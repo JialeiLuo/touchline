@@ -1,0 +1,1898 @@
+{
+  "checked_at": "2026-10-25T15:05:30.052Z",
+  "input": {
+    "seed": 7,
+    "index": 899,
+    "from": 3300,
+    "to": 3960,
+    "viewer_mode": "tactical",
+    "player_focus": "Ellis"
+  },
+  "investigations": [
+    {
+      "player_id": "Duarte",
+      "team_id": "southport",
+      "name": "Duarte",
+      "team_name": "Southport",
+      "assigned_position": "RW",
+      "at": 3623.4,
+      "history": {
+        "records": 5,
+        "minutes": 305,
+        "role_minutes": 305,
+        "record_ids": [
+          "history-Duarte-1",
+          "history-Duarte-2",
+          "history-Duarte-3",
+          "history-Duarte-4",
+          "history-Duarte-5"
+        ],
+        "status": "recorded_experience"
+      },
+      "comparison": {
+        "status": "ready",
+        "before": {
+          "passes": 2,
+          "completed": 2,
+          "shots": 0,
+          "carries": 3
+        },
+        "after": {
+          "passes": 1,
+          "completed": 1,
+          "shots": 0,
+          "carries": 1
+        },
+        "event_ids": [
+          "full-v03-7-760",
+          "full-v03-7-761",
+          "full-v03-7-762",
+          "full-v03-7-817",
+          "full-v03-7-818",
+          "full-v03-7-859",
+          "full-v03-7-860"
+        ]
+      },
+      "other_change_ids": [
+        "full-v03-7-831"
+      ],
+      "trace": [
+        {
+          "tool": "retrieve_role_history",
+          "status": "available",
+          "as_of": 3623.4,
+          "record_ids": [
+            "history-Duarte-1",
+            "history-Duarte-2",
+            "history-Duarte-3",
+            "history-Duarte-4",
+            "history-Duarte-5"
+          ]
+        },
+        {
+          "tool": "compare_player_windows",
+          "status": "ready",
+          "before": {
+            "from": 3323.4,
+            "to": 3623.4
+          },
+          "after": {
+            "from": 3623.4,
+            "to": 3923.4
+          }
+        },
+        {
+          "tool": "check_other_changes",
+          "status": "complete",
+          "event_ids": [
+            "full-v03-7-831"
+          ]
+        }
+      ],
+      "event_ids": [
+        "full-v03-7-826",
+        "full-v03-7-760",
+        "full-v03-7-761",
+        "full-v03-7-762",
+        "full-v03-7-817",
+        "full-v03-7-818",
+        "full-v03-7-859",
+        "full-v03-7-860",
+        "full-v03-7-831"
+      ]
+    },
+    {
+      "player_id": "Ellis",
+      "team_id": "northbridge",
+      "name": "Ellis",
+      "team_name": "Northbridge",
+      "assigned_position": "RW",
+      "at": 3640.2,
+      "history": {
+        "records": 5,
+        "minutes": 305,
+        "role_minutes": 20,
+        "record_ids": [
+          "history-Ellis-1",
+          "history-Ellis-2",
+          "history-Ellis-3",
+          "history-Ellis-4",
+          "history-Ellis-5"
+        ],
+        "status": "limited_sample"
+      },
+      "comparison": {
+        "status": "ready",
+        "before": {
+          "passes": 4,
+          "completed": 4,
+          "shots": 0,
+          "carries": 1
+        },
+        "after": {
+          "passes": 3,
+          "completed": 1,
+          "shots": 0,
+          "carries": 1
+        },
+        "event_ids": [
+          "full-v03-7-771",
+          "full-v03-7-773",
+          "full-v03-7-798",
+          "full-v03-7-809",
+          "full-v03-7-810",
+          "full-v03-7-845",
+          "full-v03-7-854",
+          "full-v03-7-855",
+          "full-v03-7-890"
+        ]
+      },
+      "other_change_ids": [
+        "full-v03-7-826"
+      ],
+      "trace": [
+        {
+          "tool": "retrieve_role_history",
+          "status": "available",
+          "as_of": 3640.2,
+          "record_ids": [
+            "history-Ellis-1",
+            "history-Ellis-2",
+            "history-Ellis-3",
+            "history-Ellis-4",
+            "history-Ellis-5"
+          ]
+        },
+        {
+          "tool": "compare_player_windows",
+          "status": "ready",
+          "before": {
+            "from": 3340.2,
+            "to": 3640.2
+          },
+          "after": {
+            "from": 3640.2,
+            "to": 3940.2
+          }
+        },
+        {
+          "tool": "check_other_changes",
+          "status": "complete",
+          "event_ids": [
+            "full-v03-7-826"
+          ]
+        }
+      ],
+      "event_ids": [
+        "full-v03-7-831",
+        "full-v03-7-771",
+        "full-v03-7-773",
+        "full-v03-7-798",
+        "full-v03-7-809",
+        "full-v03-7-810",
+        "full-v03-7-845",
+        "full-v03-7-854",
+        "full-v03-7-855",
+        "full-v03-7-890",
+        "full-v03-7-826"
+      ]
+    }
+  ],
+  "output": {
+    "headline": "Limited role experience in supplied records",
+    "paragraphs": [
+      {
+        "text": "Ellis is taking the RW role with limited recorded experience there: 20 of 305 minutes across 5 supplied previous matches. In equal windows around entry, the outgoing player completed 4 passes and took 0 shots; Ellis completed 1 passes and took 0 shots. Other personnel or match-state changes also occurred in the span.",
+        "evidence_ids": [
+          "fact-17"
+        ],
+        "scope_label": "History known at 60:40 · equal windows around entry"
+      },
+      {
+        "text": "Ellis completed 1 of 3 attempted passes and received 2 completed passes in this interval. No shot by this player is recorded in the interval. Ellis came on at 60:40. ",
+        "evidence_ids": [
+          "fact-18"
+        ],
+        "scope_label": "Player involvement · 55:00–66:00"
+      },
+      {
+        "text": "Northbridge introduced Ellis for Vale at 60:40. Ellis usually plays ST, but inherited the declared RW role. No shot by the substitute is recorded after coming on in this interval.",
+        "evidence_ids": [
+          "fact-5",
+          "fact-3"
+        ],
+        "scope_label": "Substitute contribution · 60:40–66:00"
+      }
+    ],
+    "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+    "limitations": [
+      "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+      "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+    ],
+    "composition": "selected-stories",
+    "mode": "foundry",
+    "reason": "Microsoft Foundry ranked the stories; team focus and goal coverage are applied locally. Wording and figures come from scoped event evidence.",
+    "evidence": {
+      "schema_version": "9",
+      "investigations": [
+        {
+          "player_id": "Duarte",
+          "team_id": "southport",
+          "name": "Duarte",
+          "team_name": "Southport",
+          "assigned_position": "RW",
+          "at": 3623.4,
+          "history": {
+            "records": 5,
+            "minutes": 305,
+            "role_minutes": 305,
+            "record_ids": [
+              "history-Duarte-1",
+              "history-Duarte-2",
+              "history-Duarte-3",
+              "history-Duarte-4",
+              "history-Duarte-5"
+            ],
+            "status": "recorded_experience"
+          },
+          "comparison": {
+            "status": "ready",
+            "before": {
+              "passes": 2,
+              "completed": 2,
+              "shots": 0,
+              "carries": 3
+            },
+            "after": {
+              "passes": 1,
+              "completed": 1,
+              "shots": 0,
+              "carries": 1
+            },
+            "event_ids": [
+              "full-v03-7-760",
+              "full-v03-7-761",
+              "full-v03-7-762",
+              "full-v03-7-817",
+              "full-v03-7-818",
+              "full-v03-7-859",
+              "full-v03-7-860"
+            ]
+          },
+          "other_change_ids": [
+            "full-v03-7-831"
+          ],
+          "trace": [
+            {
+              "tool": "retrieve_role_history",
+              "status": "available",
+              "as_of": 3623.4,
+              "record_ids": [
+                "history-Duarte-1",
+                "history-Duarte-2",
+                "history-Duarte-3",
+                "history-Duarte-4",
+                "history-Duarte-5"
+              ]
+            },
+            {
+              "tool": "compare_player_windows",
+              "status": "ready",
+              "before": {
+                "from": 3323.4,
+                "to": 3623.4
+              },
+              "after": {
+                "from": 3623.4,
+                "to": 3923.4
+              }
+            },
+            {
+              "tool": "check_other_changes",
+              "status": "complete",
+              "event_ids": [
+                "full-v03-7-831"
+              ]
+            }
+          ],
+          "event_ids": [
+            "full-v03-7-826",
+            "full-v03-7-760",
+            "full-v03-7-761",
+            "full-v03-7-762",
+            "full-v03-7-817",
+            "full-v03-7-818",
+            "full-v03-7-859",
+            "full-v03-7-860",
+            "full-v03-7-831"
+          ]
+        },
+        {
+          "player_id": "Ellis",
+          "team_id": "northbridge",
+          "name": "Ellis",
+          "team_name": "Northbridge",
+          "assigned_position": "RW",
+          "at": 3640.2,
+          "history": {
+            "records": 5,
+            "minutes": 305,
+            "role_minutes": 20,
+            "record_ids": [
+              "history-Ellis-1",
+              "history-Ellis-2",
+              "history-Ellis-3",
+              "history-Ellis-4",
+              "history-Ellis-5"
+            ],
+            "status": "limited_sample"
+          },
+          "comparison": {
+            "status": "ready",
+            "before": {
+              "passes": 4,
+              "completed": 4,
+              "shots": 0,
+              "carries": 1
+            },
+            "after": {
+              "passes": 3,
+              "completed": 1,
+              "shots": 0,
+              "carries": 1
+            },
+            "event_ids": [
+              "full-v03-7-771",
+              "full-v03-7-773",
+              "full-v03-7-798",
+              "full-v03-7-809",
+              "full-v03-7-810",
+              "full-v03-7-845",
+              "full-v03-7-854",
+              "full-v03-7-855",
+              "full-v03-7-890"
+            ]
+          },
+          "other_change_ids": [
+            "full-v03-7-826"
+          ],
+          "trace": [
+            {
+              "tool": "retrieve_role_history",
+              "status": "available",
+              "as_of": 3640.2,
+              "record_ids": [
+                "history-Ellis-1",
+                "history-Ellis-2",
+                "history-Ellis-3",
+                "history-Ellis-4",
+                "history-Ellis-5"
+              ]
+            },
+            {
+              "tool": "compare_player_windows",
+              "status": "ready",
+              "before": {
+                "from": 3340.2,
+                "to": 3640.2
+              },
+              "after": {
+                "from": 3640.2,
+                "to": 3940.2
+              }
+            },
+            {
+              "tool": "check_other_changes",
+              "status": "complete",
+              "event_ids": [
+                "full-v03-7-826"
+              ]
+            }
+          ],
+          "event_ids": [
+            "full-v03-7-831",
+            "full-v03-7-771",
+            "full-v03-7-773",
+            "full-v03-7-798",
+            "full-v03-7-809",
+            "full-v03-7-810",
+            "full-v03-7-845",
+            "full-v03-7-854",
+            "full-v03-7-855",
+            "full-v03-7-890",
+            "full-v03-7-826"
+          ]
+        }
+      ],
+      "player_focus": "Ellis",
+      "player_context": {
+        "status": "On pitch",
+        "player_id": "Ellis",
+        "name": "Ellis",
+        "team_id": "northbridge",
+        "team_name": "Northbridge",
+        "usual_position": "ST",
+        "passes": 3,
+        "completed_passes": 1,
+        "received_passes": 2,
+        "carries": 1,
+        "shots": 0,
+        "goals": 0,
+        "yellow": 0,
+        "red": 0,
+        "substitution": {
+          "at": 3640.2,
+          "incoming": true
+        },
+        "event_ids": [
+          "full-v03-7-831",
+          "full-v03-7-844",
+          "full-v03-7-845",
+          "full-v03-7-853",
+          "full-v03-7-854",
+          "full-v03-7-855",
+          "full-v03-7-866",
+          "full-v03-7-890"
+        ]
+      },
+      "viewer_focus": "neutral",
+      "sequence_analysis": {
+        "from": 3300,
+        "to": 3960,
+        "method": "Complete possession_id groups only; boundary-crossing or unfinished groups excluded. Attacking third uses successful action endpoint x>=70 for Northbridge, x<=35 for Southport. Fixed direction follows the synthetic simulator; no tracking, pressure or support inferred.",
+        "teams": [
+          {
+            "team_id": "northbridge",
+            "team_name": "Northbridge",
+            "counts": {
+              "complete_sequences": 15,
+              "attacking_third_entries": 1,
+              "shot_sequences": 0,
+              "early_losses": 10
+            },
+            "story": "Northbridge: 15 complete recorded possession sequences; 1 reached the attacking third through a completed action, 0 included a shot, and 10 ended with a failed action before a completed attacking-third entry.",
+            "examples": [
+              {
+                "id": "p-157",
+                "start": 3376.5,
+                "end": 3402.6,
+                "actions": 8,
+                "reached_final_third": true,
+                "shot": false,
+                "ending": "sequence ended",
+                "players": [
+                  "Morgan",
+                  "Lane",
+                  "Vale",
+                  "Bennett",
+                  "Brooks"
+                ],
+                "event_ids": [
+                  "full-v03-7-767",
+                  "full-v03-7-768",
+                  "full-v03-7-769",
+                  "full-v03-7-770",
+                  "full-v03-7-771",
+                  "full-v03-7-772",
+                  "full-v03-7-773",
+                  "full-v03-7-774",
+                  "full-v03-7-775"
+                ],
+                "max_progress": 85.64799540163949
+              },
+              {
+                "id": "p-181",
+                "start": 3864.5,
+                "end": 3892.3,
+                "actions": 7,
+                "reached_final_third": false,
+                "shot": false,
+                "ending": "lost possession",
+                "players": [
+                  "Lane",
+                  "Bennett",
+                  "Mason",
+                  "Morgan",
+                  "Taylor"
+                ],
+                "event_ids": [
+                  "full-v03-7-878",
+                  "full-v03-7-879",
+                  "full-v03-7-880",
+                  "full-v03-7-881",
+                  "full-v03-7-882",
+                  "full-v03-7-883",
+                  "full-v03-7-884",
+                  "full-v03-7-885"
+                ],
+                "max_progress": 78.43558529997244
+              },
+              {
+                "id": "p-183",
+                "start": 3916.4,
+                "end": 3930.1,
+                "actions": 5,
+                "reached_final_third": false,
+                "shot": false,
+                "ending": "sequence ended",
+                "players": [
+                  "Ellis",
+                  "Bennett",
+                  "Morgan",
+                  "Brooks"
+                ],
+                "event_ids": [
+                  "full-v03-7-890",
+                  "full-v03-7-891",
+                  "full-v03-7-892",
+                  "full-v03-7-893",
+                  "full-v03-7-894",
+                  "full-v03-7-895"
+                ],
+                "max_progress": 67.15100220544264
+              }
+            ],
+            "event_ids": [
+              "full-v03-7-755",
+              "full-v03-7-756",
+              "full-v03-7-757",
+              "full-v03-7-767",
+              "full-v03-7-768",
+              "full-v03-7-769",
+              "full-v03-7-770",
+              "full-v03-7-771",
+              "full-v03-7-772",
+              "full-v03-7-773",
+              "full-v03-7-774",
+              "full-v03-7-775",
+              "full-v03-7-779",
+              "full-v03-7-780",
+              "full-v03-7-781",
+              "full-v03-7-782",
+              "full-v03-7-783",
+              "full-v03-7-791",
+              "full-v03-7-792",
+              "full-v03-7-793",
+              "full-v03-7-798",
+              "full-v03-7-799",
+              "full-v03-7-800",
+              "full-v03-7-801",
+              "full-v03-7-802",
+              "full-v03-7-807",
+              "full-v03-7-808",
+              "full-v03-7-809",
+              "full-v03-7-810",
+              "full-v03-7-811",
+              "full-v03-7-812",
+              "full-v03-7-815",
+              "full-v03-7-816",
+              "full-v03-7-827",
+              "full-v03-7-828",
+              "full-v03-7-829",
+              "full-v03-7-830",
+              "full-v03-7-836",
+              "full-v03-7-837",
+              "full-v03-7-840",
+              "full-v03-7-841",
+              "full-v03-7-842",
+              "full-v03-7-843",
+              "full-v03-7-844",
+              "full-v03-7-845",
+              "full-v03-7-846",
+              "full-v03-7-852",
+              "full-v03-7-853",
+              "full-v03-7-854",
+              "full-v03-7-855",
+              "full-v03-7-856",
+              "full-v03-7-863",
+              "full-v03-7-864",
+              "full-v03-7-865",
+              "full-v03-7-866",
+              "full-v03-7-867",
+              "full-v03-7-871",
+              "full-v03-7-872",
+              "full-v03-7-873",
+              "full-v03-7-874",
+              "full-v03-7-875",
+              "full-v03-7-878",
+              "full-v03-7-879",
+              "full-v03-7-880",
+              "full-v03-7-881",
+              "full-v03-7-882",
+              "full-v03-7-883",
+              "full-v03-7-884",
+              "full-v03-7-885",
+              "full-v03-7-890",
+              "full-v03-7-891",
+              "full-v03-7-892",
+              "full-v03-7-893",
+              "full-v03-7-894",
+              "full-v03-7-895"
+            ]
+          },
+          {
+            "team_id": "southport",
+            "team_name": "Southport",
+            "counts": {
+              "complete_sequences": 16,
+              "attacking_third_entries": 1,
+              "shot_sequences": 1,
+              "early_losses": 9
+            },
+            "story": "Southport: 16 complete recorded possession sequences; 1 reached the attacking third through a completed action, 1 included a shot, and 9 ended with a failed action before a completed attacking-third entry.",
+            "examples": [
+              {
+                "id": "p-156",
+                "start": 3346.7,
+                "end": 3364.3,
+                "actions": 6,
+                "reached_final_third": false,
+                "shot": true,
+                "ending": "shot recorded",
+                "players": [
+                  "Lima",
+                  "Costa",
+                  "Silva",
+                  "Alves"
+                ],
+                "event_ids": [
+                  "full-v03-7-758",
+                  "full-v03-7-759",
+                  "full-v03-7-760",
+                  "full-v03-7-761",
+                  "full-v03-7-762",
+                  "full-v03-7-763",
+                  "full-v03-7-764",
+                  "full-v03-7-766"
+                ],
+                "max_progress": 67.64851827453822
+              },
+              {
+                "id": "p-168",
+                "start": 3597,
+                "end": 3623.4,
+                "actions": 8,
+                "reached_final_third": true,
+                "shot": false,
+                "ending": "lost possession",
+                "players": [
+                  "Silva",
+                  "Reed",
+                  "Pinto",
+                  "Nunes",
+                  "Rocha"
+                ],
+                "event_ids": [
+                  "full-v03-7-817",
+                  "full-v03-7-818",
+                  "full-v03-7-819",
+                  "full-v03-7-820",
+                  "full-v03-7-821",
+                  "full-v03-7-822",
+                  "full-v03-7-823",
+                  "full-v03-7-824",
+                  "full-v03-7-825"
+                ],
+                "max_progress": 92.84493769099936
+              },
+              {
+                "id": "p-160",
+                "start": 3450.8,
+                "end": 3468.3,
+                "actions": 6,
+                "reached_final_third": false,
+                "shot": false,
+                "ending": "sequence ended",
+                "players": [
+                  "Lima",
+                  "Rocha",
+                  "Reed",
+                  "Costa"
+                ],
+                "event_ids": [
+                  "full-v03-7-784",
+                  "full-v03-7-785",
+                  "full-v03-7-786",
+                  "full-v03-7-787",
+                  "full-v03-7-788",
+                  "full-v03-7-789",
+                  "full-v03-7-790"
+                ],
+                "max_progress": 68.52725701173767
+              }
+            ],
+            "event_ids": [
+              "full-v03-7-751",
+              "full-v03-7-752",
+              "full-v03-7-753",
+              "full-v03-7-754",
+              "full-v03-7-758",
+              "full-v03-7-759",
+              "full-v03-7-760",
+              "full-v03-7-761",
+              "full-v03-7-762",
+              "full-v03-7-763",
+              "full-v03-7-764",
+              "full-v03-7-766",
+              "full-v03-7-776",
+              "full-v03-7-777",
+              "full-v03-7-778",
+              "full-v03-7-784",
+              "full-v03-7-785",
+              "full-v03-7-786",
+              "full-v03-7-787",
+              "full-v03-7-788",
+              "full-v03-7-789",
+              "full-v03-7-790",
+              "full-v03-7-794",
+              "full-v03-7-795",
+              "full-v03-7-796",
+              "full-v03-7-797",
+              "full-v03-7-803",
+              "full-v03-7-804",
+              "full-v03-7-805",
+              "full-v03-7-806",
+              "full-v03-7-813",
+              "full-v03-7-814",
+              "full-v03-7-817",
+              "full-v03-7-818",
+              "full-v03-7-819",
+              "full-v03-7-820",
+              "full-v03-7-821",
+              "full-v03-7-822",
+              "full-v03-7-823",
+              "full-v03-7-824",
+              "full-v03-7-825",
+              "full-v03-7-832",
+              "full-v03-7-833",
+              "full-v03-7-834",
+              "full-v03-7-835",
+              "full-v03-7-838",
+              "full-v03-7-839",
+              "full-v03-7-847",
+              "full-v03-7-848",
+              "full-v03-7-849",
+              "full-v03-7-850",
+              "full-v03-7-851",
+              "full-v03-7-857",
+              "full-v03-7-858",
+              "full-v03-7-859",
+              "full-v03-7-860",
+              "full-v03-7-861",
+              "full-v03-7-862",
+              "full-v03-7-868",
+              "full-v03-7-869",
+              "full-v03-7-870",
+              "full-v03-7-876",
+              "full-v03-7-877",
+              "full-v03-7-886",
+              "full-v03-7-887",
+              "full-v03-7-888",
+              "full-v03-7-889",
+              "full-v03-7-896",
+              "full-v03-7-897",
+              "full-v03-7-898"
+            ]
+          }
+        ]
+      },
+      "comparisons": [
+        {
+          "trigger_id": "full-v03-7-826",
+          "trigger_type": "sub",
+          "trigger_team": "Southport",
+          "status": "ready",
+          "boundary": 3623.4,
+          "window": 300,
+          "before": {
+            "from": 3323.4,
+            "to": 3623.4
+          },
+          "after": {
+            "from": 3623.4,
+            "to": 3923.4
+          },
+          "interval_convention": "[from,to)",
+          "observations": [
+            {
+              "team_id": "northbridge",
+              "metric": "shots",
+              "before": 0,
+              "after": 0,
+              "delta": 0,
+              "direction": "unchanged",
+              "event_ids": []
+            },
+            {
+              "team_id": "northbridge",
+              "metric": "completed_passes",
+              "before": 20,
+              "after": 21,
+              "delta": 1,
+              "direction": "increased",
+              "event_ids": [
+                "full-v03-7-755",
+                "full-v03-7-767",
+                "full-v03-7-768",
+                "full-v03-7-769",
+                "full-v03-7-770",
+                "full-v03-7-771",
+                "full-v03-7-772",
+                "full-v03-7-773",
+                "full-v03-7-774",
+                "full-v03-7-779",
+                "full-v03-7-780",
+                "full-v03-7-781",
+                "full-v03-7-791",
+                "full-v03-7-798",
+                "full-v03-7-799",
+                "full-v03-7-800",
+                "full-v03-7-807",
+                "full-v03-7-808",
+                "full-v03-7-810",
+                "full-v03-7-811",
+                "full-v03-7-827",
+                "full-v03-7-828",
+                "full-v03-7-829",
+                "full-v03-7-841",
+                "full-v03-7-842",
+                "full-v03-7-843",
+                "full-v03-7-844",
+                "full-v03-7-852",
+                "full-v03-7-853",
+                "full-v03-7-863",
+                "full-v03-7-865",
+                "full-v03-7-871",
+                "full-v03-7-872",
+                "full-v03-7-874",
+                "full-v03-7-878",
+                "full-v03-7-879",
+                "full-v03-7-880",
+                "full-v03-7-881",
+                "full-v03-7-882",
+                "full-v03-7-883",
+                "full-v03-7-890"
+              ]
+            },
+            {
+              "team_id": "southport",
+              "metric": "shots",
+              "before": 1,
+              "after": 0,
+              "delta": -1,
+              "direction": "decreased",
+              "event_ids": [
+                "full-v03-7-764"
+              ]
+            },
+            {
+              "team_id": "southport",
+              "metric": "completed_passes",
+              "before": 17,
+              "after": 12,
+              "delta": -5,
+              "direction": "decreased",
+              "event_ids": [
+                "full-v03-7-758",
+                "full-v03-7-759",
+                "full-v03-7-762",
+                "full-v03-7-776",
+                "full-v03-7-784",
+                "full-v03-7-785",
+                "full-v03-7-787",
+                "full-v03-7-788",
+                "full-v03-7-789",
+                "full-v03-7-794",
+                "full-v03-7-795",
+                "full-v03-7-803",
+                "full-v03-7-804",
+                "full-v03-7-818",
+                "full-v03-7-819",
+                "full-v03-7-822",
+                "full-v03-7-823",
+                "full-v03-7-832",
+                "full-v03-7-834",
+                "full-v03-7-848",
+                "full-v03-7-849",
+                "full-v03-7-850",
+                "full-v03-7-857",
+                "full-v03-7-858",
+                "full-v03-7-860",
+                "full-v03-7-861",
+                "full-v03-7-868",
+                "full-v03-7-887",
+                "full-v03-7-888"
+              ]
+            }
+          ]
+        },
+        {
+          "trigger_id": "full-v03-7-831",
+          "trigger_type": "sub",
+          "trigger_team": "Northbridge",
+          "status": "ready",
+          "boundary": 3640.2,
+          "window": 300,
+          "before": {
+            "from": 3340.2,
+            "to": 3640.2
+          },
+          "after": {
+            "from": 3640.2,
+            "to": 3940.2
+          },
+          "interval_convention": "[from,to)",
+          "observations": [
+            {
+              "team_id": "northbridge",
+              "metric": "shots",
+              "before": 0,
+              "after": 0,
+              "delta": 0,
+              "direction": "unchanged",
+              "event_ids": []
+            },
+            {
+              "team_id": "northbridge",
+              "metric": "completed_passes",
+              "before": 21,
+              "after": 21,
+              "delta": 0,
+              "direction": "unchanged",
+              "event_ids": [
+                "full-v03-7-767",
+                "full-v03-7-768",
+                "full-v03-7-769",
+                "full-v03-7-770",
+                "full-v03-7-771",
+                "full-v03-7-772",
+                "full-v03-7-773",
+                "full-v03-7-774",
+                "full-v03-7-779",
+                "full-v03-7-780",
+                "full-v03-7-781",
+                "full-v03-7-791",
+                "full-v03-7-798",
+                "full-v03-7-799",
+                "full-v03-7-800",
+                "full-v03-7-807",
+                "full-v03-7-808",
+                "full-v03-7-810",
+                "full-v03-7-811",
+                "full-v03-7-827",
+                "full-v03-7-828",
+                "full-v03-7-829",
+                "full-v03-7-841",
+                "full-v03-7-842",
+                "full-v03-7-843",
+                "full-v03-7-844",
+                "full-v03-7-852",
+                "full-v03-7-853",
+                "full-v03-7-863",
+                "full-v03-7-865",
+                "full-v03-7-871",
+                "full-v03-7-872",
+                "full-v03-7-874",
+                "full-v03-7-878",
+                "full-v03-7-879",
+                "full-v03-7-880",
+                "full-v03-7-881",
+                "full-v03-7-882",
+                "full-v03-7-883",
+                "full-v03-7-890",
+                "full-v03-7-892",
+                "full-v03-7-893"
+              ]
+            },
+            {
+              "team_id": "southport",
+              "metric": "shots",
+              "before": 1,
+              "after": 0,
+              "delta": -1,
+              "direction": "decreased",
+              "event_ids": [
+                "full-v03-7-764"
+              ]
+            },
+            {
+              "team_id": "southport",
+              "metric": "completed_passes",
+              "before": 17,
+              "after": 13,
+              "delta": -4,
+              "direction": "decreased",
+              "event_ids": [
+                "full-v03-7-758",
+                "full-v03-7-759",
+                "full-v03-7-762",
+                "full-v03-7-776",
+                "full-v03-7-784",
+                "full-v03-7-785",
+                "full-v03-7-787",
+                "full-v03-7-788",
+                "full-v03-7-789",
+                "full-v03-7-794",
+                "full-v03-7-795",
+                "full-v03-7-803",
+                "full-v03-7-804",
+                "full-v03-7-818",
+                "full-v03-7-819",
+                "full-v03-7-822",
+                "full-v03-7-823",
+                "full-v03-7-832",
+                "full-v03-7-834",
+                "full-v03-7-848",
+                "full-v03-7-849",
+                "full-v03-7-850",
+                "full-v03-7-857",
+                "full-v03-7-858",
+                "full-v03-7-860",
+                "full-v03-7-861",
+                "full-v03-7-868",
+                "full-v03-7-887",
+                "full-v03-7-888",
+                "full-v03-7-896"
+              ]
+            }
+          ]
+        }
+      ],
+      "package_id": null,
+      "match": null,
+      "annotations": [],
+      "viewer_mode": "tactical",
+      "squad_context": [
+        {
+          "event_id": "full-v03-7-826",
+          "at": 3623.4,
+          "team_name": "Southport",
+          "player_name": "Duarte",
+          "outgoing_name": "Silva",
+          "subsequent_shots": 0,
+          "team_id": "southport",
+          "manager": "Rafael Duarte",
+          "declared_formation": "4-3-3",
+          "player_id": "Duarte",
+          "usual_position": "ST",
+          "assigned_position": "RW",
+          "available_at": 0
+        },
+        {
+          "event_id": "full-v03-7-831",
+          "at": 3640.2,
+          "team_name": "Northbridge",
+          "player_name": "Ellis",
+          "outgoing_name": "Vale",
+          "subsequent_shots": 0,
+          "team_id": "northbridge",
+          "manager": "Alex Rowan",
+          "declared_formation": "4-3-3",
+          "player_id": "Ellis",
+          "usual_position": "ST",
+          "assigned_position": "RW",
+          "available_at": 0
+        }
+      ],
+      "synthetic": true,
+      "seed": 7,
+      "generator_version": "0.3",
+      "as_of": 3960.3,
+      "interval": {
+        "from": 3300,
+        "to": 3960
+      },
+      "score_before": {
+        "northbridge": {
+          "goals": 1,
+          "shots": 7,
+          "onTarget": 2,
+          "passes": 225,
+          "completed": 192,
+          "fouls": 7,
+          "yellow": 2,
+          "red": 0,
+          "corners": 0,
+          "substitutions": 0,
+          "controlledSeconds": 1101.2852780381218
+        },
+        "southport": {
+          "goals": 0,
+          "shots": 1,
+          "onTarget": 1,
+          "passes": 220,
+          "completed": 187,
+          "fouls": 5,
+          "yellow": 3,
+          "red": 0,
+          "corners": 0,
+          "substitutions": 0,
+          "controlledSeconds": 1070.5786948930472
+        }
+      },
+      "interval_statistics": {
+        "northbridge": {
+          "goals": 0,
+          "shots": 0,
+          "onTarget": 0,
+          "passes": 53,
+          "completed": 44,
+          "fouls": 0,
+          "yellow": 0,
+          "red": 0,
+          "corners": 0,
+          "substitutions": 1,
+          "controlledSeconds": 241.42459998093545
+        },
+        "southport": {
+          "goals": 0,
+          "shots": 1,
+          "onTarget": 1,
+          "passes": 42,
+          "completed": 32,
+          "fouls": 0,
+          "yellow": 0,
+          "red": 0,
+          "corners": 0,
+          "substitutions": 1,
+          "controlledSeconds": 201.01139256730676
+        }
+      },
+      "facts": [
+        {
+          "id": "fact-1",
+          "text": "Southport produced more attempts during this spell (1 against 0). 1 attempt(s) required a save. Shot counts alone do not establish chance quality or overall dominance.",
+          "kind": "Where the chances came",
+          "event_ids": [
+            "full-v03-7-764"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "text": "At 60′, Southport introduced Duarte for Silva. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+          "kind": "A personnel change",
+          "event_ids": [
+            "full-v03-7-826"
+          ]
+        },
+        {
+          "id": "fact-3",
+          "text": "At 60′, Northbridge introduced Ellis for Vale. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+          "kind": "A personnel change",
+          "event_ids": [
+            "full-v03-7-831"
+          ]
+        },
+        {
+          "id": "fact-4",
+          "text": "Authored fictional squad context: Duarte usually plays ST. At 60′, Duarte replaced Silva and inherited the declared RW slot. Southport's manager is Rafael Duarte; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+          "event_ids": [
+            "full-v03-7-826"
+          ],
+          "context_ids": [
+            "squad:southport:Duarte"
+          ]
+        },
+        {
+          "id": "fact-5",
+          "text": "Authored fictional squad context: Ellis usually plays ST. At 60′, Ellis replaced Vale and inherited the declared RW slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+          "event_ids": [
+            "full-v03-7-831"
+          ],
+          "context_ids": [
+            "squad:northbridge:Ellis"
+          ]
+        },
+        {
+          "id": "fact-6",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "shots",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "full-v03-7-826"
+          ],
+          "text": "Northbridge: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-7",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "completed_passes",
+            "before": 20,
+            "after": 21,
+            "delta": 1,
+            "direction": "increased",
+            "event_ids": [
+              "full-v03-7-755",
+              "full-v03-7-767",
+              "full-v03-7-768",
+              "full-v03-7-769",
+              "full-v03-7-770",
+              "full-v03-7-771",
+              "full-v03-7-772",
+              "full-v03-7-773",
+              "full-v03-7-774",
+              "full-v03-7-779",
+              "full-v03-7-780",
+              "full-v03-7-781",
+              "full-v03-7-791",
+              "full-v03-7-798",
+              "full-v03-7-799",
+              "full-v03-7-800",
+              "full-v03-7-807",
+              "full-v03-7-808",
+              "full-v03-7-810",
+              "full-v03-7-811",
+              "full-v03-7-827",
+              "full-v03-7-828",
+              "full-v03-7-829",
+              "full-v03-7-841",
+              "full-v03-7-842",
+              "full-v03-7-843",
+              "full-v03-7-844",
+              "full-v03-7-852",
+              "full-v03-7-853",
+              "full-v03-7-863",
+              "full-v03-7-865",
+              "full-v03-7-871",
+              "full-v03-7-872",
+              "full-v03-7-874",
+              "full-v03-7-878",
+              "full-v03-7-879",
+              "full-v03-7-880",
+              "full-v03-7-881",
+              "full-v03-7-882",
+              "full-v03-7-883",
+              "full-v03-7-890"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-826",
+            "full-v03-7-755",
+            "full-v03-7-767",
+            "full-v03-7-768",
+            "full-v03-7-769",
+            "full-v03-7-770",
+            "full-v03-7-771",
+            "full-v03-7-772",
+            "full-v03-7-773",
+            "full-v03-7-774",
+            "full-v03-7-779",
+            "full-v03-7-780",
+            "full-v03-7-781",
+            "full-v03-7-791",
+            "full-v03-7-798",
+            "full-v03-7-799",
+            "full-v03-7-800",
+            "full-v03-7-807",
+            "full-v03-7-808",
+            "full-v03-7-810",
+            "full-v03-7-811",
+            "full-v03-7-827",
+            "full-v03-7-828",
+            "full-v03-7-829",
+            "full-v03-7-841",
+            "full-v03-7-842",
+            "full-v03-7-843",
+            "full-v03-7-844",
+            "full-v03-7-852",
+            "full-v03-7-853",
+            "full-v03-7-863",
+            "full-v03-7-865",
+            "full-v03-7-871",
+            "full-v03-7-872",
+            "full-v03-7-874",
+            "full-v03-7-878",
+            "full-v03-7-879",
+            "full-v03-7-880",
+            "full-v03-7-881",
+            "full-v03-7-882",
+            "full-v03-7-883",
+            "full-v03-7-890"
+          ],
+          "text": "Northbridge: completed passes before = 20; after = 21; direction = increased; absolute count difference = 1. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-8",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "shots",
+            "before": 1,
+            "after": 0,
+            "delta": -1,
+            "direction": "decreased",
+            "event_ids": [
+              "full-v03-7-764"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-826",
+            "full-v03-7-764"
+          ],
+          "text": "Southport: shots before = 1; after = 0; direction = decreased; absolute count difference = 1. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-9",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "completed_passes",
+            "before": 17,
+            "after": 12,
+            "delta": -5,
+            "direction": "decreased",
+            "event_ids": [
+              "full-v03-7-758",
+              "full-v03-7-759",
+              "full-v03-7-762",
+              "full-v03-7-776",
+              "full-v03-7-784",
+              "full-v03-7-785",
+              "full-v03-7-787",
+              "full-v03-7-788",
+              "full-v03-7-789",
+              "full-v03-7-794",
+              "full-v03-7-795",
+              "full-v03-7-803",
+              "full-v03-7-804",
+              "full-v03-7-818",
+              "full-v03-7-819",
+              "full-v03-7-822",
+              "full-v03-7-823",
+              "full-v03-7-832",
+              "full-v03-7-834",
+              "full-v03-7-848",
+              "full-v03-7-849",
+              "full-v03-7-850",
+              "full-v03-7-857",
+              "full-v03-7-858",
+              "full-v03-7-860",
+              "full-v03-7-861",
+              "full-v03-7-868",
+              "full-v03-7-887",
+              "full-v03-7-888"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-826",
+            "full-v03-7-758",
+            "full-v03-7-759",
+            "full-v03-7-762",
+            "full-v03-7-776",
+            "full-v03-7-784",
+            "full-v03-7-785",
+            "full-v03-7-787",
+            "full-v03-7-788",
+            "full-v03-7-789",
+            "full-v03-7-794",
+            "full-v03-7-795",
+            "full-v03-7-803",
+            "full-v03-7-804",
+            "full-v03-7-818",
+            "full-v03-7-819",
+            "full-v03-7-822",
+            "full-v03-7-823",
+            "full-v03-7-832",
+            "full-v03-7-834",
+            "full-v03-7-848",
+            "full-v03-7-849",
+            "full-v03-7-850",
+            "full-v03-7-857",
+            "full-v03-7-858",
+            "full-v03-7-860",
+            "full-v03-7-861",
+            "full-v03-7-868",
+            "full-v03-7-887",
+            "full-v03-7-888"
+          ],
+          "text": "Southport: completed passes before = 17; after = 12; direction = decreased; absolute count difference = 5. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-10",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "shots",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "full-v03-7-831"
+          ],
+          "text": "Northbridge: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [3340.2, 3640.2) seconds; after window [3640.2, 3940.2) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-11",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "completed_passes",
+            "before": 21,
+            "after": 21,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": [
+              "full-v03-7-767",
+              "full-v03-7-768",
+              "full-v03-7-769",
+              "full-v03-7-770",
+              "full-v03-7-771",
+              "full-v03-7-772",
+              "full-v03-7-773",
+              "full-v03-7-774",
+              "full-v03-7-779",
+              "full-v03-7-780",
+              "full-v03-7-781",
+              "full-v03-7-791",
+              "full-v03-7-798",
+              "full-v03-7-799",
+              "full-v03-7-800",
+              "full-v03-7-807",
+              "full-v03-7-808",
+              "full-v03-7-810",
+              "full-v03-7-811",
+              "full-v03-7-827",
+              "full-v03-7-828",
+              "full-v03-7-829",
+              "full-v03-7-841",
+              "full-v03-7-842",
+              "full-v03-7-843",
+              "full-v03-7-844",
+              "full-v03-7-852",
+              "full-v03-7-853",
+              "full-v03-7-863",
+              "full-v03-7-865",
+              "full-v03-7-871",
+              "full-v03-7-872",
+              "full-v03-7-874",
+              "full-v03-7-878",
+              "full-v03-7-879",
+              "full-v03-7-880",
+              "full-v03-7-881",
+              "full-v03-7-882",
+              "full-v03-7-883",
+              "full-v03-7-890",
+              "full-v03-7-892",
+              "full-v03-7-893"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-831",
+            "full-v03-7-767",
+            "full-v03-7-768",
+            "full-v03-7-769",
+            "full-v03-7-770",
+            "full-v03-7-771",
+            "full-v03-7-772",
+            "full-v03-7-773",
+            "full-v03-7-774",
+            "full-v03-7-779",
+            "full-v03-7-780",
+            "full-v03-7-781",
+            "full-v03-7-791",
+            "full-v03-7-798",
+            "full-v03-7-799",
+            "full-v03-7-800",
+            "full-v03-7-807",
+            "full-v03-7-808",
+            "full-v03-7-810",
+            "full-v03-7-811",
+            "full-v03-7-827",
+            "full-v03-7-828",
+            "full-v03-7-829",
+            "full-v03-7-841",
+            "full-v03-7-842",
+            "full-v03-7-843",
+            "full-v03-7-844",
+            "full-v03-7-852",
+            "full-v03-7-853",
+            "full-v03-7-863",
+            "full-v03-7-865",
+            "full-v03-7-871",
+            "full-v03-7-872",
+            "full-v03-7-874",
+            "full-v03-7-878",
+            "full-v03-7-879",
+            "full-v03-7-880",
+            "full-v03-7-881",
+            "full-v03-7-882",
+            "full-v03-7-883",
+            "full-v03-7-890",
+            "full-v03-7-892",
+            "full-v03-7-893"
+          ],
+          "text": "Northbridge: completed passes before = 21; after = 21; direction = unchanged; absolute count difference = 0. Before window [3340.2, 3640.2) seconds; after window [3640.2, 3940.2) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-12",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "shots",
+            "before": 1,
+            "after": 0,
+            "delta": -1,
+            "direction": "decreased",
+            "event_ids": [
+              "full-v03-7-764"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-831",
+            "full-v03-7-764"
+          ],
+          "text": "Southport: shots before = 1; after = 0; direction = decreased; absolute count difference = 1. Before window [3340.2, 3640.2) seconds; after window [3640.2, 3940.2) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-13",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "completed_passes",
+            "before": 17,
+            "after": 13,
+            "delta": -4,
+            "direction": "decreased",
+            "event_ids": [
+              "full-v03-7-758",
+              "full-v03-7-759",
+              "full-v03-7-762",
+              "full-v03-7-776",
+              "full-v03-7-784",
+              "full-v03-7-785",
+              "full-v03-7-787",
+              "full-v03-7-788",
+              "full-v03-7-789",
+              "full-v03-7-794",
+              "full-v03-7-795",
+              "full-v03-7-803",
+              "full-v03-7-804",
+              "full-v03-7-818",
+              "full-v03-7-819",
+              "full-v03-7-822",
+              "full-v03-7-823",
+              "full-v03-7-832",
+              "full-v03-7-834",
+              "full-v03-7-848",
+              "full-v03-7-849",
+              "full-v03-7-850",
+              "full-v03-7-857",
+              "full-v03-7-858",
+              "full-v03-7-860",
+              "full-v03-7-861",
+              "full-v03-7-868",
+              "full-v03-7-887",
+              "full-v03-7-888",
+              "full-v03-7-896"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-831",
+            "full-v03-7-758",
+            "full-v03-7-759",
+            "full-v03-7-762",
+            "full-v03-7-776",
+            "full-v03-7-784",
+            "full-v03-7-785",
+            "full-v03-7-787",
+            "full-v03-7-788",
+            "full-v03-7-789",
+            "full-v03-7-794",
+            "full-v03-7-795",
+            "full-v03-7-803",
+            "full-v03-7-804",
+            "full-v03-7-818",
+            "full-v03-7-819",
+            "full-v03-7-822",
+            "full-v03-7-823",
+            "full-v03-7-832",
+            "full-v03-7-834",
+            "full-v03-7-848",
+            "full-v03-7-849",
+            "full-v03-7-850",
+            "full-v03-7-857",
+            "full-v03-7-858",
+            "full-v03-7-860",
+            "full-v03-7-861",
+            "full-v03-7-868",
+            "full-v03-7-887",
+            "full-v03-7-888",
+            "full-v03-7-896"
+          ],
+          "text": "Southport: completed passes before = 17; after = 13; direction = decreased; absolute count difference = 4. Before window [3340.2, 3640.2) seconds; after window [3640.2, 3940.2) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-14",
+          "kind": "Possession sequence analysis",
+          "text": "Northbridge: 15 complete recorded possession sequences; 1 reached the attacking third through a completed action, 0 included a shot, and 10 ended with a failed action before a completed attacking-third entry. Complete sequences only; excludes sequences crossing the interval boundary. No off-ball support or defensive pressure is measured.",
+          "event_ids": [
+            "full-v03-7-755",
+            "full-v03-7-756",
+            "full-v03-7-757",
+            "full-v03-7-767",
+            "full-v03-7-768",
+            "full-v03-7-769",
+            "full-v03-7-770",
+            "full-v03-7-771",
+            "full-v03-7-772",
+            "full-v03-7-773",
+            "full-v03-7-774",
+            "full-v03-7-775",
+            "full-v03-7-779",
+            "full-v03-7-780",
+            "full-v03-7-781",
+            "full-v03-7-782",
+            "full-v03-7-783",
+            "full-v03-7-791",
+            "full-v03-7-792",
+            "full-v03-7-793",
+            "full-v03-7-798",
+            "full-v03-7-799",
+            "full-v03-7-800",
+            "full-v03-7-801",
+            "full-v03-7-802",
+            "full-v03-7-807",
+            "full-v03-7-808",
+            "full-v03-7-809",
+            "full-v03-7-810",
+            "full-v03-7-811",
+            "full-v03-7-812",
+            "full-v03-7-815",
+            "full-v03-7-816",
+            "full-v03-7-827",
+            "full-v03-7-828",
+            "full-v03-7-829",
+            "full-v03-7-830",
+            "full-v03-7-836",
+            "full-v03-7-837",
+            "full-v03-7-840",
+            "full-v03-7-841",
+            "full-v03-7-842",
+            "full-v03-7-843",
+            "full-v03-7-844",
+            "full-v03-7-845",
+            "full-v03-7-846",
+            "full-v03-7-852",
+            "full-v03-7-853",
+            "full-v03-7-854",
+            "full-v03-7-855",
+            "full-v03-7-856",
+            "full-v03-7-863",
+            "full-v03-7-864",
+            "full-v03-7-865",
+            "full-v03-7-866",
+            "full-v03-7-867",
+            "full-v03-7-871",
+            "full-v03-7-872",
+            "full-v03-7-873",
+            "full-v03-7-874",
+            "full-v03-7-875",
+            "full-v03-7-878",
+            "full-v03-7-879",
+            "full-v03-7-880",
+            "full-v03-7-881",
+            "full-v03-7-882",
+            "full-v03-7-883",
+            "full-v03-7-884",
+            "full-v03-7-885",
+            "full-v03-7-890",
+            "full-v03-7-891",
+            "full-v03-7-892",
+            "full-v03-7-893",
+            "full-v03-7-894",
+            "full-v03-7-895"
+          ]
+        },
+        {
+          "id": "fact-15",
+          "kind": "Possession sequence analysis",
+          "text": "Southport: 16 complete recorded possession sequences; 1 reached the attacking third through a completed action, 1 included a shot, and 9 ended with a failed action before a completed attacking-third entry. Complete sequences only; excludes sequences crossing the interval boundary. No off-ball support or defensive pressure is measured.",
+          "event_ids": [
+            "full-v03-7-751",
+            "full-v03-7-752",
+            "full-v03-7-753",
+            "full-v03-7-754",
+            "full-v03-7-758",
+            "full-v03-7-759",
+            "full-v03-7-760",
+            "full-v03-7-761",
+            "full-v03-7-762",
+            "full-v03-7-763",
+            "full-v03-7-764",
+            "full-v03-7-766",
+            "full-v03-7-776",
+            "full-v03-7-777",
+            "full-v03-7-778",
+            "full-v03-7-784",
+            "full-v03-7-785",
+            "full-v03-7-786",
+            "full-v03-7-787",
+            "full-v03-7-788",
+            "full-v03-7-789",
+            "full-v03-7-790",
+            "full-v03-7-794",
+            "full-v03-7-795",
+            "full-v03-7-796",
+            "full-v03-7-797",
+            "full-v03-7-803",
+            "full-v03-7-804",
+            "full-v03-7-805",
+            "full-v03-7-806",
+            "full-v03-7-813",
+            "full-v03-7-814",
+            "full-v03-7-817",
+            "full-v03-7-818",
+            "full-v03-7-819",
+            "full-v03-7-820",
+            "full-v03-7-821",
+            "full-v03-7-822",
+            "full-v03-7-823",
+            "full-v03-7-824",
+            "full-v03-7-825",
+            "full-v03-7-832",
+            "full-v03-7-833",
+            "full-v03-7-834",
+            "full-v03-7-835",
+            "full-v03-7-838",
+            "full-v03-7-839",
+            "full-v03-7-847",
+            "full-v03-7-848",
+            "full-v03-7-849",
+            "full-v03-7-850",
+            "full-v03-7-851",
+            "full-v03-7-857",
+            "full-v03-7-858",
+            "full-v03-7-859",
+            "full-v03-7-860",
+            "full-v03-7-861",
+            "full-v03-7-862",
+            "full-v03-7-868",
+            "full-v03-7-869",
+            "full-v03-7-870",
+            "full-v03-7-876",
+            "full-v03-7-877",
+            "full-v03-7-886",
+            "full-v03-7-887",
+            "full-v03-7-888",
+            "full-v03-7-889",
+            "full-v03-7-896",
+            "full-v03-7-897",
+            "full-v03-7-898"
+          ]
+        },
+        {
+          "id": "fact-16",
+          "kind": "Substitution investigation",
+          "investigation_player": "Duarte",
+          "text": "Duarte inherited RW. Available history at entry: 5 prior match records, 305 minutes in RW out of 305 recorded minutes. Role familiarity describes this supplied sample, not ability. Equal clock-window comparison: outgoing player completed 2 of 2 passes and took 0 shots before entry; incoming player completed 1 of 1 passes and took 0 shots after entry. 1 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+          "event_ids": [
+            "full-v03-7-826",
+            "full-v03-7-760",
+            "full-v03-7-761",
+            "full-v03-7-762",
+            "full-v03-7-817",
+            "full-v03-7-818",
+            "full-v03-7-859",
+            "full-v03-7-860",
+            "full-v03-7-831"
+          ],
+          "history_ids": [
+            "history-Duarte-1",
+            "history-Duarte-2",
+            "history-Duarte-3",
+            "history-Duarte-4",
+            "history-Duarte-5"
+          ]
+        },
+        {
+          "id": "fact-17",
+          "kind": "Substitution investigation",
+          "investigation_player": "Ellis",
+          "text": "Ellis inherited RW. Available history at entry: 5 prior match records, 20 minutes in RW out of 305 recorded minutes. Role familiarity describes this supplied sample, not ability. Equal clock-window comparison: outgoing player completed 4 of 4 passes and took 0 shots before entry; incoming player completed 1 of 3 passes and took 0 shots after entry. 1 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+          "event_ids": [
+            "full-v03-7-831",
+            "full-v03-7-771",
+            "full-v03-7-773",
+            "full-v03-7-798",
+            "full-v03-7-809",
+            "full-v03-7-810",
+            "full-v03-7-845",
+            "full-v03-7-854",
+            "full-v03-7-855",
+            "full-v03-7-890",
+            "full-v03-7-826"
+          ],
+          "history_ids": [
+            "history-Ellis-1",
+            "history-Ellis-2",
+            "history-Ellis-3",
+            "history-Ellis-4",
+            "history-Ellis-5"
+          ]
+        },
+        {
+          "id": "fact-18",
+          "kind": "Focused player involvement",
+          "text": "Ellis (Northbridge) in the selected interval: 1 completed passes from 3 attempted; 2 recorded completed passes received; 1 carries; 0 shots; 0 goals; 0 yellow and 0 red cards. Status at interval end: On pitch. These are event involvements, not a performance rating or off-ball assessment.",
+          "event_ids": [
+            "full-v03-7-831",
+            "full-v03-7-844",
+            "full-v03-7-845",
+            "full-v03-7-853",
+            "full-v03-7-854",
+            "full-v03-7-855",
+            "full-v03-7-866",
+            "full-v03-7-890"
+          ],
+          "context_ids": [
+            "squad:northbridge:Ellis"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "id": "full-v03-7-764",
+          "t": 3364.3,
+          "type": "shot",
+          "actor_id": "Alves",
+          "team_id": "southport",
+          "text": "Alves shoots — saved."
+        },
+        {
+          "id": "full-v03-7-826",
+          "t": 3623.4,
+          "type": "sub",
+          "actor_id": "Duarte",
+          "team_id": "southport",
+          "text": "Duarte replaces Silva."
+        },
+        {
+          "id": "full-v03-7-831",
+          "t": 3640.2,
+          "type": "sub",
+          "actor_id": "Ellis",
+          "team_id": "northbridge",
+          "text": "Ellis replaces Vale."
+        }
+      ],
+      "limitations": [
+        "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+        "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+      ]
+    },
+    "latency_ms": 1923
+  },
+  "scope": "Authored history fixture, not real-football validation; one live sample if requested."
+}

@@ -1,0 +1,19 @@
+Requested interval 40′–50′ · seed 7 · replay event 681 · 3.0s
+
+Personnel and attacking activity
+
+AI-generated · Generated through Microsoft Foundry. Fact references and limited number/timing checks passed; interpretation still needs review.
+
+Northbridge recorded 2 attempts during this spell while their opponent recorded 0 attempts; no attempts were recorded as saved. Shot counts alone do not establish chance quality or overall dominance.
+
+Sources: fact-1 [full-v03-7-553, full-v03-7-564]
+
+Morgan received a yellow card during the interval; comparable defensive-action data before and after are not provided, so we cannot conclude any change in behaviour following the booking.
+
+Sources: fact-2 [full-v03-7-654]
+
+Northbridge declared a change from 4-3-3 to 4-2-3-1 at 45′. In adjacent match-clock windows (40′–45′ before, 45′–50′ after) Northbridge recorded 2 shots before and 0 after while completed passes were 18 before and 22 after; these are recorded activity comparisons, not proof of a causal effect of the declared formation change.
+
+Sources: fact-3 [full-v03-7-611]; fact-4 [full-v03-7-611, full-v03-7-547, full-v03-7-548, full-v03-7-549, full-v03-7-550, full-v03-7-551, full-v03-7-552, full-v03-7-553, full-v03-7-559, full-v03-7-560, full-v03-7-561, full-v03-7-562, full-v03-7-563, full-v03-7-564, full-v03-7-574, full-v03-7-582, full-v03-7-583, full-v03-7-590, full-v03-7-592, full-v03-7-593, full-v03-7-594, full-v03-7-600, full-v03-7-601, full-v03-7-612, full-v03-7-613, full-v03-7-614, full-v03-7-616, full-v03-7-617, full-v03-7-623, full-v03-7-624, full-v03-7-625, full-v03-7-634, full-v03-7-635, full-v03-7-636, full-v03-7-637, full-v03-7-640, full-v03-7-645, full-v03-7-646, full-v03-7-647, full-v03-7-648, full-v03-7-660, full-v03-7-668, full-v03-7-670, full-v03-7-671, full-v03-7-672, full-v03-7-673, full-v03-7-674]
+
+Formation, off-ball movement and chance quality are not inferred from sparse events. Simplified synthetic simulator; declared formation changes are authored inputs and lack independent tracking validation.

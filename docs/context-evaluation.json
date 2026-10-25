@@ -1,0 +1,308 @@
+{
+  "generated_at": "2026-10-25T17:52:56.040Z",
+  "method": "Controlled authored role-history variants with identical match events. Counts-only baseline is an explicit deterministic baseline, not a separately tested LLM.",
+  "results": {
+    "cases": 5,
+    "passed": 5,
+    "incomplete_window_abstention": true,
+    "identical_match_counts_verified": true
+  },
+  "rows": [
+    {
+      "case": "limited",
+      "player": "Ellis",
+      "expected": "limited_sample",
+      "observed": "limited_sample",
+      "counts_only_baseline": {
+        "statistics": {
+          "northbridge": {
+            "goals": 0,
+            "shots": 0,
+            "onTarget": 0,
+            "passes": 53,
+            "completed": 44,
+            "fouls": 0,
+            "yellow": 0,
+            "red": 0,
+            "corners": 0,
+            "substitutions": 1,
+            "controlledSeconds": 241.42459998093545
+          },
+          "southport": {
+            "goals": 0,
+            "shots": 1,
+            "onTarget": 1,
+            "passes": 42,
+            "completed": 32,
+            "fouls": 0,
+            "yellow": 0,
+            "red": 0,
+            "corners": 0,
+            "substitutions": 1,
+            "controlledSeconds": 201.01139256730676
+          }
+        },
+        "answer": "Role familiarity cannot be established from these match counts."
+      },
+      "contextual_answer": "Ellis is taking the right wing role with limited recorded experience there: 20 of 305 minutes across 5 supplied previous matches. In equal windows around entry, the outgoing player completed 4 passes and took 0 shots; Ellis completed 1 pass and took 0 shots. Other personnel or match-state changes also occurred in the span.",
+      "sources": {
+        "history": [
+          "history-Ellis-1",
+          "history-Ellis-2",
+          "history-Ellis-3",
+          "history-Ellis-4",
+          "history-Ellis-5"
+        ],
+        "events": [
+          "full-v03-7-831",
+          "full-v03-7-771",
+          "full-v03-7-773",
+          "full-v03-7-798",
+          "full-v03-7-809",
+          "full-v03-7-810",
+          "full-v03-7-845",
+          "full-v03-7-854",
+          "full-v03-7-855",
+          "full-v03-7-890",
+          "full-v03-7-826"
+        ]
+      },
+      "checks_passed": true
+    },
+    {
+      "case": "experienced",
+      "player": "Duarte",
+      "expected": "recorded_experience",
+      "observed": "recorded_experience",
+      "counts_only_baseline": {
+        "statistics": {
+          "northbridge": {
+            "goals": 0,
+            "shots": 0,
+            "onTarget": 0,
+            "passes": 53,
+            "completed": 44,
+            "fouls": 0,
+            "yellow": 0,
+            "red": 0,
+            "corners": 0,
+            "substitutions": 1,
+            "controlledSeconds": 241.42459998093545
+          },
+          "southport": {
+            "goals": 0,
+            "shots": 1,
+            "onTarget": 1,
+            "passes": 42,
+            "completed": 32,
+            "fouls": 0,
+            "yellow": 0,
+            "red": 0,
+            "corners": 0,
+            "substitutions": 1,
+            "controlledSeconds": 201.01139256730676
+          }
+        },
+        "answer": "Role familiarity cannot be established from these match counts."
+      },
+      "contextual_answer": "Duarte has recorded experience in the right wing role: 305 of 305 minutes across 5 supplied previous matches. The usual-position label alone would miss that context. In equal windows around entry, the outgoing player completed 2 passes and took 0 shots; Duarte completed 1 pass and took 0 shots. Other personnel or match-state changes also occurred in the span.",
+      "sources": {
+        "history": [
+          "history-Duarte-1",
+          "history-Duarte-2",
+          "history-Duarte-3",
+          "history-Duarte-4",
+          "history-Duarte-5"
+        ],
+        "events": [
+          "full-v03-7-826",
+          "full-v03-7-760",
+          "full-v03-7-761",
+          "full-v03-7-762",
+          "full-v03-7-817",
+          "full-v03-7-818",
+          "full-v03-7-859",
+          "full-v03-7-860",
+          "full-v03-7-831"
+        ]
+      },
+      "checks_passed": true
+    },
+    {
+      "case": "missing",
+      "player": "Ellis",
+      "expected": "missing",
+      "observed": "missing",
+      "counts_only_baseline": {
+        "statistics": {
+          "northbridge": {
+            "goals": 0,
+            "shots": 0,
+            "onTarget": 0,
+            "passes": 53,
+            "completed": 44,
+            "fouls": 0,
+            "yellow": 0,
+            "red": 0,
+            "corners": 0,
+            "substitutions": 1,
+            "controlledSeconds": 241.42459998093545
+          },
+          "southport": {
+            "goals": 0,
+            "shots": 1,
+            "onTarget": 1,
+            "passes": 42,
+            "completed": 32,
+            "fouls": 0,
+            "yellow": 0,
+            "red": 0,
+            "corners": 0,
+            "substitutions": 1,
+            "controlledSeconds": 201.01139256730676
+          }
+        },
+        "answer": "Role familiarity cannot be established from these match counts."
+      },
+      "contextual_answer": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity. In equal windows around entry, the outgoing player completed 4 passes and took 0 shots; Ellis completed 1 pass and took 0 shots. Other personnel or match-state changes also occurred in the span.",
+      "sources": {
+        "history": [],
+        "events": [
+          "full-v03-7-831",
+          "full-v03-7-771",
+          "full-v03-7-773",
+          "full-v03-7-798",
+          "full-v03-7-809",
+          "full-v03-7-810",
+          "full-v03-7-845",
+          "full-v03-7-854",
+          "full-v03-7-855",
+          "full-v03-7-890",
+          "full-v03-7-826"
+        ]
+      },
+      "checks_passed": true
+    },
+    {
+      "case": "late",
+      "player": "Ellis",
+      "expected": "missing",
+      "observed": "missing",
+      "counts_only_baseline": {
+        "statistics": {
+          "northbridge": {
+            "goals": 0,
+            "shots": 0,
+            "onTarget": 0,
+            "passes": 53,
+            "completed": 44,
+            "fouls": 0,
+            "yellow": 0,
+            "red": 0,
+            "corners": 0,
+            "substitutions": 1,
+            "controlledSeconds": 241.42459998093545
+          },
+          "southport": {
+            "goals": 0,
+            "shots": 1,
+            "onTarget": 1,
+            "passes": 42,
+            "completed": 32,
+            "fouls": 0,
+            "yellow": 0,
+            "red": 0,
+            "corners": 0,
+            "substitutions": 1,
+            "controlledSeconds": 201.01139256730676
+          }
+        },
+        "answer": "Role familiarity cannot be established from these match counts."
+      },
+      "contextual_answer": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity. In equal windows around entry, the outgoing player completed 4 passes and took 0 shots; Ellis completed 1 pass and took 0 shots. Other personnel or match-state changes also occurred in the span.",
+      "sources": {
+        "history": [],
+        "events": [
+          "full-v03-7-831",
+          "full-v03-7-771",
+          "full-v03-7-773",
+          "full-v03-7-798",
+          "full-v03-7-809",
+          "full-v03-7-810",
+          "full-v03-7-845",
+          "full-v03-7-854",
+          "full-v03-7-855",
+          "full-v03-7-890",
+          "full-v03-7-826"
+        ]
+      },
+      "checks_passed": true
+    },
+    {
+      "case": "zero-minutes",
+      "player": "Ellis",
+      "expected": "missing",
+      "observed": "missing",
+      "counts_only_baseline": {
+        "statistics": {
+          "northbridge": {
+            "goals": 0,
+            "shots": 0,
+            "onTarget": 0,
+            "passes": 53,
+            "completed": 44,
+            "fouls": 0,
+            "yellow": 0,
+            "red": 0,
+            "corners": 0,
+            "substitutions": 1,
+            "controlledSeconds": 241.42459998093545
+          },
+          "southport": {
+            "goals": 0,
+            "shots": 1,
+            "onTarget": 1,
+            "passes": 42,
+            "completed": 32,
+            "fouls": 0,
+            "yellow": 0,
+            "red": 0,
+            "corners": 0,
+            "substitutions": 1,
+            "controlledSeconds": 201.01139256730676
+          }
+        },
+        "answer": "Role familiarity cannot be established from these match counts."
+      },
+      "contextual_answer": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity. In equal windows around entry, the outgoing player completed 4 passes and took 0 shots; Ellis completed 1 pass and took 0 shots. Other personnel or match-state changes also occurred in the span.",
+      "sources": {
+        "history": [
+          "history-Ellis-1",
+          "history-Ellis-2",
+          "history-Ellis-3",
+          "history-Ellis-4",
+          "history-Ellis-5"
+        ],
+        "events": [
+          "full-v03-7-831",
+          "full-v03-7-771",
+          "full-v03-7-773",
+          "full-v03-7-798",
+          "full-v03-7-809",
+          "full-v03-7-810",
+          "full-v03-7-845",
+          "full-v03-7-854",
+          "full-v03-7-855",
+          "full-v03-7-890",
+          "full-v03-7-826"
+        ]
+      },
+      "checks_passed": true
+    }
+  ],
+  "limits": [
+    "Fixture correctness, not real-football validity.",
+    "No fan usefulness study, repeated model ranking benchmark or causal claims.",
+    "This does not establish novelty or superiority to ChatGPT."
+  ]
+}

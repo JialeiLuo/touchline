@@ -1,0 +1,579 @@
+{
+  "simulator_version": "0.3",
+  "seeds": "0–59",
+  "purpose": "Descriptive audit, not empirical football calibration or independent realism validation",
+  "summary": {
+    "events": {
+      "min": 1179,
+      "max": 1223,
+      "mean": 1202.23
+    },
+    "goals": {
+      "min": 0,
+      "max": 4,
+      "mean": 1.47
+    },
+    "shots": {
+      "min": 5,
+      "max": 20,
+      "mean": 11.13
+    },
+    "passes": {
+      "min": 696,
+      "max": 763,
+      "mean": 729.75
+    },
+    "yellow": {
+      "min": 0,
+      "max": 14,
+      "mean": 3.83
+    },
+    "red": {
+      "min": 0,
+      "max": 2,
+      "mean": 0.37
+    }
+  },
+  "rows": [
+    {
+      "seed": 0,
+      "events": 1186,
+      "goals": 1,
+      "shots": 11,
+      "passes": 737,
+      "yellow": 2,
+      "red": 0
+    },
+    {
+      "seed": 1,
+      "events": 1203,
+      "goals": 3,
+      "shots": 10,
+      "passes": 728,
+      "yellow": 4,
+      "red": 0
+    },
+    {
+      "seed": 2,
+      "events": 1203,
+      "goals": 0,
+      "shots": 10,
+      "passes": 746,
+      "yellow": 4,
+      "red": 0
+    },
+    {
+      "seed": 3,
+      "events": 1185,
+      "goals": 0,
+      "shots": 5,
+      "passes": 739,
+      "yellow": 2,
+      "red": 0
+    },
+    {
+      "seed": 4,
+      "events": 1207,
+      "goals": 1,
+      "shots": 12,
+      "passes": 739,
+      "yellow": 5,
+      "red": 0
+    },
+    {
+      "seed": 5,
+      "events": 1208,
+      "goals": 0,
+      "shots": 10,
+      "passes": 751,
+      "yellow": 3,
+      "red": 0
+    },
+    {
+      "seed": 6,
+      "events": 1202,
+      "goals": 0,
+      "shots": 10,
+      "passes": 717,
+      "yellow": 5,
+      "red": 0
+    },
+    {
+      "seed": 7,
+      "events": 1206,
+      "goals": 1,
+      "shots": 9,
+      "passes": 720,
+      "yellow": 7,
+      "red": 0
+    },
+    {
+      "seed": 8,
+      "events": 1205,
+      "goals": 2,
+      "shots": 10,
+      "passes": 729,
+      "yellow": 5,
+      "red": 0
+    },
+    {
+      "seed": 9,
+      "events": 1196,
+      "goals": 1,
+      "shots": 13,
+      "passes": 730,
+      "yellow": 3,
+      "red": 1
+    },
+    {
+      "seed": 10,
+      "events": 1190,
+      "goals": 0,
+      "shots": 15,
+      "passes": 725,
+      "yellow": 2,
+      "red": 0
+    },
+    {
+      "seed": 11,
+      "events": 1222,
+      "goals": 4,
+      "shots": 17,
+      "passes": 732,
+      "yellow": 4,
+      "red": 0
+    },
+    {
+      "seed": 12,
+      "events": 1196,
+      "goals": 0,
+      "shots": 9,
+      "passes": 744,
+      "yellow": 3,
+      "red": 1
+    },
+    {
+      "seed": 13,
+      "events": 1211,
+      "goals": 1,
+      "shots": 20,
+      "passes": 740,
+      "yellow": 4,
+      "red": 1
+    },
+    {
+      "seed": 14,
+      "events": 1196,
+      "goals": 1,
+      "shots": 12,
+      "passes": 729,
+      "yellow": 3,
+      "red": 1
+    },
+    {
+      "seed": 15,
+      "events": 1197,
+      "goals": 2,
+      "shots": 12,
+      "passes": 728,
+      "yellow": 3,
+      "red": 0
+    },
+    {
+      "seed": 16,
+      "events": 1195,
+      "goals": 0,
+      "shots": 9,
+      "passes": 723,
+      "yellow": 6,
+      "red": 1
+    },
+    {
+      "seed": 17,
+      "events": 1206,
+      "goals": 2,
+      "shots": 16,
+      "passes": 708,
+      "yellow": 6,
+      "red": 1
+    },
+    {
+      "seed": 18,
+      "events": 1185,
+      "goals": 3,
+      "shots": 12,
+      "passes": 696,
+      "yellow": 3,
+      "red": 0
+    },
+    {
+      "seed": 19,
+      "events": 1199,
+      "goals": 2,
+      "shots": 9,
+      "passes": 722,
+      "yellow": 3,
+      "red": 0
+    },
+    {
+      "seed": 20,
+      "events": 1202,
+      "goals": 2,
+      "shots": 11,
+      "passes": 744,
+      "yellow": 4,
+      "red": 0
+    },
+    {
+      "seed": 21,
+      "events": 1211,
+      "goals": 1,
+      "shots": 16,
+      "passes": 763,
+      "yellow": 4,
+      "red": 0
+    },
+    {
+      "seed": 22,
+      "events": 1198,
+      "goals": 4,
+      "shots": 11,
+      "passes": 739,
+      "yellow": 2,
+      "red": 0
+    },
+    {
+      "seed": 23,
+      "events": 1216,
+      "goals": 2,
+      "shots": 14,
+      "passes": 703,
+      "yellow": 5,
+      "red": 0
+    },
+    {
+      "seed": 24,
+      "events": 1216,
+      "goals": 0,
+      "shots": 10,
+      "passes": 728,
+      "yellow": 7,
+      "red": 2
+    },
+    {
+      "seed": 25,
+      "events": 1201,
+      "goals": 1,
+      "shots": 11,
+      "passes": 729,
+      "yellow": 1,
+      "red": 0
+    },
+    {
+      "seed": 26,
+      "events": 1193,
+      "goals": 2,
+      "shots": 13,
+      "passes": 730,
+      "yellow": 1,
+      "red": 0
+    },
+    {
+      "seed": 27,
+      "events": 1211,
+      "goals": 1,
+      "shots": 7,
+      "passes": 754,
+      "yellow": 9,
+      "red": 1
+    },
+    {
+      "seed": 28,
+      "events": 1197,
+      "goals": 2,
+      "shots": 10,
+      "passes": 739,
+      "yellow": 2,
+      "red": 0
+    },
+    {
+      "seed": 29,
+      "events": 1211,
+      "goals": 0,
+      "shots": 12,
+      "passes": 737,
+      "yellow": 4,
+      "red": 1
+    },
+    {
+      "seed": 30,
+      "events": 1204,
+      "goals": 0,
+      "shots": 8,
+      "passes": 721,
+      "yellow": 7,
+      "red": 1
+    },
+    {
+      "seed": 31,
+      "events": 1197,
+      "goals": 2,
+      "shots": 10,
+      "passes": 733,
+      "yellow": 0,
+      "red": 0
+    },
+    {
+      "seed": 32,
+      "events": 1222,
+      "goals": 1,
+      "shots": 13,
+      "passes": 735,
+      "yellow": 3,
+      "red": 0
+    },
+    {
+      "seed": 33,
+      "events": 1179,
+      "goals": 0,
+      "shots": 8,
+      "passes": 698,
+      "yellow": 6,
+      "red": 0
+    },
+    {
+      "seed": 34,
+      "events": 1200,
+      "goals": 1,
+      "shots": 7,
+      "passes": 746,
+      "yellow": 2,
+      "red": 0
+    },
+    {
+      "seed": 35,
+      "events": 1210,
+      "goals": 2,
+      "shots": 17,
+      "passes": 705,
+      "yellow": 4,
+      "red": 0
+    },
+    {
+      "seed": 36,
+      "events": 1198,
+      "goals": 2,
+      "shots": 10,
+      "passes": 739,
+      "yellow": 3,
+      "red": 1
+    },
+    {
+      "seed": 37,
+      "events": 1207,
+      "goals": 1,
+      "shots": 13,
+      "passes": 732,
+      "yellow": 2,
+      "red": 1
+    },
+    {
+      "seed": 38,
+      "events": 1199,
+      "goals": 1,
+      "shots": 12,
+      "passes": 731,
+      "yellow": 2,
+      "red": 0
+    },
+    {
+      "seed": 39,
+      "events": 1213,
+      "goals": 1,
+      "shots": 11,
+      "passes": 741,
+      "yellow": 6,
+      "red": 1
+    },
+    {
+      "seed": 40,
+      "events": 1204,
+      "goals": 1,
+      "shots": 10,
+      "passes": 739,
+      "yellow": 3,
+      "red": 1
+    },
+    {
+      "seed": 41,
+      "events": 1215,
+      "goals": 0,
+      "shots": 11,
+      "passes": 721,
+      "yellow": 14,
+      "red": 2
+    },
+    {
+      "seed": 42,
+      "events": 1201,
+      "goals": 1,
+      "shots": 11,
+      "passes": 724,
+      "yellow": 3,
+      "red": 0
+    },
+    {
+      "seed": 43,
+      "events": 1200,
+      "goals": 3,
+      "shots": 13,
+      "passes": 719,
+      "yellow": 2,
+      "red": 0
+    },
+    {
+      "seed": 44,
+      "events": 1207,
+      "goals": 3,
+      "shots": 6,
+      "passes": 737,
+      "yellow": 4,
+      "red": 1
+    },
+    {
+      "seed": 45,
+      "events": 1196,
+      "goals": 3,
+      "shots": 14,
+      "passes": 712,
+      "yellow": 5,
+      "red": 0
+    },
+    {
+      "seed": 46,
+      "events": 1201,
+      "goals": 2,
+      "shots": 11,
+      "passes": 721,
+      "yellow": 5,
+      "red": 1
+    },
+    {
+      "seed": 47,
+      "events": 1200,
+      "goals": 3,
+      "shots": 13,
+      "passes": 723,
+      "yellow": 4,
+      "red": 0
+    },
+    {
+      "seed": 48,
+      "events": 1203,
+      "goals": 1,
+      "shots": 11,
+      "passes": 740,
+      "yellow": 1,
+      "red": 0
+    },
+    {
+      "seed": 49,
+      "events": 1183,
+      "goals": 3,
+      "shots": 12,
+      "passes": 718,
+      "yellow": 3,
+      "red": 0
+    },
+    {
+      "seed": 50,
+      "events": 1182,
+      "goals": 2,
+      "shots": 10,
+      "passes": 740,
+      "yellow": 3,
+      "red": 0
+    },
+    {
+      "seed": 51,
+      "events": 1206,
+      "goals": 1,
+      "shots": 11,
+      "passes": 734,
+      "yellow": 3,
+      "red": 0
+    },
+    {
+      "seed": 52,
+      "events": 1188,
+      "goals": 4,
+      "shots": 9,
+      "passes": 725,
+      "yellow": 1,
+      "red": 0
+    },
+    {
+      "seed": 53,
+      "events": 1197,
+      "goals": 1,
+      "shots": 10,
+      "passes": 739,
+      "yellow": 1,
+      "red": 0
+    },
+    {
+      "seed": 54,
+      "events": 1210,
+      "goals": 1,
+      "shots": 12,
+      "passes": 740,
+      "yellow": 4,
+      "red": 0
+    },
+    {
+      "seed": 55,
+      "events": 1218,
+      "goals": 1,
+      "shots": 10,
+      "passes": 749,
+      "yellow": 4,
+      "red": 0
+    },
+    {
+      "seed": 56,
+      "events": 1191,
+      "goals": 3,
+      "shots": 9,
+      "passes": 708,
+      "yellow": 5,
+      "red": 0
+    },
+    {
+      "seed": 57,
+      "events": 1205,
+      "goals": 1,
+      "shots": 10,
+      "passes": 717,
+      "yellow": 5,
+      "red": 1
+    },
+    {
+      "seed": 58,
+      "events": 1223,
+      "goals": 4,
+      "shots": 9,
+      "passes": 722,
+      "yellow": 2,
+      "red": 0
+    },
+    {
+      "seed": 59,
+      "events": 1221,
+      "goals": 0,
+      "shots": 11,
+      "passes": 727,
+      "yellow": 7,
+      "red": 2
+    }
+  ]
+}

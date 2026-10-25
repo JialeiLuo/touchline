@@ -1,0 +1,15 @@
+Requested interval 59′–65′ · seed 7 · replay event 900 · 2.8s
+
+Substitutions and immediate shot outcomes
+
+AI-generated · Generated through Microsoft Foundry. Fact references and limited number/timing checks passed; interpretation still needs review.
+
+Both teams made like-for-like-looking substitutions at 60′: Northbridge brought on Ellis for Vale and Southport brought on Duarte for Silva. Neither substitute is recorded as having taken a shot in this interval.
+
+Sources: fact-1 [full-7-820]; fact-2 [full-7-824]
+
+Authored squad context notes that Ellis and Duarte are usually STs but, at 60′, each inherited the declared RW slot; both teams are declared as starting 4-3-3 under their named managers. The record cautions that a different usual role does not establish a tactical benefit or disadvantage.
+
+Sources: fact-3 [full-7-820]; fact-4 [full-7-824]
+
+Formation, off-ball movement and chance quality are not inferred from sparse events. Simplified synthetic simulator; no real-match validation. Historical player context and tactical tracking are not connected.

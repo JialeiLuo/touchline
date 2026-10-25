@@ -1,0 +1,1065 @@
+{
+  "generated_at": "2026-10-25T13:45:08.325Z",
+  "generator_version": "0.3",
+  "scope": "Four fixed seed-7 intervals, one sample each. Not a statistical benchmark. Token usage includes failed validation responses where returned. No automatic retries.",
+  "rows": [
+    {
+      "case": "goal",
+      "input": {
+        "name": "goal",
+        "from": 1393.4,
+        "to": 1574,
+        "viewer_mode": "quick",
+        "seed": 7,
+        "index": 356
+      },
+      "latency_ms": 2588,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 817,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 184,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1001
+      },
+      "validation_error": "Unsupported structured comparison",
+      "result": {
+        "mode": "template",
+        "reason": "The AI response was unavailable or failed format, reference or claim checks. Showing the template instead.",
+        "headline": "Your interval catch-up",
+        "paragraphs": [
+          {
+            "text": "25′: Northbridge scored through Turner.",
+            "evidence_ids": [
+              "fact-1"
+            ]
+          },
+          {
+            "text": "Northbridge produced more attempts during this spell (1 against 0). No attempts were recorded as saved. Shot counts alone do not establish chance quality or overall dominance.",
+            "evidence_ids": [
+              "fact-2"
+            ]
+          }
+        ],
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+        ]
+      },
+      "evidence": [
+        {
+          "id": "fact-1",
+          "text": "25′: Northbridge scored through Turner.",
+          "kind": "The score changed",
+          "event_ids": [
+            "full-v03-7-347"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "text": "Northbridge produced more attempts during this spell (1 against 0). No attempts were recorded as saved. Shot counts alone do not establish chance quality or overall dominance.",
+          "kind": "Where the chances came",
+          "event_ids": [
+            "full-v03-7-346"
+          ]
+        }
+      ],
+      "raw_model_output": {
+        "headline": "Attacking activity and outcome",
+        "paragraphs": [
+          {
+            "comparisons": [
+              {
+                "fact_id": "fact-2",
+                "team_id": "Northbridge",
+                "metric": "shots",
+                "before": 0,
+                "after": 1,
+                "direction": "increased"
+              }
+            ],
+            "text": "At 25′ Northbridge scored via Turner, and Northbridge also produced more attempts in the spell (1 against 0), so their shot count increased from 0 to 1. Shot totals are noted but do not establish chance quality or dominance.",
+            "evidence_ids": [
+              "fact-1",
+              "fact-2"
+            ]
+          }
+        ],
+        "limitations": [
+          "Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+        ]
+      },
+      "review_status": "Not independently reviewed; passing guards does not establish semantic correctness."
+    },
+    {
+      "case": "substitution",
+      "input": {
+        "name": "substitution",
+        "from": 3323,
+        "to": 3924,
+        "viewer_mode": "tactical",
+        "seed": 7,
+        "index": 891
+      },
+      "latency_ms": 4311,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 2159,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 534,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2693
+      },
+      "validation_error": "Unsupported numeric claim",
+      "result": {
+        "mode": "template",
+        "reason": "The AI response was unavailable or failed format, reference or claim checks. Showing the template instead.",
+        "headline": "Your interval catch-up",
+        "paragraphs": [
+          {
+            "text": "Southport produced more attempts during this spell (1 against 0). 1 attempt(s) required a save. Shot counts alone do not establish chance quality or overall dominance.",
+            "evidence_ids": [
+              "fact-1"
+            ]
+          },
+          {
+            "text": "At 60′, Southport introduced Duarte for Silva. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+            "evidence_ids": [
+              "fact-2"
+            ]
+          },
+          {
+            "text": "At 60′, Northbridge introduced Ellis for Vale. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+            "evidence_ids": [
+              "fact-3"
+            ]
+          },
+          {
+            "text": "Authored fictional squad context: Duarte usually plays ST. At 60′, Duarte replaced Silva and inherited the declared RW slot. Southport's manager is Rafael Duarte; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+            "evidence_ids": [
+              "fact-4"
+            ]
+          },
+          {
+            "text": "Authored fictional squad context: Ellis usually plays ST. At 60′, Ellis replaced Vale and inherited the declared RW slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+            "evidence_ids": [
+              "fact-5"
+            ]
+          },
+          {
+            "text": "Northbridge: shots before = 0; after = 0; direction = unchanged. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+            "evidence_ids": [
+              "fact-6"
+            ]
+          },
+          {
+            "text": "Northbridge: completed passes before = 20; after = 21; direction = increased. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+            "evidence_ids": [
+              "fact-7"
+            ]
+          },
+          {
+            "text": "Southport: shots before = 1; after = 0; direction = decreased. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+            "evidence_ids": [
+              "fact-8"
+            ]
+          },
+          {
+            "text": "Southport: completed passes before = 17; after = 12; direction = decreased. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+            "evidence_ids": [
+              "fact-9"
+            ]
+          }
+        ],
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+        ]
+      },
+      "evidence": [
+        {
+          "id": "fact-1",
+          "text": "Southport produced more attempts during this spell (1 against 0). 1 attempt(s) required a save. Shot counts alone do not establish chance quality or overall dominance.",
+          "kind": "Where the chances came",
+          "event_ids": [
+            "full-v03-7-764"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "text": "At 60′, Southport introduced Duarte for Silva. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+          "kind": "A personnel change",
+          "event_ids": [
+            "full-v03-7-826"
+          ]
+        },
+        {
+          "id": "fact-3",
+          "text": "At 60′, Northbridge introduced Ellis for Vale. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+          "kind": "A personnel change",
+          "event_ids": [
+            "full-v03-7-831"
+          ]
+        },
+        {
+          "id": "fact-4",
+          "text": "Authored fictional squad context: Duarte usually plays ST. At 60′, Duarte replaced Silva and inherited the declared RW slot. Southport's manager is Rafael Duarte; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+          "event_ids": [
+            "full-v03-7-826"
+          ],
+          "context_ids": [
+            "squad:southport:Duarte"
+          ]
+        },
+        {
+          "id": "fact-5",
+          "text": "Authored fictional squad context: Ellis usually plays ST. At 60′, Ellis replaced Vale and inherited the declared RW slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+          "event_ids": [
+            "full-v03-7-831"
+          ],
+          "context_ids": [
+            "squad:northbridge:Ellis"
+          ]
+        },
+        {
+          "id": "fact-6",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "shots",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "full-v03-7-826"
+          ],
+          "text": "Northbridge: shots before = 0; after = 0; direction = unchanged. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-7",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "completed_passes",
+            "before": 20,
+            "after": 21,
+            "delta": 1,
+            "direction": "increased",
+            "event_ids": [
+              "full-v03-7-755",
+              "full-v03-7-767",
+              "full-v03-7-768",
+              "full-v03-7-769",
+              "full-v03-7-770",
+              "full-v03-7-771",
+              "full-v03-7-772",
+              "full-v03-7-773",
+              "full-v03-7-774",
+              "full-v03-7-779",
+              "full-v03-7-780",
+              "full-v03-7-781",
+              "full-v03-7-791",
+              "full-v03-7-798",
+              "full-v03-7-799",
+              "full-v03-7-800",
+              "full-v03-7-807",
+              "full-v03-7-808",
+              "full-v03-7-810",
+              "full-v03-7-811",
+              "full-v03-7-827",
+              "full-v03-7-828",
+              "full-v03-7-829",
+              "full-v03-7-841",
+              "full-v03-7-842",
+              "full-v03-7-843",
+              "full-v03-7-844",
+              "full-v03-7-852",
+              "full-v03-7-853",
+              "full-v03-7-863",
+              "full-v03-7-865",
+              "full-v03-7-871",
+              "full-v03-7-872",
+              "full-v03-7-874",
+              "full-v03-7-878",
+              "full-v03-7-879",
+              "full-v03-7-880",
+              "full-v03-7-881",
+              "full-v03-7-882",
+              "full-v03-7-883",
+              "full-v03-7-890"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-826",
+            "full-v03-7-755",
+            "full-v03-7-767",
+            "full-v03-7-768",
+            "full-v03-7-769",
+            "full-v03-7-770",
+            "full-v03-7-771",
+            "full-v03-7-772",
+            "full-v03-7-773",
+            "full-v03-7-774",
+            "full-v03-7-779",
+            "full-v03-7-780",
+            "full-v03-7-781",
+            "full-v03-7-791",
+            "full-v03-7-798",
+            "full-v03-7-799",
+            "full-v03-7-800",
+            "full-v03-7-807",
+            "full-v03-7-808",
+            "full-v03-7-810",
+            "full-v03-7-811",
+            "full-v03-7-827",
+            "full-v03-7-828",
+            "full-v03-7-829",
+            "full-v03-7-841",
+            "full-v03-7-842",
+            "full-v03-7-843",
+            "full-v03-7-844",
+            "full-v03-7-852",
+            "full-v03-7-853",
+            "full-v03-7-863",
+            "full-v03-7-865",
+            "full-v03-7-871",
+            "full-v03-7-872",
+            "full-v03-7-874",
+            "full-v03-7-878",
+            "full-v03-7-879",
+            "full-v03-7-880",
+            "full-v03-7-881",
+            "full-v03-7-882",
+            "full-v03-7-883",
+            "full-v03-7-890"
+          ],
+          "text": "Northbridge: completed passes before = 20; after = 21; direction = increased. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-8",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "shots",
+            "before": 1,
+            "after": 0,
+            "delta": -1,
+            "direction": "decreased",
+            "event_ids": [
+              "full-v03-7-764"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-826",
+            "full-v03-7-764"
+          ],
+          "text": "Southport: shots before = 1; after = 0; direction = decreased. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-9",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "completed_passes",
+            "before": 17,
+            "after": 12,
+            "delta": -5,
+            "direction": "decreased",
+            "event_ids": [
+              "full-v03-7-758",
+              "full-v03-7-759",
+              "full-v03-7-762",
+              "full-v03-7-776",
+              "full-v03-7-784",
+              "full-v03-7-785",
+              "full-v03-7-787",
+              "full-v03-7-788",
+              "full-v03-7-789",
+              "full-v03-7-794",
+              "full-v03-7-795",
+              "full-v03-7-803",
+              "full-v03-7-804",
+              "full-v03-7-818",
+              "full-v03-7-819",
+              "full-v03-7-822",
+              "full-v03-7-823",
+              "full-v03-7-832",
+              "full-v03-7-834",
+              "full-v03-7-848",
+              "full-v03-7-849",
+              "full-v03-7-850",
+              "full-v03-7-857",
+              "full-v03-7-858",
+              "full-v03-7-860",
+              "full-v03-7-861",
+              "full-v03-7-868",
+              "full-v03-7-887",
+              "full-v03-7-888"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-826",
+            "full-v03-7-758",
+            "full-v03-7-759",
+            "full-v03-7-762",
+            "full-v03-7-776",
+            "full-v03-7-784",
+            "full-v03-7-785",
+            "full-v03-7-787",
+            "full-v03-7-788",
+            "full-v03-7-789",
+            "full-v03-7-794",
+            "full-v03-7-795",
+            "full-v03-7-803",
+            "full-v03-7-804",
+            "full-v03-7-818",
+            "full-v03-7-819",
+            "full-v03-7-822",
+            "full-v03-7-823",
+            "full-v03-7-832",
+            "full-v03-7-834",
+            "full-v03-7-848",
+            "full-v03-7-849",
+            "full-v03-7-850",
+            "full-v03-7-857",
+            "full-v03-7-858",
+            "full-v03-7-860",
+            "full-v03-7-861",
+            "full-v03-7-868",
+            "full-v03-7-887",
+            "full-v03-7-888"
+          ],
+          "text": "Southport: completed passes before = 17; after = 12; direction = decreased. Before window [3323.4, 3623.4) seconds; after window [3623.4, 3923.4) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        }
+      ],
+      "raw_model_output": {
+        "headline": "Personnel and attacking activity",
+        "paragraphs": [
+          {
+            "comparisons": [
+              {
+                "fact_id": "fact-8",
+                "team_id": "southport",
+                "metric": "shots",
+                "before": 1,
+                "after": 0,
+                "direction": "decreased"
+              }
+            ],
+            "text": "Southport registered 1 attempt in the before window and 0 in the after window; that single before attempt required a save according to the facts. The record notes shot counts alone do not establish chance quality or dominance. (See fact-1 and fact-8.)",
+            "evidence_ids": [
+              "fact-1",
+              "fact-8"
+            ]
+          },
+          {
+            "comparisons": [
+              {
+                "fact_id": "fact-9",
+                "team_id": "southport",
+                "metric": "completed_passes",
+                "before": 17,
+                "after": 12,
+                "direction": "decreased"
+              }
+            ],
+            "text": "Southport’s completed passes fell from 17 before the substitution point to 12 after it. This change is reported as a raw count difference and is not claimed to be causal. (See fact-9.)",
+            "evidence_ids": [
+              "fact-9"
+            ]
+          },
+          {
+            "comparisons": [
+              {
+                "fact_id": "fact-6",
+                "team_id": "northbridge",
+                "metric": "shots",
+                "before": 0,
+                "after": 0,
+                "direction": "unchanged"
+              },
+              {
+                "fact_id": "fact-7",
+                "team_id": "northbridge",
+                "metric": "completed_passes",
+                "before": 20,
+                "after": 21,
+                "direction": "increased"
+              }
+            ],
+            "text": "Northbridge had 0 shots in both windows while completed passes rose slightly from 20 to 21. Both teams were assessed in equal match-clock windows around the substitutions; these counts do not by themselves prove causal effects. (See fact-6 and fact-7.)",
+            "evidence_ids": [
+              "fact-6",
+              "fact-7"
+            ]
+          },
+          {
+            "comparisons": [],
+            "text": "Substitutions: at 60′ Southport replaced Silva with Duarte (who is authored as usually a ST but was assigned the RW slot) and Northbridge replaced Vale with Ellis (authored as usually a ST but assigned the RW slot). Neither substitute produced a recorded shot in this interval; the squad-role notes are authored context and not evidence of tactical benefit. (See fact-2, fact-3, fact-4, fact-5.)",
+            "evidence_ids": [
+              "fact-2",
+              "fact-3",
+              "fact-4",
+              "fact-5"
+            ]
+          }
+        ],
+        "limitations": [
+          "Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+        ]
+      },
+      "review_status": "Not independently reviewed; passing guards does not establish semantic correctness."
+    },
+    {
+      "case": "quiet",
+      "input": {
+        "name": "quiet",
+        "from": 0,
+        "to": 120,
+        "viewer_mode": "quick",
+        "seed": 7,
+        "index": 24
+      },
+      "latency_ms": 1886,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 788,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 136,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 924
+      },
+      "validation_error": null,
+      "result": {
+        "headline": "Routine play without major events",
+        "paragraphs": [
+          {
+            "comparisons": [],
+            "text": "No goals, shots, cards, substitutions or tactical changes were recorded in this interval; the packet notes routine play but warns that absence of events does not prove the play was uneventful.",
+            "evidence_ids": [
+              "fact-1"
+            ]
+          }
+        ],
+        "limitations": [
+          "Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+        ],
+        "mode": "foundry",
+        "reason": "Generated through Microsoft Foundry. Fact references and limited number/timing checks passed; interpretation still needs review."
+      },
+      "evidence": [
+        {
+          "id": "fact-1",
+          "text": "This interval contains routine play but no recorded goal, shot, card, substitution or tactical change. That does not prove that the play was uneventful.",
+          "kind": "No major recorded incident",
+          "event_ids": [
+            "full-v03-7-1",
+            "full-v03-7-2",
+            "full-v03-7-3"
+          ]
+        }
+      ],
+      "raw_model_output": {
+        "headline": "Routine play without major events",
+        "paragraphs": [
+          {
+            "comparisons": [],
+            "text": "No goals, shots, cards, substitutions or tactical changes were recorded in this interval; the packet notes routine play but warns that absence of events does not prove the play was uneventful.",
+            "evidence_ids": [
+              "fact-1"
+            ]
+          }
+        ],
+        "limitations": [
+          "Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+        ]
+      },
+      "review_status": "Not independently reviewed; passing guards does not establish semantic correctness."
+    },
+    {
+      "case": "tactical-change",
+      "input": {
+        "name": "tactical-change",
+        "from": 2400,
+        "to": 3000,
+        "viewer_mode": "tactical",
+        "seed": 7,
+        "index": 681
+      },
+      "latency_ms": 3822,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 2097,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 496,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2593
+      },
+      "validation_error": "Unsupported numeric claim",
+      "result": {
+        "mode": "template",
+        "reason": "The AI response was unavailable or failed format, reference or claim checks. Showing the template instead.",
+        "headline": "Your interval catch-up",
+        "paragraphs": [
+          {
+            "text": "Northbridge produced more attempts during this spell (2 against 0). No attempts were recorded as saved. Shot counts alone do not establish chance quality or overall dominance.",
+            "evidence_ids": [
+              "fact-1"
+            ]
+          },
+          {
+            "text": "Morgan received a yellow card. We would need comparable defensive actions before claiming that a booked player became more cautious.",
+            "evidence_ids": [
+              "fact-2"
+            ]
+          },
+          {
+            "text": "Northbridge declared a change from 4-3-3 to 4-2-3-1 at 45′. This is an explicit synthetic instruction, not a formation inferred from video. Its effect still needs assessment.",
+            "evidence_ids": [
+              "fact-3"
+            ]
+          },
+          {
+            "text": "Comparison windows: 40′–45′ before, 45′–50′ after. Northbridge recorded 2 shots before and 0 after; completed passes were 18 before and 22 after. These equal match-clock windows describe recorded activity. Different opponents' actions, game state and chance variation remain alternative explanations; the comparison does not establish a causal formation effect.",
+            "evidence_ids": [
+              "fact-4"
+            ]
+          },
+          {
+            "text": "Northbridge: shots before = 2; after = 0; direction = decreased. Before window [2400, 2700) seconds; after window [2700, 3000) seconds. Equal match-clock windows around the recorded tactical_change. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+            "evidence_ids": [
+              "fact-5"
+            ]
+          },
+          {
+            "text": "Northbridge: completed passes before = 18; after = 22; direction = increased. Before window [2400, 2700) seconds; after window [2700, 3000) seconds. Equal match-clock windows around the recorded tactical_change. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+            "evidence_ids": [
+              "fact-6"
+            ]
+          },
+          {
+            "text": "Southport: shots before = 0; after = 0; direction = unchanged. Before window [2400, 2700) seconds; after window [2700, 3000) seconds. Equal match-clock windows around the recorded tactical_change. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+            "evidence_ids": [
+              "fact-7"
+            ]
+          },
+          {
+            "text": "Southport: completed passes before = 17; after = 16; direction = decreased. Before window [2400, 2700) seconds; after window [2700, 3000) seconds. Equal match-clock windows around the recorded tactical_change. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+            "evidence_ids": [
+              "fact-8"
+            ]
+          }
+        ],
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+        ]
+      },
+      "evidence": [
+        {
+          "id": "fact-1",
+          "text": "Northbridge produced more attempts during this spell (2 against 0). No attempts were recorded as saved. Shot counts alone do not establish chance quality or overall dominance.",
+          "kind": "Where the chances came",
+          "event_ids": [
+            "full-v03-7-553",
+            "full-v03-7-564"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "text": "Morgan received a yellow card. We would need comparable defensive actions before claiming that a booked player became more cautious.",
+          "kind": "Discipline to watch",
+          "event_ids": [
+            "full-v03-7-654"
+          ]
+        },
+        {
+          "id": "fact-3",
+          "text": "Northbridge declared a change from 4-3-3 to 4-2-3-1 at 45′. This is an explicit synthetic instruction, not a formation inferred from video. Its effect still needs assessment.",
+          "kind": "A recorded tactical change",
+          "event_ids": [
+            "full-v03-7-611"
+          ]
+        },
+        {
+          "id": "fact-4",
+          "text": "Comparison windows: 40′–45′ before, 45′–50′ after. Northbridge recorded 2 shots before and 0 after; completed passes were 18 before and 22 after. These equal match-clock windows describe recorded activity. Different opponents' actions, game state and chance variation remain alternative explanations; the comparison does not establish a causal formation effect.",
+          "kind": "Before and after the declared change",
+          "event_ids": [
+            "full-v03-7-611",
+            "full-v03-7-547",
+            "full-v03-7-548",
+            "full-v03-7-549",
+            "full-v03-7-550",
+            "full-v03-7-551",
+            "full-v03-7-552",
+            "full-v03-7-553",
+            "full-v03-7-559",
+            "full-v03-7-560",
+            "full-v03-7-561",
+            "full-v03-7-562",
+            "full-v03-7-563",
+            "full-v03-7-564",
+            "full-v03-7-574",
+            "full-v03-7-582",
+            "full-v03-7-583",
+            "full-v03-7-590",
+            "full-v03-7-592",
+            "full-v03-7-593",
+            "full-v03-7-594",
+            "full-v03-7-600",
+            "full-v03-7-601",
+            "full-v03-7-612",
+            "full-v03-7-613",
+            "full-v03-7-614",
+            "full-v03-7-616",
+            "full-v03-7-617",
+            "full-v03-7-623",
+            "full-v03-7-624",
+            "full-v03-7-625",
+            "full-v03-7-634",
+            "full-v03-7-635",
+            "full-v03-7-636",
+            "full-v03-7-637",
+            "full-v03-7-640",
+            "full-v03-7-645",
+            "full-v03-7-646",
+            "full-v03-7-647",
+            "full-v03-7-648",
+            "full-v03-7-660",
+            "full-v03-7-668",
+            "full-v03-7-670",
+            "full-v03-7-671",
+            "full-v03-7-672",
+            "full-v03-7-673",
+            "full-v03-7-674"
+          ]
+        },
+        {
+          "id": "fact-5",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "shots",
+            "before": 2,
+            "after": 0,
+            "delta": -2,
+            "direction": "decreased",
+            "event_ids": [
+              "full-v03-7-553",
+              "full-v03-7-564"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-611",
+            "full-v03-7-553",
+            "full-v03-7-564"
+          ],
+          "text": "Northbridge: shots before = 2; after = 0; direction = decreased. Before window [2400, 2700) seconds; after window [2700, 3000) seconds. Equal match-clock windows around the recorded tactical_change. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-6",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "completed_passes",
+            "before": 18,
+            "after": 22,
+            "delta": 4,
+            "direction": "increased",
+            "event_ids": [
+              "full-v03-7-547",
+              "full-v03-7-548",
+              "full-v03-7-549",
+              "full-v03-7-550",
+              "full-v03-7-551",
+              "full-v03-7-552",
+              "full-v03-7-559",
+              "full-v03-7-560",
+              "full-v03-7-561",
+              "full-v03-7-562",
+              "full-v03-7-563",
+              "full-v03-7-582",
+              "full-v03-7-583",
+              "full-v03-7-590",
+              "full-v03-7-592",
+              "full-v03-7-593",
+              "full-v03-7-594",
+              "full-v03-7-600",
+              "full-v03-7-612",
+              "full-v03-7-613",
+              "full-v03-7-614",
+              "full-v03-7-616",
+              "full-v03-7-623",
+              "full-v03-7-624",
+              "full-v03-7-634",
+              "full-v03-7-635",
+              "full-v03-7-636",
+              "full-v03-7-637",
+              "full-v03-7-640",
+              "full-v03-7-645",
+              "full-v03-7-646",
+              "full-v03-7-647",
+              "full-v03-7-648",
+              "full-v03-7-660",
+              "full-v03-7-668",
+              "full-v03-7-670",
+              "full-v03-7-671",
+              "full-v03-7-672",
+              "full-v03-7-673",
+              "full-v03-7-674"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-611",
+            "full-v03-7-547",
+            "full-v03-7-548",
+            "full-v03-7-549",
+            "full-v03-7-550",
+            "full-v03-7-551",
+            "full-v03-7-552",
+            "full-v03-7-559",
+            "full-v03-7-560",
+            "full-v03-7-561",
+            "full-v03-7-562",
+            "full-v03-7-563",
+            "full-v03-7-582",
+            "full-v03-7-583",
+            "full-v03-7-590",
+            "full-v03-7-592",
+            "full-v03-7-593",
+            "full-v03-7-594",
+            "full-v03-7-600",
+            "full-v03-7-612",
+            "full-v03-7-613",
+            "full-v03-7-614",
+            "full-v03-7-616",
+            "full-v03-7-623",
+            "full-v03-7-624",
+            "full-v03-7-634",
+            "full-v03-7-635",
+            "full-v03-7-636",
+            "full-v03-7-637",
+            "full-v03-7-640",
+            "full-v03-7-645",
+            "full-v03-7-646",
+            "full-v03-7-647",
+            "full-v03-7-648",
+            "full-v03-7-660",
+            "full-v03-7-668",
+            "full-v03-7-670",
+            "full-v03-7-671",
+            "full-v03-7-672",
+            "full-v03-7-673",
+            "full-v03-7-674"
+          ],
+          "text": "Northbridge: completed passes before = 18; after = 22; direction = increased. Before window [2400, 2700) seconds; after window [2700, 3000) seconds. Equal match-clock windows around the recorded tactical_change. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-7",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "shots",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "full-v03-7-611"
+          ],
+          "text": "Southport: shots before = 0; after = 0; direction = unchanged. Before window [2400, 2700) seconds; after window [2700, 3000) seconds. Equal match-clock windows around the recorded tactical_change. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-8",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "completed_passes",
+            "before": 17,
+            "after": 16,
+            "delta": -1,
+            "direction": "decreased",
+            "event_ids": [
+              "full-v03-7-555",
+              "full-v03-7-567",
+              "full-v03-7-568",
+              "full-v03-7-569",
+              "full-v03-7-570",
+              "full-v03-7-571",
+              "full-v03-7-576",
+              "full-v03-7-577",
+              "full-v03-7-578",
+              "full-v03-7-579",
+              "full-v03-7-586",
+              "full-v03-7-587",
+              "full-v03-7-596",
+              "full-v03-7-597",
+              "full-v03-7-603",
+              "full-v03-7-605",
+              "full-v03-7-607",
+              "full-v03-7-620",
+              "full-v03-7-627",
+              "full-v03-7-629",
+              "full-v03-7-630",
+              "full-v03-7-642",
+              "full-v03-7-650",
+              "full-v03-7-651",
+              "full-v03-7-652",
+              "full-v03-7-662",
+              "full-v03-7-663",
+              "full-v03-7-664",
+              "full-v03-7-665",
+              "full-v03-7-666",
+              "full-v03-7-676",
+              "full-v03-7-677",
+              "full-v03-7-678"
+            ]
+          },
+          "event_ids": [
+            "full-v03-7-611",
+            "full-v03-7-555",
+            "full-v03-7-567",
+            "full-v03-7-568",
+            "full-v03-7-569",
+            "full-v03-7-570",
+            "full-v03-7-571",
+            "full-v03-7-576",
+            "full-v03-7-577",
+            "full-v03-7-578",
+            "full-v03-7-579",
+            "full-v03-7-586",
+            "full-v03-7-587",
+            "full-v03-7-596",
+            "full-v03-7-597",
+            "full-v03-7-603",
+            "full-v03-7-605",
+            "full-v03-7-607",
+            "full-v03-7-620",
+            "full-v03-7-627",
+            "full-v03-7-629",
+            "full-v03-7-630",
+            "full-v03-7-642",
+            "full-v03-7-650",
+            "full-v03-7-651",
+            "full-v03-7-652",
+            "full-v03-7-662",
+            "full-v03-7-663",
+            "full-v03-7-664",
+            "full-v03-7-665",
+            "full-v03-7-666",
+            "full-v03-7-676",
+            "full-v03-7-677",
+            "full-v03-7-678"
+          ],
+          "text": "Southport: completed passes before = 17; after = 16; direction = decreased. Before window [2400, 2700) seconds; after window [2700, 3000) seconds. Equal match-clock windows around the recorded tactical_change. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        }
+      ],
+      "raw_model_output": {
+        "headline": "Personnel and attacking activity",
+        "paragraphs": [
+          {
+            "comparisons": [
+              {
+                "fact_id": "fact-6",
+                "team_id": "northbridge",
+                "metric": "completed_passes",
+                "before": 18,
+                "after": 22,
+                "direction": "increased"
+              }
+            ],
+            "text": "Northbridge declared a change from 4-3-3 to 4-2-3-1 at 45′ (authored instruction). In the five-minute windows around that change Northbridge completed 18 passes before and 22 after; completed passes therefore increased from 18 to 22 in the after window. This is an observed association, not proof the formation caused the change.",
+            "evidence_ids": [
+              "fact-3",
+              "fact-6"
+            ]
+          },
+          {
+            "comparisons": [
+              {
+                "fact_id": "fact-5",
+                "team_id": "northbridge",
+                "metric": "shots",
+                "before": 2,
+                "after": 0,
+                "direction": "decreased"
+              }
+            ],
+            "text": "In the same comparison windows Northbridge produced 2 attempts before and 0 after; shots decreased from 2 to 0. Shot counts alone do not establish chance quality or dominance, and other explanations (score state, personnel changes, variation) remain possible.",
+            "evidence_ids": [
+              "fact-5",
+              "fact-1"
+            ]
+          },
+          {
+            "comparisons": [
+              {
+                "fact_id": "fact-7",
+                "team_id": "southport",
+                "metric": "shots",
+                "before": 0,
+                "after": 0,
+                "direction": "unchanged"
+              },
+              {
+                "fact_id": "fact-8",
+                "team_id": "southport",
+                "metric": "completed_passes",
+                "before": 17,
+                "after": 16,
+                "direction": "decreased"
+              }
+            ],
+            "text": "Southport recorded 0 shots in both windows (unchanged) and completed passes changed from 17 to 16 (decreased by 1). These figures show little attacking-event change for Southport across the windows around the recorded tactical change.",
+            "evidence_ids": [
+              "fact-7",
+              "fact-8"
+            ]
+          },
+          {
+            "comparisons": [],
+            "text": "A booking occurred: Morgan received a yellow card. There is no before/after defensive-action comparison provided, so we cannot conclude the booking affected behaviour. The data are from a simplified synthetic simulator and do not include formation tracking or chance-quality measures, which limits interpretation.",
+            "evidence_ids": [
+              "fact-2"
+            ]
+          }
+        ],
+        "limitations": [
+          "Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation."
+        ]
+      },
+      "review_status": "Not independently reviewed; passing guards does not establish semantic correctness."
+    }
+  ]
+}

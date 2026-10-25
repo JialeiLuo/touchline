@@ -1,0 +1,15 @@
+Quick catch-up · Requested interval 31′–34′ · uploaded match · replay event 468 · 2.6s
+
+Routine play with a verbal exchange
+
+AI-generated · Generated through Microsoft Foundry. Fact references and limited number/timing checks passed; interpretation still needs review.
+
+No goals, shots, cards, substitutions or tactical changes were recorded in the interval. That limits what we can say about match impact.
+
+Inspect supporting evidence (1 facts)
+
+A synthetic observer notes players exchanged words; physical contact and any disciplinary sanction are not confirmed, so we cannot treat this as an official incident.
+
+Inspect supporting evidence (1 facts)
+
+Formation, off-ball movement and chance quality are not inferred from sparse events. Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs.

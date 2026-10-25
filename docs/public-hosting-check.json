@@ -1,0 +1,100 @@
+{
+  "verified_date": "2026-10-25",
+  "origin": "https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net",
+  "hosting": {
+    "sku": "F1",
+    "tier": "Free",
+    "instances": 1,
+    "region": "Germany West Central",
+    "runtime": "Node 24 LTS",
+    "https_only": true,
+    "paid_monitoring_enabled": false
+  },
+  "student_subscription": {
+    "state": "Enabled",
+    "spending_limit": "On"
+  },
+  "deployed_zip_sha256": "5a12c6c175b7dc83afb63ed426f013a826d1e67e011e4a3c886a612df0157578",
+  "restart_test": {
+    "ledger_before": {
+      "daily": 1,
+      "total": 1
+    },
+    "ledger_after_restart": {
+      "daily": 1,
+      "total": 1
+    },
+    "persistent_path": "/home/touchline-state/usage.json"
+  },
+  "cache_test": {
+    "fresh_model_call": true,
+    "repeated_reply_cached": true,
+    "ledger_after_browser_fresh_and_repeat": {
+      "daily": 2,
+      "total": 2
+    }
+  },
+  "limit_test": {
+    "mode": "template",
+    "delivery": "local",
+    "reason": "Online commentary allowance reached. Showing local commentary; replay and evidence still work."
+  },
+  "throttle_test": {
+    "responses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      429,
+      429
+    ],
+    "status_still_available": true
+  },
+  "restored_limits": {
+    "daily": 200,
+    "total": 2000,
+    "requests_per_minute": 30
+  },
+  "browser_checks": [
+    "fresh load while local server stopped",
+    "replay slider",
+    "interval catch-up",
+    "Tactical player-focused Foundry explanation",
+    "cache notice",
+    "team lineups and manager",
+    "player details",
+    "Spanish translated glossary explanation",
+    "no captured console errors"
+  ],
+  "limits": [
+    "Free plan can cold-start and has CPU quotas",
+    "single-process ledger; proxy socket rate bucket can be shared",
+    "call allowances are not a dollar billing cap",
+    "no independent second physical device was used"
+  ]
+}

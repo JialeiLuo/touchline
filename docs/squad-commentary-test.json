@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-24T18:28:11.602Z",
+  "seed": 7,
+  "from": 3540,
+  "to": 3900,
+  "latency_ms": 3255,
+  "mode": "template",
+  "headline": "Your interval catch-up",
+  "paragraphs": [
+    {
+      "text": "Northbridge introduced Ellis for Vale. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+      "evidence_ids": [
+        "fact-1"
+      ]
+    },
+    {
+      "text": "Southport introduced Duarte for Silva. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+      "evidence_ids": [
+        "fact-2"
+      ]
+    },
+    {
+      "text": "Authored fictional squad context: Ellis usually plays ST. At 60′, Ellis replaced Vale and inherited the declared RW slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+      "evidence_ids": [
+        "fact-3"
+      ]
+    },
+    {
+      "text": "Authored fictional squad context: Duarte usually plays ST. At 60′, Duarte replaced Silva and inherited the declared RW slot. Southport's manager is Rafael Duarte; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+      "evidence_ids": [
+        "fact-4"
+      ]
+    }
+  ],
+  "limitations": [
+    "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+    "Simplified synthetic simulator; no real-match validation. Historical player context and tactical tracking are not connected."
+  ],
+  "squad_context": [
+    {
+      "team_id": "northbridge",
+      "manager": "Alex Rowan",
+      "declared_formation": "4-3-3",
+      "player_id": "Ellis",
+      "usual_position": "ST",
+      "assigned_position": "RW",
+      "available_at": 0
+    },
+    {
+      "team_id": "southport",
+      "manager": "Rafael Duarte",
+      "declared_formation": "4-3-3",
+      "player_id": "Duarte",
+      "usual_position": "ST",
+      "assigned_position": "RW",
+      "available_at": 0
+    }
+  ]
+}

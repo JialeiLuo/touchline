@@ -1,0 +1,354 @@
+{
+  "generated_at": "2026-10-25T17:45:13.050Z",
+  "method": "Four fixed seed-7 intervals, two fresh live samples each, no retries or cache. All outcomes saved. Format/reference acceptance and latency, not semantic correctness or a fan study.",
+  "planned_samples": 8,
+  "completed": 8,
+  "accepted": 8,
+  "fallbacks": 0,
+  "rows": [
+    {
+      "case": "quiet",
+      "repeat": 1,
+      "latency_ms": 896,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 615,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 35,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 650
+      },
+      "mode": "foundry",
+      "failure_code": null,
+      "headline": "Possession staying short of advanced territory",
+      "paragraphs": [
+        {
+          "text": "Northbridge had possession sequences, but none of the 3 complete sequences carried a successful action into the attacking third.",
+          "evidence_ids": [
+            "fact-2"
+          ],
+          "scope_label": "Complete sequences only · 0:00–2:00 · crossing/unfinished sequences excluded"
+        },
+        {
+          "text": "Northbridge–Southport stayed at 0–0. Northbridge took 0 shots and Southport took 0.",
+          "evidence_ids": [
+            "fact-4"
+          ],
+          "scope_label": "Selected interval · 0:00–2:00"
+        }
+      ]
+    },
+    {
+      "case": "tactical",
+      "repeat": 1,
+      "latency_ms": 1578,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 1061,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 43,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1104
+      },
+      "mode": "foundry",
+      "failure_code": null,
+      "headline": "A declared change of shape",
+      "paragraphs": [
+        {
+          "text": "Northbridge declared a change from 4-3-3 to 4-2-3-1 at 45′.. Follow the new roles alongside the next passing and attacking sequences.",
+          "evidence_ids": [
+            "fact-3"
+          ],
+          "scope_label": "Declared at 45:00 · selected interval"
+        },
+        {
+          "text": "Northbridge completed more passes after the recorded change, but that activity did not come with more shots. Completed passes went from 18 to 22; shots fell from 2 to 0. This is more passing activity, without an increase in recorded attempts.",
+          "evidence_ids": [
+            "fact-5",
+            "fact-6"
+          ],
+          "scope_label": "Before 40:00–45:00 · after 45:00–50:00"
+        },
+        {
+          "text": "Northbridge reached the attacking third in 3 of 11 complete sequences; 1 included a shot. Another 5 ended with a failed action before a completed entry. Those sequences show where their possession did—and did not—turn into advanced play.",
+          "evidence_ids": [
+            "fact-9"
+          ],
+          "scope_label": "Complete sequences only · 40:00–50:00 · crossing/unfinished sequences excluded"
+        },
+        {
+          "text": "Morgan at 47:59: the booking adds a duel to follow. Watch the player's next recorded challenges and whether they stay involved in the play.",
+          "evidence_ids": [
+            "fact-2"
+          ],
+          "scope_label": "Selected interval · 40:00–50:00"
+        }
+      ]
+    },
+    {
+      "case": "player-context",
+      "repeat": 1,
+      "latency_ms": 1875,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 2152,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 43,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2195
+      },
+      "mode": "foundry",
+      "failure_code": null,
+      "headline": "Limited role experience in supplied records",
+      "paragraphs": [
+        {
+          "text": "Ellis is taking the right wing role with limited recorded experience there: 20 of 305 minutes across 5 supplied previous matches. In equal windows around entry, the outgoing player completed 4 passes and took 0 shots; Ellis completed 1 pass and took 0 shots. Other personnel or match-state changes also occurred in the span.",
+          "evidence_ids": [
+            "fact-17"
+          ],
+          "scope_label": "History known at 60:40 · equal windows around entry"
+        },
+        {
+          "text": "Northbridge reached the attacking third in 1 of 15 complete sequences, yet none of those complete sequences included a shot. Getting up the pitch and finishing an attack were different things in this spell.",
+          "evidence_ids": [
+            "fact-14"
+          ],
+          "scope_label": "Complete sequences only · 55:00–66:00 · crossing/unfinished sequences excluded"
+        },
+        {
+          "text": "Northbridge–Southport stayed at 1–0 during your selected interval. Northbridge took 0 shots and Southport took 1.",
+          "evidence_ids": [
+            "fact-19",
+            "fact-1"
+          ],
+          "scope_label": "Selected interval · 55:00–66:00"
+        }
+      ]
+    },
+    {
+      "case": "goal",
+      "repeat": 1,
+      "latency_ms": 1081,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 386,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 35,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 421
+      },
+      "mode": "foundry",
+      "failure_code": null,
+      "headline": "A goal changes the score",
+      "paragraphs": [
+        {
+          "text": "25′: Northbridge scored through Turner.",
+          "evidence_ids": [
+            "fact-1"
+          ],
+          "scope_label": "Selected interval · 24:13–26:13"
+        },
+        {
+          "text": "Northbridge–Southport went from 0–0 to 1–0. Northbridge took 1 shots and Southport took 0.",
+          "evidence_ids": [
+            "fact-5",
+            "fact-2"
+          ],
+          "scope_label": "Selected interval · 24:13–26:13"
+        }
+      ]
+    },
+    {
+      "case": "quiet",
+      "repeat": 2,
+      "latency_ms": 1097,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 615,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 35,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 650
+      },
+      "mode": "foundry",
+      "failure_code": null,
+      "headline": "Possession staying short of advanced territory",
+      "paragraphs": [
+        {
+          "text": "Northbridge had possession sequences, but none of the 3 complete sequences carried a successful action into the attacking third.",
+          "evidence_ids": [
+            "fact-2"
+          ],
+          "scope_label": "Complete sequences only · 0:00–2:00 · crossing/unfinished sequences excluded"
+        },
+        {
+          "text": "Northbridge–Southport stayed at 0–0. Northbridge took 0 shots and Southport took 0.",
+          "evidence_ids": [
+            "fact-4"
+          ],
+          "scope_label": "Selected interval · 0:00–2:00"
+        }
+      ]
+    },
+    {
+      "case": "tactical",
+      "repeat": 2,
+      "latency_ms": 3839,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 1061,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 43,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1104
+      },
+      "mode": "foundry",
+      "failure_code": null,
+      "headline": "A declared change of shape",
+      "paragraphs": [
+        {
+          "text": "Northbridge declared a change from 4-3-3 to 4-2-3-1 at 45′.. Follow the new roles alongside the next passing and attacking sequences.",
+          "evidence_ids": [
+            "fact-3"
+          ],
+          "scope_label": "Declared at 45:00 · selected interval"
+        },
+        {
+          "text": "Northbridge completed more passes after the recorded change, but that activity did not come with more shots. Completed passes went from 18 to 22; shots fell from 2 to 0. This is more passing activity, without an increase in recorded attempts.",
+          "evidence_ids": [
+            "fact-5",
+            "fact-6"
+          ],
+          "scope_label": "Before 40:00–45:00 · after 45:00–50:00"
+        },
+        {
+          "text": "Northbridge reached the attacking third in 3 of 11 complete sequences; 1 included a shot. Another 5 ended with a failed action before a completed entry. Those sequences show where their possession did—and did not—turn into advanced play.",
+          "evidence_ids": [
+            "fact-9"
+          ],
+          "scope_label": "Complete sequences only · 40:00–50:00 · crossing/unfinished sequences excluded"
+        },
+        {
+          "text": "Morgan at 47:59: the booking adds a duel to follow. Watch the player's next recorded challenges and whether they stay involved in the play.",
+          "evidence_ids": [
+            "fact-2"
+          ],
+          "scope_label": "Selected interval · 40:00–50:00"
+        }
+      ]
+    },
+    {
+      "case": "player-context",
+      "repeat": 2,
+      "latency_ms": 1595,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 2152,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2048
+        },
+        "output_tokens": 43,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2195
+      },
+      "mode": "foundry",
+      "failure_code": null,
+      "headline": "Limited role experience in supplied records",
+      "paragraphs": [
+        {
+          "text": "Ellis is taking the right wing role with limited recorded experience there: 20 of 305 minutes across 5 supplied previous matches. In equal windows around entry, the outgoing player completed 4 passes and took 0 shots; Ellis completed 1 pass and took 0 shots. Other personnel or match-state changes also occurred in the span.",
+          "evidence_ids": [
+            "fact-17"
+          ],
+          "scope_label": "History known at 60:40 · equal windows around entry"
+        },
+        {
+          "text": "Northbridge reached the attacking third in 1 of 15 complete sequences, yet none of those complete sequences included a shot. Getting up the pitch and finishing an attack were different things in this spell.",
+          "evidence_ids": [
+            "fact-14"
+          ],
+          "scope_label": "Complete sequences only · 55:00–66:00 · crossing/unfinished sequences excluded"
+        },
+        {
+          "text": "Northbridge–Southport stayed at 1–0 during your selected interval. Northbridge took 0 shots and Southport took 1.",
+          "evidence_ids": [
+            "fact-19",
+            "fact-1"
+          ],
+          "scope_label": "Selected interval · 55:00–66:00"
+        }
+      ]
+    },
+    {
+      "case": "goal",
+      "repeat": 2,
+      "latency_ms": 1206,
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 386,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 35,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 421
+      },
+      "mode": "foundry",
+      "failure_code": null,
+      "headline": "A goal changes the score",
+      "paragraphs": [
+        {
+          "text": "25′: Northbridge scored through Turner.",
+          "evidence_ids": [
+            "fact-1"
+          ],
+          "scope_label": "Selected interval · 24:13–26:13"
+        },
+        {
+          "text": "Northbridge–Southport went from 0–0 to 1–0. Northbridge took 1 shots and Southport took 0.",
+          "evidence_ids": [
+            "fact-5",
+            "fact-2"
+          ],
+          "scope_label": "Selected interval · 24:13–26:13"
+        }
+      ]
+    }
+  ]
+}

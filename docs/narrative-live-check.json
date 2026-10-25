@@ -1,0 +1,71 @@
+{
+  "latency_ms": 2602,
+  "result": {
+    "headline": "Northbridge grew more threatening after the formation tweak",
+    "paragraphs": [
+      {
+        "comparisons": [],
+        "text": "After Northbridge switched to a 4-2-3-1 at 45\u2032 they produced the only shots in this spell and completed more passes, with a clear shift toward sustained possession that reached the attacking third on several occasions; however, only one of their complete possession sequences included a shot and five stalled before entering the box, so the threat level rose but wasn't fully converted.",
+        "evidence_ids": [
+          "fact-3",
+          "fact-1",
+          "fact-6",
+          "fact-9"
+        ]
+      },
+      {
+        "comparisons": [],
+        "text": "By contrast Southport\u2019s completed sequences stayed short: none of their 12 complete possessions carried a successful action into the attacking third or produced a shot, and their completed passes fell in the same comparison window, suggesting momentum favoured Northbridge though the exact impact of the booking to Morgan is unclear.",
+        "evidence_ids": [
+          "fact-10",
+          "fact-8",
+          "fact-2"
+        ]
+      }
+    ],
+    "limitations": [
+      "Formation, off-ball movement and chance quality are not inferred from sparse events.",
+      "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+    ],
+    "mode": "foundry",
+    "reason": "Generated through Microsoft Foundry. Fact references and limited number/timing checks passed; interpretation still needs review."
+  },
+  "validation_error": null,
+  "raw": {
+    "headline": "Northbridge grew more threatening after the formation tweak",
+    "paragraphs": [
+      {
+        "comparisons": [],
+        "text": "After Northbridge switched to a 4-2-3-1 at 45\u2032 they produced the only shots in this spell and completed more passes, with a clear shift toward sustained possession that reached the attacking third on several occasions; however, only one of their complete possession sequences included a shot and five stalled before entering the box, so the threat level rose but wasn't fully converted [fact-3, fact-1, fact-6, fact-9].",
+        "evidence_ids": [
+          "fact-3",
+          "fact-1",
+          "fact-6",
+          "fact-9"
+        ]
+      },
+      {
+        "comparisons": [],
+        "text": "By contrast Southport\u2019s completed sequences stayed short: none of their 12 complete possessions carried a successful action into the attacking third or produced a shot, and their completed passes fell in the same comparison window, suggesting momentum favoured Northbridge though the exact impact of the booking to Morgan is unclear [fact-10, fact-8, fact-2].",
+        "evidence_ids": [
+          "fact-10",
+          "fact-8",
+          "fact-2"
+        ]
+      }
+    ],
+    "limitations": [
+      "Formation, off-ball movement and chance quality are not inferred from sparse events.",
+      "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+    ]
+  },
+  "manual_review": {
+    "status": "failed",
+    "issues": [
+      "Conflated interval shots with post-change shots",
+      "Confused attacking third with penalty area",
+      "Claimed increased threat without chance-quality comparison"
+    ],
+    "follow_up": "Added conservative penalty-area and chance-quality lexical guards. These are narrow guards, not full semantic verification."
+  }
+}

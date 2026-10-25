@@ -1,0 +1,15 @@
+Requested interval 50′–60′ · seed 7 · replay event 850 · 2.6s
+
+Three goals in a six-minute burst defined the interval
+
+AI-generated · Generated through Microsoft Foundry. Evidence references checked; semantic correctness still requires evaluation.
+
+Between the 50th and 57th minutes three goals were scored: Southport through Lima at 50′, Northbridge through Brooks at 56′, then Southport through Pinto at 57′.
+
+Sources: fact-1 [full-7-691, full-7-768, full-7-786]
+
+Southport registered two attempts during this spell while Northbridge had one; no saved shots were recorded. The shot count alone does not establish chance quality or overall dominance.
+
+Sources: fact-2 [full-7-690, full-7-767, full-7-785]
+
+Formation, off-ball movement and chance quality are not inferred from sparse events. Simplified synthetic simulator; no real-match validation. Historical player context and tactical tracking are not connected.
