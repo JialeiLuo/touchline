@@ -1,0 +1,67 @@
+{
+  "checked_at": "2026-10-25T14:52:14.803Z",
+  "checks": [
+    "Player evidence linked to selected interval",
+    "Unknown player rejected",
+    "Uploaded squad naming and player evidence; directional sequence analysis correctly unavailable",
+    "Quick/Tactical player wording differs; watch-next present"
+  ],
+  "live_samples": [
+    {
+      "viewer_mode": "quick",
+      "latency_ms": 2090,
+      "mode": "foundry",
+      "headline": "Following Morgan",
+      "paragraphs": [
+        {
+          "text": "Morgan's recorded involvement was in passing and carrying, with no shot in this interval.",
+          "evidence_ids": [
+            "fact-11"
+          ],
+          "scope_label": "Player involvement · 40:00–50:00"
+        },
+        {
+          "text": "Northbridge completed more passes after the recorded change, but that activity did not come with more shots.",
+          "evidence_ids": [
+            "fact-5",
+            "fact-6"
+          ],
+          "scope_label": "Before 40:00–45:00 · after 45:00–50:00"
+        }
+      ],
+      "watch_next": "Watch Morgan's next recorded receptions and whether they lead to progression or an attempt. This is a viewing question, not a prediction."
+    },
+    {
+      "viewer_mode": "tactical",
+      "latency_ms": 1102,
+      "mode": "foundry",
+      "headline": "Following Morgan",
+      "paragraphs": [
+        {
+          "text": "Morgan completed 6 of 7 attempted passes and received 5 completed passes in this interval. No shot by this player is recorded in the interval. ",
+          "evidence_ids": [
+            "fact-11"
+          ],
+          "scope_label": "Player involvement · 40:00–50:00"
+        },
+        {
+          "text": "Northbridge completed more passes after the recorded change, but that activity did not come with more shots. Completed passes went from 18 to 22; shots fell from 2 to 0. This is more passing activity, without an increase in recorded attempts.",
+          "evidence_ids": [
+            "fact-5",
+            "fact-6"
+          ],
+          "scope_label": "Before 40:00–45:00 · after 45:00–50:00"
+        },
+        {
+          "text": "Northbridge reached the attacking third in 3 of 11 complete sequences; 1 included a shot. Another 5 ended with a failed action before a completed entry. Those sequences show where their possession did—and did not—turn into advanced play.",
+          "evidence_ids": [
+            "fact-9"
+          ],
+          "scope_label": "Complete sequences only · 40:00–50:00 · crossing/unfinished sequences excluded"
+        }
+      ],
+      "watch_next": "Watch Morgan's next recorded receptions and whether they lead to progression or an attempt. This is a viewing question, not a prediction."
+    }
+  ],
+  "limitations": "Two samples are integration evidence, not a usefulness or reliability benchmark."
+}

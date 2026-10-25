@@ -1,0 +1,60 @@
+[
+  {
+    "viewer_mode": "quick",
+    "mode": "foundry",
+    "latency_ms": 2716,
+    "headline": "Personnel and attacking activity",
+    "paragraphs": [
+      {
+        "text": "Northbridge's declared switch to 4-2-3-1 at 45′ coincided with two attempts earlier in the 40′–45′ window and none in 45′–50′; completed passes were 18 before and 22 after. The switch is an authored instruction; the data show different raw counts but do not prove the formation caused the change. ",
+        "evidence_ids": [
+          "fact-3",
+          "fact-4",
+          "fact-1"
+        ]
+      },
+      {
+        "text": "Morgan received a yellow card during the interval. We lack comparable defensive-action detail to say whether the booking changed his behavior. ",
+        "evidence_ids": [
+          "fact-2"
+        ]
+      }
+    ],
+    "limitations": [
+      "Formation, off-ball movement and chance quality are not inferred from sparse events.",
+      "Simplified synthetic simulator; no real-match validation. Historical player context and measured tactical tracking are not connected; declared formation changes are authored inputs."
+    ]
+  },
+  {
+    "viewer_mode": "tactical",
+    "mode": "foundry",
+    "latency_ms": 3459,
+    "headline": "Personnel and attacking activity",
+    "paragraphs": [
+      {
+        "text": "Northbridge declared a switch from 4-3-3 to 4-2-3-1 at 45′; this is an authored formation change and its on-pitch effect is not observed here. Comparison windows provided are 40′–45′ (before) and 45′–50′ (after).",
+        "evidence_ids": [
+          "fact-3",
+          "fact-4"
+        ]
+      },
+      {
+        "text": "In the supplied interval Northbridge produced more attempts: 2 attempts versus 0 attempts for the opponent. No attempts were recorded as saved, and the facts note that shot counts alone do not establish chance quality or overall dominance.",
+        "evidence_ids": [
+          "fact-1"
+        ]
+      },
+      {
+        "text": "Statistically, Northbridge recorded 2 shots in 40′–45′ and 0 in 45′–50′, while completed passes rose from 18 to 22 across those same windows. Morgan received a yellow card; the data note we would need comparable defensive actions to claim the booking changed behavior.",
+        "evidence_ids": [
+          "fact-4",
+          "fact-2"
+        ]
+      }
+    ],
+    "limitations": [
+      "Formation effects, off-ball movement and chance quality cannot be inferred from the sparse events provided.",
+      "This is a simplified synthetic simulator with authored formation inputs and no external match validation; alternative explanations (opponent actions, game state, random variation) are not resolved by these facts."
+    ]
+  }
+]

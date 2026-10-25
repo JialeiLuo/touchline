@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-25T18:00:38.563Z",
+  "origin": "https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net",
+  "version": "0.5.0",
+  "checks": [
+    "public HTML and browser assets",
+    "private files blocked",
+    "cross-origin POST rejected",
+    "model configured",
+    "calculated evidence",
+    "live Foundry response and identical cached reply",
+    "synthetic JSON upload"
+  ],
+  "first_delivery": "fresh",
+  "cached_delivery": "cached",
+  "live_mode": "foundry",
+  "notes": "Remote HTTPS checks from development machine; browser journey and restart persistence recorded separately."
+}

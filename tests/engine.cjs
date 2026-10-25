@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict'),fs=require('fs'),E=require('../engine.js'),D=JSON.parse(fs.readFileSync(__dirname+'/../data/fixtures.json'));
+const a=[...D.baseline,...D.common,...D.targeted],b=[...D.baseline,...D.common,...D.quiet];
+assert.equal(E.analyse(a,0,D.prior_events).booked,false);
+assert.equal(E.analyse(a,1,D.prior_events).attacks.length,0);
+assert.equal(E.analyse(a,4,D.prior_events).signal,false);
+assert.equal(E.analyse(a,5,D.prior_events).signal,true);
+assert.equal(E.analyse(b,b.length-1,D.prior_events).signal,false);
+assert.deepEqual(E.analyse(a,5,D.prior_events).before,{attacks:6,flank:2});
+assert.equal(E.analyse(a,5,D.prior_events).sub,false);
+const changed=a.map((e,i)=>i>5?{...e,flank:false}:e);
+assert.deepEqual(E.analyse(a,5,D.prior_events),E.analyse(changed,5,D.prior_events));
+assert.deepEqual(E.retrieve(D.history,3780,'reed').map(x=>x.id),['history-01']);
+assert.equal(E.retrieve(D.history,3780,'other').length,0);
+assert.throws(()=>E.validate([a[0],a[0]]));
+assert.throws(()=>E.validate([{id:'x',t:0,type:'attack',flank:true,x:106,y:2}]));
+console.log('12 evidence checks passed: thresholds, negative control, calculated baseline, future-event isolation, history filtering and invalid data.');

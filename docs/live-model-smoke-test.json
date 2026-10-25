@@ -1,0 +1,32 @@
+{
+  "status": 200,
+  "mode": "foundry",
+  "reason": "Generated through Microsoft Foundry. Evidence references checked; semantic correctness still requires evaluation.",
+  "latency_ms": 3555,
+  "headline": "Three goals changed the scoreline in the 50'–57' interval",
+  "paragraphs": [
+    {
+      "text": "Southport scored first in the interval at 50′ through Lima, Northbridge responded at 56′ through Brooks, and Southport scored again at 57′ through Pinto; those three events are recorded as goals in the facts.",
+      "evidence_ids": [
+        "fact-1"
+      ]
+    },
+    {
+      "text": "Across the interval Southport had two shots (both on target and both resulting in goals) while Northbridge had one shot (on target and a goal); the packet notes Southport produced more attempts (2 vs 1) and that shot counts alone do not establish chance quality or overall dominance.",
+      "evidence_ids": [
+        "fact-2"
+      ]
+    },
+    {
+      "text": "Interval possession/control and passing activity are recorded: Southport completed 35 of 42 passes and controlled about 217.37 seconds, Northbridge completed 23 of 33 passes and controlled about 164.39 seconds; no fouls, cards, corners or substitutions are recorded during this spell in the provided data.",
+      "evidence_ids": [
+        "fact-2",
+        "fact-1"
+      ]
+    }
+  ],
+  "limitations": [
+    "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+    "Simplified synthetic simulator; no real-match validation. Historical player context and tactical tracking are not connected."
+  ]
+}

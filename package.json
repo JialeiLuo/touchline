@@ -1,0 +1,16 @@
+{
+  "name": "touchline-match-companion",
+  "version": "0.5.0",
+  "private": true,
+  "description": "Evidence-grounded synthetic football companion with Microsoft Foundry story ranking",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.cjs",
+    "test": "node --test tests/*.cjs",
+    "evaluate": "node tools/evaluate-context.cjs",
+    "check:viewer": "node tools/check-viewer-milestone.cjs",
+    "check:investigation": "node tools/check-investigation.cjs"
+  }
+}

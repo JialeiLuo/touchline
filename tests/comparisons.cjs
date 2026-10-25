@@ -1,0 +1,15 @@
+const A=require('node:assert/strict'),{compareWindows,validateComparisons}=require('../server/comparisons.cjs'),{packet}=require('../server/evidence.cjs'),{simulate}=require('../full-match.js');
+const events=[{id:'start',t:0,type:'kickoff'},...[[299,'northbridge'],[300,'northbridge'],[599,'southport'],[600,'southport'],[899,'southport'],[900,'northbridge']].map(([t,team_id],i)=>({id:`s${i}`,t,team_id,type:'shot'}))];
+const request={boundary:600,asOf:900,teams:['northbridge','southport']},r=compareWindows(events,request);
+A.equal(r.status,'ready');A.deepEqual(r.observations.filter(o=>o.metric==='shots').map(o=>[o.team_id,o.before,o.after,o.direction]),[['northbridge',1,0,'decreased'],['southport',1,2,'increased']]);
+A.equal(compareWindows(events,{...request,asOf:899}).status,'insufficient_window');
+A.equal(compareWindows(events,{...request,boundary:100}).status,'insufficient_window');
+A.deepEqual(compareWindows([...events,{id:'future',t:901,type:'shot',team_id:'southport'}],request),r);
+const comparison=r.observations[0],p={facts:[{id:'f',comparison}]},claim={fact_id:'f',...Object.fromEntries(['team_id','metric','before','after','direction'].map(k=>[k,comparison[k]]))};
+A.throws(()=>validateComparisons({paragraphs:[{evidence_ids:['f']}]},p),/Missing/);
+const output=c=>({paragraphs:[{evidence_ids:['f'],comparisons:[c]}]});A.equal(validateComparisons(output(claim),p).paragraphs.length,1);
+for(const edit of [{team_id:'southport'},{before:0,after:1},{direction:'increased'},{metric:'goals'},{fact_id:'unknown'}])A.throws(()=>validateComparisons(output({...claim,...edit}),p),/comparison/);
+const es=simulate(7).events,change=es.find(e=>e.type==='tactical_change'),idx=es.findIndex(e=>e.t>=change.t+300);
+const ready=packet({seed:7,index:idx,from:2400,to:3000});A(ready.facts.some(f=>f.comparison));A.equal(ready.comparisons[0].status,'ready');
+const early=packet({seed:7,index:idx,from:2400,to:2999});A.equal(early.comparisons[0].status,'insufficient_window');A(!early.facts.some(f=>f.comparison));
+console.log('Comparison checks passed: half-open boundaries, both teams, missing windows, future exclusion, swapped values/team/direction rejection, packet integration.');

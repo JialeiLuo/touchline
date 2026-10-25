@@ -1,0 +1,6 @@
+/* Local endpoint checks; --live makes one bounded model request. */
+const A=require('node:assert/strict'),fs=require('node:fs');
+(async()=>{const {simulate}=require('../full-match.js'),es=simulate(7).events,index=es.findIndex(e=>e.t>=3960),input={seed:7,index,from:3300,to:3960,viewer_mode:'tactical',player_focus:'Ellis'};
+const post=async(route,body)=>{const r=await fetch('http://127.0.0.1:8767'+route,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});if(!r.ok)throw Error('HTTP '+r.status);return r.json()};const p=await post('/api/evidence',input);A.equal(p.investigations.find(i=>i.name==='Ellis').history.role_minutes,20);A.equal(p.investigations.find(i=>i.name==='Duarte').history.role_minutes,305);
+let output=null;if(process.argv.includes('--live')){const started=Date.now();output=await post('/api/commentary',input);output.latency_ms=Date.now()-started;A(output.paragraphs.some(p=>p.text.includes('20 of 305')))}
+fs.writeFileSync('docs/investigation-check.json',JSON.stringify({checked_at:new Date().toISOString(),input,investigations:p.investigations,output,scope:'Authored history fixture, not real-football validation; one live sample if requested.'},null,2)+'\n');console.log(JSON.stringify({mode:output?.mode,latency_ms:output?.latency_ms,paragraphs:output?.paragraphs}));})();

@@ -1,0 +1,378 @@
+{
+  "schema_version": "1",
+  "provenance": {
+    "synthetic": true,
+    "method": "Manually authored fictional squad metadata aligned to simulator player IDs",
+    "version": "0.1",
+    "available_at": 0,
+    "limitations": "Declared roles and schematic slots are authored context, not inferred tracking. No real players, manager history, injury records or scouting data."
+  },
+  "teams": {
+    "northbridge": {
+      "id": "northbridge",
+      "name": "Northbridge",
+      "manager": "Alex Rowan",
+      "declared_formation": "4-3-3",
+      "players": [
+        {
+          "id": "Morgan",
+          "name": "Morgan",
+          "shirt_number": 1,
+          "usual_position": "CM",
+          "assigned_position": "CM",
+          "starting": true,
+          "slot": {
+            "x": 50,
+            "y": 55
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Vale",
+          "name": "Vale",
+          "shirt_number": 2,
+          "usual_position": "RW",
+          "assigned_position": "RW",
+          "starting": true,
+          "slot": {
+            "x": 80,
+            "y": 80
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Taylor",
+          "name": "Taylor",
+          "shirt_number": 3,
+          "usual_position": "CB",
+          "assigned_position": "CB",
+          "starting": true,
+          "slot": {
+            "x": 30,
+            "y": 35
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Bennett",
+          "name": "Bennett",
+          "shirt_number": 4,
+          "usual_position": "CB",
+          "assigned_position": "CB",
+          "starting": true,
+          "slot": {
+            "x": 30,
+            "y": 65
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Hayes",
+          "name": "Hayes",
+          "shirt_number": 5,
+          "usual_position": "LB",
+          "assigned_position": "LB",
+          "starting": true,
+          "slot": {
+            "x": 30,
+            "y": 15
+          },
+          "preferred_foot": "Left"
+        },
+        {
+          "id": "Parker",
+          "name": "Parker",
+          "shirt_number": 6,
+          "usual_position": "RB",
+          "assigned_position": "RB",
+          "starting": true,
+          "slot": {
+            "x": 30,
+            "y": 85
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Brooks",
+          "name": "Brooks",
+          "shirt_number": 7,
+          "usual_position": "ST",
+          "assigned_position": "ST",
+          "starting": true,
+          "slot": {
+            "x": 80,
+            "y": 50
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Turner",
+          "name": "Turner",
+          "shirt_number": 8,
+          "usual_position": "DM",
+          "assigned_position": "DM",
+          "starting": true,
+          "slot": {
+            "x": 50,
+            "y": 30
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Lane",
+          "name": "Lane",
+          "shirt_number": 9,
+          "usual_position": "LW",
+          "assigned_position": "LW",
+          "starting": true,
+          "slot": {
+            "x": 80,
+            "y": 20
+          },
+          "preferred_foot": "Left"
+        },
+        {
+          "id": "Mason",
+          "name": "Mason",
+          "shirt_number": 10,
+          "usual_position": "CM",
+          "assigned_position": "CM",
+          "starting": true,
+          "slot": {
+            "x": 50,
+            "y": 75
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Grant",
+          "name": "Grant",
+          "shirt_number": 11,
+          "usual_position": "GK",
+          "assigned_position": "GK",
+          "starting": true,
+          "slot": {
+            "x": 10,
+            "y": 50
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Ellis",
+          "name": "Ellis",
+          "shirt_number": 12,
+          "usual_position": "ST",
+          "starting": false,
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Harper",
+          "name": "Harper",
+          "shirt_number": 13,
+          "usual_position": "GK",
+          "starting": false,
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Blake",
+          "name": "Blake",
+          "shirt_number": 14,
+          "usual_position": "CB",
+          "starting": false,
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Foster",
+          "name": "Foster",
+          "shirt_number": 15,
+          "usual_position": "CM",
+          "starting": false,
+          "preferred_foot": "Right"
+        }
+      ]
+    },
+    "southport": {
+      "id": "southport",
+      "name": "Southport",
+      "manager": "Rafael Duarte",
+      "declared_formation": "4-3-3",
+      "players": [
+        {
+          "id": "Reed",
+          "name": "Reed",
+          "shirt_number": 1,
+          "usual_position": "RB",
+          "assigned_position": "RB",
+          "starting": true,
+          "slot": {
+            "x": 30,
+            "y": 85
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Silva",
+          "name": "Silva",
+          "shirt_number": 2,
+          "usual_position": "RW",
+          "assigned_position": "RW",
+          "starting": true,
+          "slot": {
+            "x": 80,
+            "y": 80
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Costa",
+          "name": "Costa",
+          "shirt_number": 3,
+          "usual_position": "CB",
+          "assigned_position": "CB",
+          "starting": true,
+          "slot": {
+            "x": 30,
+            "y": 35
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Santos",
+          "name": "Santos",
+          "shirt_number": 4,
+          "usual_position": "CB",
+          "assigned_position": "CB",
+          "starting": true,
+          "slot": {
+            "x": 30,
+            "y": 65
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Nunes",
+          "name": "Nunes",
+          "shirt_number": 5,
+          "usual_position": "LB",
+          "assigned_position": "LB",
+          "starting": true,
+          "slot": {
+            "x": 30,
+            "y": 15
+          },
+          "preferred_foot": "Left"
+        },
+        {
+          "id": "Lima",
+          "name": "Lima",
+          "shirt_number": 6,
+          "usual_position": "CM",
+          "assigned_position": "CM",
+          "starting": true,
+          "slot": {
+            "x": 50,
+            "y": 55
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Rocha",
+          "name": "Rocha",
+          "shirt_number": 7,
+          "usual_position": "ST",
+          "assigned_position": "ST",
+          "starting": true,
+          "slot": {
+            "x": 80,
+            "y": 50
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Alves",
+          "name": "Alves",
+          "shirt_number": 8,
+          "usual_position": "DM",
+          "assigned_position": "DM",
+          "starting": true,
+          "slot": {
+            "x": 50,
+            "y": 30
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Pinto",
+          "name": "Pinto",
+          "shirt_number": 9,
+          "usual_position": "LW",
+          "assigned_position": "LW",
+          "starting": true,
+          "slot": {
+            "x": 80,
+            "y": 20
+          },
+          "preferred_foot": "Left"
+        },
+        {
+          "id": "Mendes",
+          "name": "Mendes",
+          "shirt_number": 10,
+          "usual_position": "CM",
+          "assigned_position": "CM",
+          "starting": true,
+          "slot": {
+            "x": 50,
+            "y": 75
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Sousa",
+          "name": "Sousa",
+          "shirt_number": 11,
+          "usual_position": "GK",
+          "assigned_position": "GK",
+          "starting": true,
+          "slot": {
+            "x": 10,
+            "y": 50
+          },
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Duarte",
+          "name": "Duarte",
+          "shirt_number": 12,
+          "usual_position": "ST",
+          "starting": false,
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Teixeira",
+          "name": "Teixeira",
+          "shirt_number": 13,
+          "usual_position": "GK",
+          "starting": false,
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Barros",
+          "name": "Barros",
+          "shirt_number": 14,
+          "usual_position": "CB",
+          "starting": false,
+          "preferred_foot": "Right"
+        },
+        {
+          "id": "Neves",
+          "name": "Neves",
+          "shirt_number": 15,
+          "usual_position": "CM",
+          "starting": false,
+          "preferred_foot": "Right"
+        }
+      ]
+    }
+  }
+}

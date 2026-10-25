@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-25T18:00:16.966602+00:00",
+  "version": "0.5.0",
+  "scope": "Frozen prototype acceptance, not a fan study",
+  "local_test_files": 19,
+  "contract_cases": 288,
+  "context_variants": 5,
+  "live_ranking_samples": 8,
+  "accepted_live_samples": 8,
+  "fallbacks_in_bounded_live_run": 0,
+  "browser_checks": {
+    "prepared_example": true,
+    "kickoff_invalid_request_disabled": true,
+    "legacy_card_hidden_in_full_match": true,
+    "local_recap_visible_after_button": true,
+    "lineup_player_to_commentary": true,
+    "stale_selection_warning": true,
+    "future_end_disabled": true,
+    "selection_changed_while_loading_discards_response": true,
+    "actual_json_upload": true,
+    "invalid_upload_rejected": true,
+    "reported_then_corrected_incident": true,
+    "mobile_390_no_horizontal_overflow": true,
+    "public_tactical_ai": true,
+    "public_quick_shorter_and_different": true,
+    "public_cached_quick": true,
+    "public_stale_warning": true,
+    "public_tactical_helper_matches_mode": true,
+    "captured_console_errors": []
+  },
+  "review_type": "Assistant editorial inspection with examples and limitations in PRODUCT_EVALUATION.md; no independent fans",
+  "runtime_sources_sha256": {
+    "server.cjs": "b231c8bcfa17ea67f4a3ea6939d0481981de8ec0427044eb55c54b0d50b54bbe",
+    "product-ui.js": "69dd86dd77161d95d3af8209c1ddf00b83d9ba911144ea4dbf2972cdaa8d2531",
+    "server/evidence.cjs": "572d2cb59aba43dfa7c2d12f5e72c4a76f3db0ebf6ee83d089dee154279f5e08",
+    "server/stories.cjs": "ee4dfe4a3e2f62d212e4fdf67b6d25e0de37a21d4de1beb8b71b0c0f07e109e4",
+    "server/provider.cjs": "1c3b126e0cc8e601dbeb3700864278aa17ad4a84da369ff78fe4bf5a889fa323"
+  },
+  "public_final_source_checks": {
+    "product_ui_matches_local_bytes": true,
+    "overview_shot_counts_in_supporting_fact": true,
+    "persistent_ledger_after_redeploy": {
+      "daily": 8,
+      "total": 8
+    }
+  }
+}
