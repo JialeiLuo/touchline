@@ -1,0 +1,12 @@
+const A=require('node:assert/strict'),{simulate}=require('../full-match.js'),{packet}=require('../server/evidence.cjs'),{fromReplay,validate}=require('../match-package.js'),store=require('../server/package-store.cjs'),{buildStories}=require('../server/stories.cjs');
+const d=simulate(7),index=d.events.findIndex(e=>e.t>=3960),input={seed:7,index,from:3300,to:3960,player_focus:'Ellis'},p=packet(input),ellis=p.investigations.find(i=>i.name==='Ellis'),duarte=p.investigations.find(i=>i.name==='Duarte');
+A.equal(ellis.history.status,'limited_sample');A.equal(ellis.history.role_minutes,20);A.equal(ellis.history.minutes,305);A.equal(duarte.history.status,'recorded_experience');A.equal(duarte.history.role_minutes,305);A.equal(ellis.comparison.status,'ready');A(buildStories(p).some(s=>s.title==='Limited role experience in supplied records'));
+const uploaded=fromReplay(d);validate(uploaded);uploaded.history.records.push({id:'late-history',player_id:'Ellis',match_id:'old-match',happened_at:-100,available_at:5000,position:'RW',minutes:90,source:'Late fictional history',synthetic:true});const id=store.put(uploaded),up=packet({...input,package_id:id});A(!up.investigations.find(i=>i.name==='Ellis').history.record_ids.includes('late-history'));
+const absent=structuredClone(uploaded);delete absent.history;const missing=packet({...input,package_id:store.put(absent)});A.equal(missing.investigations[0].history.status,'missing');
+const early=packet({...input,to:3700});A(early.investigations.every(i=>i.comparison.status==='waiting'));
+const invalid=structuredClone(uploaded);invalid.history.records[0].player_id='unknown';A.throws(()=>validate(invalid),/history player/);
+const prefix=packet({...input,index:d.events.findIndex(e=>e.t>=3500),to:3500});A.equal(prefix.investigations.length,0);
+console.log('Investigation: contrasting histories, denominators, missing/late records, waiting windows, validated package history and no future substitutions pass.');
+
+const {assembleStories}=require('../server/stories.cjs'),all=buildStories(p),context=all.find(s=>s.scope.kind==='contextual_investigation'&&s.player_id==='Ellis'),basic=all.find(s=>s.scope.kind==='player_interval'&&s.player_id==='Ellis');const result=assembleStories({story_ids:[context.id,basic.id]},p);A.equal(result.paragraphs.filter(p=>p.text.startsWith('Ellis')).length,1);
+const duplicate=structuredClone(uploaded);duplicate.history.records.push({...duplicate.history.records[0],id:'duplicate-match'});A.throws(()=>validate(duplicate),/one position/);
