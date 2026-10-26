@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:08,000
+Missed ten minutes? Touchline is your AI co-commentator, helping you catch up on the story behind the score.
+
+2
+00:00:08,000 --> 00:00:23,000
+Explore a fictional ninety-minute match. Replay events update the score, statistics and current lineups. Everything starts with structured synthetic data, with no live football feed or broadcast footage.
+
+3
+00:00:23,000 --> 00:00:27,000
+Compare both teams using statistics calculated from recorded events.
+
+4
+00:00:27,000 --> 00:00:33,000
+Meet the starting eleven, substitutes, managers and declared formations.
+
+5
+00:00:33,000 --> 00:00:38,000
+Player details distinguish an assigned position from the usual role.
+
+6
+00:00:38,000 --> 00:00:46,000
+Choose the minutes you missed, commentary depth, and the team or player you want to follow.
+
+7
+00:00:46,000 --> 00:01:02,000
+Ask what changed. Microsoft Foundry ranks supported stories. Here, Ellis enters at right wing, but supplied history records only twenty of three hundred and five previous minutes in that role. That context makes the substitution more interesting.
+
+8
+00:01:02,000 --> 00:01:12,000
+Open the evidence to inspect the supporting facts, matched activity windows and source records. These comparisons explain the context without pretending to prove causation.
+
+9
+00:01:12,000 --> 00:01:18,000
+Quick mode is shorter. Team and player focus change the emphasis while preserving facts.
+
+10
+00:01:18,000 --> 00:01:25,000
+Click highlighted terms for translated football vocabulary and explanations in your chosen glossary language.
+
+11
+00:01:25,000 --> 00:01:32,000
+Upload a supported match package, or explore reproducible synthetic examples with documented seeds and provenance.
+
+12
+00:01:32,000 --> 00:01:40,000
+Reported incidents can include later corrections and linked official rule references. Reports and referee decisions remain distinct.
+
+13
+00:01:40,000 --> 00:01:48,000
+Try the public demo and source repository. Azure hosts Touchline, with bounded AI story selection and a local fallback.
