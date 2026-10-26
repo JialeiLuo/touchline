@@ -1,0 +1,128 @@
+[
+  [
+    0,
+    8,
+    "Touchline | Your AI Co-commentator",
+    "Missed ten minutes? Catch up on the story, not just the score."
+  ],
+  [
+    1,
+    1.875,
+    "Follow a fictional full match",
+    "Replay events, watch the clock and inspect the changing match statistics."
+  ],
+  [
+    2,
+    1.875,
+    "Follow a fictional full match",
+    "Replay events, watch the clock and inspect the changing match statistics."
+  ],
+  [
+    3,
+    1.875,
+    "Follow a fictional full match",
+    "Replay events, watch the clock and inspect the changing match statistics."
+  ],
+  [
+    4,
+    1.875,
+    "Follow a fictional full match",
+    "Replay events, watch the clock and inspect the changing match statistics."
+  ],
+  [
+    5,
+    1.875,
+    "Follow a fictional full match",
+    "Replay events, watch the clock and inspect the changing match statistics."
+  ],
+  [
+    6,
+    1.875,
+    "Follow a fictional full match",
+    "Replay events, watch the clock and inspect the changing match statistics."
+  ],
+  [
+    7,
+    1.875,
+    "Follow a fictional full match",
+    "Replay events, watch the clock and inspect the changing match statistics."
+  ],
+  [
+    8,
+    1.875,
+    "Follow a fictional full match",
+    "Replay events, watch the clock and inspect the changing match statistics."
+  ],
+  [
+    9,
+    4,
+    "Start with the match evidence",
+    "Both teams\u2019 statistics are calculated from the recorded events."
+  ],
+  [
+    15,
+    6,
+    "Meet the teams",
+    "Inspect the starting XI, current lineup, formations and managers."
+  ],
+  [
+    16,
+    5,
+    "Understand the player\u2019s role",
+    "Player details distinguish the assigned position from the usual role."
+  ],
+  [
+    10,
+    8,
+    "Choose the spell you missed",
+    "Select an interval, commentary depth and the team or player you care about."
+  ],
+  [
+    11,
+    2,
+    "Ask for the story",
+    "Microsoft Foundry ranks supported stories for this interval."
+  ],
+  [
+    12,
+    14,
+    "A co-commentator with context",
+    "The prepared example connects Ellis\u2019s changed role with match activity and fictional player history."
+  ],
+  [
+    13,
+    10,
+    "Open the supporting evidence",
+    "Inspect source facts behind the explanation. Interpretation stays separate from calculated evidence."
+  ],
+  [
+    14,
+    6,
+    "Make it personal",
+    "Quick and Tactical views change the depth; team and player focus change the emphasis."
+  ],
+  [
+    17,
+    7,
+    "Bridge football languages",
+    "Click highlighted terms for a translated name and an explanation in your chosen glossary language."
+  ],
+  [
+    18,
+    7,
+    "Bring your own match package",
+    "Load supported structured match data, or explore the reproducible synthetic examples."
+  ],
+  [
+    19,
+    8,
+    "Put incidents in context",
+    "Reported incidents can include corrections and a linked, versioned official rule reference."
+  ],
+  [
+    0,
+    8,
+    "Try Touchline",
+    "Public demo and source repository. Fictional data; bounded AI story selection, with a local fallback."
+  ]
+]
