@@ -10,5 +10,3 @@ node_modules/
 __pycache__/
 submission/frames/
 submission/private-*
-
-submission/narration/
