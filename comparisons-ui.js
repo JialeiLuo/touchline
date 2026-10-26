@@ -9,7 +9,7 @@
   }host.append(section);
  };
  window.renderSequenceStory=function(host,packet){
-  const report=packet.sequence_analysis;if(!report)return;
+  const report=packet.sequence_analysis;if(!report){if(packet.input_capabilities?.sequence_reason)host.append(el('p','How attacks developed · '+packet.input_capabilities.sequence_reason,'muted'));return;}
   const section=el('section',undefined,'calculated-comparisons');section.setAttribute('aria-label','How attacks developed');section.append(el('h3','How attacks developed'));
   for(const team of report.teams){
    section.append(el('p',team.story));

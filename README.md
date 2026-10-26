@@ -90,3 +90,6 @@ Recorded evaluation: **19 test files**, a **288-combination deterministic contra
 - [Public deployment](docs/PUBLIC_DEMO.md), [copyright and licensing position](COPYRIGHT.md)
 
 No real football feed, video perception, calibrated xG, match prediction, broad injury/manager/recruitment history, arbitrary CSV import or production-scale service is included. The narrated demonstration video is not a voice-commentary feature inside the website.
+
+### Local refinement: reliable match input
+Batch 1 adds data-based upload analysis (including possession sequences), explicit time/coordinate contracts, capability labels, event-specific validation errors, atomic package replacement and expiry/removal controls. Open **Match data & demo settings** to load or download an example. See [input contract](docs/MATCH_PACKAGE.md), [viewer instructions](docs/USER_GUIDE.md) and [Batch 1 verification](docs/BATCH_1.md). These local refinements are not yet deployed to the public submission demo.

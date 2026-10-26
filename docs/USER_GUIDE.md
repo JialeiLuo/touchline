@@ -85,3 +85,8 @@ The curated IFAB reference explains a rule separately from the incident facts. I
 ## What this is useful for today
 
 Try an interval catch-up, a focused player story, source inspection, glossary learning and a structured-package replay. A pre-match briefing, open-ended football questions, autonomous evidence investigation, real match lookup, injury/manager analysis, calibrated xG, predictions and spoken live commentary remain outside the prototype.
+
+## Loading your match reliably
+Open **Match data & demo settings**, then **Match data**. Use **Load example package** first, or choose a synthetic Touchline JSON file up to 2 MB. **Download current package** gives the complete editable format, including the explicit time/coordinate contract. CSV and video are not accepted yet.
+
+The panel shows which sequence analysis, role history and incident data are supplied. Missing data is different from a measured zero. Uploading the built-in match preserves its supported calculations. Validation errors point to problematic events; rejected uploads keep your current match. An accepted replacement removes the old server copy. The expiry time is shown; after expiry local replay still works, and **Reload expired package** restores server analysis. **Remove upload and use built-in match** deletes the selected server copy. Restarting the server also clears its temporary uploads. Never put credentials or personal information in match packages.

@@ -20142,5 +20142,13 @@
         "synthetic": true
       }
     ]
+  },
+  "analysis_contract": {
+    "time_unit": "seconds",
+    "coordinates": "metres_105x68",
+    "direction": {
+      "northbridge": "increasing_x",
+      "southport": "decreasing_x"
+    }
   }
 }
