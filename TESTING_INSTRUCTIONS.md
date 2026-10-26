@@ -30,3 +30,7 @@ node tools/evaluate-product.cjs
 Open `http://127.0.0.1:8767/`. No dependencies need installing. Without private Azure configuration, explanations use the labelled local path. For online ranking, copy `.env.example` to `.env` and privately configure your own Foundry deployment. Never commit secrets. No key belonging to the entrant is provided in the repository.
 
 Read docs/MATCH_PACKAGE.md for the JSON schema, docs/DATA_PROVENANCE.md for generation, and docs/PRODUCT_EVALUATION.md for recorded results and limitations. Optional live evaluation scripts consume model credit and are not part of `npm test`.
+
+## Demonstration video
+
+Watch the 1:48 English-narrated walkthrough: https://youtu.be/9JvQMpAhdpA
