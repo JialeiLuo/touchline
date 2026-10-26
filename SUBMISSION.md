@@ -4,6 +4,8 @@
 
 **Working demo:** https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/
 
+**Demo video (1:48, English narration and captions):** https://youtu.be/9JvQMpAhdpA
+
 **Source:** https://github.com/JialeiLuo/touchline
 
 **Suggested category:** Best Use of Microsoft Foundry Project. Touchline uses Foundry for bounded story ranking; it is not a multi-agent system.
