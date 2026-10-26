@@ -6,7 +6,7 @@
 - English pitch and testing instructions: prepared in SUBMISSION.md and TESTING_INSTRUCTIONS.md.
 - Suggested category: Best Use of Microsoft Foundry Project. No multi-agent claim.
 - User confirmed registration by the deadline and entrant eligibility requirements on 25 October 2026. This is entrant confirmation, not an organizer eligibility ruling.
-- Video: English-captioned MP4 built and decoded successfully (about 107 seconds). Supported-platform upload paused after browser access was declined; nothing uploaded to YouTube.
+- Video: 108-second English-captioned MP4 now includes timed synthetic English narration. The user authorized YouTube access on 26 October, but a saved browser permission still blocks Studio; upload remains pending.
 - Project page: English title, tagline, pitch and public repository link saved; video URL pending.
 - Final entry/legal acceptance: not performed. The entrant must review the completed package before any contract acceptance.
 
