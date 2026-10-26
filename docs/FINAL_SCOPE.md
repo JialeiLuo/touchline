@@ -30,3 +30,7 @@ JSON v1, completed 90-minute match, documented two internal team slots with cust
 Reproducible local suite; multi-seed contract matrix; contrasting/missing/late role-history fixtures; bounded fresh live ranking samples with every outcome retained; browser journeys for entry, commentary, time/focus changes, lineup navigation, glossary, file upload and correction visibility; narrow-width layout check; public post-deployment smoke checks. Detailed evidence is in PRODUCT_EVALUATION.md and JSON reports.
 
 External fan usability validation, long-duration availability and an equal-information competing-model baseline have not been completed and are not implied by these checks. Remaining work is submission packaging, not expanding this frozen feature list.
+
+## Documentation reconciliation — 26 October 2026
+
+Public source, narrated video and project-page links have since been published. This freeze describes product capabilities, not a promise that the historical packaging tasks above remain unfinished. See [current coverage review](COVERAGE_REVIEW.md) for the reconciled feature backlog and next-step priorities. Website voice remains outside scope; video narration does not change that.

@@ -2,7 +2,7 @@
 
 Living project backlog. Update this file when the user proposes an idea or development reveals a useful new one. This is a record, not a promise to implement every item. Keep user suggestions, proposed extensions and implementation status distinct. No real football conclusions have been validated.
 
-Status: prototype = narrow demonstration exists; proposed = not implemented; foundation = partial supporting infrastructure exists.
+Status: prototype = narrow demonstration exists; proposed = not implemented; foundation = partial supporting infrastructure exists. Historical progress notes below describe their time of writing. The current reconciled status of every item is in [COVERAGE_REVIEW.md](COVERAGE_REVIEW.md), audited 26 October 2026.
 
 ## Product goal
 An English-first AI football co-commentator that follows match events, connects them to relevant history, answers follow-ups and explains evidence. Selected-language glossary aids help fans discuss football across languages. Replay cards are rule/template based; selected-interval AI commentary is connected through Microsoft Foundry.
@@ -11,10 +11,10 @@ An English-first AI football co-commentator that follows match events, connects 
 
 | ID | Idea | Evidence needed / treatment | Status |
 |---|---|---|---|
-| U01 | Explain whether substitutions contributed to a change | Incoming player actions, roles, before/after opportunities, other changes; distinguish contribution from causal attribution | foundation: substitution event and caveat only |
+| U01 | Explain whether substitutions contributed to a change | Incoming player actions, roles, before/after opportunities, other changes; distinguish contribution from causal attribution | partial: role-history, matched activity and concurrent changes; no causal attribution |
 | U02 | Recall whether a goalkeeper made similar errors recently | Consistent incident definitions, comparable opportunities, historical records; avoid judging by raw incident counts | proposed |
-| U03 | Assess red-card impact | Score/time, personnel, territorial/chance changes and opponent response | proposed |
-| U04 | Assess yellow-card impact and possible caution | Comparable defensive opportunities, challenge choices and opponent targeting; do not presume caution | prototype: flank-count signal only |
+| U03 | Assess red-card impact | Score/time, personnel, territorial/chance changes and opponent response | partial: dismissal/personnel story and protected coverage; no dedicated man-down impact model |
+| U04 | Assess yellow-card impact and possible caution | Comparable defensive opportunities, challenge choices and opponent targeting; do not presume caution | partial: booking story plus legacy flank fixture; no measured caution inference |
 | U05 | Assess recruitment/senior-management contribution to squad weaknesses | Squad depth, transfers, finances, availability and multiple matches; frame alternatives, not blame from one match | proposed, later scope |
 | U06 | Discuss what might happen next in the match | Conditional scenarios; probabilities need a tested forecasting method | foundation: what-to-watch template only |
 | U07 | Discuss longer-term consequences and future performance | Fixtures, standings, strength, availability and uncertainty | proposed |
@@ -23,20 +23,20 @@ An English-first AI football co-commentator that follows match events, connects 
 | U10 | English main interface plus selected-language explanations | English content; glossary translation and definition in selected language; optional English explanation | prototype: six glossary languages |
 | U11 | Analyse unusual matches/upsets more deeply | Explicit pre-match expectation, table/strength context, match performance; result surprise differs from performance surprise | proposed |
 | U12 | Player personal style / discipline over recent matches | Cards, fouls, duel types and exposure (minutes/opportunities), role, opponents, refereeing; cards alone cannot establish aggression | proposed |
-| U13 | Position familiarity / playing out of position | Historical positions, actual roles, minutes and role-specific actions; nominal position is not the entire role | proposed |
+| U13 | Position familiarity / playing out of position | Historical positions, actual roles, minutes and role-specific actions; nominal position is not the entire role | prototype: last available role-minute records and inherited-role familiarity |
 | U14 | Detect a new/rare formation | Formation history, in/out-of-possession shape, sample size and manager context; event-only inputs insufficient for precise shape inference | proposed |
 | U15 | Detect an unfamiliar starting XI or squad | Starting XI history, combinations, minutes together, injuries/rotation; novelty does not imply poor performance | proposed |
 | U16 | Explain an unexpected result relative to the fan's prior expectation | Capture the stated reason/baseline and compare evidence; do not invent expectations | proposed |
-| U17 | Include bench, injuries/return dates, past opponents/results and manager context as needed | Timestamped fictional context initially; only use fields relevant to an output | foundation: fictional substitution and one history record |
-| U18 | Make the product useful beyond asking ChatGPT | Automatic current-match context, evidence navigation, continuous updates and minimal viewing interruption | overarching evaluation requirement |
+| U17 | Include bench, injuries/return dates, past opponents/results and manager context as needed | Timestamped fictional context initially; only use fields relevant to an output | partial: bench/manager labels and narrow role history; injuries/form/results missing |
+| U18 | Make the product useful beyond asking ChatGPT | Automatic current-match context, evidence navigation, continuous updates and minimal viewing interruption | workflow distinction implemented; fan benefit and equal-input chatbot advantage unvalidated |
 
 ## Assistant-proposed ideas
 
 | ID | Idea | Evidence / implementation notes | Status |
 |---|---|---|---|
-| A01 | Catch-up: what changed while I was away? | User interval, events and prior comparison windows | prototype: fixed recap only |
-| A02 | Explain patterns behind recent play | Linked sequences, rolling comparisons, minimum evidence | prototype: flank pattern only |
-| A03 | Distinguish possession from threat | Possession duration, progression, territory and chances | proposed |
+| A01 | Catch-up: what changed while I was away? | User interval, events and prior comparison windows | prototype: selectable revealed interval, commentary and local recap |
+| A02 | Explain patterns behind recent play | Linked sequences, rolling comparisons, minimum evidence | partial: complete possession progression and matched event windows |
+| A03 | Distinguish possession from threat | Possession duration, progression, territory and chances | partial: possession/progression/shots; no xG |
 | A04 | Player matchups and repeated targeting | Repeated encounters, outcomes and chance creation | prototype: coarse flank proxy only |
 | A05 | Pressing, build-up problems and escape routes | Pressured actions, recoveries, passing sequences | proposed |
 | A06 | Space, overloads and off-ball contributions | Tracking or snapshots; do not infer detailed movement from sparse ball events | proposed |
@@ -44,24 +44,26 @@ An English-first AI football co-commentator that follows match events, connects 
 | A08 | Set-piece routines and recurring threats | Comparable deliveries, contacts and outcomes | proposed |
 | A09 | Separate chance creation, finishing and goalkeeping | Appropriate shot/chance evidence; uncertainty for small samples | proposed |
 | A10 | Compare previous games against similar playing styles | Similarity definition, opposition/context adjustments | proposed |
-| A11 | Maintain and revisit hypotheses | State expected observable signs; strengthen/weaken as events arrive | foundation: static what-to-watch text |
+| A11 | Maintain and revisit hypotheses | State expected observable signs; strengthen/weaken as events arrive | foundation: static next-to-watch question; no persistent hypothesis updates |
 | A12 | Show evidence and alternative explanations | Event IDs and numerical evidence; distinguish fact, interpretation, forecast | prototype |
 | A13 | Adjust commentary depth and frequency to significance | Evidence thresholds, cooldown, avoid inventing stories in quiet periods | foundation: minimum-phase threshold and control fixture |
-| A14 | Simple/detailed experience and favourite-team/player focus | Same facts, different presentation/selection; no fan-bias distortion | prototype: simple/detailed only |
+| A14 | Simple/detailed experience and favourite-team/player focus | Same facts, different presentation/selection; no fan-bias distortion | prototype: Quick/Tactical, team and player focus |
 | A15 | Optional voice commentary and pronunciation | Audio timing, interruption controls and name pronunciation | proposed, later scope |
 | A16 | Regional name aliases, bilingual search and saved vocabulary | Entity resolution and curated dictionaries; acknowledge variants | proposed |
 | A17 | Editorial review / broadcaster output | Approve/edit/dismiss and timed machine-readable cards | proposed alternative audience, not current primary scope |
 | A18 | Simulation-based alternative continuations | Explicit assumptions; simulator outcome is not real-world causal proof | proposed, later scope |
 | A19 | Lineup continuity and partnerships | Shared minutes, recurring pairings, comparable opponents; not just XI overlap | proposed |
 | A20 | Workload, recovery and rotation context | Recent minutes, rest days, travel if relevant; avoid diagnosing fatigue without evidence | proposed |
-| A21 | Commentary uncertainty and conflicting evidence | Show missing/contradictory information, abstain when unsupported | foundation: current caveats |
+| A21 | Commentary uncertainty and conflicting evidence | Show missing/contradictory information, abstain when unsupported | partial: scopes, missing history, corrections and explicit limitations |
 
-## Near-term implementation order
-1. Maintain clean event/evidence contracts and generated replay.
-2. Build player-context records: discipline rates, role history, lineup novelty with denominators and timestamps.
-3. Connect an AI explanation layer to evidence packets, with unsupported-claim checks and fallback.
-4. Add one contextual scenario and test usefulness with fans.
-5. Expand only when evidence, time and evaluation justify it.
+## Current next-step order — reconciled 26 October
+1. Finish consistent user instructions and test the first useful result with unfamiliar fans.
+2. Design one bounded model-selected investigation; existing role-history retrieval is deterministic.
+3. Compare deterministic priority, model ranking and the proposed investigator on equal inputs.
+4. Add supplied/illustrative xG with provenance before richer chance-quality stories.
+5. Improve the demo cut and CI; expand CSV/rules/history only with explicit contracts and tests.
+
+Detailed acceptance criteria are in COVERAGE_REVIEW.md. Older paragraphs below are a development history, not a second current-status table.
 
 ## Data/reliability principles
 - Synthetic provenance and generator version/seed are explicit.
@@ -120,3 +122,13 @@ Team focus implemented: Both sides / either team; facts stay fixed, story priori
 Viewer milestone: player involvement focus, lineup-to-commentary follow, separate concise/full story wording, explicit watch-next questions, dismissal/incident candidates, simplified viewer screen and updated input-data onboarding implemented. These are bounded evidence-derived stories, not general human-like tactical understanding. Broader history, live hypotheses, voice and agent-selected evidence tools remain proposed.
 
 Role-history investigation implemented for supplied records: compare inherited role with last five available prior matches, minutes denominators, outgoing/incoming involvement and concurrent changes. Built-in contrasting fictional histories exercise limited versus established role experience. Manager suitability, injury histories, causality and autonomous retrieval remain outstanding.
+
+## Documentation and rubric review — 26 October 2026
+- U29: README should teach a new user how to use the product, not lead with developer setup. Implemented: viewer-first README, prepared-example walkthrough, task table, input explanation, troubleshooting and docs/USER_GUIDE.md. Not yet tested with unfamiliar fans.
+- U30: Demo should demonstrate the judging criteria through visible value. Current video covers features; submission/VIDEO_REVISION_PLAN.md proposes a more focused 115-second cut with a genuine output contrast, architecture and evaluation. Proposed cut has not been recorded/uploaded.
+- Reconciled all U01–U33 and A01–A24 in docs/COVERAGE_REVIEW.md. Current team/player personalisation and role-history retrieval supersede earlier proposed-status notes. Website voice remains unimplemented despite narrated submission media.
+
+Additional user ideas recovered from earlier discussion:
+- U31: Memorable human/touchline moments and confrontations. Partial: supplied annotations and corrections exist; automatic capture from video does not.
+- U32: Normal football statistics with side-by-side horizontal bars and highlighted higher values. Implemented for the supported event metrics; xG remains absent.
+- U33: Full-match experiment rather than a short spell. Implemented for 90 minutes; added time/extra time/shootouts remain absent.

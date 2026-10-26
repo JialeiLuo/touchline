@@ -50,7 +50,11 @@ These are families and illustrative subtypes, not a requirement to make a separa
 ## Derived story catalogue
 Counterattack, overload, repeated targeting, press escape, build-up difficulty, chance-creation change, territorial/control change, set-piece threat, substitution contribution, disciplinary exposure, role unfamiliarity, rare lineup/shape, upset relative to an explicit baseline, comeback, game-state adjustment, milestone and conditional next-to-watch hypothesis. Each needs a stated method and sufficient inputs; these are not generic facts to fabricate from a sparse feed.
 
-## Current implementation coverage
+## Original implementation snapshot — 25 October 2026
+
+This subsection is historical. General Touchline JSON v1 upload, annotations/corrections, role-history retrieval and broader story selection were subsequently implemented in bounded form. See [current coverage review](COVERAGE_REVIEW.md) and [frozen scope](FINAL_SCOPE.md) for present capabilities. The unsupported list below records the state at initial research time.
+
+### Snapshot coverage
 - Existing full-match events: kickoff, period end, pass/carry, foul/card, shot/goal/save, corner/restart, substitution, possession-end and authored tactical change.
 - Existing context: small fictional squads, declared roles/managers/formations, narrow fixture history, six-language glossary.
 - Existing calculations: prefix statistics, substitution involvement and limited equal-window comparisons.
