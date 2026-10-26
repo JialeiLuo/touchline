@@ -1,0 +1,1 @@
+const fs=require('fs'),path=require('path');const base=path.join(__dirname,'..','data');const data=JSON.parse(fs.readFileSync(path.join(base,'fixtures.json'),'utf8'));fs.writeFileSync(path.join(base,'fixtures.js'),'// Generated from fixtures.json by tools/sync-fixtures.cjs. Do not edit.\nglobalThis.MATCH_FIXTURES = '+JSON.stringify(data,null,2)+';\n');
