@@ -28,5 +28,17 @@ ff=os.environ.get('FFMPEG') or shutil.which('ffmpeg')
 if not ff:
  import imageio_ffmpeg
  ff=imageio_ffmpeg.get_ffmpeg_exe()
-subprocess.run([ff,'-y','-f','concat','-safe','0','-i',str(render/'concat.txt'),'-t',str(elapsed),'-r','24','-c:v','libx264','-preset','veryfast','-crf','22','-pix_fmt','yuv420p','-movflags','+faststart',str(out/'touchline-demo.mp4')],check=True,stdout=subprocess.DEVNULL,stderr=open(render/'encode.log','w'))
-print(f'Built {elapsed}s video: {out/"touchline-demo.mp4"}')
+# Write an exact number of frames so caption and narration timestamps remain aligned.
+audio=out/'touchline-narration.wav'
+command=[ff,'-y','-f','rawvideo','-pixel_format','rgb24','-video_size','1920x1080','-framerate','24','-i','pipe:0']
+if audio.exists(): command += ['-i',str(audio),'-af','loudnorm=I=-16:TP=-1.5:LRA=11','-c:a','aac','-b:a','128k']
+command += ['-t',str(elapsed),'-c:v','libx264','-preset','veryfast','-crf','22','-pix_fmt','yuv420p','-movflags','+faststart',str(out/'touchline-demo.mp4')]
+with open(render/'encode.log','w') as log:
+ process=subprocess.Popen(command,stdin=subprocess.PIPE,stdout=subprocess.DEVNULL,stderr=log)
+ try:
+  for n,(_,duration,_,_) in enumerate(segments):
+   pixels=Image.open(render/f'{n:03}.jpg').convert('RGB').tobytes()
+   for _ in range(round(duration*24)): process.stdin.write(pixels)
+ finally: process.stdin.close()
+ if process.wait(): raise RuntimeError('Video encoding failed; inspect '+str(render/'encode.log'))
+print(f'Built {elapsed}s video: {out/"touchline-demo.mp4"}; narration={audio.exists()}')
