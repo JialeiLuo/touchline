@@ -21,6 +21,7 @@ function createTools(p){
  const substitution=player=>p.squad_context.find(c=>c.player_id===player);
  function requirements(s){
   if(basic.has(s.id))return['context-0'];
+  if(s.requires_tools)return s.requires_tools.map(r=>reads.get(`${r.tool}:${r.key}`));
   const sourceFacts=s.evidence_ids.map(id=>p.facts.find(f=>f.id===id));
   if(sourceFacts.some(f=>f?.kind==='A recorded tactical change')){const teams=[...new Set(sourceFacts.flatMap(f=>(f?.event_ids||[]).map(id=>p.events.find(e=>e.id===id)?.team_id)).filter(Boolean))];return teams.map(t=>reads.get(`inspect_formation:${t}`));}
   if(sourceFacts.some(f=>f?.kind==='Discipline to watch')){const teams=[...new Set(sourceFacts.flatMap(f=>(f?.event_ids||[]).map(id=>p.events.find(e=>e.id===id)?.team_id)).filter(Boolean))];return teams.map(t=>reads.get(`inspect_discipline:${t}`));}

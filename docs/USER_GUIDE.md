@@ -102,3 +102,7 @@ Explain a revealed interval and expand **Explore the play behind this explanatio
 ## Local refinement: evidence investigation
 
 Choose **Explanation approach → Investigate the evidence**, then explain the selected interval. Expand **Evidence investigation** to inspect the actual queries, sources and stop reason. **Select supporting stories** retains the earlier ranker. Queries have strict request/time/usage limits; insufficient evidence and failures remain visible and can use the local fallback. The model chooses queries and story IDs; wording/figures remain source-owned. See [scope and limits](BOUNDED_INVESTIGATOR.md). This feature is local until the final release batch.
+
+## Local refinement: facts and the reading of the play
+
+Explanatory summaries show the recorded facts first, followed by **Reading of the play** and a relevant **Limit or alternative**. Open supporting evidence to inspect sources and the checked claim records. Quick preserves the main pattern; Tactical adds exact counts and denominators. Quiet intervals stay brief; full-time takeaways refer back to the selected scope. Missing data is not presented as zero. See [commentary contracts and limits](GROUNDED_COMMENTARY.md). This refinement remains local until Batch 10.

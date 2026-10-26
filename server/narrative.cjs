@@ -1,0 +1,56 @@
+/* Composable, source-owned explanation: observed record, reading and alternatives. */
+const ids=claims=>[...new Set(claims.flatMap(c=>c.basis_fact_ids))];
+const clock=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
+const role=r=>({RW:'right wing',LW:'left wing',ST:'striker',AM:'attacking midfield',CM:'central midfield',DM:'defensive midfield',CB:'centre-back',RB:'right-back',LB:'left-back',GK:'goalkeeper'}[r]||r);
+function buildNarratives(p){
+ const {expectedClaim}=require('./narrative-checks.cjs'),rows=[],full=p.interval.to>=5400;
+ const claim=(kind,extra={})=>expectedClaim({kind,...extra},p);
+ const add=(row,quick,tactical)=>{row.narrative={quick,tactical};row.quick_text=[quick.fact,quick.reading,quick.alternative].filter(Boolean).join(' ');row.text=[tactical.fact,tactical.reading,tactical.alternative].filter(Boolean).join(' ');row.evidence_ids=ids(row.structured_claims);rows.push(row);};
+ function trend(g,team){const pass=g?.observations.find(o=>o.team_id===team&&o.metric==='completed_passes'),shot=g?.observations.find(o=>o.team_id===team&&o.metric==='shots');if(!pass||!shot)return null;
+  if(pass.delta>0&&shot.delta<=0)return{reading:'More completed passing did not come with more recorded attempts.',tag:'conflicting_activity'};
+  if(pass.delta===0&&shot.delta===0)return{reading:'The team’s recorded passing and shooting counts were unchanged across these equal windows.',tag:'unchanged_activity'};
+  if(shot.delta>0)return{reading:'The team recorded more attempts after the change; their count alone does not show better chances.',tag:'more_attempts'};
+  if(pass.delta<0&&shot.delta<0)return{reading:'Both completed passing and shooting activity declined across these windows.',tag:'activity_decline'};
+  return{reading:'The activity measures do not point to a single improvement.',tag:'mixed_activity'};
+ }
+ for(const inv of p.investigations){const group=p.comparisons.find(c=>c.trigger_id===p.squad_context.find(c=>c.player_id===inv.player_id)?.event_id),entry=p.squad_context.find(c=>c.player_id===inv.player_id),h=inv.history,c=inv.comparison,signal=group?.status==='ready'?trend(group,inv.team_id):null;
+  const claims=[claim('history_share',{player_id:inv.player_id}),claim('player_windows',{player_id:inv.player_id}),claim('concurrent_changes',{player_id:inv.player_id})];if(signal)claims.push(claim('team_change',{trigger_id:entry.event_id,team_id:inv.team_id}));
+  const history=h.status==='missing'?`${inv.name} ${full?'took':'takes'} the ${role(inv.assigned_position)} role; usable prior role-minute history is missing.`:`${inv.name} ${full?'took':'takes'} the ${role(inv.assigned_position)} role with ${h.role_minutes} of ${h.minutes} supplied prior minutes in that role.`;
+  const pending=c.before_window.from<0?'The full before-entry window is unavailable.':full?'The match ended before a full post-entry comparison was available.':'The full post-entry comparison is not yet available.';
+  const quickFact=history+(c.status!=='ready'?' '+pending:'');
+  let alternative=c.status!=='ready'?'A before/after conclusion would be premature.':c.before.on_pitch_seconds!==c.after.on_pitch_seconds?'Player time on pitch differs, so raw player totals are not directly comparable.':inv.other_change_ids.length?'Other recorded changes overlap the windows, so the substitution’s effect cannot be isolated.':'Equal clock windows do not isolate the substitution’s effect.';
+  if(h.status==='missing'&&c.status!=='ready')alternative='The usual-position label cannot establish familiarity, and the comparison is incomplete.';
+  const exposure=c.status==='ready'?` The outgoing player completed ${c.before.completed}/${c.before.passes} passes and took ${c.before.shots} shots; ${inv.name} completed ${c.after.completed}/${c.after.passes} and took ${c.after.shots}. On-pitch exposure was ${c.before.on_pitch_seconds}s and ${c.after.on_pitch_seconds}s respectively.`:' '+pending;
+  add({title:signal?.tag==='conflicting_activity'?'A role change, with conflicting activity':c.status!=='ready'?'A role change awaiting enough evidence':'The role change in context',scope:{kind:'substitution_synthesis',from:c.before_window.from,to:c.status==='ready'?c.after_window.to:p.interval.to},scope_label:`History at ${clock(inv.at)} · ${c.status==='ready'?`equal windows ${clock(c.before_window.from)}–${clock(c.after_window.to)}`:'comparison unavailable'}`,team_id:inv.team_id,player_id:inv.player_id,activity_scope:c.status==='ready'?{team_id:inv.team_id,from:c.before_window.from,to:c.after_window.to}:null,priority:12,structured_claims:claims,requires_tools:[{tool:'role_history',key:inv.player_id},{tool:'compare_change',key:entry.event_id}],alternative_category:c.status!=='ready'?'incomplete_evidence':c.before.on_pitch_seconds!==c.after.on_pitch_seconds?'unequal_exposure':'causal_attribution',coverage_tags:[`player:${inv.player_id}`,`change:${entry.event_id}:${inv.team_id}`],watch_next:`Watch ${inv.name}'s next recorded involvement in the ${role(inv.assigned_position)} role and whether the team’s possessions lead to attempts.`},
+   {fact:quickFact,reading:signal?.reading??'',alternative},
+   {fact:history+(h.status!=='missing'?` The sample covers ${h.records} prior match records.`:'')+exposure,reading:signal?.reading??'',alternative});
+ }
+ for(const group of p.comparisons.filter(g=>g.status==='ready'))for(const team_id of ['northbridge','southport']){if(p.squad_context.some(c=>c.event_id===group.trigger_id&&c.team_id===team_id))continue;const signal=trend(group,team_id),tc=claim('team_change',{trigger_id:group.trigger_id,team_id});if(!signal||!tc)continue;if(tc.metrics.every(m=>m.before===0&&m.after===0))continue;const team=p.facts.find(f=>f.comparison?.team_id===team_id)?.text.split(':')[0]||team_id,passes=tc.metrics.find(m=>m.metric==='completed_passes'),shots=tc.metrics.find(m=>m.metric==='shots');
+  add({title:signal.tag==='unchanged_activity'?'A change without an activity shift':signal.tag==='conflicting_activity'?'Passing and shooting tell different stories':'Activity around the recorded change',team_id,scope:{kind:'change_synthesis',before:group.before,after:group.after},scope_label:`Equal windows ${clock(group.before.from)}–${clock(group.after.to)}`,priority:7,activity_scope:{team_id,from:group.before.from,to:group.after.to},structured_claims:[tc],requires_tools:[{tool:'compare_change',key:group.trigger_id}],alternative_category:'causal_attribution',coverage_tags:[`change:${group.trigger_id}:${team_id}`],watch_next:'Watch whether the next comparable spell adds attempts as well as completed passes.'},
+  {fact:`${team}: completed passes ${passes.before} → ${passes.after}; shots ${shots.before} → ${shots.after}.`,reading:signal.reading,alternative:'These counts describe activity, not the cause of the change.'},
+  {fact:`${team} completed ${passes.before} passes before and ${passes.after} after the change; shots went from ${shots.before} to ${shots.after}. Both windows cover equal match-clock time.`,reading:signal.reading,alternative:'Score state, personnel and unmeasured play can also influence activity; these counts do not isolate an effect.'});
+ }
+ const situation=p.facts.find(f=>f.kind==='Interval situation');if(situation){const [a,b]=situation.score_end,[home,away]=situation.team_names,score=claim('interval_score'),shots=score.shots.reduce((a,b)=>a+b,0),quiet=!shots&&!p.squad_context.length&&!p.comparisons.length&&!p.annotations.length&&!p.events.some(e=>['goal','yellow_card','red_card','tactical_change'].includes(e.type));
+  if(quiet){const coverage=claim('sequence_availability'),noProgress=!coverage.available;
+   add({title:'A quiet spell in the recorded play',scope:{kind:'interval_synthesis',...p.interval},scope_label:`Selected interval ${clock(p.interval.from)}–${clock(p.interval.to)}`,priority:8,structured_claims:[score,claim('quiet_record'),...(noProgress?[coverage]:[])],requires_tools:[],coverage_tags:['interval_overview']},
+    {fact:`${home}–${away} held at ${a}–${b}; neither side recorded a shot in this interval.`,reading:'',alternative:noProgress?'Possession detail is unavailable, so this does not show how either side used the ball.':''},
+    {fact:`${home}–${away} stayed at ${a}–${b}. No shot, substitution, dismissal or declared shape change was recorded in the selected interval.`,reading:'An unchanged score and no attempts do not establish how either side controlled play.',alternative:noProgress?'Possession detail is unavailable; missing evidence is not zero activity.':''});
+  }
+  if(full)add({title:'The result and the selected closing spell',scope:{kind:'interval_synthesis',...p.interval},scope_label:`Full time · selected ${clock(p.interval.from)}–${clock(p.interval.to)}`,priority:p.interval.from===0?6:9,structured_claims:[score],requires_tools:[],coverage_tags:['interval_overview']},
+   {fact:`Full time: ${home} ${a}–${b} ${away}.`,reading:p.interval.from===0?'The recorded result and the passages behind it can now be reviewed.':'This catch-up covers the selected closing interval, not all of the match.',alternative:''},
+   {fact:`Full time: ${home} ${a}–${b} ${away}. In the selected ${clock(p.interval.from)}–${clock(p.interval.to)} interval, recorded shots were ${score.shots[0]} and ${score.shots[1]} respectively.`,reading:'The score records the outcome; the supporting passages describe how the selected play unfolded.',alternative:'Those observations do not establish a single cause of the final result.'});
+ }
+ return rows;
+}
+function enrichStory(story,p){
+ const {expectedClaim}=require('./narrative-checks.cjs');
+ if(story.scope.kind==='complete_sequences'){
+  const team=p.sequence_analysis.teams.find(t=>t.team_id===story.team_id),c=team.counts,reading=c.attacking_third_entries===0?'Completed passing did not carry these sequences into the attacking third.':c.shot_sequences===0?'Reaching advanced territory did not produce a recorded shot within these complete sequences.':'The record connects these possession sequences with attempts, rather than showing only a passing total.';
+  const quick={fact:`${team.team_name}: ${c.attacking_third_entries}/${c.complete_sequences} complete sequences reached the attacking third; ${c.shot_sequences} included a shot.`,reading,alternative:'Crossing and unfinished sequences are excluded.'};
+  const tactical={fact:`${team.team_name} had ${c.complete_sequences} complete sequences: ${c.attacking_third_entries} reached the attacking third, ${c.shot_sequences} included a shot, and ${c.early_losses} ended in an early failed action.`,reading,alternative:'The denominator excludes boundary-crossing and unfinished sequences; off-ball play is not measured.'};
+  story.narrative={quick,tactical};story.quick_text=Object.values(quick).join(' ');story.text=Object.values(tactical).join(' ');story.structured_claims=[expectedClaim({kind:'sequence_summary',team_id:team.team_id},p)];story.alternative_category='sequence_coverage';
+ }
+ if(story.scope.kind==='chance_quality'){story.structured_claims=[...new Set(story.evidence_ids.map(id=>p.facts.find(f=>f.id===id)?.chance_team).filter(Boolean))].map(team_id=>expectedClaim({kind:'chance_values',team_id},p));}
+ return story;
+}
+module.exports={buildNarratives,enrichStory};

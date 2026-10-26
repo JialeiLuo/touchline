@@ -103,3 +103,5 @@ Batch 3 adds [richer football evidence tools](docs/FOOTBALL_EVIDENCE_TOOLS.md), 
 Batch 4 adds [supplied/illustrative chance quality](docs/CHANCE_QUALITY.md). See [local verification and limitations](docs/BATCH_4.md). The hosted demo and video update in the final release batches.
 
 Batch 5 adds the [bounded AI investigator](docs/BOUNDED_INVESTIGATOR.md), with model-selected queries, follow-ups, inspected-story gating, budgets and a visible trace. See [local results and live samples](docs/BATCH_5.md). Publication remains Batch 10.
+
+Batch 6 adds [connected, grounded commentary](docs/GROUNDED_COMMENTARY.md): facts versus interpretation, checked claims, quiet/full-time handling and complementary composition. See [local verification and remaining limits](docs/BATCH_6.md).

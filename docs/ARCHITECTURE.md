@@ -25,3 +25,7 @@ Packet schema 12 adds `chance_quality`: validated per-shot supplied/illustrative
 ## Batch 5 model-directed investigation (local refinement)
 
 Packet schema 13 adds `analysis_mode`. The investigator path uses `server/investigator.cjs` and an allowlisted registry in `server/investigator-tools.cjs`: basic context → model-selected query → bounded result → follow-up or finish → inspected-story composition. Precomputed deterministic evidence tools are shared with the ranker. The previous deterministic-only descriptions above describe earlier checkpoints/the ranker path. See [current contracts and budgets](BOUNDED_INVESTIGATOR.md).
+
+## Batch 6 commentary composition
+
+Packet schema 14 adds explicit sequence coverage. `server/narrative.cjs` builds source-owned explanatory candidates; `server/narrative-checks.cjs` validates typed values/scopes against the packet; `server/compose.cjs` applies focus, essential coverage, deduplication, word targets and inspected-only refill. Model-selected IDs still flow through the existing ranker/investigator adapters. See [grounded commentary](GROUNDED_COMMENTARY.md).
