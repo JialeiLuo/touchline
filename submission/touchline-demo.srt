@@ -1,0 +1,104 @@
+1
+00:00:00,000 --> 00:00:08,000
+Touchline | Your AI Co-commentator
+Missed ten minutes? Catch up on the story, not just the score.
+
+2
+00:00:08,000 --> 00:00:09,875
+Follow a fictional full match
+Replay events, watch the clock and inspect the changing match statistics.
+
+3
+00:00:09,875 --> 00:00:11,750
+Follow a fictional full match
+Replay events, watch the clock and inspect the changing match statistics.
+
+4
+00:00:11,750 --> 00:00:13,625
+Follow a fictional full match
+Replay events, watch the clock and inspect the changing match statistics.
+
+5
+00:00:13,625 --> 00:00:15,500
+Follow a fictional full match
+Replay events, watch the clock and inspect the changing match statistics.
+
+6
+00:00:15,500 --> 00:00:17,375
+Follow a fictional full match
+Replay events, watch the clock and inspect the changing match statistics.
+
+7
+00:00:17,375 --> 00:00:19,250
+Follow a fictional full match
+Replay events, watch the clock and inspect the changing match statistics.
+
+8
+00:00:19,250 --> 00:00:21,125
+Follow a fictional full match
+Replay events, watch the clock and inspect the changing match statistics.
+
+9
+00:00:21,125 --> 00:00:23,000
+Follow a fictional full match
+Replay events, watch the clock and inspect the changing match statistics.
+
+10
+00:00:23,000 --> 00:00:27,000
+Start with the match evidence
+Both teams’ statistics are calculated from the recorded events.
+
+11
+00:00:27,000 --> 00:00:33,000
+Meet the teams
+Inspect the starting XI, current lineup, formations and managers.
+
+12
+00:00:33,000 --> 00:00:38,000
+Understand the player’s role
+Player details distinguish the assigned position from the usual role.
+
+13
+00:00:38,000 --> 00:00:46,000
+Choose the spell you missed
+Select an interval, commentary depth and the team or player you care about.
+
+14
+00:00:46,000 --> 00:00:48,000
+Ask for the story
+Microsoft Foundry ranks supported stories for this interval.
+
+15
+00:00:48,000 --> 00:01:02,000
+A co-commentator with context
+The prepared example connects Ellis’s changed role with match activity and fictional player history.
+
+16
+00:01:02,000 --> 00:01:12,000
+Open the supporting evidence
+Inspect source facts behind the explanation. Interpretation stays separate from calculated evidence.
+
+17
+00:01:12,000 --> 00:01:18,000
+Make it personal
+Quick and Tactical views change the depth; team and player focus change the emphasis.
+
+18
+00:01:18,000 --> 00:01:25,000
+Bridge football languages
+Click highlighted terms for a translated name and an explanation in your chosen glossary language.
+
+19
+00:01:25,000 --> 00:01:32,000
+Bring your own match package
+Load supported structured match data, or explore the reproducible synthetic examples.
+
+20
+00:01:32,000 --> 00:01:40,000
+Put incidents in context
+Reported incidents can include corrections and a linked, versioned official rule reference.
+
+21
+00:01:40,000 --> 00:01:48,000
+Try Touchline
+Public demo and source repository. Fictional data; bounded AI story selection, with a local fallback.

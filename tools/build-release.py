@@ -12,6 +12,7 @@ archive = out/f'touchline-{version}-source.zip'
 files = [p for p in root.iterdir() if p.is_file() and (p.suffix in ['.js','.cjs','.html'] or p.name in ['README.md','SUBMISSION.md','TESTING_INSTRUCTIONS.md','COPYRIGHT.md','package.json','Dockerfile','.gitignore','.dockerignore','.env.example'])]
 for folder in ['server','prompts','tests','tools','data','submission']:
     files += [p for p in (root/folder).rglob('*') if p.is_file() and p.suffix in ['.js','.cjs','.json','.txt','.py','.md','.srt','.mp4'] and '__pycache__' not in p.parts]
+files += list((root/'submission'/'demo-frames').glob('*.jpg'))
 files += [p for p in (root/'docs').iterdir() if p.suffix in ['.md','.json','.txt']]
 for name in ['viewer-milestone.jpg','contextual-investigation.jpg','scoped-stories.jpg','team-focus.jpg','public-demo.jpg','product-milestone.jpg','product-mobile.jpg']:
     if (root/'docs'/name).exists(): files.append(root/'docs'/name)
