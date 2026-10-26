@@ -13,3 +13,7 @@ Browser → local Node server → validated match package → revealed event pre
 Calculations and template fallback work locally. Azure ranking needs internet. No web-search tool is attached to the model. No frameworks, external runtime libraries or databases are required.
 
 Uploads are temporary process memory: one-hour lifetime, eight packages, 2 MB each. Restarting clears them. The demo is single-process; the usage ledger persists on hosted storage. User authentication and production-scale distributed resource management are not implemented.
+
+## Batch 3 evidence tools
+
+Packet schema 11 adds shared role-history, formation, discipline and enriched comparison tools. See [tool contracts and boundary conventions](FOOTBALL_EVIDENCE_TOOLS.md). The investigator still follows deterministic steps; model-selected calls remain future work.

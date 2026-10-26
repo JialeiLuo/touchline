@@ -97,3 +97,5 @@ Batch 1 adds data-based upload analysis (including possession sequences), explic
 ## Local refinement evaluation
 
 Batch 2 adds a controlled [scenario matrix and baseline protocol](docs/EVALUATION_SCENARIOS.md). Run `npm run evaluate:scenarios` for development cases; the reserved split is separate. See [Batch 2 results and limitations](docs/BATCH_2.md). These offline checks do not establish model superiority or fan usefulness.
+
+Batch 3 adds [richer football evidence tools](docs/FOOTBALL_EVIDENCE_TOOLS.md), including actual player exposure, progression denominators, declared-shape and discipline context. See [verification and local viewer changes](docs/BATCH_3.md).

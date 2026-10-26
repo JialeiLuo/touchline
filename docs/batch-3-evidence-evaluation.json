@@ -1,0 +1,2110 @@
+{
+  "version": "batch3-v1",
+  "source_revision": "23464db69e1d773267f95aaf804e8a5af1c010e2",
+  "runtime": "v24.22.1",
+  "source_hashes": {
+    "server/football-tools.cjs": "9de586d9ecff12857e7d71d92e8f09ea2108fbc991582232b1cb1d1ad56fb1a0",
+    "server/evidence.cjs": "f3d398cfac0a3ee2d54f38febd0e2f6715c30f3c1027a4347f6a74e185f23dd5",
+    "server/sequences.cjs": "7512f733f1d5201ce63c7fe5f3457cc67ef6a58520949e139aa14aa951a6987e",
+    "server/investigation.cjs": "bc244c787a94c35e52ce634285872ea7d5f58f05ddd733a0f55a1dd2b07fb2be",
+    "comparisons-ui.js": "c48c4d23ea923bd6da0f469b0d332811a88ab0269c9db36ade10a1b1447d6e64",
+    "evaluation/scenarios.cjs": "186ef97e2c9849ed06916c130d62a75d47c84f5f14b106b7d08a397270db902b",
+    "tools/check-football-evidence.cjs": "031a3d983d9a39a708348bb058e32264c6cc8c9a2fa21b57d1cf6fe7e7952464",
+    "tools/evaluate-scenarios.cjs": "b9aa30262fe48b280fe8f5a84d66fa5427cb8174eb7a07887003106efd334e44"
+  },
+  "method": "Offline regression of the 24 frozen Batch 2 scenario/mode combinations plus structured tool example. Reserved scenarios are regression checks, not a blind or independent model trial. No model call or semantic usefulness score.",
+  "cases": 24,
+  "passed": 24,
+  "rows": [
+    {
+      "id": "dev-quiet",
+      "split": "development",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-quiet",
+      "split": "development",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-goal",
+      "split": "development",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-goal",
+      "split": "development",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-positive",
+      "split": "development",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-positive",
+      "split": "development",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-no-change",
+      "split": "development",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-no-change",
+      "split": "development",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-conflicting",
+      "split": "development",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-conflicting",
+      "split": "development",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-missing-history",
+      "split": "development",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-missing-history",
+      "split": "development",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-waiting",
+      "split": "development",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-waiting",
+      "split": "development",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-corrected",
+      "split": "development",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "dev-corrected",
+      "split": "development",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "holdout-concurrent",
+      "split": "holdout",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "concurrent changes",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "holdout-concurrent",
+      "split": "holdout",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "concurrent changes",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "holdout-late-history",
+      "split": "holdout",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "holdout-late-history",
+      "split": "holdout",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "holdout-before-correction",
+      "split": "holdout",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "holdout-before-correction",
+      "split": "holdout",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "holdout-decline",
+      "split": "holdout",
+      "mode": "quick",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "holdout-decline",
+      "split": "holdout",
+      "mode": "tactical",
+      "passed": true,
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "sample": {
+    "scenario": "holdout-concurrent",
+    "football_tools": {
+      "formation": {
+        "status": "available",
+        "from": 300,
+        "to": 950,
+        "teams": [
+          {
+            "team_id": "northbridge",
+            "status": "no_recorded_change",
+            "before": "4-3-3",
+            "after": "4-3-3",
+            "changes": [],
+            "event_ids": []
+          },
+          {
+            "team_id": "southport",
+            "status": "no_recorded_change",
+            "before": "4-3-3",
+            "after": "4-3-3",
+            "changes": [],
+            "event_ids": []
+          }
+        ],
+        "method": "Declared formations and role assignments only. No change record means no recorded declaration, not proof of unchanged on-field tactics."
+      },
+      "discipline": {
+        "status": "available",
+        "from": 300,
+        "to": 950,
+        "teams": [
+          {
+            "team_id": "northbridge",
+            "booked_on_pitch_share": {
+              "numerator": 0,
+              "denominator": 11,
+              "value": 0
+            },
+            "on_pitch_start": 11,
+            "on_pitch_end": 11,
+            "booked_on_pitch_start": [],
+            "booked_on_pitch_end": [],
+            "yellow_events": 0,
+            "dismissals": 0,
+            "event_ids": [],
+            "state_event_ids": [
+              "holdout-concurrent-2"
+            ]
+          },
+          {
+            "team_id": "southport",
+            "booked_on_pitch_share": {
+              "numerator": 0,
+              "denominator": 10,
+              "value": 0
+            },
+            "on_pitch_start": 11,
+            "on_pitch_end": 10,
+            "booked_on_pitch_start": [],
+            "booked_on_pitch_end": [],
+            "yellow_events": 0,
+            "dismissals": 1,
+            "event_ids": [
+              "holdout-concurrent-8"
+            ],
+            "state_event_ids": [
+              "holdout-concurrent-8"
+            ]
+          }
+        ],
+        "method": "Starting state excludes events at from (except kickoff); ending state includes events at to unless endExclusive is requested. Counts are recorded on-field players, not a risk estimate. Second-yellow records and dismissal records are separate events; do not add them as distinct people."
+      },
+      "change_comparisons": [
+        {
+          "trigger_id": "holdout-concurrent-2",
+          "trigger_type": "sub",
+          "boundary": 600,
+          "window": 300,
+          "before": {
+            "from": 300,
+            "to": 600
+          },
+          "after": {
+            "from": 600,
+            "to": 900
+          },
+          "interval_convention": "[from,to)",
+          "available_at": 900,
+          "status": "ready",
+          "teams": [
+            {
+              "team_id": "northbridge",
+              "before": {
+                "duration_seconds": 300,
+                "discipline": {
+                  "team_id": "northbridge",
+                  "booked_on_pitch_share": {
+                    "numerator": 0,
+                    "denominator": 11,
+                    "value": 0
+                  },
+                  "on_pitch_start": 11,
+                  "on_pitch_end": 11,
+                  "booked_on_pitch_start": [],
+                  "booked_on_pitch_end": [],
+                  "yellow_events": 0,
+                  "dismissals": 0,
+                  "event_ids": [],
+                  "state_event_ids": []
+                },
+                "passes": 1,
+                "completed_passes": 1,
+                "pass_completion": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "value": 1
+                },
+                "shots": 0,
+                "shots_per_minute": {
+                  "numerator": 0,
+                  "denominator": 5,
+                  "value": 0
+                },
+                "progression": {
+                  "status": "unavailable",
+                  "reason": "Complete possession IDs and spatial endpoints are required.",
+                  "entry_share": null,
+                  "shot_share": null
+                },
+                "event_ids": [
+                  "holdout-concurrent-3"
+                ]
+              },
+              "after": {
+                "duration_seconds": 300,
+                "discipline": {
+                  "team_id": "northbridge",
+                  "booked_on_pitch_share": {
+                    "numerator": 0,
+                    "denominator": 11,
+                    "value": 0
+                  },
+                  "on_pitch_start": 11,
+                  "on_pitch_end": 11,
+                  "booked_on_pitch_start": [],
+                  "booked_on_pitch_end": [],
+                  "yellow_events": 0,
+                  "dismissals": 0,
+                  "event_ids": [],
+                  "state_event_ids": [
+                    "holdout-concurrent-2"
+                  ]
+                },
+                "passes": 1,
+                "completed_passes": 1,
+                "pass_completion": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "value": 1
+                },
+                "shots": 1,
+                "shots_per_minute": {
+                  "numerator": 1,
+                  "denominator": 5,
+                  "value": 0.2
+                },
+                "progression": {
+                  "status": "unavailable",
+                  "reason": "Complete possession IDs and spatial endpoints are required.",
+                  "entry_share": null,
+                  "shot_share": null
+                },
+                "event_ids": [
+                  "holdout-concurrent-4",
+                  "holdout-concurrent-5"
+                ]
+              }
+            },
+            {
+              "team_id": "southport",
+              "before": {
+                "duration_seconds": 300,
+                "discipline": {
+                  "team_id": "southport",
+                  "booked_on_pitch_share": {
+                    "numerator": 0,
+                    "denominator": 11,
+                    "value": 0
+                  },
+                  "on_pitch_start": 11,
+                  "on_pitch_end": 11,
+                  "booked_on_pitch_start": [],
+                  "booked_on_pitch_end": [],
+                  "yellow_events": 0,
+                  "dismissals": 0,
+                  "event_ids": [],
+                  "state_event_ids": []
+                },
+                "passes": 0,
+                "completed_passes": 0,
+                "pass_completion": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "shots": 0,
+                "shots_per_minute": {
+                  "numerator": 0,
+                  "denominator": 5,
+                  "value": 0
+                },
+                "progression": {
+                  "status": "unavailable",
+                  "reason": "Complete possession IDs and spatial endpoints are required.",
+                  "entry_share": null,
+                  "shot_share": null
+                },
+                "event_ids": []
+              },
+              "after": {
+                "duration_seconds": 300,
+                "discipline": {
+                  "team_id": "southport",
+                  "booked_on_pitch_share": {
+                    "numerator": 0,
+                    "denominator": 10,
+                    "value": 0
+                  },
+                  "on_pitch_start": 11,
+                  "on_pitch_end": 10,
+                  "booked_on_pitch_start": [],
+                  "booked_on_pitch_end": [],
+                  "yellow_events": 0,
+                  "dismissals": 1,
+                  "event_ids": [
+                    "holdout-concurrent-8"
+                  ],
+                  "state_event_ids": [
+                    "holdout-concurrent-8"
+                  ]
+                },
+                "passes": 0,
+                "completed_passes": 0,
+                "pass_completion": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "shots": 1,
+                "shots_per_minute": {
+                  "numerator": 1,
+                  "denominator": 5,
+                  "value": 0.2
+                },
+                "progression": {
+                  "status": "unavailable",
+                  "reason": "Complete possession IDs and spatial endpoints are required.",
+                  "entry_share": null,
+                  "shot_share": null
+                },
+                "event_ids": [
+                  "holdout-concurrent-6"
+                ]
+              }
+            }
+          ],
+          "concurrent_changes": [
+            {
+              "id": "holdout-concurrent-7",
+              "at": 700,
+              "type": "goal",
+              "team_id": "southport"
+            },
+            {
+              "id": "holdout-concurrent-8",
+              "at": 710,
+              "type": "red_card",
+              "team_id": "southport"
+            }
+          ],
+          "formation": {
+            "status": "available",
+            "from": 300,
+            "to": 900,
+            "teams": [
+              {
+                "team_id": "northbridge",
+                "status": "no_recorded_change",
+                "before": "4-3-3",
+                "after": "4-3-3",
+                "changes": [],
+                "event_ids": []
+              },
+              {
+                "team_id": "southport",
+                "status": "no_recorded_change",
+                "before": "4-3-3",
+                "after": "4-3-3",
+                "changes": [],
+                "event_ids": []
+              }
+            ],
+            "method": "Declared formations and role assignments only. No change record means no recorded declaration, not proof of unchanged on-field tactics."
+          },
+          "discipline": {
+            "status": "available",
+            "from": 300,
+            "to": 900,
+            "teams": [
+              {
+                "team_id": "northbridge",
+                "booked_on_pitch_share": {
+                  "numerator": 0,
+                  "denominator": 11,
+                  "value": 0
+                },
+                "on_pitch_start": 11,
+                "on_pitch_end": 11,
+                "booked_on_pitch_start": [],
+                "booked_on_pitch_end": [],
+                "yellow_events": 0,
+                "dismissals": 0,
+                "event_ids": [],
+                "state_event_ids": [
+                  "holdout-concurrent-2"
+                ]
+              },
+              {
+                "team_id": "southport",
+                "booked_on_pitch_share": {
+                  "numerator": 0,
+                  "denominator": 10,
+                  "value": 0
+                },
+                "on_pitch_start": 11,
+                "on_pitch_end": 10,
+                "booked_on_pitch_start": [],
+                "booked_on_pitch_end": [],
+                "yellow_events": 0,
+                "dismissals": 1,
+                "event_ids": [
+                  "holdout-concurrent-8"
+                ],
+                "state_event_ids": [
+                  "holdout-concurrent-8"
+                ]
+              }
+            ],
+            "method": "Starting state excludes events at from (except kickoff); ending state includes events at to unless endExclusive is requested. Counts are recorded on-field players, not a risk estimate. Second-yellow records and dismissal records are separate events; do not add them as distinct people."
+          },
+          "method": "Equal clock exposure, not equal possession or player exposure. Pass attempts and complete possession groups are denominators. Counts do not measure chance quality or isolate a change effect. Comparison spans exclude the right endpoint."
+        },
+        {
+          "trigger_id": "holdout-concurrent-8",
+          "trigger_type": "red_card",
+          "boundary": 710,
+          "window": 300,
+          "before": {
+            "from": 410,
+            "to": 710
+          },
+          "after": {
+            "from": 710,
+            "to": 1010
+          },
+          "interval_convention": "[from,to)",
+          "available_at": 1010,
+          "status": "insufficient_window",
+          "reason": "Two full equal clock windows are required.",
+          "teams": []
+        }
+      ]
+    },
+    "investigations": [
+      {
+        "player_id": "Ellis",
+        "team_id": "northbridge",
+        "name": "Ellis",
+        "team_name": "Northbridge",
+        "assigned_position": "CM",
+        "at": 600,
+        "history": {
+          "status": "recorded_experience",
+          "as_of": 600,
+          "position": "CM",
+          "records": 1,
+          "minutes": 90,
+          "role_minutes": 90,
+          "role_share": {
+            "numerator": 90,
+            "denominator": 90,
+            "value": 1
+          },
+          "available_records": 1,
+          "omitted_older_records": 0,
+          "record_ids": [
+            "holdout-concurrent-history"
+          ],
+          "sources": [
+            {
+              "id": "holdout-concurrent-history",
+              "source": "Authored fixture",
+              "available_at": 0,
+              "happened_at": -1000
+            }
+          ],
+          "method": "Most recent 5 available prior-match records; role-minute share is sample familiarity, not ability. Zero-minute or absent records provide no usable denominator."
+        },
+        "comparison": {
+          "status": "ready",
+          "before": {
+            "duration_seconds": 300,
+            "on_pitch_seconds": 300,
+            "pass_completion": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1
+            },
+            "passes": 1,
+            "completed": 1,
+            "shots": 0,
+            "carries": 0
+          },
+          "after": {
+            "duration_seconds": 300,
+            "on_pitch_seconds": 300,
+            "pass_completion": {
+              "numerator": 1,
+              "denominator": 1,
+              "value": 1
+            },
+            "passes": 1,
+            "completed": 1,
+            "shots": 1,
+            "carries": 0
+          },
+          "before_window": {
+            "from": 300,
+            "to": 600
+          },
+          "after_window": {
+            "from": 600,
+            "to": 900
+          },
+          "interval_convention": "[from,to)",
+          "method": "Equal clock windows; on_pitch_seconds reports actual player exposure. Unequal exposure and concurrent changes prevent attributing differences to the substitution.",
+          "event_ids": [
+            "holdout-concurrent-3",
+            "holdout-concurrent-4",
+            "holdout-concurrent-5"
+          ]
+        },
+        "other_change_ids": [
+          "holdout-concurrent-7",
+          "holdout-concurrent-8"
+        ],
+        "trace": [
+          {
+            "tool": "retrieve_role_history",
+            "status": "recorded_experience",
+            "as_of": 600,
+            "record_ids": [
+              "holdout-concurrent-history"
+            ]
+          },
+          {
+            "tool": "compare_player_windows",
+            "status": "ready",
+            "before": {
+              "from": 300,
+              "to": 600
+            },
+            "after": {
+              "from": 600,
+              "to": 900
+            }
+          },
+          {
+            "tool": "check_other_changes",
+            "status": "complete",
+            "event_ids": [
+              "holdout-concurrent-7",
+              "holdout-concurrent-8"
+            ]
+          }
+        ],
+        "event_ids": [
+          "holdout-concurrent-2",
+          "holdout-concurrent-3",
+          "holdout-concurrent-4",
+          "holdout-concurrent-5",
+          "holdout-concurrent-7",
+          "holdout-concurrent-8"
+        ]
+      }
+    ]
+  }
+}

@@ -2,7 +2,7 @@ const A=require('node:assert/strict'),P=require('../match-package.js'),{simulate
 for(const seed of [0,7,19]){
  const replay=simulate(seed),data=P.fromReplay(replay),id=store.put(data),input={index:replay.events.length-1,from:2400,to:3000};
  const a=packet({...input,seed}),b=packet({...input,package_id:id});
- for(const field of ['sequence_analysis','comparisons','interval_statistics','score_before','investigations','facts'])A.deepEqual(b[field],a[field],`${field}: seed ${seed} import parity`);
+ for(const field of ['sequence_analysis','comparisons','interval_statistics','score_before','investigations','facts','football_tools'])A.deepEqual(b[field],a[field],`${field}: seed ${seed} import parity`);
  store.remove(id);
 }
 const data=P.fromReplay(simulate(7));

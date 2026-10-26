@@ -4,11 +4,11 @@ function analyseSequences(events,{from,to,asOf,teams,direction={northbridge:'inc
  for(const e of visible){if(!e.possession_id)continue;if(!groups.has(e.possession_id))groups.set(e.possession_id,[]);groups.get(e.possession_id).push(e)}
  const results=[];
  for(const[team_id,team]of Object.entries(teams)){
-  const sequences=[];
+  const sequences=[];let crossing=0,unfinished=0;
   for(const[id,rows]of groups){
    const actions=rows.filter(e=>e.team_id===team_id&&['pass','carry'].includes(e.type));
    const end=rows.find(e=>e.type==='possession_end'&&e.team_id===team_id);
-   if(!actions.length||!end||actions[0].t-(actions[0].duration||0)<from||end.t>to)continue;
+   if(!actions.length)continue;const start=actions[0].t-(actions[0].duration||0);if(end&&end.t<from)continue;if(start<from){crossing++;continue;}if(!end||end.t>to){unfinished++;continue;}
    const located=actions.filter(e=>Number.isFinite(e.x)),progress=e=>direction[team_id]==='increasing_x'?e.x:105-e.x;
    const reached=located.some(e=>progress(e)>=70&&e.outcome==='complete');
    const shot=rows.some(e=>e.type==='shot'&&e.team_id===team_id),last=actions.at(-1);
@@ -19,7 +19,7 @@ function analyseSequences(events,{from,to,asOf,teams,direction={northbridge:'inc
   if(sequences.length>=3&&reached===0)story+=' Their completed sequences did not carry a successful action into the attacking third; the passing activity stayed short of that zone.';
   else if(reached>=2&&shots===0)story+=' They reached advanced territory repeatedly, but none of these complete sequences produced a recorded shot.';
   const examples=[...sequences].sort((a,b)=>(b.shot-a.shot)||(Number(b.reached_final_third)-Number(a.reached_final_third))||((b.max_progress??-1)-(a.max_progress??-1))).slice(0,3);
-  results.push({team_id,team_name:team.name,counts:{complete_sequences:sequences.length,attacking_third_entries:reached,shot_sequences:shots,early_losses:lostEarly},story,examples,event_ids:sequences.flatMap(s=>s.event_ids)});
+  results.push({team_id,team_name:team.name,counts:{complete_sequences:sequences.length,attacking_third_entries:reached,shot_sequences:shots,early_losses:lostEarly},coverage:{included:sequences.length,boundary_crossing:crossing,unfinished,denominator:'complete recorded sequences wholly inside the interval'},story,examples,event_ids:sequences.flatMap(s=>s.event_ids)});
  }
  return{from,to,method:'Complete possession_id groups only; boundary-crossing or unfinished groups excluded. Attacking third uses successful action endpoints within 35 metres of the declared attacking end. Fixed direction follows the package contract; no tracking, pressure or support inferred.',teams:results};
 }

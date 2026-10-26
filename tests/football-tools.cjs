@@ -1,0 +1,41 @@
+const A=require('node:assert/strict'),{fixture}=require('../evaluation/scenarios.cjs'),{roleHistory,compareFootball,discipline,formation,playerExposure}=require('../server/football-tools.cjs'),{validate}=require('../match-package.js'),{packet}=require('../server/evidence.cjs'),store=require('../server/package-store.cjs');
+const base=fixture({id:'tools',change:true,history:true}),{data,incoming}=base,out=data.events.find(e=>e.type==='sub').outgoing_id;
+// History: positive, absent, zero denominator, exact availability, cap, role mismatch.
+const query={player_id:incoming,position:data.squads.teams.northbridge.players.find(p=>p.id===out).assigned_position,asOf:600};
+A.equal(roleHistory(data,query).role_share.value,1);const missing=structuredClone(data);delete missing.history;A.equal(roleHistory(missing,query).role_share.value,null);
+const history=structuredClone(data);history.history.records[0].minutes=0;A.equal(roleHistory(history,query).status,'missing');
+history.history.records[0].minutes=90;history.history.records[0].available_at=600;A.equal(roleHistory(history,{...query,asOf:599}).records,0);A.equal(roleHistory(history,query).records,1);
+history.history.records[0].position='GK';A.equal(roleHistory(history,query).status,'not_recorded');
+for(let i=1;i<=6;i++)history.history.records.push({...history.history.records[0],id:`old-${i}`,match_id:`m-${i}`,happened_at:-1000-i,position:query.position});
+A.equal(roleHistory(history,query).records,5);A.equal(roleHistory(history,query).omitted_older_records,2);A.equal(roleHistory(history,query).sources.length,5);A.throws(()=>roleHistory(data,{...query,limit:0}));A.throws(()=>roleHistory(data,{...query,player_id:'unknown'}));
+// Equal windows: attempted-pass denominator, zero-data negative control, prefix readiness.
+const request={boundary:600,asOf:950,trigger_id:data.events.find(e=>e.type==='sub').id};
+const c=compareFootball(data,data.events,request),team=c.teams[0];A.equal(c.status,'ready');A.equal(team.before.pass_completion.denominator,1);A.equal(team.after.pass_completion.value,1);A.equal(c.teams[1].before.pass_completion.value,null);A.equal(team.before.progression.status,'unavailable');A.equal(c.concurrent_changes.length,0);
+A.equal(compareFootball(data,data.events,{...request,asOf:899}).status,'insufficient_window');A.equal(compareFootball(data,data.events.filter(e=>e.t<=650),request).status,'insufficient_window');A.equal(compareFootball(data,data.events,{...request,boundary:100}).status,'insufficient_window');A.equal(compareFootball(data,data.events,{...request,boundary:5200}).status,'insufficient_window');A.throws(()=>compareFootball(data,data.events,{...request,window:0}));
+// Discipline: second yellow + red counted separately; booked player leaves pitch; endpoints.
+const cards=structuredClone(data),ev=(id,t,type,fields)=>({id,t,type,synthetic:true,...fields});
+cards.events.push(ev('yellow1',400,'yellow_card',{team_id:'northbridge',actor_id:out}),ev('yellow2',700,'yellow_card',{team_id:'northbridge',actor_id:incoming}),ev('yellow3',750,'yellow_card',{team_id:'northbridge',actor_id:incoming}),ev('dismissal',750,'red_card',{team_id:'northbridge',actor_id:incoming,reason:'second_yellow'}));cards.events.sort((a,b)=>a.t-b.t);validate(cards);
+const d=discipline(cards,cards.events,{from:300,to:900,asOf:950}).teams[0];A.equal(d.yellow_events,3);A.equal(d.dismissals,1);A.equal(d.on_pitch_start,11);A.equal(d.on_pitch_end,10);A.deepEqual(d.booked_on_pitch_end,[]);A.equal(d.booked_on_pitch_share.denominator,10);
+A.equal(discipline(cards,cards.events,{from:300,to:750,asOf:950,endExclusive:true}).teams[0].dismissals,0);A.equal(discipline(cards,cards.events,{from:300,to:750,asOf:950}).teams[0].dismissals,1);A.equal(playerExposure(cards,cards.events,{player_id:incoming,from:600,to:900}),150);A.equal(playerExposure(cards,cards.events,{player_id:out,from:300,to:600}),300);
+const dc=compareFootball(cards,cards.events,request);A.equal(dc.concurrent_changes.length,1);A.equal(dc.teams[0].after.discipline.dismissals,1);
+// Formation: declaration at boundary and subsequent role reassignment cannot rewrite entry role.
+const changed=structuredClone(data);changed.events.push(ev('shape',700,'tactical_change',{team_id:'northbridge',from_formation:'4-3-3',to_formation:'4-2-3-1',assignments:[{player_id:incoming,position:'AM',slot:{x:68,y:50}}]}));changed.events.sort((a,b)=>a.t-b.t);validate(changed);
+A.equal(formation(changed,changed.events,{from:300,to:699,asOf:950}).teams[0].status,'no_recorded_change');A.equal(formation(changed,changed.events,{from:300,to:700,asOf:950}).teams[0].after,'4-2-3-1');A.equal(formation(changed,changed.events,{from:700,to:900,asOf:950}).teams[0].before,'4-3-3');A.equal(formation(changed,changed.events,{from:300,to:700,asOf:950,endExclusive:true}).teams[0].after,'4-3-3');A.throws(()=>formation(changed,changed.events,{from:300,to:950,asOf:699}));
+function pack(d,to=950){const id=store.put(d);try{return packet({package_id:id,index:d.events.findLastIndex(e=>e.t<=to),from:300,to});}finally{store.remove(id);}}
+const p=pack(changed);A.equal(p.investigations[0].assigned_position,query.position);A.equal(p.investigations[0].history.role_minutes,90);A.equal(p.football_tools.formation.teams[0].after,'4-2-3-1');
+const cp=pack(cards);A.equal(cp.investigations[0].comparison.after.on_pitch_seconds,150);A.equal(cp.football_tools.change_comparisons.length,2);A.equal(cp.football_tools.change_comparisons.find(c=>c.trigger_id==='dismissal').status,'insufficient_window');A(!cp.facts.some(f=>f.comparison&&f.event_ids.includes('dismissal')));
+const early=pack(data,620);A.equal(early.investigations[0].comparison.after.shots,null);A.equal(early.investigations[0].comparison.after.pass_completion,null);
+// Progression: hand-authored complete, failed-entry, crossing and unfinished sequences.
+const spatial=structuredClone(data);spatial.events=spatial.events.filter(e=>e.type!=='pass');const recipient=spatial.squads.teams.northbridge.players.find(p=>p.starting&&p.id!==out&&p.assigned_position!=='GK').id;
+function pass(id,t,x,outcome='complete',actor=out,duration=2){return ev(id,t,'pass',{team_id:'northbridge',actor_id:actor,recipient_id:recipient,duration,x,y:34,outcome,possession_id:id.split('-')[0]});}
+function end(id,t){return ev(`${id}-end`,t,'possession_end',{team_id:'northbridge',possession_id:id});}
+spatial.events.push(pass('a-pass',350,75),end('a',360),pass('b-pass',400,80,'lost'),end('b',410),pass('cross-pass',610,80,'complete',incoming,20),end('cross',620),pass('u-pass',650,40,'complete',incoming));spatial.events.sort((a,b)=>a.t-b.t);validate(spatial);
+const sp=compareFootball(spatial,spatial.events,request).teams[0];A.equal(sp.before.progression.entry_share.numerator,1);A.equal(sp.before.progression.entry_share.denominator,2);A.equal(sp.before.progression.counts.early_losses,1);A.equal(sp.after.progression.entry_share.value,null);A.equal(sp.after.progression.status,'no_complete_sequences');A.equal(sp.after.progression.coverage.boundary_crossing,1);A.equal(sp.after.progression.coverage.unfinished,1);
+const mirror=structuredClone(spatial);mirror.analysis_contract.direction={northbridge:'decreasing_x',southport:'increasing_x'};for(const e of mirror.events)if(e.x!==undefined)e.x=105-e.x;A.deepEqual(compareFootball(mirror,mirror.events,request).teams[0].before.progression,sp.before.progression);
+console.log('Football tools: history provenance/availability, rates and missing denominators, concurrent changes, exposure, entry-time roles, formation/discipline boundaries, mirrored progression and excluded sequences pass.');
+
+// Once enough time is revealed, dismissal-triggered comparison becomes available.
+const later=structuredClone(cards);later.events.push(ev('later-clock',1200,'restart',{}));later.events.sort((a,b)=>a.t-b.t);validate(later);const lp=pack(later,1200);A.equal(lp.football_tools.change_comparisons.find(c=>c.trigger_id==='dismissal').status,'ready');A(lp.facts.some(f=>f.comparison&&f.event_ids.includes('dismissal')));
+// A card after the selected endpoint cannot alter the earlier on-field state.
+A.equal(discipline(cards,cards.events,{from:300,to:749,asOf:950}).teams[0].on_pitch_end,11);
+A.throws(()=>playerExposure(cards,cards.events.filter(e=>e.t<=650),{player_id:incoming,from:600,to:900}));
