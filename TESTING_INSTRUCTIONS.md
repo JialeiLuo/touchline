@@ -34,3 +34,5 @@ Read docs/MATCH_PACKAGE.md for the JSON schema, docs/DATA_PROVENANCE.md for gene
 ## Demonstration video
 
 Watch the 1:48 English-narrated walkthrough: https://youtu.be/9JvQMpAhdpA
+
+For first-time viewers, see [the detailed user guide](docs/USER_GUIDE.md). For evidence against each judging prompt and the complete idea backlog, see [coverage review](docs/COVERAGE_REVIEW.md).
