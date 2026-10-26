@@ -1,0 +1,3050 @@
+{
+  "version": "batch5-v1",
+  "source_revision": "647c997bde5fe9ff106482e16453d00485022a5e",
+  "source_hashes": {
+    "server/investigator.cjs": "324a20a3edca05caff0595990bea718ae39077e85e002950486f3562a3bb5f71",
+    "server/investigator-tools.cjs": "374d055c50cd83c48f08997db0bc9b079dde83ec82ed18cbf64577a9577a7758",
+    "prompts/investigator.txt": "6ce6510042b28737e8904b2daef6918b44432c7985c5a1914e60bb338a17f7cd",
+    "server/stories.cjs": "0e5e7ac1303fb0dee2c197e46dd138cc747583022b2b283c454113a9a87fc860",
+    "tools/evaluate-agent.cjs": "283d52e76b1f211ae62bf9da0d01119f67fd9df3a536798c4af372c7f924a908"
+  },
+  "method": "Twenty-four frozen scenario/mode runs using a deliberately scripted provider. Checks real tool dispatch, final evidence gating, essential coverage and paragraph limits. Does not measure real model tool choice, semantic quality or incremental value. Separate live sample is recorded in batch-5-live-investigation.json.",
+  "cases": 24,
+  "passed": 24,
+  "rows": [
+    {
+      "id": "dev-quiet",
+      "split": "development",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "The score held — here is the spell",
+        "paragraphs": [
+          {
+            "text": "Northbridge–Southport stayed at 0–0. Northbridge took 0 shots and Southport took 0.",
+            "evidence_ids": [
+              "fact-2"
+            ],
+            "scope_label": "Selected interval · 5:00–15:50"
+          }
+        ],
+        "watch_next": null,
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6055,
+              "status": "received",
+              "latency_ms": 1,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 6861,
+              "status": "received",
+              "latency_ms": 1,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "analyse_possession",
+              "status": "unavailable",
+              "result_id": "result-1",
+              "summary": "analyse possession: unavailable",
+              "arguments": {
+                "team_id": "northbridge"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "context-0",
+                "result-1"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 200,
+            "output_tokens": 80,
+            "reported_calls": 2,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 17364
+          },
+          "duration_ms": 3
+        }
+      }
+    },
+    {
+      "id": "dev-quiet",
+      "split": "development",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "The score held — here is the spell",
+        "paragraphs": [
+          {
+            "text": "Northbridge–Southport stayed at 0–0 during your selected interval. Northbridge took 0 shots and Southport took 0.",
+            "evidence_ids": [
+              "fact-2"
+            ],
+            "scope_label": "Selected interval · 5:00–15:50"
+          }
+        ],
+        "watch_next": null,
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6088,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 6924,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "analyse_possession",
+              "status": "unavailable",
+              "result_id": "result-1",
+              "summary": "analyse possession: unavailable",
+              "arguments": {
+                "team_id": "northbridge"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "context-0",
+                "result-1"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 200,
+            "output_tokens": 80,
+            "reported_calls": 2,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 17460
+          },
+          "duration_ms": 0
+        }
+      }
+    },
+    {
+      "id": "dev-goal",
+      "split": "development",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A goal changes the score",
+        "paragraphs": [
+          {
+            "text": "11′: Southport scored through Reed.",
+            "evidence_ids": [
+              "fact-1"
+            ],
+            "scope_label": "Selected interval · 5:00–15:50"
+          }
+        ],
+        "watch_next": null,
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6322,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7395,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "analyse_possession",
+              "status": "unavailable",
+              "result_id": "result-1",
+              "summary": "analyse possession: unavailable",
+              "arguments": {
+                "team_id": "northbridge"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "context-0",
+                "result-1"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 200,
+            "output_tokens": 80,
+            "reported_calls": 2,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 18165
+          },
+          "duration_ms": 0
+        }
+      }
+    },
+    {
+      "id": "dev-goal",
+      "split": "development",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A goal changes the score",
+        "paragraphs": [
+          {
+            "text": "11′: Southport scored through Reed.",
+            "evidence_ids": [
+              "fact-1"
+            ],
+            "scope_label": "Selected interval · 5:00–15:50"
+          }
+        ],
+        "watch_next": null,
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6355,
+              "status": "received",
+              "latency_ms": 1,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7458,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "analyse_possession",
+              "status": "unavailable",
+              "result_id": "result-1",
+              "summary": "analyse possession: unavailable",
+              "arguments": {
+                "team_id": "northbridge"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "context-0",
+                "result-1"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 200,
+            "output_tokens": 80,
+            "reported_calls": 2,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 18261
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "dev-positive",
+      "split": "development",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "supported",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role the substitute has played before",
+        "paragraphs": [
+          {
+            "text": "Ellis has recorded experience in the central midfield role: 90 of 90 minutes across 1 supplied previous matches. The usual-position label alone would miss that context.",
+            "evidence_ids": [
+              "fact-9"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "supported",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "supported",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6249,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7512,
+              "status": "received",
+              "latency_ms": 1,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 15696,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "recorded_experience",
+              "result_id": "result-1",
+              "summary": "role history: recorded_experience",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": [
+                "dev-positive-history"
+              ]
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "dev-positive-2"
+              },
+              "event_ids": [
+                "dev-positive-2",
+                "dev-positive-3",
+                "dev-positive-4",
+                "dev-positive-5",
+                "dev-positive-6",
+                "dev-positive-7",
+                "dev-positive-8"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "supported",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 36129
+          },
+          "duration_ms": 3
+        }
+      }
+    },
+    {
+      "id": "dev-positive",
+      "split": "development",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "supported",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role the substitute has played before",
+        "paragraphs": [
+          {
+            "text": "Ellis has recorded experience in the central midfield role: 90 of 90 minutes across 1 supplied previous matches. The usual-position label alone would miss that context. In equal windows around entry, the outgoing player completed 1 passes and took 0 shots; Ellis completed 3 passes and took 2 shots. ",
+            "evidence_ids": [
+              "fact-9"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "supported",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "supported",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6282,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7575,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 16230,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "recorded_experience",
+              "result_id": "result-1",
+              "summary": "role history: recorded_experience",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": [
+                "dev-positive-history"
+              ]
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "dev-positive-2"
+              },
+              "event_ids": [
+                "dev-positive-2",
+                "dev-positive-3",
+                "dev-positive-4",
+                "dev-positive-5",
+                "dev-positive-6",
+                "dev-positive-7",
+                "dev-positive-8"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "supported",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 36759
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "dev-no-change",
+      "split": "development",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity.",
+            "evidence_ids": [
+              "fact-7"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6240,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7312,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 14994,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "dev-no-change-2"
+              },
+              "event_ids": [
+                "dev-no-change-2",
+                "dev-no-change-3",
+                "dev-no-change-4"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 35218
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "dev-no-change",
+      "split": "development",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity. In equal windows around entry, the outgoing player completed 1 passes and took 0 shots; Ellis completed 1 pass and took 0 shots. ",
+            "evidence_ids": [
+              "fact-7"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6273,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7375,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 15349,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "dev-no-change-2"
+              },
+              "event_ids": [
+                "dev-no-change-2",
+                "dev-no-change-3",
+                "dev-no-change-4"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 35669
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "dev-conflicting",
+      "split": "development",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity.",
+            "evidence_ids": [
+              "fact-9"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6256,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7340,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 15553,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "dev-conflicting-2"
+              },
+              "event_ids": [
+                "dev-conflicting-2",
+                "dev-conflicting-3",
+                "dev-conflicting-7",
+                "dev-conflicting-8",
+                "dev-conflicting-4",
+                "dev-conflicting-5",
+                "dev-conflicting-6"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 35821
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "dev-conflicting",
+      "split": "development",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity. In equal windows around entry, the outgoing player completed 1 passes and took 2 shots; Ellis completed 3 passes and took 0 shots. ",
+            "evidence_ids": [
+              "fact-9"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6289,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7403,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 16042,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "dev-conflicting-2"
+              },
+              "event_ids": [
+                "dev-conflicting-2",
+                "dev-conflicting-3",
+                "dev-conflicting-7",
+                "dev-conflicting-8",
+                "dev-conflicting-4",
+                "dev-conflicting-5",
+                "dev-conflicting-6"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 36406
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "dev-missing-history",
+      "split": "development",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity.",
+            "evidence_ids": [
+              "fact-7"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6252,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7324,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 15036,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "dev-missing-history-2"
+              },
+              "event_ids": [
+                "dev-missing-history-2",
+                "dev-missing-history-3",
+                "dev-missing-history-4"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 35284
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "dev-missing-history",
+      "split": "development",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity. In equal windows around entry, the outgoing player completed 1 passes and took 0 shots; Ellis completed 1 pass and took 0 shots. ",
+            "evidence_ids": [
+              "fact-7"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6285,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7387,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 15391,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "dev-missing-history-2"
+              },
+              "event_ids": [
+                "dev-missing-history-2",
+                "dev-missing-history-3",
+                "dev-missing-history-4"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 35735
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "dev-waiting",
+      "split": "development",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity.",
+            "evidence_ids": [
+              "fact-3"
+            ],
+            "scope_label": "History known at 10:00 · post-entry comparison waiting"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6236,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7308,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 9783,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "insufficient_window",
+              "result_id": "result-2",
+              "summary": "compare change: insufficient_window",
+              "arguments": {
+                "event_id": "dev-waiting-2"
+              },
+              "event_ids": [
+                "dev-waiting-2"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 29999
+          },
+          "duration_ms": 0
+        }
+      }
+    },
+    {
+      "id": "dev-waiting",
+      "split": "development",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity. Wait for a full post-entry window before comparing involvement.",
+            "evidence_ids": [
+              "fact-3"
+            ],
+            "scope_label": "History known at 10:00 · post-entry comparison waiting"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6269,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7371,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 10072,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "insufficient_window",
+              "result_id": "result-2",
+              "summary": "compare change: insufficient_window",
+              "arguments": {
+                "event_id": "dev-waiting-2"
+              },
+              "event_ids": [
+                "dev-waiting-2"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 30384
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "dev-corrected",
+      "split": "development",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "supported",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "An incident report has been clarified",
+        "paragraphs": [
+          {
+            "text": "The initial report was corrected; no sanction is established.",
+            "evidence_ids": [
+              "fact-2"
+            ],
+            "scope_label": "Reported at 14:10 · corrected"
+          }
+        ],
+        "watch_next": null,
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "supported",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "supported",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6054,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7257,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "inspect_incidents",
+              "status": "available",
+              "result_id": "result-1",
+              "summary": "inspect incidents: available",
+              "arguments": {},
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "supported",
+              "result_ids": [
+                "result-1"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 200,
+            "output_tokens": 80,
+            "reported_calls": 2,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 17759
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "dev-corrected",
+      "split": "development",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "supported",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "An incident report has been clarified",
+        "paragraphs": [
+          {
+            "text": "The initial report was corrected; no sanction is established.",
+            "evidence_ids": [
+              "fact-2"
+            ],
+            "scope_label": "Reported at 14:10 · corrected"
+          }
+        ],
+        "watch_next": null,
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "supported",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "supported",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6087,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7320,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "inspect_incidents",
+              "status": "available",
+              "result_id": "result-1",
+              "summary": "inspect incidents: available",
+              "arguments": {},
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "supported",
+              "result_ids": [
+                "result-1"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 200,
+            "output_tokens": 80,
+            "reported_calls": 2,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 17855
+          },
+          "duration_ms": 0
+        }
+      }
+    },
+    {
+      "id": "holdout-concurrent",
+      "split": "holdout",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "supported",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "The decisive recorded incidents",
+        "paragraphs": [
+          {
+            "text": "11′: Southport scored through Reed. Reed was sent off for Southport. That changes the available personnel, but the event stream alone does not establish how the team reorganised.",
+            "evidence_ids": [
+              "fact-1",
+              "fact-4"
+            ],
+            "scope_label": "Selected interval · 5:00–15:50"
+          },
+          {
+            "text": "Ellis has recorded experience in the central midfield role: 90 of 90 minutes across 1 supplied previous matches. The usual-position label alone would miss that context.",
+            "evidence_ids": [
+              "fact-12"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "supported",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "supported",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6959,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 8865,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 18274,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "recorded_experience",
+              "result_id": "result-1",
+              "summary": "role history: recorded_experience",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": [
+                "holdout-concurrent-history"
+              ]
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "holdout-concurrent-2"
+              },
+              "event_ids": [
+                "holdout-concurrent-2",
+                "holdout-concurrent-7",
+                "holdout-concurrent-8",
+                "holdout-concurrent-3",
+                "holdout-concurrent-4",
+                "holdout-concurrent-5",
+                "holdout-concurrent-6"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "supported",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-3"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 40770
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "holdout-concurrent",
+      "split": "holdout",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "supported",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "The decisive recorded incidents",
+        "paragraphs": [
+          {
+            "text": "11′: Southport scored through Reed. Reed was sent off for Southport. That changes the available personnel, but the event stream alone does not establish how the team reorganised.",
+            "evidence_ids": [
+              "fact-1",
+              "fact-4"
+            ],
+            "scope_label": "Selected interval · 5:00–15:50"
+          },
+          {
+            "text": "Ellis has recorded experience in the central midfield role: 90 of 90 minutes across 1 supplied previous matches. The usual-position label alone would miss that context. In equal windows around entry, the outgoing player completed 1 passes and took 0 shots; Ellis completed 1 pass and took 1 shots. Other personnel or match-state changes also occurred in the span.",
+            "evidence_ids": [
+              "fact-12"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "supported",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "supported",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6992,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 8928,
+              "status": "received",
+              "latency_ms": 1,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 19058,
+              "status": "received",
+              "latency_ms": 1,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "recorded_experience",
+              "result_id": "result-1",
+              "summary": "role history: recorded_experience",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": [
+                "holdout-concurrent-history"
+              ]
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "holdout-concurrent-2"
+              },
+              "event_ids": [
+                "holdout-concurrent-2",
+                "holdout-concurrent-7",
+                "holdout-concurrent-8",
+                "holdout-concurrent-3",
+                "holdout-concurrent-4",
+                "holdout-concurrent-5",
+                "holdout-concurrent-6"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "supported",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-3"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 41650
+          },
+          "duration_ms": 2
+        }
+      }
+    },
+    {
+      "id": "holdout-late-history",
+      "split": "holdout",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity.",
+            "evidence_ids": [
+              "fact-7"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6253,
+              "status": "received",
+              "latency_ms": 1,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7325,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 15042,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "holdout-late-history-2"
+              },
+              "event_ids": [
+                "holdout-late-history-2",
+                "holdout-late-history-3",
+                "holdout-late-history-4"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 35292
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "holdout-late-history",
+      "split": "holdout",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity. In equal windows around entry, the outgoing player completed 1 passes and took 0 shots; Ellis completed 1 pass and took 0 shots. ",
+            "evidence_ids": [
+              "fact-7"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6286,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7388,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 15397,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "holdout-late-history-2"
+              },
+              "event_ids": [
+                "holdout-late-history-2",
+                "holdout-late-history-3",
+                "holdout-late-history-4"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 35743
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "holdout-before-correction",
+      "split": "holdout",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "supported",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A reported incident",
+        "paragraphs": [
+          {
+            "text": "Initial report of an incident.",
+            "evidence_ids": [
+              "fact-2"
+            ],
+            "scope_label": "Reported at 11:00 · reported"
+          }
+        ],
+        "watch_next": null,
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "supported",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "supported",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6054,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7142,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "inspect_incidents",
+              "status": "available",
+              "result_id": "result-1",
+              "summary": "inspect incidents: available",
+              "arguments": {},
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "supported",
+              "result_ids": [
+                "result-1"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 200,
+            "output_tokens": 80,
+            "reported_calls": 2,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 17644
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "holdout-before-correction",
+      "split": "holdout",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "supported",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A reported incident",
+        "paragraphs": [
+          {
+            "text": "Initial report of an incident.",
+            "evidence_ids": [
+              "fact-2"
+            ],
+            "scope_label": "Reported at 11:00 · reported"
+          }
+        ],
+        "watch_next": null,
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "supported",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "supported",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6087,
+              "status": "received",
+              "latency_ms": 1,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7205,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "inspect_incidents",
+              "status": "available",
+              "result_id": "result-1",
+              "summary": "inspect incidents: available",
+              "arguments": {},
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "supported",
+              "result_ids": [
+                "result-1"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 200,
+            "output_tokens": 80,
+            "reported_calls": 2,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 17740
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "holdout-decline",
+      "split": "holdout",
+      "mode": "quick",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity.",
+            "evidence_ids": [
+              "fact-9"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6256,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7340,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 15593,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "holdout-decline-2"
+              },
+              "event_ids": [
+                "holdout-decline-2",
+                "holdout-decline-3",
+                "holdout-decline-4",
+                "holdout-decline-5",
+                "holdout-decline-6",
+                "holdout-decline-8",
+                "holdout-decline-9",
+                "holdout-decline-7"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 35861
+          },
+          "duration_ms": 1
+        }
+      }
+    },
+    {
+      "id": "holdout-decline",
+      "split": "holdout",
+      "mode": "tactical",
+      "provider_kind": "scripted_fixture",
+      "passed": true,
+      "evidence_status": "insufficient_evidence",
+      "output": {
+        "watch_label": "What to watch next",
+        "headline": "A role question with missing history",
+        "paragraphs": [
+          {
+            "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity. In equal windows around entry, the outgoing player completed 4 passes and took 2 shots; Ellis completed 1 pass and took 0 shots. ",
+            "evidence_ids": [
+              "fact-9"
+            ],
+            "scope_label": "History known at 10:00 · equal windows around entry"
+          }
+        ],
+        "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs.",
+          "The investigation did not establish a supported explanation beyond the recorded facts."
+        ],
+        "composition": "investigated-stories",
+        "mode": "foundry",
+        "evidence_status": "insufficient_evidence",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "insufficient_evidence",
+          "model": "scripted-fixture",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "max_output_tokens": 1200,
+              "input_bytes": 6289,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 2,
+              "max_output_tokens": 1200,
+              "input_bytes": 7403,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            },
+            {
+              "number": 3,
+              "max_output_tokens": 1200,
+              "input_bytes": 16010,
+              "status": "received",
+              "latency_ms": 0,
+              "usage": {
+                "input_tokens": 100,
+                "output_tokens": 40
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-1",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "compare_change",
+              "status": "ready",
+              "result_id": "result-2",
+              "summary": "compare change: ready",
+              "arguments": {
+                "event_id": "holdout-decline-2"
+              },
+              "event_ids": [
+                "holdout-decline-2",
+                "holdout-decline-3",
+                "holdout-decline-4",
+                "holdout-decline-5",
+                "holdout-decline-6",
+                "holdout-decline-8",
+                "holdout-decline-9",
+                "holdout-decline-7"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "insufficient_evidence",
+              "result_ids": [
+                "result-1",
+                "result-2"
+              ],
+              "story_ids": [
+                "story-1"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "output_tokens": 120,
+            "reported_calls": 3,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 36374
+          },
+          "duration_ms": 0
+        }
+      }
+    }
+  ]
+}

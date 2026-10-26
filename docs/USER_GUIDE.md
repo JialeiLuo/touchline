@@ -84,7 +84,7 @@ The curated IFAB reference explains a rule separately from the incident facts. I
 
 ## What this is useful for today
 
-Try an interval catch-up, a focused player story, source inspection, glossary learning and a structured-package replay. A pre-match briefing, open-ended football questions, autonomous evidence investigation, real match lookup, injury/manager analysis, calibrated xG, predictions and spoken live commentary remain outside the prototype.
+Try an interval catch-up, a focused player story, source inspection, glossary learning and a structured-package replay. A pre-match briefing, open-ended football questions, real match lookup, injury/manager analysis, calibrated xG, predictions and spoken live commentary remain outside the prototype.
 
 ## Loading your match reliably
 Open **Match data & demo settings**, then **Match data**. Use **Load example package** first, or choose a synthetic Touchline JSON file up to 2 MB. **Download current package** gives the complete editable format, including the explicit time/coordinate contract. CSV and video are not accepted yet.
@@ -98,3 +98,7 @@ After explaining an interval, expand **Explore the play behind this explanation*
 ## Local refinement: chance quality
 
 Explain a revealed interval and expand **Explore the play behind this explanation**. The chance-quality section shows shot coverage, source, supplied totals and linked goals. Charts separate sources; expand the shot-values disclosure to inspect each value, goal link and method. Built-in values illustrate the simulator and are not calibrated professional xG. Missing/delayed values are not zero; incomplete or mixed-source inputs do not receive a combined total. See [details and limits](CHANCE_QUALITY.md). This refinement is local until Batch 10.
+
+## Local refinement: evidence investigation
+
+Choose **Explanation approach → Investigate the evidence**, then explain the selected interval. Expand **Evidence investigation** to inspect the actual queries, sources and stop reason. **Select supporting stories** retains the earlier ranker. Queries have strict request/time/usage limits; insufficient evidence and failures remain visible and can use the local fallback. The model chooses queries and story IDs; wording/figures remain source-owned. See [scope and limits](BOUNDED_INVESTIGATOR.md). This feature is local until the final release batch.

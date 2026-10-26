@@ -1,0 +1,258 @@
+{
+  "checked_at": "2026-10-26T13:52:11.803Z",
+  "source_revision": "647c997bde5fe9ff106482e16453d00485022a5e",
+  "source_hashes": {
+    "server/investigator.cjs": "8c6eec8ceff3a888e036d6bf988d8954926d78a09a23029fc353690ed8a785eb",
+    "server/investigator-tools.cjs": "9d7b9f68ea9381c0b6bf8f0dbf091d69c283b23c956ae3468438df2520a97ac4",
+    "prompts/investigator.txt": "6ce6510042b28737e8904b2daef6918b44432c7985c5a1914e60bb338a17f7cd",
+    "server/stories.cjs": "0e5e7ac1303fb0dee2c197e46dd138cc747583022b2b283c454113a9a87fc860",
+    "server/evidence.cjs": "2c0d2c1f523a4a53bd4ecfcf7050c1ce99471573d1c8b6de86032e4b70e662f1"
+  },
+  "input": {
+    "seed": 7,
+    "index": 899,
+    "from": 3300,
+    "to": 3960,
+    "viewer_mode": "tactical",
+    "player_focus": "Ellis",
+    "analysis_mode": "investigate"
+  },
+  "scope": "One fresh live synthetic substitution investigation. All outcomes retained. Demonstrates protocol/tool execution only, not causal validity, superiority or fan usefulness.",
+  "output": {
+    "watch_label": "What to watch next",
+    "headline": "Limited role experience in supplied records",
+    "paragraphs": [
+      {
+        "text": "Ellis is taking the right wing role with limited recorded experience there: 20 of 305 minutes across 5 supplied previous matches. In equal windows around entry, the outgoing player completed 4 passes and took 0 shots; Ellis completed 1 pass and took 0 shots. Other personnel or match-state changes also occurred in the span.",
+        "evidence_ids": [
+          "fact-18"
+        ],
+        "scope_label": "History known at 60:40 · equal windows around entry"
+      },
+      {
+        "text": "Southport completed fewer passes and took fewer shots after the recorded change: passes went from 17 to 13, and shots from 1 to 0. Both measures of recorded activity declined in these windows.",
+        "evidence_ids": [
+          "fact-12",
+          "fact-13"
+        ],
+        "scope_label": "Before 55:40–60:40 · after 60:40–65:40"
+      }
+    ],
+    "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+    "limitations": [
+      "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+      "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+    ],
+    "composition": "investigated-stories",
+    "mode": "foundry",
+    "evidence_status": "supported",
+    "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+    "investigation": {
+      "version": "batch5-v1",
+      "status": "complete",
+      "stop_reason": "supported",
+      "model": "gpt-5-mini",
+      "budgets": {
+        "model_calls": 4,
+        "tool_calls": 6,
+        "duration_ms": 22000,
+        "max_output_tokens": 1200,
+        "token_budget": 60000,
+        "request_bytes": 36000,
+        "result_bytes": 18000,
+        "response_bytes": 100000
+      },
+      "model_calls": [
+        {
+          "number": 1,
+          "max_output_tokens": 1200,
+          "input_bytes": 6940,
+          "status": "received",
+          "latency_ms": 2147,
+          "usage": {
+            "input_tokens": 1232,
+            "output_tokens": 34
+          }
+        },
+        {
+          "number": 2,
+          "max_output_tokens": 1200,
+          "input_bytes": 10799,
+          "status": "received",
+          "latency_ms": 2158,
+          "usage": {
+            "input_tokens": 1826,
+            "output_tokens": 39
+          }
+        },
+        {
+          "number": 3,
+          "max_output_tokens": 1200,
+          "input_bytes": 25292,
+          "status": "received",
+          "latency_ms": 1679,
+          "usage": {
+            "input_tokens": 5405,
+            "output_tokens": 58
+          }
+        }
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "tool": "role_history",
+          "status": "limited_sample",
+          "result_id": "result-1",
+          "summary": "role history: limited_sample",
+          "arguments": {
+            "player_id": "Ellis"
+          },
+          "event_ids": [],
+          "history_ids": [
+            "history-Ellis-1",
+            "history-Ellis-2",
+            "history-Ellis-3",
+            "history-Ellis-4",
+            "history-Ellis-5"
+          ]
+        },
+        {
+          "number": 2,
+          "tool": "compare_change",
+          "status": "ready",
+          "result_id": "result-2",
+          "summary": "compare change: ready",
+          "arguments": {
+            "event_id": "full-v03-7-831"
+          },
+          "event_ids": [
+            "full-v03-7-831",
+            "full-v03-7-826",
+            "full-v03-7-767",
+            "full-v03-7-768",
+            "full-v03-7-769",
+            "full-v03-7-770",
+            "full-v03-7-771",
+            "full-v03-7-772",
+            "full-v03-7-773",
+            "full-v03-7-774",
+            "full-v03-7-779",
+            "full-v03-7-780",
+            "full-v03-7-781",
+            "full-v03-7-782",
+            "full-v03-7-791",
+            "full-v03-7-792",
+            "full-v03-7-798",
+            "full-v03-7-799",
+            "full-v03-7-800",
+            "full-v03-7-801",
+            "full-v03-7-807",
+            "full-v03-7-808",
+            "full-v03-7-809",
+            "full-v03-7-810",
+            "full-v03-7-811",
+            "full-v03-7-815",
+            "full-v03-7-827",
+            "full-v03-7-828",
+            "full-v03-7-829",
+            "full-v03-7-836",
+            "full-v03-7-840",
+            "full-v03-7-841",
+            "full-v03-7-842",
+            "full-v03-7-843",
+            "full-v03-7-844",
+            "full-v03-7-845",
+            "full-v03-7-852",
+            "full-v03-7-853",
+            "full-v03-7-854",
+            "full-v03-7-855",
+            "full-v03-7-863",
+            "full-v03-7-864",
+            "full-v03-7-865",
+            "full-v03-7-866",
+            "full-v03-7-871",
+            "full-v03-7-872",
+            "full-v03-7-873",
+            "full-v03-7-874",
+            "full-v03-7-878",
+            "full-v03-7-879",
+            "full-v03-7-880",
+            "full-v03-7-881",
+            "full-v03-7-882",
+            "full-v03-7-883",
+            "full-v03-7-884",
+            "full-v03-7-890",
+            "full-v03-7-891",
+            "full-v03-7-892",
+            "full-v03-7-893",
+            "full-v03-7-894",
+            "full-v03-7-758",
+            "full-v03-7-759",
+            "full-v03-7-760",
+            "full-v03-7-761",
+            "full-v03-7-762",
+            "full-v03-7-763",
+            "full-v03-7-764",
+            "full-v03-7-776",
+            "full-v03-7-777",
+            "full-v03-7-784",
+            "full-v03-7-785",
+            "full-v03-7-786",
+            "full-v03-7-787",
+            "full-v03-7-788",
+            "full-v03-7-789",
+            "full-v03-7-794",
+            "full-v03-7-795",
+            "full-v03-7-796",
+            "full-v03-7-803",
+            "full-v03-7-804",
+            "full-v03-7-805",
+            "full-v03-7-813",
+            "full-v03-7-817",
+            "full-v03-7-818",
+            "full-v03-7-819",
+            "full-v03-7-820",
+            "full-v03-7-821",
+            "full-v03-7-822",
+            "full-v03-7-823",
+            "full-v03-7-824",
+            "full-v03-7-832",
+            "full-v03-7-833",
+            "full-v03-7-834",
+            "full-v03-7-838",
+            "full-v03-7-847",
+            "full-v03-7-848",
+            "full-v03-7-849",
+            "full-v03-7-850",
+            "full-v03-7-857",
+            "full-v03-7-858"
+          ],
+          "history_ids": []
+        },
+        {
+          "number": 3,
+          "tool": "finish_investigation",
+          "status": "complete",
+          "result_id": null,
+          "summary": "supported",
+          "result_ids": [
+            "result-1",
+            "result-2"
+          ],
+          "story_ids": [
+            "story-3",
+            "story-8"
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 8463,
+        "output_tokens": 131,
+        "reported_calls": 3,
+        "unreported_calls": 0,
+        "reserved_token_upper_estimate": 49703
+      },
+      "duration_ms": 5999
+    }
+  }
+}

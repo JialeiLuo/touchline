@@ -21,3 +21,7 @@ Packet schema 11 adds shared role-history, formation, discipline and enriched co
 ## Batch 4 chance quality
 
 Packet schema 12 adds `chance_quality`: validated per-shot supplied/illustrative values → replay/availability filtering → per-source coverage and aggregation → optional source-owned stories and a shot chart. See [chance-quality contracts](CHANCE_QUALITY.md). Match-package schema stays version 1 with optional fields.
+
+## Batch 5 model-directed investigation (local refinement)
+
+Packet schema 13 adds `analysis_mode`. The investigator path uses `server/investigator.cjs` and an allowlisted registry in `server/investigator-tools.cjs`: basic context → model-selected query → bounded result → follow-up or finish → inspected-story composition. Precomputed deterministic evidence tools are shared with the ranker. The previous deterministic-only descriptions above describe earlier checkpoints/the ranker path. See [current contracts and budgets](BOUNDED_INVESTIGATOR.md).

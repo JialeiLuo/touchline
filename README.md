@@ -52,7 +52,7 @@ Synthetic events + optional supplied history/incident records
   → render evidence-owned wording and source links
 ```
 
-The hosted model is **gpt-5-mini through Microsoft Foundry**. Azure App Service hosts the website and private Node backend. The model selects among supported stories; it does not independently choose tools, browse the web or write unrestricted commentary. Calculations and displayed story wording are deterministic. The selected evidence packet is sent to Foundry only when online commentary is requested; it is not an offline-only product.
+The hosted model is **gpt-5-mini through Microsoft Foundry**. Azure App Service hosts the website and private Node backend. The hosted release selects among supported stories. The local Batch 5 refinement also supports bounded, model-selected evidence queries and follow-ups; final wording stays tied to inspected source-owned stories. Neither path browses the web or writes unrestricted commentary. Calculations and displayed story wording are deterministic. The selected evidence packet is sent to Foundry only when online commentary is requested; it is not an offline-only product.
 
 Caching, persistent call allowances, request throttling and local fallback protect the student-credit demo. The local calculation/replay path works without Azure credentials. [Architecture](docs/ARCHITECTURE.md) · [Data provenance](docs/DATA_PROVENANCE.md) · [Scope and limits](docs/FINAL_SCOPE.md)
 
@@ -78,7 +78,7 @@ node tools/evaluate-product.cjs
 
 Recorded evaluation: **19 test files**, a **288-combination deterministic contract matrix**, **five controlled history variants**, and **eight fresh live-ranking samples**. These check different things; their counts are not comparable units and do not establish a fan-usefulness score. Live evaluation scripts consume model credit and are optional. [Results and limits](docs/PRODUCT_EVALUATION.md)
 
-[Criterion-by-criterion review and complete idea coverage](docs/COVERAGE_REVIEW.md) identifies the strongest evidence and the remaining gaps. The largest technical gap is autonomous investigation; the largest validation gap is independent testing with fans. Novelty and superiority over other assistants have not been established.
+[Criterion-by-criterion review and complete idea coverage](docs/COVERAGE_REVIEW.md) identifies the strongest evidence and the remaining gaps. The local Batch 5 refinement implements bounded investigation; its broader reliability and incremental value still need comparative evaluation. Independent testing with fans remains a validation gap. Novelty and superiority over other assistants have not been established.
 
 ## Project documentation
 
@@ -101,3 +101,5 @@ Batch 2 adds a controlled [scenario matrix and baseline protocol](docs/EVALUATIO
 Batch 3 adds [richer football evidence tools](docs/FOOTBALL_EVIDENCE_TOOLS.md), including actual player exposure, progression denominators, declared-shape and discipline context. See [verification and local viewer changes](docs/BATCH_3.md).
 
 Batch 4 adds [supplied/illustrative chance quality](docs/CHANCE_QUALITY.md). See [local verification and limitations](docs/BATCH_4.md). The hosted demo and video update in the final release batches.
+
+Batch 5 adds the [bounded AI investigator](docs/BOUNDED_INVESTIGATOR.md), with model-selected queries, follow-ups, inspected-story gating, budgets and a visible trace. See [local results and live samples](docs/BATCH_5.md). Publication remains Batch 10.

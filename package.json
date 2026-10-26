@@ -13,6 +13,8 @@
     "check:viewer": "node tools/check-viewer-milestone.cjs",
     "check:investigation": "node tools/check-investigation.cjs",
     "evaluate:scenarios": "node tools/evaluate-scenarios.cjs",
-    "evaluate:scenarios:holdout": "node tools/evaluate-scenarios.cjs --split=holdout"
+    "evaluate:scenarios:holdout": "node tools/evaluate-scenarios.cjs --split=holdout",
+    "evaluate:agent": "node tools/evaluate-agent.cjs",
+    "check:agent": "node tools/check-agent.cjs"
   }
 }
