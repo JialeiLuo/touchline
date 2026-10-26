@@ -5,6 +5,14 @@
     "id": "synthetic-7",
     "title": "Northbridge v Southport"
   },
+  "analysis_contract": {
+    "time_unit": "seconds",
+    "coordinates": "metres_105x68",
+    "direction": {
+      "northbridge": "increasing_x",
+      "southport": "decreasing_x"
+    }
+  },
   "provenance": {
     "method": "original seeded simplified full-timeline simulator",
     "version": "0.3",
@@ -396,6 +404,131 @@
         ]
       }
     }
+  },
+  "xg_sources": [
+    {
+      "id": "touchline-illustrative-v1",
+      "label": "Touchline simulator illustration",
+      "stage": "pre_shot",
+      "kind": "illustrative",
+      "version": "1",
+      "method": "Pre-shot simulator probability: 0.04 + 0.22 * clamp((attacking_progress - 35) / 65, 0, 1). Uses only endpoint progress; no shot outcome. Not fitted or calibrated to real football."
+    }
+  ],
+  "history": {
+    "schema_version": "1",
+    "records": [
+      {
+        "id": "history-Ellis-1",
+        "player_id": "Ellis",
+        "match_id": "fictional-prior-1",
+        "happened_at": -604800,
+        "available_at": 0,
+        "position": "ST",
+        "minutes": 70,
+        "source": "Authored synthetic role-history fixture",
+        "synthetic": true
+      },
+      {
+        "id": "history-Ellis-2",
+        "player_id": "Ellis",
+        "match_id": "fictional-prior-2",
+        "happened_at": -1209600,
+        "available_at": 0,
+        "position": "ST",
+        "minutes": 75,
+        "source": "Authored synthetic role-history fixture",
+        "synthetic": true
+      },
+      {
+        "id": "history-Ellis-3",
+        "player_id": "Ellis",
+        "match_id": "fictional-prior-3",
+        "happened_at": -1814400,
+        "available_at": 0,
+        "position": "ST",
+        "minutes": 60,
+        "source": "Authored synthetic role-history fixture",
+        "synthetic": true
+      },
+      {
+        "id": "history-Ellis-4",
+        "player_id": "Ellis",
+        "match_id": "fictional-prior-4",
+        "happened_at": -2419200,
+        "available_at": 0,
+        "position": "ST",
+        "minutes": 80,
+        "source": "Authored synthetic role-history fixture",
+        "synthetic": true
+      },
+      {
+        "id": "history-Ellis-5",
+        "player_id": "Ellis",
+        "match_id": "fictional-prior-5",
+        "happened_at": -3024000,
+        "available_at": 0,
+        "position": "RW",
+        "minutes": 20,
+        "source": "Authored synthetic role-history fixture",
+        "synthetic": true
+      },
+      {
+        "id": "history-Duarte-1",
+        "player_id": "Duarte",
+        "match_id": "fictional-prior-1",
+        "happened_at": -604800,
+        "available_at": 0,
+        "position": "RW",
+        "minutes": 70,
+        "source": "Authored synthetic role-history fixture",
+        "synthetic": true
+      },
+      {
+        "id": "history-Duarte-2",
+        "player_id": "Duarte",
+        "match_id": "fictional-prior-2",
+        "happened_at": -1209600,
+        "available_at": 0,
+        "position": "RW",
+        "minutes": 75,
+        "source": "Authored synthetic role-history fixture",
+        "synthetic": true
+      },
+      {
+        "id": "history-Duarte-3",
+        "player_id": "Duarte",
+        "match_id": "fictional-prior-3",
+        "happened_at": -1814400,
+        "available_at": 0,
+        "position": "RW",
+        "minutes": 60,
+        "source": "Authored synthetic role-history fixture",
+        "synthetic": true
+      },
+      {
+        "id": "history-Duarte-4",
+        "player_id": "Duarte",
+        "match_id": "fictional-prior-4",
+        "happened_at": -2419200,
+        "available_at": 0,
+        "position": "RW",
+        "minutes": 80,
+        "source": "Authored synthetic role-history fixture",
+        "synthetic": true
+      },
+      {
+        "id": "history-Duarte-5",
+        "player_id": "Duarte",
+        "match_id": "fictional-prior-5",
+        "happened_at": -3024000,
+        "available_at": 0,
+        "position": "RW",
+        "minutes": 20,
+        "source": "Authored synthetic role-history fixture",
+        "synthetic": true
+      }
+    ]
   },
   "events": [
     {
@@ -5161,6 +5294,10 @@
       "possession_id": "p-59",
       "x": 40.689238720573485,
       "y": 22.145910147577524,
+      "xg": {
+        "value": 0.05925588490040257,
+        "source_id": "touchline-illustrative-v1"
+      },
       "outcome": "off_target",
       "text": "Morgan shoots — off target."
     },
@@ -5471,6 +5608,10 @@
       "possession_id": "p-63",
       "x": 73.82807320635766,
       "y": 23.367679939605296,
+      "xg": {
+        "value": 0.17141809392921054,
+        "source_id": "touchline-illustrative-v1"
+      },
       "outcome": "off_target",
       "text": "Lane shoots — off target."
     },
@@ -6023,6 +6164,10 @@
       "possession_id": "p-71",
       "x": 49.99737696070224,
       "y": 38.286551954224706,
+      "xg": {
+        "value": 0.09076035279006912,
+        "source_id": "touchline-illustrative-v1"
+      },
       "outcome": "goal",
       "text": "Turner shoots — goal!"
     },
@@ -6034,6 +6179,7 @@
       "synthetic": true,
       "team_id": "northbridge",
       "actor_id": "Turner",
+      "shot_id": "full-v03-7-346",
       "x": 49.99737696070224,
       "y": 38.286551954224706,
       "text": "Goal for Northbridge."
@@ -6445,6 +6591,10 @@
       "possession_id": "p-75",
       "x": 46.51936335582286,
       "y": 49.15484918002039,
+      "xg": {
+        "value": 0.07898861443509275,
+        "source_id": "touchline-illustrative-v1"
+      },
       "outcome": "off_target",
       "text": "Mason shoots — off target."
     },
@@ -8712,6 +8862,10 @@
       "possession_id": "p-106",
       "x": 34.51906554214656,
       "y": 14.274281569756567,
+      "xg": {
+        "value": 0.16008931662658088,
+        "source_id": "touchline-illustrative-v1"
+      },
       "outcome": "saved",
       "text": "Lima shoots — saved."
     },
@@ -9359,6 +9513,10 @@
       "possession_id": "p-115",
       "x": 71.75676056789234,
       "y": 19.81176282186061,
+      "xg": {
+        "value": 0.16440749730671253,
+        "source_id": "touchline-illustrative-v1"
+      },
       "outcome": "off_target",
       "text": "Mason shoots — off target."
     },
@@ -9539,6 +9697,10 @@
       "possession_id": "p-117",
       "x": 71.42481238208711,
       "y": 61.31108424253762,
+      "xg": {
+        "value": 0.163283980370141,
+        "source_id": "touchline-illustrative-v1"
+      },
       "outcome": "off_target",
       "text": "Vale shoots — off target."
     },
@@ -11560,6 +11722,10 @@
       "possession_id": "p-139",
       "x": 67.60793076083064,
       "y": 58.66482119169086,
+      "xg": {
+        "value": 0.15036530411358065,
+        "source_id": "touchline-illustrative-v1"
+      },
       "outcome": "saved",
       "text": "Brooks shoots — saved."
     },
@@ -12835,6 +13001,10 @@
       "possession_id": "p-156",
       "x": 37.35148172546178,
       "y": 3,
+      "xg": {
+        "value": 0.15050267723689859,
+        "source_id": "touchline-illustrative-v1"
+      },
       "outcome": "saved",
       "text": "Alves shoots — saved."
     },
@@ -20027,128 +20197,5 @@
         }
       ]
     }
-  ],
-  "history": {
-    "schema_version": "1",
-    "records": [
-      {
-        "id": "history-Ellis-1",
-        "player_id": "Ellis",
-        "match_id": "fictional-prior-1",
-        "happened_at": -604800,
-        "available_at": 0,
-        "position": "ST",
-        "minutes": 70,
-        "source": "Authored synthetic role-history fixture",
-        "synthetic": true
-      },
-      {
-        "id": "history-Ellis-2",
-        "player_id": "Ellis",
-        "match_id": "fictional-prior-2",
-        "happened_at": -1209600,
-        "available_at": 0,
-        "position": "ST",
-        "minutes": 75,
-        "source": "Authored synthetic role-history fixture",
-        "synthetic": true
-      },
-      {
-        "id": "history-Ellis-3",
-        "player_id": "Ellis",
-        "match_id": "fictional-prior-3",
-        "happened_at": -1814400,
-        "available_at": 0,
-        "position": "ST",
-        "minutes": 60,
-        "source": "Authored synthetic role-history fixture",
-        "synthetic": true
-      },
-      {
-        "id": "history-Ellis-4",
-        "player_id": "Ellis",
-        "match_id": "fictional-prior-4",
-        "happened_at": -2419200,
-        "available_at": 0,
-        "position": "ST",
-        "minutes": 80,
-        "source": "Authored synthetic role-history fixture",
-        "synthetic": true
-      },
-      {
-        "id": "history-Ellis-5",
-        "player_id": "Ellis",
-        "match_id": "fictional-prior-5",
-        "happened_at": -3024000,
-        "available_at": 0,
-        "position": "RW",
-        "minutes": 20,
-        "source": "Authored synthetic role-history fixture",
-        "synthetic": true
-      },
-      {
-        "id": "history-Duarte-1",
-        "player_id": "Duarte",
-        "match_id": "fictional-prior-1",
-        "happened_at": -604800,
-        "available_at": 0,
-        "position": "RW",
-        "minutes": 70,
-        "source": "Authored synthetic role-history fixture",
-        "synthetic": true
-      },
-      {
-        "id": "history-Duarte-2",
-        "player_id": "Duarte",
-        "match_id": "fictional-prior-2",
-        "happened_at": -1209600,
-        "available_at": 0,
-        "position": "RW",
-        "minutes": 75,
-        "source": "Authored synthetic role-history fixture",
-        "synthetic": true
-      },
-      {
-        "id": "history-Duarte-3",
-        "player_id": "Duarte",
-        "match_id": "fictional-prior-3",
-        "happened_at": -1814400,
-        "available_at": 0,
-        "position": "RW",
-        "minutes": 60,
-        "source": "Authored synthetic role-history fixture",
-        "synthetic": true
-      },
-      {
-        "id": "history-Duarte-4",
-        "player_id": "Duarte",
-        "match_id": "fictional-prior-4",
-        "happened_at": -2419200,
-        "available_at": 0,
-        "position": "RW",
-        "minutes": 80,
-        "source": "Authored synthetic role-history fixture",
-        "synthetic": true
-      },
-      {
-        "id": "history-Duarte-5",
-        "player_id": "Duarte",
-        "match_id": "fictional-prior-5",
-        "happened_at": -3024000,
-        "available_at": 0,
-        "position": "RW",
-        "minutes": 20,
-        "source": "Authored synthetic role-history fixture",
-        "synthetic": true
-      }
-    ]
-  },
-  "analysis_contract": {
-    "time_unit": "seconds",
-    "coordinates": "metres_105x68",
-    "direction": {
-      "northbridge": "increasing_x",
-      "southport": "decreasing_x"
-    }
-  }
+  ]
 }

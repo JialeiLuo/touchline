@@ -22,6 +22,7 @@
   const method=el('details');method.append(el('summary','How this is measured'),el('p',report.method,'muted'));section.append(method);host.append(section);
  };
  window.renderCalculatedComparisons=function(host,packet){
+  if(window.renderChanceQuality)window.renderChanceQuality(host,packet);
   const groups=packet.comparisons||[];
   const section=el('section',undefined,'calculated-comparisons');section.setAttribute('aria-label','Calculated before and after evidence');
   section.append(el('h3','Before & after · calculated evidence'),el('p','Calculated from match events, independently of the AI wording. A change after an event does not prove the event caused it.','muted'));

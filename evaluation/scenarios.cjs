@@ -1,7 +1,7 @@
 /* Fixed authored fixtures. Expectations are declared independently of production tools. */
 const {simulate}=require('../full-match.js'),{fromReplay}=require('../match-package.js');
 function fixture(spec){
- const data=structuredClone(fromReplay(simulate(7)));data.match={id:spec.id,title:spec.id};delete data.history;
+ const data=structuredClone(fromReplay(simulate(7)));data.match={id:spec.id,title:spec.id};delete data.history;delete data.xg_sources;
  const players=data.squads.teams.northbridge.players,starter=players.find(p=>p.starting&&p.assigned_position!=='GK'),recipient=players.find(p=>p.starting&&p.id!==starter.id&&p.assigned_position!=='GK'),incoming=players.find(p=>!p.starting);
  let n=0;const event=(t,type,fields={})=>({id:`${spec.id}-${++n}`,t,type,synthetic:true,text:`Authored ${type} at ${t} seconds.`,...fields});
  const action=(t,type='pass',actor=starter.id)=>event(t,type,{team_id:'northbridge',actor_id:actor,...(type==='pass'?{recipient_id:recipient.id,outcome:'complete',duration:2}: {outcome:'off_target'})});

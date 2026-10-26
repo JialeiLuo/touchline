@@ -30,7 +30,7 @@ Foundry can rank supporting stories differently. If online selection is unavaila
 | Can I inspect another synthetic match? | **Match data & demo settings** | Change the seed, generate a replay, load the example, upload a supported JSON package or download the current package. |
 | What is known about a reported incident? | Example package → replay through minutes 33 and 34 | A report and later clarification, with an official-rule reference kept separate from the incident facts. |
 
-The pitch markers show declared lineup slots, not tracked player movement. Statistics include score, possession, shots/on target, passes/completion, fouls, cards, corners and substitutions. **xG is not implemented.**
+The pitch markers show declared lineup slots, not tracked player movement. Statistics include score, possession, shots/on target, passes/completion, fouls, cards, corners and substitutions. **The local refinement adds supplied/illustrative shot values with provenance, coverage and a chart; these are not calibrated professional xG.**
 
 ## Bring your own input
 
@@ -99,3 +99,5 @@ Batch 1 adds data-based upload analysis (including possession sequences), explic
 Batch 2 adds a controlled [scenario matrix and baseline protocol](docs/EVALUATION_SCENARIOS.md). Run `npm run evaluate:scenarios` for development cases; the reserved split is separate. See [Batch 2 results and limitations](docs/BATCH_2.md). These offline checks do not establish model superiority or fan usefulness.
 
 Batch 3 adds [richer football evidence tools](docs/FOOTBALL_EVIDENCE_TOOLS.md), including actual player exposure, progression denominators, declared-shape and discipline context. See [verification and local viewer changes](docs/BATCH_3.md).
+
+Batch 4 adds [supplied/illustrative chance quality](docs/CHANCE_QUALITY.md). See [local verification and limitations](docs/BATCH_4.md). The hosted demo and video update in the final release batches.

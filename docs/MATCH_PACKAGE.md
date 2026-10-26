@@ -58,3 +58,7 @@ Pass/carry duration is seconds, required for possession-time accounting. Player 
 Sequence analysis is enabled from supplied possession IDs, x/y endpoints and closing records, equally for built-in and uploaded matches. Missing prerequisites produce “Unavailable”, not a zero entry count. Only complete groups wholly inside the selected interval are counted. A capability is an input-coverage statement, not a guarantee of professional-quality data or tactical causality.
 
 Package management endpoints: GET /api/packages/{opaque-id} returns creation/expiry timestamps; DELETE removes that known package. No package-list endpoint exists. POST /api/packages accepts X-Replace-Package containing your previous opaque ID, and returns expires_at. Validation happens before replacement, including at capacity. IDs confer access to their temporary package: keep them private. There is no user-account isolation or durable storage in this prototype.
+
+## Optional pre-shot values (Batch 4)
+
+Version 1 accepts `xg_sources` and shot `xg` objects; goals may supply `shot_id` for a unique preceding goal-outcome shot. See the [complete source, availability, range and linkage contract](CHANCE_QUALITY.md). Legacy packages without shot values remain supported. The updated runnable example includes clearly labelled simulator illustrations; no professional calibration is claimed.

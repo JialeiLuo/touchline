@@ -94,3 +94,7 @@ The panel shows which sequence analysis, role history and incident data are supp
 ## Local refinement: richer supporting evidence
 
 After explaining an interval, expand **Explore the play behind this explanation**. Substitution evidence shows each player’s seconds on pitch and the history known at entry. Before/after comparisons show passes completed out of attempts, advanced sequences out of complete recorded sequences, and concurrent changes. Missing progression data is labelled unavailable. The shape/discipline disclosure shows declared formations and booked players still on the field. These additions are currently local; the public demo updates in the final release batch.
+
+## Local refinement: chance quality
+
+Explain a revealed interval and expand **Explore the play behind this explanation**. The chance-quality section shows shot coverage, source, supplied totals and linked goals. Charts separate sources; expand the shot-values disclosure to inspect each value, goal link and method. Built-in values illustrate the simulator and are not calibrated professional xG. Missing/delayed values are not zero; incomplete or mixed-source inputs do not receive a combined total. See [details and limits](CHANCE_QUALITY.md). This refinement is local until Batch 10.

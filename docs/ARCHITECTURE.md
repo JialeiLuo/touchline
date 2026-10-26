@@ -17,3 +17,7 @@ Uploads are temporary process memory: one-hour lifetime, eight packages, 2 MB ea
 ## Batch 3 evidence tools
 
 Packet schema 11 adds shared role-history, formation, discipline and enriched comparison tools. See [tool contracts and boundary conventions](FOOTBALL_EVIDENCE_TOOLS.md). The investigator still follows deterministic steps; model-selected calls remain future work.
+
+## Batch 4 chance quality
+
+Packet schema 12 adds `chance_quality`: validated per-shot supplied/illustrative values → replay/availability filtering → per-source coverage and aggregation → optional source-owned stories and a shot chart. See [chance-quality contracts](CHANCE_QUALITY.md). Match-package schema stays version 1 with optional fields.
