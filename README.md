@@ -1,53 +1,92 @@
 # Touchline — Your AI Co-commentator
 
-Touchline turns synthetic football events into an inspectable match companion: replay, statistics, lineups, interval catch-up, multilingual glossary, team/player focus and contextual substitution stories.
+**Missed ten minutes? Catch up on the story, not just the score.** Touchline is a football companion for a returning fan: choose a match interval, follow a team or player, and inspect the evidence behind a short explanation.
 
-The current AI route ranks supported story candidates through Microsoft Foundry. Calculations, time scopes, sources and story wording remain server-owned. This is a bounded prototype, not autonomous football reasoning or a live broadcast feed.
+[Open the public demo](https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/) · [Watch the 1:48 narrated video](https://youtu.be/9JvQMpAhdpA) · [Full user guide](docs/USER_GUIDE.md) · [Judge testing instructions](TESTING_INSTRUCTIONS.md)
+
+The demo uses entirely fictional matches. You do not need an account, a payment, your own data or an Azure subscription to try the hosted website. Free hosting can take a little time to start.
+
+![Touchline viewer workspace](docs/product-milestone.jpg)
+
+## Your first explanation: about one minute
+
+1. Open the public demo and select **Try the substitution example**. This prepares seed 7 at minute 66, selects minutes 55–66, Tactical detail and Ellis. It does not make a model request yet.
+2. Select **Explain what changed**. The explanation should connect Ellis's assigned wing role with his supplied history: only **20 of 305 previous recorded minutes** in that role. This describes familiarity in the sample, not his ability or the substitution's causal effect.
+3. Open **Inspect supporting evidence** beneath a story. Check the event/history IDs, timestamps and comparison window. **Explore the play behind this explanation** provides the underlying analysis.
+4. Select **Quick catch-up** and explain again. Expect shorter wording. Select a team or player to change relevance; important goals and dismissals remain included.
+5. Change the interval or replay position. An older explanation is flagged; request a new one for the new selection. You cannot request minutes the replay has not revealed.
+
+Foundry can rank supporting stories differently. If online selection is unavailable, a clearly labelled local fallback still gives supported commentary.
+
+## What you can do
+
+| Your question or task | Where to go | What you get |
+|---|---|---|
+| What did I miss between two minutes? | **Catch up on the story** → From/To → **Explain what changed** | Selected-interval commentary, supporting facts and a next-to-watch question; full time uses a replay takeaway. |
+| Give me just the events | **Show event recap** | A local summary; no model call is needed. |
+| Why is this substitution interesting? | Prepared substitution example; **Tactical detail**, player focus | Usual/assigned roles, supplied recent role minutes, involvement comparisons and concurrent changes. |
+| Who is playing, and where? | **Teams & lineups** → player details | Starting/current XI, bench, fictional manager, declared formation and player roles. **Follow this player in commentary** sets player focus. |
+| How do I say this football term in another language? | **Glossary language** → click an underlined term/name | Curated translation and explanation in Chinese, Spanish, French, German, Portuguese or Japanese. The interface and commentary remain English. |
+| Can I inspect another synthetic match? | **Match data & demo settings** | Change the seed, generate a replay, load the example, upload a supported JSON package or download the current package. |
+| What is known about a reported incident? | Example package → replay through minutes 33 and 34 | A report and later clarification, with an official-rule reference kept separate from the incident facts. |
+
+The pitch markers show declared lineup slots, not tracked player movement. Statistics include score, possession, shots/on target, passes/completion, fouls, cards, corners and substitutions. **xG is not implemented.**
+
+## Bring your own input
+
+Upload **Touchline synthetic package JSON v1**, not an arbitrary provider export or a video. Start from [the runnable example](data/example-match-package.json), or download a current package from the website. A JSON file is a structured text document containing named fields, lists and records.
+
+Required content: match metadata, provenance, two squads and chronological core events covering 0–90 minutes. Optional role-history records and incident annotations enrich the explanation. A narrative cannot reliably supply context missing from the input.
+
+The website validates the package before using it. The current limits are 2 MB, 12,000 core events, 200 annotations and 1,000 history records; up to eight uploaded packages are held in server memory for one hour. A server restart clears uploads. Do not upload sensitive information. **CSV, live feeds, real video and open-ended online match lookup are not supported.** See [input specification](docs/MATCH_PACKAGE.md) and [step-by-step upload instructions](docs/USER_GUIDE.md#bring-your-own-synthetic-match).
+
+## What the AI does
+
+```text
+Synthetic events + optional supplied history/incident records
+  → validate and time-filter
+  → calculate statistics, sequences and comparison windows
+  → retrieve available role history and build supported story candidates
+  → Microsoft Foundry ranks candidate IDs
+  → apply focus and essential-event coverage
+  → render evidence-owned wording and source links
+```
+
+The hosted model is **gpt-5-mini through Microsoft Foundry**. Azure App Service hosts the website and private Node backend. The model selects among supported stories; it does not independently choose tools, browse the web or write unrestricted commentary. Calculations and displayed story wording are deterministic. The selected evidence packet is sent to Foundry only when online commentary is requested; it is not an offline-only product.
+
+Caching, persistent call allowances, request throttling and local fallback protect the student-credit demo. The local calculation/replay path works without Azure credentials. [Architecture](docs/ARCHITECTURE.md) · [Data provenance](docs/DATA_PROVENANCE.md) · [Scope and limits](docs/FINAL_SCOPE.md)
 
 ## Run locally
 
-Requires Node.js 22 or newer. No dependencies or package installation are needed. Development and clean-copy checks currently use Node 24.
+Requires **Node.js 22 or newer**; no runtime dependencies need installing.
 
 ```sh
+git clone https://github.com/JialeiLuo/touchline.git
+cd touchline
 npm start
 ```
 
-Or run `node server.cjs`. Open `http://127.0.0.1:8767/`.
+Open `http://127.0.0.1:8767/`. Without Azure configuration, commentary uses the labelled local fallback. For online ranking, copy `.env.example` to `.env` and privately configure your own Foundry deployment. Never commit `.env` or share API keys. The hosted demo's configuration is not distributed.
 
-Without Azure configuration, commentary uses a clearly labeled local fallback. To enable online ranking, copy `.env.example` to `.env`, enter your deployment configuration privately, then use `npm start`. Never commit `.env`. ChatGPT Plus and Azure credit are separate from this software.
-
-## Explore
-
-1. Advance the replay using the slider or Next key moment.
-2. Choose the minutes you missed and a viewing mode/team/player preference.
-3. Select Explain what changed. Expand supporting evidence or the passages of play.
-4. For the contextual example, use seed 7, advance beyond minute 66, select 55–66 and focus on Ellis. Duarte provides a contrasting role-history case.
-5. Match data & demo settings contains the package example, JSON upload, seed controls and provenance.
-
-## Verify
+## Evidence, evaluation and judging coverage
 
 ```sh
 npm test
 npm run evaluate
+node tools/evaluate-product.cjs
 ```
 
-`evaluate` compares five controlled role-history variants with a counts-only baseline. It makes no model calls. Optional live integration scripts are documented in [Testing](docs/TESTING.md).
+Recorded evaluation: **19 test files**, a **288-combination deterministic contract matrix**, **five controlled history variants**, and **eight fresh live-ranking samples**. These check different things; their counts are not comparable units and do not establish a fan-usefulness score. Live evaluation scripts consume model credit and are optional. [Results and limits](docs/PRODUCT_EVALUATION.md)
 
-## Documentation
+[Criterion-by-criterion review and complete idea coverage](docs/COVERAGE_REVIEW.md) identifies the strongest evidence and the remaining gaps. The largest technical gap is autonomous investigation; the largest validation gap is independent testing with fans. Novelty and superiority over other assistants have not been established.
 
-- [Architecture](docs/ARCHITECTURE.md)
-- [Input format and optional role history](docs/MATCH_PACKAGE.md)
-- [Data provenance and limits](docs/DATA_PROVENANCE.md)
-- [Evaluation results](docs/CONTEXT_EVALUATION.md)
-- [Deployment preparation](docs/DEPLOYMENT.md)
-- [Current project checklist](docs/VIEWER_MILESTONE.md)
+## Project documentation
 
-## Current limits
+- [User guide](docs/USER_GUIDE.md) and [judge testing instructions](TESTING_INSTRUCTIONS.md)
+- [Submission pitch](SUBMISSION.md), [video and reproduction](submission/VIDEO.md)
+- [Coverage review and next steps](docs/COVERAGE_REVIEW.md), [living brainstorm](docs/IDEAS.md)
+- [Architecture](docs/ARCHITECTURE.md), [input contract](docs/MATCH_PACKAGE.md), [synthetic provenance](docs/DATA_PROVENANCE.md)
+- [Product evaluation](docs/PRODUCT_EVALUATION.md), [context evaluation](docs/CONTEXT_EVALUATION.md), [frozen scope](docs/FINAL_SCOPE.md)
+- [Public deployment](docs/PUBLIC_DEMO.md), [copyright and licensing position](COPYRIGHT.md)
 
-Synthetic event generation is simplified and not calibrated to professional football. No real footage, live feed, xG model, tracking or general manager/injury history is connected. History-based stories use only supplied records. Before/after activity does not establish causation. Small passing evaluations do not establish fan usefulness or production reliability.
-
-Persistent single-process AI-call allowances, request throttling and response caching are implemented. Public Free F1 hosting is verified (see docs/PUBLIC_DEMO.md). Broader evaluation, final submission materials and licensing decisions remain outstanding. Do not treat this source bundle as an already deployed production service.
-
-Public demo: https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/
-
-Release 0.5 consolidates the viewer workflow, adds a prepared example and stale-result/future-time protection, and preserves essential incidents within short summaries. See [frozen scope](docs/FINAL_SCOPE.md) and [product evaluation](docs/PRODUCT_EVALUATION.md). Milestones 1 and 2 are complete subject to the explicitly documented prototype limitations; submission packaging remains.
+No real football feed, video perception, calibrated xG, match prediction, broad injury/manager/recruitment history, arbitrary CSV import or production-scale service is included. The narrated demonstration video is not a voice-commentary feature inside the website.
