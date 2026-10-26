@@ -10,6 +10,7 @@
     "start": "node --env-file-if-exists=.env server.cjs",
     "test": "node --test tests/*.cjs",
     "evaluate": "node tools/evaluate-context.cjs",
+    "check:fan": "node tools/check-fan-experience.cjs",
     "check:viewer": "node tools/check-viewer-milestone.cjs",
     "check:investigation": "node tools/check-investigation.cjs",
     "evaluate:scenarios": "node tools/evaluate-scenarios.cjs",

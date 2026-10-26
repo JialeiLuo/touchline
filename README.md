@@ -105,3 +105,5 @@ Batch 4 adds [supplied/illustrative chance quality](docs/CHANCE_QUALITY.md). See
 Batch 5 adds the [bounded AI investigator](docs/BOUNDED_INVESTIGATOR.md), with model-selected queries, follow-ups, inspected-story gating, budgets and a visible trace. See [local results and live samples](docs/BATCH_5.md). Publication remains Batch 10.
 
 Batch 6 adds [connected, grounded commentary](docs/GROUNDED_COMMENTARY.md): facts versus interpretation, checked claims, quiet/full-time handling and complementary composition. See [local verification and remaining limits](docs/BATCH_6.md).
+
+Batch 7 integrates [the fan experience](docs/BATCH_7.md): interval navigation, viewing preferences, lineup follow-through, evidence/glossary access, loading/recovery and narrow-screen/keyboard fixes. Run `npm run check:fan` for the local browser journey checks.

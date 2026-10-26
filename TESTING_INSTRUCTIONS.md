@@ -36,3 +36,7 @@ Read docs/MATCH_PACKAGE.md for the JSON schema, docs/DATA_PROVENANCE.md for gene
 Watch the 1:48 English-narrated walkthrough: https://youtu.be/9JvQMpAhdpA
 
 For first-time viewers, see [the detailed user guide](docs/USER_GUIDE.md). For evidence against each judging prompt and the complete idea backlog, see [coverage review](docs/COVERAGE_REVIEW.md).
+
+## Fan journey browser check (Batch 7)
+
+Run `npm run check:fan` with Playwright and Chrome installed. The check starts a temporary local server with Foundry disabled, so it does not spend model credits. Set `TOUCHLINE_PLAYWRIGHT` to an alternate Playwright module path or `TOUCHLINE_BROWSER` to a compatible Chromium executable when needed. It tests interval boundaries, preference changes during a delayed request, connection failure recovery, upload expiry, glossary access, lineup player focus and a 390px layout. See [the Batch 7 report](docs/BATCH_7.md) for scope and limits.

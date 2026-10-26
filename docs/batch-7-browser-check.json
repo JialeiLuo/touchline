@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "Whole-minute validation, interval stepping and future-time prevention",
+    "Local commentary, evidence disclosure and glossary in retained commentary",
+    "Single in-flight request, stale-response suppression and local recovery",
+    "Uploaded match protected from example replacement; expiry blocks every server analysis action",
+    "Lineup player follow returns to commentary with the selected player",
+    "390px viewport without horizontal page overflow; keyboard dismissal returns focus"
+  ],
+  "errors": [],
+  "limitations": "Automated browser integration checks with local fallback and controlled failures; not unfamiliar-user testing or a WCAG conformance audit."
+}
