@@ -1,0 +1,2459 @@
+{
+  "schema_version": 1,
+  "suite_version": "batch2-v1",
+  "split": "holdout",
+  "source_revision": "c8d3bc9d76bac91eec1760d38a2ebf556cd13854",
+  "runtime": "v24.22.1",
+  "source_hashes": {
+    "evaluation/scenarios.cjs": "186ef97e2c9849ed06916c130d62a75d47c84f5f14b106b7d08a397270db902b",
+    "tools/evaluate-scenarios.cjs": "b9aa30262fe48b280fe8f5a84d66fa5427cb8174eb7a07887003106efd334e44",
+    "server/evidence.cjs": "7e7ba44f9c67ec62ed613c45075846fcd11bdd25717968533270018e14de5888",
+    "server/provider.cjs": "1c3b126e0cc8e601dbeb3700864278aa17ad4a84da369ff78fe4bf5a889fa323",
+    "server/stories.cjs": "ee4dfe4a3e2f62d212e4fdf67b6d25e0de37a21d4de1beb8b71b0c0f07e109e4",
+    "server/investigation.cjs": "6762f8a0233fcaa443f40396577cae4ef60e8f4e642d4ba8c1adcbb8c5f3a0af",
+    "server/comparisons.cjs": "6543baf1397f9b5586be5ff97ab78842abdc4d1ded1ef08a6cb0b818f239c85f",
+    "match-package.js": "19b0f970dacfc1f1778b40560c3329c4950ad13fda82b18cab2d7dedfc137625"
+  },
+  "method": "Authored synthetic fixtures; all-facts and deterministic priority-story baselines use the identical evidence packet. No model calls. Mechanical checks are separate from pending human semantic review.",
+  "cases": 8,
+  "passed": 8,
+  "failed": 0,
+  "rows": [
+    {
+      "id": "holdout-concurrent",
+      "split": "holdout",
+      "mode": "quick",
+      "question": "What changed around this interval and what evidence helps explain it?",
+      "rubric": "Retain goal and dismissal; identify concurrent changes and avoid causal attribution.",
+      "input_sha256": "988ac242db8e0c7d960c6a357646e9281149419d2bdaeb5945835032ffe94a41",
+      "input": {
+        "index": 8,
+        "from": 300,
+        "to": 950,
+        "viewer_mode": "quick"
+      },
+      "expected": {
+        "score": [
+          0,
+          1
+        ],
+        "shots": 1,
+        "investigations": 1,
+        "history": "recorded_experience",
+        "comparison": "ready",
+        "passes": [
+          1,
+          1
+        ],
+        "attempts": [
+          0,
+          1
+        ],
+        "otherChanges": 2
+      },
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "concurrent changes",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "facts": [
+        {
+          "id": "fact-1",
+          "text": "11′: Southport scored through Reed.",
+          "kind": "The score changed",
+          "event_ids": [
+            "holdout-concurrent-7"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "text": "Both sides produced 1 attempt(s). 0 required a save; the balance of shots alone does not tell us who controlled the game.",
+          "kind": "Where the chances came",
+          "event_ids": [
+            "holdout-concurrent-6",
+            "holdout-concurrent-5"
+          ]
+        },
+        {
+          "id": "fact-3",
+          "text": "At 10′, Northbridge introduced Ellis for Morgan. The substitute subsequently took 1 shot(s) in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+          "kind": "A personnel change",
+          "event_ids": [
+            "holdout-concurrent-2",
+            "holdout-concurrent-5"
+          ]
+        },
+        {
+          "id": "fact-4",
+          "text": "Reed was sent off for Southport. That changes the available personnel, but the event stream alone does not establish how the team reorganised.",
+          "kind": "A dismissal changed the numbers",
+          "event_ids": [
+            "holdout-concurrent-8"
+          ]
+        },
+        {
+          "id": "fact-5",
+          "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+          "event_ids": [
+            "holdout-concurrent-2"
+          ],
+          "context_ids": [
+            "squad:northbridge:Ellis"
+          ]
+        },
+        {
+          "id": "fact-6",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "shots",
+            "before": 0,
+            "after": 1,
+            "delta": 1,
+            "direction": "increased",
+            "event_ids": [
+              "holdout-concurrent-5"
+            ]
+          },
+          "event_ids": [
+            "holdout-concurrent-2",
+            "holdout-concurrent-5"
+          ],
+          "text": "Northbridge: shots before = 0; after = 1; direction = increased; absolute count difference = 1. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-7",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "completed_passes",
+            "before": 1,
+            "after": 1,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": [
+              "holdout-concurrent-3",
+              "holdout-concurrent-4"
+            ]
+          },
+          "event_ids": [
+            "holdout-concurrent-2",
+            "holdout-concurrent-3",
+            "holdout-concurrent-4"
+          ],
+          "text": "Northbridge: completed passes before = 1; after = 1; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-8",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "shots",
+            "before": 0,
+            "after": 1,
+            "delta": 1,
+            "direction": "increased",
+            "event_ids": [
+              "holdout-concurrent-6"
+            ]
+          },
+          "event_ids": [
+            "holdout-concurrent-2",
+            "holdout-concurrent-6"
+          ],
+          "text": "Southport: shots before = 0; after = 1; direction = increased; absolute count difference = 1. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-9",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "completed_passes",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-concurrent-2"
+          ],
+          "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-10",
+          "kind": "Substitution investigation",
+          "investigation_player": "Ellis",
+          "text": "Ellis inherited CM. Available history at entry: 1 prior match records, 90 minutes in CM out of 90 recorded minutes. Role familiarity describes this supplied sample, not ability. Equal clock-window comparison: outgoing player completed 1 of 1 passes and took 0 shots before entry; incoming player completed 1 of 1 passes and took 1 shots after entry. 2 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+          "event_ids": [
+            "holdout-concurrent-2",
+            "holdout-concurrent-3",
+            "holdout-concurrent-4",
+            "holdout-concurrent-5",
+            "holdout-concurrent-7",
+            "holdout-concurrent-8"
+          ],
+          "history_ids": [
+            "holdout-concurrent-history"
+          ]
+        },
+        {
+          "id": "fact-11",
+          "kind": "Interval situation",
+          "text": "Northbridge 0–0 Southport at interval start; 0–1 at interval end. Selected-interval shots: Northbridge 1; Southport 1. Counts include revealed events from 300 through 950 seconds.",
+          "event_ids": [
+            "holdout-concurrent-6",
+            "holdout-concurrent-7",
+            "holdout-concurrent-5"
+          ],
+          "score_start": [
+            0,
+            0
+          ],
+          "score_end": [
+            0,
+            1
+          ],
+          "team_names": [
+            "Northbridge",
+            "Southport"
+          ]
+        }
+      ],
+      "baseline_outputs": {
+        "all_facts": {
+          "headline": "Recorded interval facts",
+          "paragraphs": [
+            {
+              "text": "11′: Southport scored through Reed.",
+              "evidence_ids": [
+                "fact-1"
+              ]
+            },
+            {
+              "text": "Both sides produced 1 attempt(s). 0 required a save; the balance of shots alone does not tell us who controlled the game.",
+              "evidence_ids": [
+                "fact-2"
+              ]
+            },
+            {
+              "text": "At 10′, Northbridge introduced Ellis for Morgan. The substitute subsequently took 1 shot(s) in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+              "evidence_ids": [
+                "fact-3"
+              ]
+            },
+            {
+              "text": "Reed was sent off for Southport. That changes the available personnel, but the event stream alone does not establish how the team reorganised.",
+              "evidence_ids": [
+                "fact-4"
+              ]
+            },
+            {
+              "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+              "evidence_ids": [
+                "fact-5"
+              ]
+            },
+            {
+              "text": "Northbridge: shots before = 0; after = 1; direction = increased; absolute count difference = 1. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-6"
+              ]
+            },
+            {
+              "text": "Northbridge: completed passes before = 1; after = 1; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-7"
+              ]
+            },
+            {
+              "text": "Southport: shots before = 0; after = 1; direction = increased; absolute count difference = 1. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-8"
+              ]
+            },
+            {
+              "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-9"
+              ]
+            },
+            {
+              "text": "Ellis inherited CM. Available history at entry: 1 prior match records, 90 minutes in CM out of 90 recorded minutes. Role familiarity describes this supplied sample, not ability. Equal clock-window comparison: outgoing player completed 1 of 1 passes and took 0 shots before entry; incoming player completed 1 of 1 passes and took 1 shots after entry. 2 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+              "evidence_ids": [
+                "fact-10"
+              ]
+            },
+            {
+              "text": "Northbridge 0–0 Southport at interval start; 0–1 at interval end. Selected-interval shots: Northbridge 1; Southport 1. Counts include revealed events from 300 through 950 seconds.",
+              "evidence_ids": [
+                "fact-11"
+              ]
+            }
+          ]
+        },
+        "priority_stories": {
+          "watch_label": "What to watch next",
+          "headline": "The decisive recorded incidents",
+          "paragraphs": [
+            {
+              "text": "11′: Southport scored through Reed. Reed was sent off for Southport. That changes the available personnel, but the event stream alone does not establish how the team reorganised.",
+              "evidence_ids": [
+                "fact-1",
+                "fact-4"
+              ],
+              "scope_label": "Selected interval · 5:00–15:50"
+            }
+          ],
+          "watch_next": null,
+          "limitations": [
+            "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+            "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+          ],
+          "composition": "selected-stories",
+          "mode": "template",
+          "reason": "Offline Batch 2 baseline"
+        }
+      },
+      "manual_review": {
+        "status": "pending",
+        "dimensions": [
+          "factual support",
+          "relevance to question",
+          "conflicting signals",
+          "appropriate uncertainty",
+          "readability"
+        ],
+        "scale": "0 absent/incorrect; 1 partial; 2 clear and supported; N/A when irrelevant"
+      }
+    },
+    {
+      "id": "holdout-concurrent",
+      "split": "holdout",
+      "mode": "tactical",
+      "question": "What changed around this interval and what evidence helps explain it?",
+      "rubric": "Retain goal and dismissal; identify concurrent changes and avoid causal attribution.",
+      "input_sha256": "a1df1c97ef6e0af654b7c70738ea22ed6841b6cc9807ab5e94b1f6b68e4a9123",
+      "input": {
+        "index": 8,
+        "from": 300,
+        "to": 950,
+        "viewer_mode": "tactical"
+      },
+      "expected": {
+        "score": [
+          0,
+          1
+        ],
+        "shots": 1,
+        "investigations": 1,
+        "history": "recorded_experience",
+        "comparison": "ready",
+        "passes": [
+          1,
+          1
+        ],
+        "attempts": [
+          0,
+          1
+        ],
+        "otherChanges": 2
+      },
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "concurrent changes",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "facts": [
+        {
+          "id": "fact-1",
+          "text": "11′: Southport scored through Reed.",
+          "kind": "The score changed",
+          "event_ids": [
+            "holdout-concurrent-7"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "text": "Both sides produced 1 attempt(s). 0 required a save; the balance of shots alone does not tell us who controlled the game.",
+          "kind": "Where the chances came",
+          "event_ids": [
+            "holdout-concurrent-6",
+            "holdout-concurrent-5"
+          ]
+        },
+        {
+          "id": "fact-3",
+          "text": "At 10′, Northbridge introduced Ellis for Morgan. The substitute subsequently took 1 shot(s) in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+          "kind": "A personnel change",
+          "event_ids": [
+            "holdout-concurrent-2",
+            "holdout-concurrent-5"
+          ]
+        },
+        {
+          "id": "fact-4",
+          "text": "Reed was sent off for Southport. That changes the available personnel, but the event stream alone does not establish how the team reorganised.",
+          "kind": "A dismissal changed the numbers",
+          "event_ids": [
+            "holdout-concurrent-8"
+          ]
+        },
+        {
+          "id": "fact-5",
+          "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+          "event_ids": [
+            "holdout-concurrent-2"
+          ],
+          "context_ids": [
+            "squad:northbridge:Ellis"
+          ]
+        },
+        {
+          "id": "fact-6",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "shots",
+            "before": 0,
+            "after": 1,
+            "delta": 1,
+            "direction": "increased",
+            "event_ids": [
+              "holdout-concurrent-5"
+            ]
+          },
+          "event_ids": [
+            "holdout-concurrent-2",
+            "holdout-concurrent-5"
+          ],
+          "text": "Northbridge: shots before = 0; after = 1; direction = increased; absolute count difference = 1. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-7",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "completed_passes",
+            "before": 1,
+            "after": 1,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": [
+              "holdout-concurrent-3",
+              "holdout-concurrent-4"
+            ]
+          },
+          "event_ids": [
+            "holdout-concurrent-2",
+            "holdout-concurrent-3",
+            "holdout-concurrent-4"
+          ],
+          "text": "Northbridge: completed passes before = 1; after = 1; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-8",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "shots",
+            "before": 0,
+            "after": 1,
+            "delta": 1,
+            "direction": "increased",
+            "event_ids": [
+              "holdout-concurrent-6"
+            ]
+          },
+          "event_ids": [
+            "holdout-concurrent-2",
+            "holdout-concurrent-6"
+          ],
+          "text": "Southport: shots before = 0; after = 1; direction = increased; absolute count difference = 1. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-9",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "completed_passes",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-concurrent-2"
+          ],
+          "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-10",
+          "kind": "Substitution investigation",
+          "investigation_player": "Ellis",
+          "text": "Ellis inherited CM. Available history at entry: 1 prior match records, 90 minutes in CM out of 90 recorded minutes. Role familiarity describes this supplied sample, not ability. Equal clock-window comparison: outgoing player completed 1 of 1 passes and took 0 shots before entry; incoming player completed 1 of 1 passes and took 1 shots after entry. 2 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+          "event_ids": [
+            "holdout-concurrent-2",
+            "holdout-concurrent-3",
+            "holdout-concurrent-4",
+            "holdout-concurrent-5",
+            "holdout-concurrent-7",
+            "holdout-concurrent-8"
+          ],
+          "history_ids": [
+            "holdout-concurrent-history"
+          ]
+        },
+        {
+          "id": "fact-11",
+          "kind": "Interval situation",
+          "text": "Northbridge 0–0 Southport at interval start; 0–1 at interval end. Selected-interval shots: Northbridge 1; Southport 1. Counts include revealed events from 300 through 950 seconds.",
+          "event_ids": [
+            "holdout-concurrent-6",
+            "holdout-concurrent-7",
+            "holdout-concurrent-5"
+          ],
+          "score_start": [
+            0,
+            0
+          ],
+          "score_end": [
+            0,
+            1
+          ],
+          "team_names": [
+            "Northbridge",
+            "Southport"
+          ]
+        }
+      ],
+      "baseline_outputs": {
+        "all_facts": {
+          "headline": "Recorded interval facts",
+          "paragraphs": [
+            {
+              "text": "11′: Southport scored through Reed.",
+              "evidence_ids": [
+                "fact-1"
+              ]
+            },
+            {
+              "text": "Both sides produced 1 attempt(s). 0 required a save; the balance of shots alone does not tell us who controlled the game.",
+              "evidence_ids": [
+                "fact-2"
+              ]
+            },
+            {
+              "text": "At 10′, Northbridge introduced Ellis for Morgan. The substitute subsequently took 1 shot(s) in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+              "evidence_ids": [
+                "fact-3"
+              ]
+            },
+            {
+              "text": "Reed was sent off for Southport. That changes the available personnel, but the event stream alone does not establish how the team reorganised.",
+              "evidence_ids": [
+                "fact-4"
+              ]
+            },
+            {
+              "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+              "evidence_ids": [
+                "fact-5"
+              ]
+            },
+            {
+              "text": "Northbridge: shots before = 0; after = 1; direction = increased; absolute count difference = 1. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-6"
+              ]
+            },
+            {
+              "text": "Northbridge: completed passes before = 1; after = 1; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-7"
+              ]
+            },
+            {
+              "text": "Southport: shots before = 0; after = 1; direction = increased; absolute count difference = 1. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-8"
+              ]
+            },
+            {
+              "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-9"
+              ]
+            },
+            {
+              "text": "Ellis inherited CM. Available history at entry: 1 prior match records, 90 minutes in CM out of 90 recorded minutes. Role familiarity describes this supplied sample, not ability. Equal clock-window comparison: outgoing player completed 1 of 1 passes and took 0 shots before entry; incoming player completed 1 of 1 passes and took 1 shots after entry. 2 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+              "evidence_ids": [
+                "fact-10"
+              ]
+            },
+            {
+              "text": "Northbridge 0–0 Southport at interval start; 0–1 at interval end. Selected-interval shots: Northbridge 1; Southport 1. Counts include revealed events from 300 through 950 seconds.",
+              "evidence_ids": [
+                "fact-11"
+              ]
+            }
+          ]
+        },
+        "priority_stories": {
+          "watch_label": "What to watch next",
+          "headline": "The decisive recorded incidents",
+          "paragraphs": [
+            {
+              "text": "11′: Southport scored through Reed. Reed was sent off for Southport. That changes the available personnel, but the event stream alone does not establish how the team reorganised.",
+              "evidence_ids": [
+                "fact-1",
+                "fact-4"
+              ],
+              "scope_label": "Selected interval · 5:00–15:50"
+            },
+            {
+              "text": "Ellis has recorded experience in the central midfield role: 90 of 90 minutes across 1 supplied previous matches. The usual-position label alone would miss that context. In equal windows around entry, the outgoing player completed 1 passes and took 0 shots; Ellis completed 1 pass and took 1 shots. Other personnel or match-state changes also occurred in the span.",
+              "evidence_ids": [
+                "fact-10"
+              ],
+              "scope_label": "History known at 10:00 · equal windows around entry"
+            }
+          ],
+          "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+          "limitations": [
+            "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+            "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+          ],
+          "composition": "selected-stories",
+          "mode": "template",
+          "reason": "Offline Batch 2 baseline"
+        }
+      },
+      "manual_review": {
+        "status": "pending",
+        "dimensions": [
+          "factual support",
+          "relevance to question",
+          "conflicting signals",
+          "appropriate uncertainty",
+          "readability"
+        ],
+        "scale": "0 absent/incorrect; 1 partial; 2 clear and supported; N/A when irrelevant"
+      }
+    },
+    {
+      "id": "holdout-late-history",
+      "split": "holdout",
+      "mode": "quick",
+      "question": "What changed around this interval and what evidence helps explain it?",
+      "rubric": "History arriving after entry cannot establish what was known at entry.",
+      "input_sha256": "2ea5d46be941db636fd00e73e93a0391ee8c15e41cf306f68f2d0f30cfa90098",
+      "input": {
+        "index": 4,
+        "from": 300,
+        "to": 950,
+        "viewer_mode": "quick"
+      },
+      "expected": {
+        "score": [
+          0,
+          0
+        ],
+        "shots": 0,
+        "investigations": 1,
+        "history": "missing",
+        "comparison": "ready",
+        "passes": [
+          1,
+          1
+        ],
+        "attempts": [
+          0,
+          0
+        ]
+      },
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "facts": [
+        {
+          "id": "fact-1",
+          "text": "At 10′, Northbridge introduced Ellis for Morgan. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+          "kind": "A personnel change",
+          "event_ids": [
+            "holdout-late-history-2"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+          "event_ids": [
+            "holdout-late-history-2"
+          ],
+          "context_ids": [
+            "squad:northbridge:Ellis"
+          ]
+        },
+        {
+          "id": "fact-3",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "shots",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-late-history-2"
+          ],
+          "text": "Northbridge: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-4",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "completed_passes",
+            "before": 1,
+            "after": 1,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": [
+              "holdout-late-history-3",
+              "holdout-late-history-4"
+            ]
+          },
+          "event_ids": [
+            "holdout-late-history-2",
+            "holdout-late-history-3",
+            "holdout-late-history-4"
+          ],
+          "text": "Northbridge: completed passes before = 1; after = 1; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-5",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "shots",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-late-history-2"
+          ],
+          "text": "Southport: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-6",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "completed_passes",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-late-history-2"
+          ],
+          "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-7",
+          "kind": "Substitution investigation",
+          "investigation_player": "Ellis",
+          "text": "Ellis inherited CM. Available history at entry: 0 prior match records, 0 minutes in CM out of 0 recorded minutes. No role-history conclusion is available. Equal clock-window comparison: outgoing player completed 1 of 1 passes and took 0 shots before entry; incoming player completed 1 of 1 passes and took 0 shots after entry. 0 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+          "event_ids": [
+            "holdout-late-history-2",
+            "holdout-late-history-3",
+            "holdout-late-history-4"
+          ],
+          "history_ids": []
+        },
+        {
+          "id": "fact-8",
+          "kind": "Interval situation",
+          "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 0; Southport 0. Counts include revealed events from 300 through 950 seconds.",
+          "event_ids": [],
+          "score_start": [
+            0,
+            0
+          ],
+          "score_end": [
+            0,
+            0
+          ],
+          "team_names": [
+            "Northbridge",
+            "Southport"
+          ]
+        }
+      ],
+      "baseline_outputs": {
+        "all_facts": {
+          "headline": "Recorded interval facts",
+          "paragraphs": [
+            {
+              "text": "At 10′, Northbridge introduced Ellis for Morgan. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+              "evidence_ids": [
+                "fact-1"
+              ]
+            },
+            {
+              "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+              "evidence_ids": [
+                "fact-2"
+              ]
+            },
+            {
+              "text": "Northbridge: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-3"
+              ]
+            },
+            {
+              "text": "Northbridge: completed passes before = 1; after = 1; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-4"
+              ]
+            },
+            {
+              "text": "Southport: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-5"
+              ]
+            },
+            {
+              "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-6"
+              ]
+            },
+            {
+              "text": "Ellis inherited CM. Available history at entry: 0 prior match records, 0 minutes in CM out of 0 recorded minutes. No role-history conclusion is available. Equal clock-window comparison: outgoing player completed 1 of 1 passes and took 0 shots before entry; incoming player completed 1 of 1 passes and took 0 shots after entry. 0 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+              "evidence_ids": [
+                "fact-7"
+              ]
+            },
+            {
+              "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 0; Southport 0. Counts include revealed events from 300 through 950 seconds.",
+              "evidence_ids": [
+                "fact-8"
+              ]
+            }
+          ]
+        },
+        "priority_stories": {
+          "watch_label": "What to watch next",
+          "headline": "A role question with missing history",
+          "paragraphs": [
+            {
+              "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity.",
+              "evidence_ids": [
+                "fact-7"
+              ],
+              "scope_label": "History known at 10:00 · equal windows around entry"
+            }
+          ],
+          "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+          "limitations": [
+            "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+            "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+          ],
+          "composition": "selected-stories",
+          "mode": "template",
+          "reason": "Offline Batch 2 baseline"
+        }
+      },
+      "manual_review": {
+        "status": "pending",
+        "dimensions": [
+          "factual support",
+          "relevance to question",
+          "conflicting signals",
+          "appropriate uncertainty",
+          "readability"
+        ],
+        "scale": "0 absent/incorrect; 1 partial; 2 clear and supported; N/A when irrelevant"
+      }
+    },
+    {
+      "id": "holdout-late-history",
+      "split": "holdout",
+      "mode": "tactical",
+      "question": "What changed around this interval and what evidence helps explain it?",
+      "rubric": "History arriving after entry cannot establish what was known at entry.",
+      "input_sha256": "212f647b03a6f16dff00972d73c444dc17a9abf84b9bfb6903c41e04c94f4d95",
+      "input": {
+        "index": 4,
+        "from": 300,
+        "to": 950,
+        "viewer_mode": "tactical"
+      },
+      "expected": {
+        "score": [
+          0,
+          0
+        ],
+        "shots": 0,
+        "investigations": 1,
+        "history": "missing",
+        "comparison": "ready",
+        "passes": [
+          1,
+          1
+        ],
+        "attempts": [
+          0,
+          0
+        ]
+      },
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "facts": [
+        {
+          "id": "fact-1",
+          "text": "At 10′, Northbridge introduced Ellis for Morgan. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+          "kind": "A personnel change",
+          "event_ids": [
+            "holdout-late-history-2"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+          "event_ids": [
+            "holdout-late-history-2"
+          ],
+          "context_ids": [
+            "squad:northbridge:Ellis"
+          ]
+        },
+        {
+          "id": "fact-3",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "shots",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-late-history-2"
+          ],
+          "text": "Northbridge: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-4",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "completed_passes",
+            "before": 1,
+            "after": 1,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": [
+              "holdout-late-history-3",
+              "holdout-late-history-4"
+            ]
+          },
+          "event_ids": [
+            "holdout-late-history-2",
+            "holdout-late-history-3",
+            "holdout-late-history-4"
+          ],
+          "text": "Northbridge: completed passes before = 1; after = 1; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-5",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "shots",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-late-history-2"
+          ],
+          "text": "Southport: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-6",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "completed_passes",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-late-history-2"
+          ],
+          "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-7",
+          "kind": "Substitution investigation",
+          "investigation_player": "Ellis",
+          "text": "Ellis inherited CM. Available history at entry: 0 prior match records, 0 minutes in CM out of 0 recorded minutes. No role-history conclusion is available. Equal clock-window comparison: outgoing player completed 1 of 1 passes and took 0 shots before entry; incoming player completed 1 of 1 passes and took 0 shots after entry. 0 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+          "event_ids": [
+            "holdout-late-history-2",
+            "holdout-late-history-3",
+            "holdout-late-history-4"
+          ],
+          "history_ids": []
+        },
+        {
+          "id": "fact-8",
+          "kind": "Interval situation",
+          "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 0; Southport 0. Counts include revealed events from 300 through 950 seconds.",
+          "event_ids": [],
+          "score_start": [
+            0,
+            0
+          ],
+          "score_end": [
+            0,
+            0
+          ],
+          "team_names": [
+            "Northbridge",
+            "Southport"
+          ]
+        }
+      ],
+      "baseline_outputs": {
+        "all_facts": {
+          "headline": "Recorded interval facts",
+          "paragraphs": [
+            {
+              "text": "At 10′, Northbridge introduced Ellis for Morgan. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+              "evidence_ids": [
+                "fact-1"
+              ]
+            },
+            {
+              "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+              "evidence_ids": [
+                "fact-2"
+              ]
+            },
+            {
+              "text": "Northbridge: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-3"
+              ]
+            },
+            {
+              "text": "Northbridge: completed passes before = 1; after = 1; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-4"
+              ]
+            },
+            {
+              "text": "Southport: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-5"
+              ]
+            },
+            {
+              "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-6"
+              ]
+            },
+            {
+              "text": "Ellis inherited CM. Available history at entry: 0 prior match records, 0 minutes in CM out of 0 recorded minutes. No role-history conclusion is available. Equal clock-window comparison: outgoing player completed 1 of 1 passes and took 0 shots before entry; incoming player completed 1 of 1 passes and took 0 shots after entry. 0 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+              "evidence_ids": [
+                "fact-7"
+              ]
+            },
+            {
+              "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 0; Southport 0. Counts include revealed events from 300 through 950 seconds.",
+              "evidence_ids": [
+                "fact-8"
+              ]
+            }
+          ]
+        },
+        "priority_stories": {
+          "watch_label": "What to watch next",
+          "headline": "A role question with missing history",
+          "paragraphs": [
+            {
+              "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity. In equal windows around entry, the outgoing player completed 1 passes and took 0 shots; Ellis completed 1 pass and took 0 shots. ",
+              "evidence_ids": [
+                "fact-7"
+              ],
+              "scope_label": "History known at 10:00 · equal windows around entry"
+            },
+            {
+              "text": "Northbridge–Southport stayed at 0–0 during your selected interval. Northbridge took 0 shots and Southport took 0.",
+              "evidence_ids": [
+                "fact-8"
+              ],
+              "scope_label": "Selected interval · 5:00–15:50"
+            }
+          ],
+          "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+          "limitations": [
+            "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+            "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+          ],
+          "composition": "selected-stories",
+          "mode": "template",
+          "reason": "Offline Batch 2 baseline"
+        }
+      },
+      "manual_review": {
+        "status": "pending",
+        "dimensions": [
+          "factual support",
+          "relevance to question",
+          "conflicting signals",
+          "appropriate uncertainty",
+          "readability"
+        ],
+        "scale": "0 absent/incorrect; 1 partial; 2 clear and supported; N/A when irrelevant"
+      }
+    },
+    {
+      "id": "holdout-before-correction",
+      "split": "holdout",
+      "mode": "quick",
+      "question": "What changed around this interval and what evidence helps explain it?",
+      "rubric": "Do not leak the later correction into this replay prefix.",
+      "input_sha256": "acc878dfa097c23ee03ba29e11ee65ee32333c71bef462eeba8cb54f7100b0f0",
+      "input": {
+        "index": 1,
+        "from": 300,
+        "to": 800,
+        "viewer_mode": "quick"
+      },
+      "expected": {
+        "score": [
+          0,
+          0
+        ],
+        "shots": 0,
+        "investigations": 0,
+        "annotations": [
+          "report"
+        ]
+      },
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "facts": [
+        {
+          "id": "fact-1",
+          "text": "This interval contains routine play but no recorded goal, shot, card, substitution or tactical change. That does not prove that the play was uneventful.",
+          "kind": "No major recorded incident",
+          "event_ids": [
+            "holdout-before-correction-2"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "kind": "Incident annotation",
+          "text": "Synthetic reported annotation: Initial report of an incident. Source: Authored report. This annotation does not itself establish an official sanction or a causal match effect.",
+          "event_ids": [],
+          "annotation_ids": [
+            "report"
+          ]
+        },
+        {
+          "id": "fact-3",
+          "kind": "Interval situation",
+          "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 0; Southport 0. Counts include revealed events from 300 through 800 seconds.",
+          "event_ids": [],
+          "score_start": [
+            0,
+            0
+          ],
+          "score_end": [
+            0,
+            0
+          ],
+          "team_names": [
+            "Northbridge",
+            "Southport"
+          ]
+        }
+      ],
+      "baseline_outputs": {
+        "all_facts": {
+          "headline": "Recorded interval facts",
+          "paragraphs": [
+            {
+              "text": "This interval contains routine play but no recorded goal, shot, card, substitution or tactical change. That does not prove that the play was uneventful.",
+              "evidence_ids": [
+                "fact-1"
+              ]
+            },
+            {
+              "text": "Synthetic reported annotation: Initial report of an incident. Source: Authored report. This annotation does not itself establish an official sanction or a causal match effect.",
+              "evidence_ids": [
+                "fact-2"
+              ]
+            },
+            {
+              "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 0; Southport 0. Counts include revealed events from 300 through 800 seconds.",
+              "evidence_ids": [
+                "fact-3"
+              ]
+            }
+          ]
+        },
+        "priority_stories": {
+          "watch_label": "What to watch next",
+          "headline": "A reported incident",
+          "paragraphs": [
+            {
+              "text": "Initial report of an incident.",
+              "evidence_ids": [
+                "fact-2"
+              ],
+              "scope_label": "Reported at 11:00 · reported"
+            },
+            {
+              "text": "Northbridge–Southport stayed at 0–0. Northbridge took 0 shots and Southport took 0.",
+              "evidence_ids": [
+                "fact-3"
+              ],
+              "scope_label": "Selected interval · 5:00–13:20"
+            }
+          ],
+          "watch_next": null,
+          "limitations": [
+            "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+            "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+          ],
+          "composition": "selected-stories",
+          "mode": "template",
+          "reason": "Offline Batch 2 baseline"
+        }
+      },
+      "manual_review": {
+        "status": "pending",
+        "dimensions": [
+          "factual support",
+          "relevance to question",
+          "conflicting signals",
+          "appropriate uncertainty",
+          "readability"
+        ],
+        "scale": "0 absent/incorrect; 1 partial; 2 clear and supported; N/A when irrelevant"
+      }
+    },
+    {
+      "id": "holdout-before-correction",
+      "split": "holdout",
+      "mode": "tactical",
+      "question": "What changed around this interval and what evidence helps explain it?",
+      "rubric": "Do not leak the later correction into this replay prefix.",
+      "input_sha256": "5b6acf34abaeaa764d5f0b7f2452a801de2ecb22128563961cc9d2f190119a90",
+      "input": {
+        "index": 1,
+        "from": 300,
+        "to": 800,
+        "viewer_mode": "tactical"
+      },
+      "expected": {
+        "score": [
+          0,
+          0
+        ],
+        "shots": 0,
+        "investigations": 0,
+        "annotations": [
+          "report"
+        ]
+      },
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "facts": [
+        {
+          "id": "fact-1",
+          "text": "This interval contains routine play but no recorded goal, shot, card, substitution or tactical change. That does not prove that the play was uneventful.",
+          "kind": "No major recorded incident",
+          "event_ids": [
+            "holdout-before-correction-2"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "kind": "Incident annotation",
+          "text": "Synthetic reported annotation: Initial report of an incident. Source: Authored report. This annotation does not itself establish an official sanction or a causal match effect.",
+          "event_ids": [],
+          "annotation_ids": [
+            "report"
+          ]
+        },
+        {
+          "id": "fact-3",
+          "kind": "Interval situation",
+          "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 0; Southport 0. Counts include revealed events from 300 through 800 seconds.",
+          "event_ids": [],
+          "score_start": [
+            0,
+            0
+          ],
+          "score_end": [
+            0,
+            0
+          ],
+          "team_names": [
+            "Northbridge",
+            "Southport"
+          ]
+        }
+      ],
+      "baseline_outputs": {
+        "all_facts": {
+          "headline": "Recorded interval facts",
+          "paragraphs": [
+            {
+              "text": "This interval contains routine play but no recorded goal, shot, card, substitution or tactical change. That does not prove that the play was uneventful.",
+              "evidence_ids": [
+                "fact-1"
+              ]
+            },
+            {
+              "text": "Synthetic reported annotation: Initial report of an incident. Source: Authored report. This annotation does not itself establish an official sanction or a causal match effect.",
+              "evidence_ids": [
+                "fact-2"
+              ]
+            },
+            {
+              "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 0; Southport 0. Counts include revealed events from 300 through 800 seconds.",
+              "evidence_ids": [
+                "fact-3"
+              ]
+            }
+          ]
+        },
+        "priority_stories": {
+          "watch_label": "What to watch next",
+          "headline": "A reported incident",
+          "paragraphs": [
+            {
+              "text": "Initial report of an incident.",
+              "evidence_ids": [
+                "fact-2"
+              ],
+              "scope_label": "Reported at 11:00 · reported"
+            },
+            {
+              "text": "Northbridge–Southport stayed at 0–0 during your selected interval. Northbridge took 0 shots and Southport took 0.",
+              "evidence_ids": [
+                "fact-3"
+              ],
+              "scope_label": "Selected interval · 5:00–13:20"
+            }
+          ],
+          "watch_next": null,
+          "limitations": [
+            "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+            "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+          ],
+          "composition": "selected-stories",
+          "mode": "template",
+          "reason": "Offline Batch 2 baseline"
+        }
+      },
+      "manual_review": {
+        "status": "pending",
+        "dimensions": [
+          "factual support",
+          "relevance to question",
+          "conflicting signals",
+          "appropriate uncertainty",
+          "readability"
+        ],
+        "scale": "0 absent/incorrect; 1 partial; 2 clear and supported; N/A when irrelevant"
+      }
+    },
+    {
+      "id": "holdout-decline",
+      "split": "holdout",
+      "mode": "quick",
+      "question": "What changed around this interval and what evidence helps explain it?",
+      "rubric": "Describe the activity decline with equal windows and uncertainty.",
+      "input_sha256": "f2219db2677bdc77c2d09b4da1bb2f9738617fdc1c93e61af5d77614c5609841",
+      "input": {
+        "index": 9,
+        "from": 300,
+        "to": 950,
+        "viewer_mode": "quick"
+      },
+      "expected": {
+        "score": [
+          0,
+          0
+        ],
+        "shots": 2,
+        "investigations": 1,
+        "history": "missing",
+        "comparison": "ready",
+        "passes": [
+          4,
+          1
+        ],
+        "attempts": [
+          2,
+          0
+        ]
+      },
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "facts": [
+        {
+          "id": "fact-1",
+          "text": "Northbridge produced more attempts during this spell (2 against 0). No attempts were recorded as saved. Shot counts alone do not establish chance quality or overall dominance.",
+          "kind": "Where the chances came",
+          "event_ids": [
+            "holdout-decline-8",
+            "holdout-decline-9"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "text": "At 10′, Northbridge introduced Ellis for Morgan. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+          "kind": "A personnel change",
+          "event_ids": [
+            "holdout-decline-2"
+          ]
+        },
+        {
+          "id": "fact-3",
+          "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+          "event_ids": [
+            "holdout-decline-2"
+          ],
+          "context_ids": [
+            "squad:northbridge:Ellis"
+          ]
+        },
+        {
+          "id": "fact-4",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "shots",
+            "before": 2,
+            "after": 0,
+            "delta": -2,
+            "direction": "decreased",
+            "event_ids": [
+              "holdout-decline-8",
+              "holdout-decline-9"
+            ]
+          },
+          "event_ids": [
+            "holdout-decline-2",
+            "holdout-decline-8",
+            "holdout-decline-9"
+          ],
+          "text": "Northbridge: shots before = 2; after = 0; direction = decreased; absolute count difference = 2. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-5",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "completed_passes",
+            "before": 4,
+            "after": 1,
+            "delta": -3,
+            "direction": "decreased",
+            "event_ids": [
+              "holdout-decline-3",
+              "holdout-decline-4",
+              "holdout-decline-5",
+              "holdout-decline-6",
+              "holdout-decline-7"
+            ]
+          },
+          "event_ids": [
+            "holdout-decline-2",
+            "holdout-decline-3",
+            "holdout-decline-4",
+            "holdout-decline-5",
+            "holdout-decline-6",
+            "holdout-decline-7"
+          ],
+          "text": "Northbridge: completed passes before = 4; after = 1; direction = decreased; absolute count difference = 3. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-6",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "shots",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-decline-2"
+          ],
+          "text": "Southport: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-7",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "completed_passes",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-decline-2"
+          ],
+          "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-8",
+          "kind": "Substitution investigation",
+          "investigation_player": "Ellis",
+          "text": "Ellis inherited CM. Available history at entry: 0 prior match records, 0 minutes in CM out of 0 recorded minutes. No role-history conclusion is available. Equal clock-window comparison: outgoing player completed 4 of 4 passes and took 2 shots before entry; incoming player completed 1 of 1 passes and took 0 shots after entry. 0 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+          "event_ids": [
+            "holdout-decline-2",
+            "holdout-decline-3",
+            "holdout-decline-4",
+            "holdout-decline-5",
+            "holdout-decline-6",
+            "holdout-decline-8",
+            "holdout-decline-9",
+            "holdout-decline-7"
+          ],
+          "history_ids": []
+        },
+        {
+          "id": "fact-9",
+          "kind": "Interval situation",
+          "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 2; Southport 0. Counts include revealed events from 300 through 950 seconds.",
+          "event_ids": [
+            "holdout-decline-8",
+            "holdout-decline-9"
+          ],
+          "score_start": [
+            0,
+            0
+          ],
+          "score_end": [
+            0,
+            0
+          ],
+          "team_names": [
+            "Northbridge",
+            "Southport"
+          ]
+        }
+      ],
+      "baseline_outputs": {
+        "all_facts": {
+          "headline": "Recorded interval facts",
+          "paragraphs": [
+            {
+              "text": "Northbridge produced more attempts during this spell (2 against 0). No attempts were recorded as saved. Shot counts alone do not establish chance quality or overall dominance.",
+              "evidence_ids": [
+                "fact-1"
+              ]
+            },
+            {
+              "text": "At 10′, Northbridge introduced Ellis for Morgan. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+              "evidence_ids": [
+                "fact-2"
+              ]
+            },
+            {
+              "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+              "evidence_ids": [
+                "fact-3"
+              ]
+            },
+            {
+              "text": "Northbridge: shots before = 2; after = 0; direction = decreased; absolute count difference = 2. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-4"
+              ]
+            },
+            {
+              "text": "Northbridge: completed passes before = 4; after = 1; direction = decreased; absolute count difference = 3. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-5"
+              ]
+            },
+            {
+              "text": "Southport: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-6"
+              ]
+            },
+            {
+              "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-7"
+              ]
+            },
+            {
+              "text": "Ellis inherited CM. Available history at entry: 0 prior match records, 0 minutes in CM out of 0 recorded minutes. No role-history conclusion is available. Equal clock-window comparison: outgoing player completed 4 of 4 passes and took 2 shots before entry; incoming player completed 1 of 1 passes and took 0 shots after entry. 0 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+              "evidence_ids": [
+                "fact-8"
+              ]
+            },
+            {
+              "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 2; Southport 0. Counts include revealed events from 300 through 950 seconds.",
+              "evidence_ids": [
+                "fact-9"
+              ]
+            }
+          ]
+        },
+        "priority_stories": {
+          "watch_label": "What to watch next",
+          "headline": "A role question with missing history",
+          "paragraphs": [
+            {
+              "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity.",
+              "evidence_ids": [
+                "fact-8"
+              ],
+              "scope_label": "History known at 10:00 · equal windows around entry"
+            }
+          ],
+          "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+          "limitations": [
+            "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+            "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+          ],
+          "composition": "selected-stories",
+          "mode": "template",
+          "reason": "Offline Batch 2 baseline"
+        }
+      },
+      "manual_review": {
+        "status": "pending",
+        "dimensions": [
+          "factual support",
+          "relevance to question",
+          "conflicting signals",
+          "appropriate uncertainty",
+          "readability"
+        ],
+        "scale": "0 absent/incorrect; 1 partial; 2 clear and supported; N/A when irrelevant"
+      }
+    },
+    {
+      "id": "holdout-decline",
+      "split": "holdout",
+      "mode": "tactical",
+      "question": "What changed around this interval and what evidence helps explain it?",
+      "rubric": "Describe the activity decline with equal windows and uncertainty.",
+      "input_sha256": "eb3dc30418504fe666de450cf087f1a26c73991e3f7d37095478786753feb4d7",
+      "input": {
+        "index": 9,
+        "from": 300,
+        "to": 950,
+        "viewer_mode": "tactical"
+      },
+      "expected": {
+        "score": [
+          0,
+          0
+        ],
+        "shots": 2,
+        "investigations": 1,
+        "history": "missing",
+        "comparison": "ready",
+        "passes": [
+          4,
+          1
+        ],
+        "attempts": [
+          2,
+          0
+        ]
+      },
+      "checks": [
+        {
+          "name": "closing score",
+          "passed": true
+        },
+        {
+          "name": "Northbridge interval shots",
+          "passed": true
+        },
+        {
+          "name": "investigation count",
+          "passed": true
+        },
+        {
+          "name": "history availability",
+          "passed": true
+        },
+        {
+          "name": "window readiness",
+          "passed": true
+        },
+        {
+          "name": "equal-window completed passes",
+          "passed": true
+        },
+        {
+          "name": "equal-window shots",
+          "passed": true
+        },
+        {
+          "name": "visible incident versions",
+          "passed": true
+        },
+        {
+          "name": "missing coordinates remain unavailable",
+          "passed": true
+        },
+        {
+          "name": "all_facts: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: no future event references",
+          "passed": true
+        },
+        {
+          "name": "all_facts: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: valid fact references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: no future event references",
+          "passed": true
+        },
+        {
+          "name": "priority_stories: mandatory incidents retained",
+          "passed": true
+        },
+        {
+          "name": "priority story paragraph budget",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "facts": [
+        {
+          "id": "fact-1",
+          "text": "Northbridge produced more attempts during this spell (2 against 0). No attempts were recorded as saved. Shot counts alone do not establish chance quality or overall dominance.",
+          "kind": "Where the chances came",
+          "event_ids": [
+            "holdout-decline-8",
+            "holdout-decline-9"
+          ]
+        },
+        {
+          "id": "fact-2",
+          "text": "At 10′, Northbridge introduced Ellis for Morgan. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+          "kind": "A personnel change",
+          "event_ids": [
+            "holdout-decline-2"
+          ]
+        },
+        {
+          "id": "fact-3",
+          "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+          "event_ids": [
+            "holdout-decline-2"
+          ],
+          "context_ids": [
+            "squad:northbridge:Ellis"
+          ]
+        },
+        {
+          "id": "fact-4",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "shots",
+            "before": 2,
+            "after": 0,
+            "delta": -2,
+            "direction": "decreased",
+            "event_ids": [
+              "holdout-decline-8",
+              "holdout-decline-9"
+            ]
+          },
+          "event_ids": [
+            "holdout-decline-2",
+            "holdout-decline-8",
+            "holdout-decline-9"
+          ],
+          "text": "Northbridge: shots before = 2; after = 0; direction = decreased; absolute count difference = 2. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-5",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "northbridge",
+            "metric": "completed_passes",
+            "before": 4,
+            "after": 1,
+            "delta": -3,
+            "direction": "decreased",
+            "event_ids": [
+              "holdout-decline-3",
+              "holdout-decline-4",
+              "holdout-decline-5",
+              "holdout-decline-6",
+              "holdout-decline-7"
+            ]
+          },
+          "event_ids": [
+            "holdout-decline-2",
+            "holdout-decline-3",
+            "holdout-decline-4",
+            "holdout-decline-5",
+            "holdout-decline-6",
+            "holdout-decline-7"
+          ],
+          "text": "Northbridge: completed passes before = 4; after = 1; direction = decreased; absolute count difference = 3. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-6",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "shots",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-decline-2"
+          ],
+          "text": "Southport: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-7",
+          "kind": "Calculated comparison",
+          "comparison": {
+            "team_id": "southport",
+            "metric": "completed_passes",
+            "before": 0,
+            "after": 0,
+            "delta": 0,
+            "direction": "unchanged",
+            "event_ids": []
+          },
+          "event_ids": [
+            "holdout-decline-2"
+          ],
+          "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter."
+        },
+        {
+          "id": "fact-8",
+          "kind": "Substitution investigation",
+          "investigation_player": "Ellis",
+          "text": "Ellis inherited CM. Available history at entry: 0 prior match records, 0 minutes in CM out of 0 recorded minutes. No role-history conclusion is available. Equal clock-window comparison: outgoing player completed 4 of 4 passes and took 2 shots before entry; incoming player completed 1 of 1 passes and took 0 shots after entry. 0 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+          "event_ids": [
+            "holdout-decline-2",
+            "holdout-decline-3",
+            "holdout-decline-4",
+            "holdout-decline-5",
+            "holdout-decline-6",
+            "holdout-decline-8",
+            "holdout-decline-9",
+            "holdout-decline-7"
+          ],
+          "history_ids": []
+        },
+        {
+          "id": "fact-9",
+          "kind": "Interval situation",
+          "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 2; Southport 0. Counts include revealed events from 300 through 950 seconds.",
+          "event_ids": [
+            "holdout-decline-8",
+            "holdout-decline-9"
+          ],
+          "score_start": [
+            0,
+            0
+          ],
+          "score_end": [
+            0,
+            0
+          ],
+          "team_names": [
+            "Northbridge",
+            "Southport"
+          ]
+        }
+      ],
+      "baseline_outputs": {
+        "all_facts": {
+          "headline": "Recorded interval facts",
+          "paragraphs": [
+            {
+              "text": "Northbridge produced more attempts during this spell (2 against 0). No attempts were recorded as saved. Shot counts alone do not establish chance quality or overall dominance.",
+              "evidence_ids": [
+                "fact-1"
+              ]
+            },
+            {
+              "text": "At 10′, Northbridge introduced Ellis for Morgan. No subsequent shot by the substitute is recorded in this interval. This is a direct contribution check, not proof of a tactical improvement.",
+              "evidence_ids": [
+                "fact-2"
+              ]
+            },
+            {
+              "text": "Authored fictional squad context: Ellis usually plays ST. At 10′, Ellis replaced Morgan and inherited the declared CM slot. Northbridge's manager is Alex Rowan; the declared starting formation is 4-3-3. A different usual role does not establish a tactical benefit or disadvantage.",
+              "evidence_ids": [
+                "fact-3"
+              ]
+            },
+            {
+              "text": "Northbridge: shots before = 2; after = 0; direction = decreased; absolute count difference = 2. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-4"
+              ]
+            },
+            {
+              "text": "Northbridge: completed passes before = 4; after = 1; direction = decreased; absolute count difference = 3. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-5"
+              ]
+            },
+            {
+              "text": "Southport: shots before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-6"
+              ]
+            },
+            {
+              "text": "Southport: completed passes before = 0; after = 0; direction = unchanged; absolute count difference = 0. Before window [300, 600) seconds; after window [600, 900) seconds. Equal match-clock windows around the recorded sub. Both teams are assessed separately. These counts do not establish chance quality or a causal effect; score state, other personnel changes and random variation can matter.",
+              "evidence_ids": [
+                "fact-7"
+              ]
+            },
+            {
+              "text": "Ellis inherited CM. Available history at entry: 0 prior match records, 0 minutes in CM out of 0 recorded minutes. No role-history conclusion is available. Equal clock-window comparison: outgoing player completed 4 of 4 passes and took 2 shots before entry; incoming player completed 1 of 1 passes and took 0 shots after entry. 0 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.",
+              "evidence_ids": [
+                "fact-8"
+              ]
+            },
+            {
+              "text": "Northbridge 0–0 Southport at interval start; 0–0 at interval end. Selected-interval shots: Northbridge 2; Southport 0. Counts include revealed events from 300 through 950 seconds.",
+              "evidence_ids": [
+                "fact-9"
+              ]
+            }
+          ]
+        },
+        "priority_stories": {
+          "watch_label": "What to watch next",
+          "headline": "A role question with missing history",
+          "paragraphs": [
+            {
+              "text": "We have no usable previous role-minute history for Ellis; the squad's usual-position label cannot establish familiarity. In equal windows around entry, the outgoing player completed 4 passes and took 2 shots; Ellis completed 1 pass and took 0 shots. ",
+              "evidence_ids": [
+                "fact-8"
+              ],
+              "scope_label": "History known at 10:00 · equal windows around entry"
+            },
+            {
+              "text": "Northbridge completed fewer passes and took fewer shots after the recorded change: passes went from 4 to 1, and shots from 2 to 0. Both measures of recorded activity declined in these windows.",
+              "evidence_ids": [
+                "fact-4",
+                "fact-5"
+              ],
+              "scope_label": "Before 5:00–10:00 · after 10:00–15:00"
+            },
+            {
+              "text": "Northbridge–Southport stayed at 0–0 during your selected interval. Northbridge took 2 shots and Southport took 0.",
+              "evidence_ids": [
+                "fact-9",
+                "fact-1"
+              ],
+              "scope_label": "Selected interval · 5:00–15:50"
+            }
+          ],
+          "watch_next": "Watch Ellis's next involvements in the assigned role. Prior role minutes describe familiarity, not whether the change will succeed.",
+          "limitations": [
+            "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+            "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+          ],
+          "composition": "selected-stories",
+          "mode": "template",
+          "reason": "Offline Batch 2 baseline"
+        }
+      },
+      "manual_review": {
+        "status": "pending",
+        "dimensions": [
+          "factual support",
+          "relevance to question",
+          "conflicting signals",
+          "appropriate uncertainty",
+          "readability"
+        ],
+        "scale": "0 absent/incorrect; 1 partial; 2 clear and supported; N/A when irrelevant"
+      }
+    }
+  ]
+}

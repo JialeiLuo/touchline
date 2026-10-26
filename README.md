@@ -93,3 +93,7 @@ No real football feed, video perception, calibrated xG, match prediction, broad 
 
 ### Local refinement: reliable match input
 Batch 1 adds data-based upload analysis (including possession sequences), explicit time/coordinate contracts, capability labels, event-specific validation errors, atomic package replacement and expiry/removal controls. Open **Match data & demo settings** to load or download an example. See [input contract](docs/MATCH_PACKAGE.md), [viewer instructions](docs/USER_GUIDE.md) and [Batch 1 verification](docs/BATCH_1.md). These local refinements are not yet deployed to the public submission demo.
+
+## Local refinement evaluation
+
+Batch 2 adds a controlled [scenario matrix and baseline protocol](docs/EVALUATION_SCENARIOS.md). Run `npm run evaluate:scenarios` for development cases; the reserved split is separate. See [Batch 2 results and limitations](docs/BATCH_2.md). These offline checks do not establish model superiority or fan usefulness.
