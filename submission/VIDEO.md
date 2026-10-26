@@ -2,7 +2,9 @@
 
 `touchline-demo.mp4`: 1920×1080 H.264 video with AAC English synthetic narration and burned-in English captions, 108 seconds. This is an edited walkthrough using real interface captures and held frames, not a continuous screen recording. No real match footage or music is included.
 
-Public supported-platform upload is pending. The user authorized YouTube access on 26 October, but a saved browser permission still blocks YouTube Studio. A GitHub-only video does not complete the submission requirement.
+Public demonstration video: https://youtu.be/9JvQMpAhdpA
+
+The entrant uploaded the narrated demo to YouTube on 26 October 2026. The watch page opens with the expected title and a 1:48 duration.
 
 ## Reproduce
 
