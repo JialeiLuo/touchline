@@ -109,3 +109,5 @@ Batch 6 adds [connected, grounded commentary](docs/GROUNDED_COMMENTARY.md): fact
 Batch 7 integrates [the fan experience](docs/BATCH_7.md): interval navigation, viewing preferences, lineup follow-through, evidence/glossary access, loading/recovery and narrow-screen/keyboard fixes. Run `npm run check:fan` for the local browser journey checks.
 
 Batch 8 provides [four-way comparative evaluation and repairs](docs/BATCH_8.md), with saved real-model attempts, identical source packets per pair, tool/resource traces and explicit failures. These small runs do **not** establish that investigation is more useful than rules or ranking. `npm run evaluate:comparative` is offline by default; live runs require an explicit flag and consume existing Azure allowance.
+
+[Batch 9 usability review candidate](docs/BATCH_9.md) improves first-visit guidance, source disclosures and visible evidence limitations. Builder/browser checks pass; unfamiliar-participant responses and resulting fixes are pending, so Batch 9 is not yet marked complete.

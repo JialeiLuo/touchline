@@ -44,3 +44,7 @@ Run `npm run check:fan` with Playwright and Chrome installed. The check starts a
 ## Comparative evaluation (Batch 8)
 
 `npm run evaluate:comparative -- --split=all` runs the offline 27-case/mode matrix. Live comparison requires explicit `--live`, configuration and bounded Azure credit; follow [the method and reproducible commands](docs/COMPARATIVE_EVALUATION.md). `node tools/audit-comparative.cjs` checks saved paired inputs, grades, usage and source provenance without model calls. `node tools/review-comparative.cjs` regenerates the shuffled review packet and separate key. The original comparison and later targeted repairs are separate artifacts; neither substitutes for independent review or fan usability testing.
+
+## Usability review candidate (Batch 9)
+
+`npm run check:usability` runs a builder browser walkthrough with no model calls and saves separate Batch 9 artifacts. Use [the participant task sheet](docs/BATCH_9_PARTICIPANT_TASKS.md) on the current local review build for real first-time feedback. Record actual responses in [the participant results](docs/BATCH_9_RESULTS.md); passing browser checks is not participant evidence.

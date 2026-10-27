@@ -12,7 +12,7 @@
  $('aiStatus').textContent='Choose an interval and your viewing preferences, then ask what changed.';
  const recap=$('recap').closest('section');recap.querySelector('.label').textContent='Match so far · replay clock';
  const help=document.createElement('p');help.className='muted';help.textContent='The match-so-far summary follows the replay clock. Your catch-up covers only the selected interval.';recap.prepend(help);
- const intro=document.createElement('p');intro.className='muted';intro.textContent='New here? Play the match or move the replay slider, choose the minutes you missed, then select Explain what changed. Use Teams & lineups to inspect the squad.';teamNav.after(intro);
+ const intro=document.createElement('p');intro.id='viewerGettingStarted';intro.className='muted';intro.textContent='New here? Play the match or move the replay slider, choose the minutes you missed, then select Explain what changed. Use Teams & lineups to inspect the squad.';teamNav.after(intro);
  guideSteps.splice(0,guideSteps.length,
   {title:'1. Follow the match',target:'#play',body:'Play the synthetic match, advance one event, jump to a key moment or move the slider below the pitch. The score, statistics and current lineup follow this replay clock.'},
   {title:'2. Catch up on an interval',target:'#catchFrom',body:'Choose the start and end minutes you missed. Advance the replay beyond the interval end first. Explain what changed creates a commentary with supporting evidence; Generate catch-up gives a local event recap.'},

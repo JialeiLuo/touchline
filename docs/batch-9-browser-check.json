@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-27T12:20:08.656Z",
+  "review_type": "builder_browser_walkthrough",
+  "participant_responses": 0,
+  "source_hashes": {
+    "index.html": "5af92f9fd5e0dd07ab18ae244b534743d4f8f52da61fb7ee93f33f7e15ffed0c",
+    "app.js": "f02a8c88b15b3153fff14666598b660ea45caaca4153393631f7860a30d77edc",
+    "viewer-ui.js": "4c5e693b8c7d1454bb20b7185f17a31ec68151658d40440d1707835947411a87",
+    "fan-ui.js": "909c28466233ef03dad4af8e3480559299d8f986a26ab5fbaf38d3962ab95c38",
+    "usability-ui.js": "86daf79ac0a471ab92461f77777f6fa0c5a9143cfb5716fdda4d1c77fd737cd9",
+    "evidence-ui.js": "d087cf85afa2a6779927343d940c7692b1d98b130740468e01c97d53a6c0954d",
+    "investigator-ui.js": "7f48b5daf63bf08da64616bda5b4ac77e8ebd88e4c01b05ff534279ea1ad6da9"
+  },
+  "checks": [
+    "Product introduction precedes setup, with one getting-started explanation",
+    "Whole-minute validation, interval stepping and future-time prevention",
+    "Facts have a visible label; source statements precede underlying record references",
+    "Local commentary, evidence disclosure and glossary in retained commentary",
+    "Single in-flight request, stale-response suppression and local recovery",
+    "Uploaded match protected from example replacement; expiry blocks every server analysis action",
+    "Limited evidence is visible without opening the trace; no unqueried history gap is invented",
+    "Lineup player follow returns to commentary with the selected player",
+    "320px and 390px layouts without horizontal page overflow; keyboard dismissal returns focus"
+  ],
+  "errors": [],
+  "limitations": "Builder browser walkthrough with local fallback and controlled failure/limited-evidence responses. No model calls. Not participant observations or a WCAG conformance audit."
+}
