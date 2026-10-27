@@ -1,5 +1,7 @@
 # Touchline 0.5 — frozen hackathon prototype scope
 
+> Historical snapshot: current local capabilities and remaining work are reconciled in [the 27 October pre-release review](PRE_RELEASE_REVIEW.md). In particular, bounded model-selected investigation and supplied/illustrative shot-value analysis are now implemented. This file is not the final release manifest.
+
 ## Product promise
 
 A returning football fan selects a revealed match interval and receives a short, inspectable explanation of the recorded story, with optional team/player focus and a translated football glossary. Touchline connects event evidence with supplied context; it does not watch a broadcast or find live match data online.

@@ -1,5 +1,7 @@
 # Touchline: first-time participant tasks
 
+Status: Batch 9 was accepted and closed by the owner on 27 October 2026. This sheet is retained as the review protocol; it is not a request for further participation.
+
 Use the current local review build at http://127.0.0.1:8769 on the computer running Touchline. The older public demo does not contain these changes. If the participant is elsewhere, arrange a session on this computer; do not use the old public demo as evidence about this build.
 
 This is a 10–15 minute review of a fictional football prototype. We are testing the product, not the participant. Explain what you are looking for and what you think the screen means. There are no preferred opinions. Do not read the facilitator notes before trying the tasks.

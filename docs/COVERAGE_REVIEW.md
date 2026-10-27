@@ -1,5 +1,7 @@
 # Touchline coverage review — 26 October 2026
 
+> Historical snapshot: current local capabilities and remaining work are reconciled in [the 27 October pre-release review](PRE_RELEASE_REVIEW.md). In particular, bounded model-selected investigation and supplied/illustrative shot-value analysis are now implemented. This file is not the final release manifest.
+
 This is an implementation audit and prioritisation document, not a predicted judging score. “Implemented” means a bounded prototype path exists, not production readiness. “Partial” means only part of the proposed outcome is supported. The README, user guide and this report were reconciled against the 0.5 source and existing evaluation records. No fan study or new model benchmark was performed for this review.
 
 Official rubric: [section 6](https://github.com/microsoft/insidethegamehackathon/blob/main/OFFICIAL%20RULES.md#6-judges--criteria). Stage one screens viability/theme/technology fit. Stage two has five equally weighted categories. Row labels below are concise paraphrases; assessment and priorities are our own.

@@ -1,5 +1,7 @@
 # Touchline idea register
 
+> Historical snapshot: current local capabilities and remaining work are reconciled in [the 27 October pre-release review](PRE_RELEASE_REVIEW.md). In particular, bounded model-selected investigation and supplied/illustrative shot-value analysis are now implemented. This file is not the final release manifest.
+
 Living project backlog. Update this file when the user proposes an idea or development reveals a useful new one. This is a record, not a promise to implement every item. Keep user suggestions, proposed extensions and implementation status distinct. No real football conclusions have been validated.
 
 Status: prototype = narrow demonstration exists; proposed = not implemented; foundation = partial supporting infrastructure exists. Historical progress notes below describe their time of writing. The current reconciled status of every item is in [COVERAGE_REVIEW.md](COVERAGE_REVIEW.md), audited 26 October 2026.
