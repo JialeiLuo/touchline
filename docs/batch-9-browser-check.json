@@ -1,14 +1,14 @@
 {
-  "checked_at": "2026-10-27T12:20:08.656Z",
+  "checked_at": "2026-10-27T12:48:17.136Z",
   "review_type": "builder_browser_walkthrough",
   "participant_responses": 0,
   "source_hashes": {
     "index.html": "5af92f9fd5e0dd07ab18ae244b534743d4f8f52da61fb7ee93f33f7e15ffed0c",
-    "app.js": "f02a8c88b15b3153fff14666598b660ea45caaca4153393631f7860a30d77edc",
+    "app.js": "b980dd2fd1aebb54e673f081b5e6aa79c137e33e210c3c51ad6f6bd4f618eb70",
     "viewer-ui.js": "4c5e693b8c7d1454bb20b7185f17a31ec68151658d40440d1707835947411a87",
-    "fan-ui.js": "909c28466233ef03dad4af8e3480559299d8f986a26ab5fbaf38d3962ab95c38",
-    "usability-ui.js": "86daf79ac0a471ab92461f77777f6fa0c5a9143cfb5716fdda4d1c77fd737cd9",
-    "evidence-ui.js": "d087cf85afa2a6779927343d940c7692b1d98b130740468e01c97d53a6c0954d",
+    "fan-ui.js": "e952ed8a8479d1248bee59763ae6b23e987c42da5cd3981475b81714f13ed3b0",
+    "usability-ui.js": "9afe79b003b32c979b8f6f74df549816efabed28a19b12e0384b4658a7a3dc10",
+    "evidence-ui.js": "05fad2774006af09df4b9f609b28e4a4a46fd78f0c6a618ed2bcc2636ddb86c1",
     "investigator-ui.js": "7f48b5daf63bf08da64616bda5b4ac77e8ebd88e4c01b05ff534279ea1ad6da9"
   },
   "checks": [
@@ -16,6 +16,7 @@
     "Whole-minute validation, interval stepping and future-time prevention",
     "Facts have a visible label; source statements precede underlying record references",
     "Local commentary, evidence disclosure and glossary in retained commentary",
+    "Without player focus, Quick is concise and Tactical explains past-role minutes; stale mode output and recovery actions are labelled",
     "Single in-flight request, stale-response suppression and local recovery",
     "Uploaded match protected from example replacement; expiry blocks every server analysis action",
     "Limited evidence is visible without opening the trace; no unqueried history gap is invented",

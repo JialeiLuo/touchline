@@ -16,14 +16,15 @@
   const limited=output.evidence_status==='insufficient_evidence',local=output.mode==='template';if(!limited&&!local)return;
   const box=el('section');box.className='answer evidence-notice';box.setAttribute('aria-label',limited?'Limited evidence':'Local explanation');box.append(el('strong',limited?'Evidence is limited':'Local explanation'));
   const messages=[];
-  if(limited){messages.push('The inspected evidence does not establish a fuller explanation. The recorded events below are still available.');
+  if(limited){
    for(const step of output.investigation?.steps||[]){if(step.status==='rejected')continue;
-    if(step.tool==='compare_change'&&['insufficient_window','waiting'].includes(step.status))messages.push('There is not enough recorded play for a full before-and-after comparison. A later replay position may help if more play after the change is needed.');
+    if(step.tool==='compare_change'&&['insufficient_window','waiting'].includes(step.status))messages.push('There is not enough recorded play for a full before-and-after comparison. Use an interval that includes more play after the change, once it has been revealed.');
     if(step.tool==='role_history'&&step.status==='missing')messages.push('Usable prior role history is missing. This does not mean the player has no experience.');
     if(step.tool==='analyse_possession'&&step.status==='unavailable')messages.push('Possession detail is unavailable, so passing totals alone cannot explain how attacks developed.');
     if(step.tool==='analyse_possession'&&step.status==='no_complete_sequences')messages.push('No complete possession sequences were available for this query. This does not establish that no play occurred.');
     if(step.tool==='inspect_chances'&&['unavailable','partial','mixed_sources'].includes(step.status))messages.push('Comparable chance values are unavailable or incomplete; missing values are not zero.');
    }
+   if(!messages.length)messages.push('The available evidence cannot support a fuller explanation. Recorded events are shown below.');
   }else messages.push('Online analysis was unavailable or stopped at its limit. This explanation uses the recorded evidence and local rules. You can still inspect sources or open the event recap.');
   for(const text of new Set(messages))box.append(el('p',text));host.append(box);
  };

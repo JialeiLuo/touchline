@@ -12,10 +12,11 @@
  function interval(from,to){$('catchFrom').value=from;$('catchTo').value=to;for(const id of ['catchFrom','catchTo'])$(id).dispatchEvent(new Event('input',{bubbles:true}));}
  function button(id,label,fn){const b=document.createElement('button');b.id=id;b.textContent=label;b.onclick=fn;navigation.append(b);return b;}
  const previous=button('previousInterval','← Previous interval',()=>move(-1)),next=button('nextInterval','Next interval →',()=>move(1)),latest=button('revealedInterval','Use latest 5 minutes',()=>{const end=Math.floor(active().events[index].t/60);interval(Math.max(Math.ceil(active().events[0].t/60),end-5),end)});
+ const endHere=button('endAtReplay','End at current replay minute',()=>{const s=state();interval(s.from,s.end)});
  const jump=document.createElement('a');jump.href='#commentaryWorkspace';jump.className='skip-link';jump.textContent='Skip to interval commentary';document.body.prepend(jump);workspace.tabIndex=-1;
  const recovery=document.createElement('div');recovery.className='toolbar';recovery.id='commentaryRecovery';recovery.hidden=true;
  const retry=document.createElement('button');retry.textContent='Try commentary again';retry.onclick=()=>requestCommentary(false);
- const local=document.createElement('button');local.textContent='Open local event recap';local.onclick=()=>{$('catchGenerate').click();$('catchReport').scrollIntoView({block:'center'});};recovery.append(retry,local);result.after(recovery);
+ const local=document.createElement('button');local.textContent='Show the events in this interval';local.onclick=()=>{$('catchGenerate').click();$('catchReport').scrollIntoView({block:'center'});};recovery.append(retry,local);const recoveryHelp=document.createElement('p');recoveryHelp.className='muted';recoveryHelp.textContent='Get another explanation for your current choices, or see a simple list of the recorded events.';recovery.append(recoveryHelp);result.after(recovery);
  let pending=false;
  const recapKey=()=>JSON.stringify([fullReplay.package_id||fullReplay.seed,$('scenario').value,index,$('catchFrom').value,$('catchTo').value]);
  const priorRecap=makeCatchup;makeCatchup=function(){priorRecap();$('catchReport').dataset.selectionKey=recapKey();};
@@ -25,11 +26,11 @@
   else if(!Number.isInteger(from)||!Number.isInteger(to))error='Use whole minutes for the start and end.';
   else if(from<earliest)error=`This replay starts at minute ${earliest}. Choose that minute or later.`;
   else if(to<=from)error='The end minute must be after the start minute.';
-  else if(to>end)error=`Only minutes through ${end} are revealed. Advance the replay or use the latest 5 minutes.`;
+  else if(to>end)error=`The replay is at minute ${end}; minute ${to} has not happened yet. Choose an end minute of ${end} or earlier, or select End at current replay minute below.`;
   return{from,to,earliest,end,error,full:$('scenario').value==='full'};
  }
  function move(direction){const s=state();if(s.error)return;const width=s.to-s.from,from=s.from+direction*width,to=s.to+direction*width;if(from>=s.earliest&&to<=s.end)interval(from,to);}
- function sync(){const s=state(),valid=!s.error,expired=packageExpired();
+ function sync(){const s=state(),valid=!s.error,expired=packageExpired();endHere.hidden=!(s.to>s.end&&Number.isInteger(s.from)&&s.from>=s.earliest&&s.from<s.end);endHere.disabled=pending;write(endHere,`End at current replay minute (${s.end})`);
   write(status,s.error||`Selected ${s.from}–${s.to} minutes · revealed through minute ${s.end}. Changing the interval does not request AI commentary.`);
   const report=$('catchReport');if(report.dataset.selectionKey&&report.dataset.selectionKey!==recapKey()){report.textContent='The match, replay position or interval changed. Select Show event recap to update this summary.';delete report.dataset.selectionKey;}
   for(const id of ['catchFrom','catchTo'])$(id).setAttribute('aria-invalid',String(!valid));
@@ -43,7 +44,7 @@
   $('progress').setAttribute('aria-valuetext',`Replay at ${Math.floor(active().events[index].t/60)} minutes ${active().events[index].t%60} seconds`);
   $('guidedExample').hidden=$('guidedExampleHelp').hidden=showTeams||!!fullReplay.package_id;
  }
- const priorRequest=requestCommentary;requestCommentary=async function(inspect){sync();if(pending||$('aiCatchup').disabled)return;pending=true;recovery.hidden=true;sync();try{await priorRequest(inspect);}finally{pending=false;sync();recovery.hidden=!result.textContent.trim();retry.textContent=result.querySelector('h3')?'Refresh explanation':'Try commentary again';}};
+ const priorRequest=requestCommentary;requestCommentary=async function(inspect){sync();if(pending||$('aiCatchup').disabled)return;pending=true;recovery.hidden=true;sync();try{await priorRequest(inspect);}finally{pending=false;sync();recovery.hidden=!result.textContent.trim();retry.textContent=result.querySelector('h3')?'Explain my current selection':'Try commentary again';}};
  const priorRender=render;render=function(){priorRender();sync()};
  const priorReset=reset;reset=function(){priorReset();sync();recovery.hidden=true};$('reset').onclick=reset;
  for(const id of ['catchFrom','catchTo','analysisMode','viewerMode','viewerFocus','playerFocus'])$(id).addEventListener('input',sync);

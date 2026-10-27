@@ -1,0 +1,135 @@
+2 · Choose your commentary
+Ready. Choose your interval and preferences, then explain what changed.
+
+Commentary style
+
+Tactical detail · comparisons & uncertainty
+Team focus
+
+Both sides
+Player focus
+
+No individual player
+Focus changes story priority, not the facts. Player focus takes priority when both are set; goals remain included.
+
+Tactical detail adds exact figures, declared roles and more supporting stories.
+
+Built-in synthetic match · Tactical detail · Both sides focus · 55–65 minutes
+
+Explain what changed
+Inspect calculations and raw evidence
+Recorded facts describe the supplied data. Reading of the play is an interpretation. Open Why this explanation? to check the source statements and underlying records.
+
+Tactical detail · Both sides focus · Requested interval 55′–65′ · seed 7 · replay event 950 · 3.7s
+
+A role change awaiting enough evidence
+AI evidence investigation · evidence-based wording · Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.
+
+Evidence investigation · finished
+3 model requests · 2 evidence queries · 3.7s
+
+Compare activity around the change
+insufficient window · event id: full-v03-7-826
+
+Recorded sources (1)
+full-v03-7-826
+
+Check role history
+recorded experience · player id: Duarte
+
+Recorded sources (5)
+history-Duarte-1, history-Duarte-2, history-Duarte-3, history-Duarte-4, history-Duarte-5
+
+Finish the investigation
+complete
+
+Stop: supported. Limits: 4 model requests, 6 tool attempts, 22s. Final wording uses inspected, source-owned stories.
+
+Usage and budget details
+Reported input tokens: 5756; output tokens: 132. Usage returned for 3 requests; unavailable for 0. Conservative reservation: 40517/60000.
+
+History at 60:23 · comparison unavailable
+
+Recorded facts · Duarte takes the right wing role with 305 of 305 supplied prior minutes in that role. The sample covers 5 prior match records. The full post-entry comparison is not yet available.
+Limit or alternative · A before/after conclusion would be premature.
+
+Why this explanation? (1 source statements · 3 checked claims)
+Duarte inherited RW. Available history at entry: 5 prior match records, 305 minutes in RW out of 305 recorded minutes. Role familiarity describes this supplied sample, not ability. The full after-entry window is not yet available. 1 other goal, dismissal, substitution or declared tactical changes occurred in the comparison span. This comparison cannot isolate the substitution effect.
+
+Underlying records · 2 events, 5 history, 0 reports
+60:23 · sub · Duarte replaces Silva. [full-v03-7-826]
+
+60:40 · sub · Ellis replaces Vale. [full-v03-7-831]
+
+Supplied historical record: history-Duarte-1. Role history describes the supplied sample, not ability.
+
+Supplied historical record: history-Duarte-2. Role history describes the supplied sample, not ability.
+
+Supplied historical record: history-Duarte-3. Role history describes the supplied sample, not ability.
+
+Supplied historical record: history-Duarte-4. Role history describes the supplied sample, not ability.
+
+Supplied historical record: history-Duarte-5. Role history describes the supplied sample, not ability.
+
+Fact reference: fact-9. Comparison windows can include events before the selected interval; only evidence available at the permitted replay time is used.
+
+Checked claim records
+[
+  {
+    "kind": "history_share",
+    "player_id": "Duarte",
+    "assigned_position": "RW",
+    "role_minutes": 305,
+    "minutes": 305,
+    "records": 5,
+    "status": "recorded_experience",
+    "known_at": 3623.4,
+    "basis_fact_ids": [
+      "fact-9"
+    ]
+  },
+  {
+    "kind": "player_windows",
+    "player_id": "Duarte",
+    "status": "waiting",
+    "before": null,
+    "after": null,
+    "from": 3323.4,
+    "boundary": 3623.4,
+    "to": 3923.4,
+    "basis_fact_ids": [
+      "fact-9"
+    ]
+  },
+  {
+    "kind": "concurrent_changes",
+    "player_id": "Duarte",
+    "count": 1,
+    "event_ids": [
+      "full-v03-7-831"
+    ],
+    "basis_fact_ids": [
+      "fact-9"
+    ]
+  }
+]
+Selected interval · 55:00–65:00
+
+Northbridge–Southport stayed at 1–0 during your selected interval. Northbridge took 0 shots and Southport took 1.
+
+Why this explanation? (2 source statements)
+Northbridge 1–0 Southport at interval start; 1–0 at interval end. Selected-interval shots: Northbridge 0; Southport 1. Counts include revealed events from 3300 through 3900 seconds.
+
+Underlying records · 2 events, 0 history, 0 reports
+Event reference: full-v03-7-347. Its individual description is not included here; the calculated source statement above includes its contribution.
+
+56:04 · shot · Alves shoots — saved. [full-v03-7-764]
+
+Fact reference: fact-12. Comparison windows can include events before the selected interval; only evidence available at the permitted replay time is used.
+
+Southport produced more attempts during this spell (1 against 0). 1 attempt(s) required a save. Shot counts alone do not establish chance quality or overall dominance.
+
+Underlying records · 1 events, 0 history, 0 reports
+56:04 · shot · Alves shoots — saved. [full-v03-7-764]
+
+Fact reference: fact-1. Comparison windows can include events before the selected interval; only evidence available at the permitted replay time is used.

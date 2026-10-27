@@ -1,6 +1,6 @@
 # Batch 9 — Usability review and final product fixes
 
-27 October 2026. **Status: local review candidate ready; real participant responses pending. Batch 9 is not yet fully complete.** The user confirmed they can provide unfamiliar-participant responses. No actual participant answers have been received or inferred.
+27 October 2026. **Status: reported feedback repaired locally; unfamiliar-participant verification remains open.** One written review response and the original explanation were received on 27 October. First-time status and task assistance were not specified. [The results](BATCH_9_RESULTS.md) distinguish reported observations from builder checks and remaining participation gaps.
 
 ## Verified builder findings and repairs
 
@@ -32,7 +32,7 @@ The current local review server runs at http://127.0.0.1:8769 on this computer. 
 
 Use [the task and response sheet](BATCH_9_PARTICIPANT_TASKS.md). Let an unfamiliar participant try catching up, finding a source, distinguishing interpretation, following a player, comparing modes, recovering from a future interval and using the glossary. Record their actual actions/answers and whether they needed help; do not coach before the attempt.
 
-[Participant results](BATCH_9_RESULTS.md) remain explicitly pending. Once responses arrive, record the observations, prioritise material comprehension/source-finding/recovery issues, repair and recheck them, and update this report before marking Batch 9 complete.
+[Reported results and repairs](BATCH_9_RESULTS.md) are now recorded. The main repairs are a direct substitution takeaway, explained past-minute denominators, more distinct Quick/Tactical outputs, one-click future-interval recovery and clearer recap/update actions. Technical metadata remains available in collapsed disclosures. A follow-up unfamiliar-user response is still needed to establish source-finding and unaided comprehension; do not mark those tasks as passed from automated checks.
 
 ## Remaining limits
 

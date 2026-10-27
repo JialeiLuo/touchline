@@ -1,12 +1,12 @@
 # How to use Touchline
 
-This guide describes the 0.5 fan-facing prototype. [Open Touchline](https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/) or [watch the 1:48 demonstration](https://youtu.be/9JvQMpAhdpA). Everything in the example match is fictional.
+This guide describes the local review build of the 0.5 fan-facing prototype. The public demo and video below remain the earlier release until Batch 10. [Open Touchline](https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/) or [watch the 1:48 demonstration](https://youtu.be/9JvQMpAhdpA). Everything in the example match is fictional.
 
 ## Start without supplying data
 
 Select **Try the substitution example** near the top of the page. It prepares a complete example: minute 66, catch-up 55–66, Tactical detail and Ellis. Select **Explain what changed**. Expect commentary about his assigned right-wing role, supplied recent experience and recorded match activity. The model may prioritize additional stories differently.
 
-Expand **Inspect supporting evidence** below each story. The facts list links by stable record IDs. Expand **Explore the play behind this explanation** for role context, complete possession sequences and matched comparisons. The history example uses 20 minutes in the inherited role out of 305 total supplied minutes; it is not a real football statistic or player rating.
+Expand **Why this explanation?** below each story. The facts list links by stable record IDs. Expand **Explore the play behind this explanation** for role context, complete possession sequences and matched comparisons. In the Ellis example, the five supplied past match records contain 305 total minutes, including 20 at right wing. These are past minutes, not time in the current match, and do not rate his ability. Quick omits those history figures; Tactical explains them. If the selected interval ends too soon after his entry, the answer says that it cannot yet establish whether the substitution helped. Extend the interval to include more post-entry play once that play has been revealed.
 
 ## Watch or rewind the replay
 
@@ -24,9 +24,9 @@ Under **Match data & demo settings**, Full synthetic match is the main 90-minute
 
 The explanation concerns the selected interval. A role comparison may use its explicitly labelled window around an entry; historical records are filtered by their own availability rule. The separate match-so-far summary concerns the whole revealed replay, not just your interval.
 
-If you change the interval, preferences or replay position, the previous explanation is marked as belonging to the old selection. Request another explanation to update it. A future end minute is blocked; a pending response is discarded if the selection changes.
+If you change the interval, preferences or replay position, the previous explanation is marked as belonging to the old selection. Request another explanation to update it. A future end minute is blocked. **End at current replay minute** keeps your start minute and moves the end back to the replay clock; a pending response is discarded if the selection changes.
 
-**Show event recap** produces a local event summary. It is useful when you want the sequence of recorded events without online selection. Commentary adds selected context when that context is present; it cannot infer arbitrary tactics from sparse events.
+**Explain my current selection** requests another explanation using the currently selected interval, focus and style. **Show the events in this interval** (or **Show event recap**) produces a simple list of recorded events without online analysis. It is useful when you want the sequence of recorded events without online selection. Commentary adds selected context when that context is present; it cannot infer arbitrary tactics from sparse events.
 
 ## Follow a team or player
 
@@ -36,7 +36,7 @@ Team focus changes which supported stories are most relevant. It does not alter 
 
 ## Learn vocabulary across languages
 
-Choose Chinese, Spanish, French, German, Portuguese or Japanese under **Glossary language**. Click a highlighted term or supported player name. The popup gives a curated translation and explanation in that language, with English help where provided. The main interface and commentary remain English. The dictionary is limited; unfamiliar terms are not automatically translated.
+English is the default. You can also choose Chinese, Spanish, French, German, Portuguese or Japanese under **Glossary language**. Click a highlighted term or supported player name. The popup gives a curated translation and explanation in that language, with English help where provided. The main interface and commentary remain English. The dictionary is limited; unfamiliar terms are not automatically translated.
 
 ## Bring your own synthetic match
 

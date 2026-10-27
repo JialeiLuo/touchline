@@ -25,3 +25,17 @@ const late=fixture({id:'late-sub',change:true});for(const e of late.data.events)
 
 // Nearly overlapping windows for the same team should not repeat a trend as a new finding.
 const close=packet({seed:7,index:899,from:3300,to:3960,viewer_mode:'tactical'}),co=fallback(close,'test'),origins=co.paragraphs.flatMap(p=>p.origin_story_ids),built=buildStories(close),chosenStories=origins.map(id=>built.find(s=>s.id===id)).filter(Boolean);for(const s of chosenStories.filter(s=>s.scope.kind==='change_synthesis'))A(!chosenStories.some(other=>other!==s&&other.player_id&&other.team_id===s.team_id&&other.activity_scope&&Math.abs(other.activity_scope.from-s.activity_scope.from)<60));
+
+// Reported minute-66 confusion: a useful answer without focus; explicit past-minute denominators in Tactical.
+const replay66=d.events.findIndex(e=>e.t>=3960);
+for(const player_focus of [null,'Ellis']){
+ const input={seed:7,index:replay66,from:3300,to:3900,player_focus};
+ const qp=packet({...input,viewer_mode:'quick'}),tp=packet({...input,viewer_mode:'tactical'}),q=fallback(qp,'review'),t=fallback(tp,'review');
+ A.match(q.paragraphs[0].text,/cannot tell yet whether the substitution helped/);
+ A.doesNotMatch(q.paragraphs[0].text,/305|prior match records|past match records/);
+ A.match(t.paragraphs[0].text,/of 305 total minutes were in this role/);
+ A.match(t.paragraphs[0].text,/past-match minutes, not minutes in this match/);
+ A.notEqual(q.paragraphs[0].text,t.paragraphs[0].text);
+ A(q.word_count<t.word_count);
+ if(player_focus)A.match(t.paragraphs[0].text,/20 of 305/);
+}

@@ -8,6 +8,6 @@
  // Reuse the existing English definitions instead of opening Chinese definitions by default.
  GLOSSARY_LANGUAGES.en={label:'English',terms:Object.fromEntries(Object.keys(definitions).map(k=>[k,k])),definitions:{...definitions},name_note:'Fictional player or club in this prototype.'};
  const english=document.createElement('option');english.value='en';english.textContent='English';$('language').prepend(english);$('language').value='en';$('language').dispatchEvent(new Event('change',{bubbles:true}));
- const sourceHelp=document.createElement('p');sourceHelp.className='muted';sourceHelp.id='evidenceHelp';sourceHelp.textContent='Recorded facts describe the supplied data. Reading of the play is an interpretation. Open Why this explanation? to check the source statements and underlying records.';aiPanel.insertBefore(sourceHelp,$('aiResult'));
+ const sourceHelp=document.createElement('p');sourceHelp.className='muted';sourceHelp.id='evidenceHelp';sourceHelp.textContent='Open Why this explanation? beneath a takeaway to check its sources.';aiPanel.insertBefore(sourceHelp,$('aiResult'));
  const css=document.createElement('style');css.textContent='.source-fact{border-top:1px solid #35483c;padding:10px 0}.source-fact>p{font-size:14px}.evidence-notice{margin:16px 0}.evidence-notice p{margin:8px 0}.source-fact details{overflow-wrap:anywhere}#evidenceHelp{font-size:13px}';document.head.append(css);
 })();
