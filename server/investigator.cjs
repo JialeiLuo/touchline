@@ -14,12 +14,14 @@ async function investigate(p,{fetcher=fetch,reserve=()=>({allowed:true}),signal,
  try{
   while(trace.model_calls.length<budget.model_calls){
    if(signal?.aborted)throw error('cancelled');if(now()>=deadline)throw error('time_budget');if(attempts>=budget.tool_calls)throw error('tool_budget');
-   const finalTurn=trace.model_calls.length===budget.model_calls-1||attempts>=budget.tool_calls-1;
+   let finalTurn=trace.model_calls.length===budget.model_calls-1||attempts>=budget.tool_calls-1;
    const body={model:process.env.AZURE_FOUNDRY_DEPLOYMENT,instructions,input:history,tools:tools.definitions,tool_choice:finalTurn?{type:'function',name:'finish_investigation'}:'required',parallel_tool_calls:false,max_output_tokens:budget.max_output_tokens,store:false,include:['reasoning.encrypted_content'],...(process.env.AZURE_FOUNDRY_DEPLOYMENT==='gpt-5-mini'?{reasoning:{effort:'minimal'}}:{})};
-   const encoded=JSON.stringify(body),bytes=Buffer.byteLength(encoded),reservation=bytes+1024+body.max_output_tokens;
+   let encoded=JSON.stringify(body),bytes=Buffer.byteLength(encoded),reservation=bytes+1024+body.max_output_tokens;
+   // Preserve room for the next result and final request rather than querying into a fallback.
+   if(!finalTurn&&tools.results.size>1&&budget.token_budget-trace.usage.reserved_token_upper_estimate<reservation*2+budget.result_bytes){finalTurn=true;body.tool_choice={type:'function',name:'finish_investigation'};encoded=JSON.stringify(body);bytes=Buffer.byteLength(encoded);reservation=bytes+1024+body.max_output_tokens;}
    if(bytes>budget.request_bytes||trace.usage.reserved_token_upper_estimate+reservation>budget.token_budget)throw error('token_budget');
    const allowance=reserve();if(!allowance.allowed)throw error('allowance_reached');
-   trace.usage.reserved_token_upper_estimate+=reservation;const record={number:trace.model_calls.length+1,max_output_tokens:body.max_output_tokens,input_bytes:bytes,status:'requested',latency_ms:0};trace.model_calls.push(record);const requestStart=now();
+   trace.usage.reserved_token_upper_estimate+=reservation;const record={number:trace.model_calls.length+1,finish_only:finalTurn,max_output_tokens:body.max_output_tokens,input_bytes:bytes,status:'requested',latency_ms:0};trace.model_calls.push(record);const requestStart=now();
    let timer;const abort=new AbortController(),onAbort=()=>abort.abort();signal?.addEventListener('abort',onAbort,{once:true});
    let response,data;
    try{const operation=(async()=>{response=await fetcher(new URL(base.href.replace(/\/$/,'')+'/responses'),{method:'POST',headers:{'Content-Type':'application/json','api-key':process.env.AZURE_FOUNDRY_API_KEY},body:encoded,signal:abort.signal});if(!response.ok)throw error(response.status===429?'provider_rate_limit':'provider_http_error');const value=await response.json();if(Buffer.byteLength(JSON.stringify(value))>budget.response_bytes)throw error('provider_response_too_large');return value;})();
@@ -40,14 +42,14 @@ async function investigate(p,{fetcher=fetch,reserve=()=>({allowed:true}),signal,
      if(typeof call.arguments!=='string'||call.arguments.length>4096)throw Error('invalid_arguments');args=JSON.parse(call.arguments);
      if(finalTurn&&call.name!=='finish_investigation')throw Error('finish_required');
      if(call.name==='finish_investigation'){
-      if(calls.length!==1)throw Error('finish_must_be_alone');const selection=tools.finish(args);step.status='complete';step.result_ids=selection.result_ids;step.story_ids=selection.story_ids;step.summary=selection.status;
+      if(calls.length!==1)throw Error('finish_must_be_alone');const selection=tools.finish(args);step.status='complete';step.result_ids=selection.result_ids;step.references_completed=selection.references_completed;step.story_ids=selection.story_ids;step.summary=selection.status;
       const out=assembleStories({story_ids:selection.story_ids},p,selection.available_story_ids);
       return complete({...out,mode:'foundry',composition:'investigated-stories',evidence_status:selection.status,reason:'Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.',limitations:[...out.limitations,...(selection.status==='insufficient_evidence'?['The investigation did not establish a supported explanation beyond the recorded facts.']:[])]},'complete',selection.status);
      }
      const result=tools.execute(call.name,args),encodedResult=JSON.stringify(result);step.arguments=args;step.result_id=result.result_id;step.status=result.status;step.event_ids=result.event_ids.slice(0,100);step.history_ids=result.history_ids;step.summary=`${call.name.replaceAll('_',' ')}: ${result.status}`;
      if(Buffer.byteLength(encodedResult)>budget.result_bytes){step.status='result_too_large';throw error('result_budget');}
      history.push({type:'function_call_output',call_id:call.call_id,output:encodedResult});
-    }catch(e){if(e.code)throw e;const allowed=['unknown_tool','invalid_arguments','unknown_substitute','unknown_change','duplicate_query','finish_required','finish_must_be_alone','inspect_evidence_first','invalid_finish_references','uninspected_story','insufficient_support'];const code=allowed.includes(e.message)?e.message:'invalid_arguments';step.status='rejected';step.summary=code;history.push({type:'function_call_output',call_id:call.call_id,output:JSON.stringify({error:code,instruction:'Use a valid listed query or finish using inspected stories. No execution occurred.'})});}
+    }catch(e){if(e.code)throw e;const allowed=['unknown_tool','invalid_arguments','unknown_substitute','unknown_change','duplicate_query','finish_required','finish_must_be_alone','inspect_evidence_first','invalid_finish_references','uninspected_story','insufficient_support'];const code=allowed.includes(e.message)?e.message:'invalid_arguments';step.status='rejected';step.summary=code;history.push({type:'function_call_output',call_id:call.call_id,output:JSON.stringify({error:code,instruction:'Use a valid listed query or finish using the available stories below and all their required_result_ids, including context-0 where required. No execution occurred.',...(call.name==='finish_investigation'?{max_story_ids:p.viewer_mode==='quick'?2:4,valid_result_ids:[...tools.results.keys()],available_stories:tools.candidates()}:{})})});}
    }
   }
   throw error('model_call_budget');

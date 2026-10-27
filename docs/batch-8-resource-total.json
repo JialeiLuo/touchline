@@ -1,0 +1,119 @@
+{
+  "method": "Each distinct saved provider attempt is included once. Duplicate intermediate file aliases and offline/replay-only outputs are excluded. Missing provider usage is unknown, never zero billed usage. Estimates apply historical list-rate scenarios only.",
+  "attempts": [
+    {
+      "file": "docs/batch-8-live-development-before.json",
+      "sha256": "6df6577422de526e659cbf8cc971e4145e15f3e13050e8e567234b0214247306",
+      "outputs": 76,
+      "usage": {
+        "input_tokens": 22725,
+        "output_tokens": 1613,
+        "cached_input_tokens": 2560,
+        "unreported_calls": 49,
+        "estimate_usd": {
+          "global_2025_list": 0.00833125,
+          "data_zone_2025_list": 0.009164375
+        },
+        "cost_status": "Illustrative published 2025 list-rate scenarios, not verified deployment billing. Unreported usage, hosting and taxes excluded."
+      },
+      "provider_calls": 63
+    },
+    {
+      "file": "docs/batch-8-live-contract-diagnostic.json",
+      "sha256": "a663a8f3b58e75146f02f53a9ea81d25acf915eadde4e5c7f5b0415f0d326a09",
+      "outputs": 19,
+      "usage": {
+        "input_tokens": 40496,
+        "output_tokens": 2276,
+        "cached_input_tokens": 9472,
+        "unreported_calls": 0,
+        "estimate_usd": {
+          "global_2025_list": 0.0125448,
+          "data_zone_2025_list": 0.01379928
+        },
+        "cost_status": "Illustrative published 2025 list-rate scenarios, not verified deployment billing. Unreported usage, hosting and taxes excluded."
+      },
+      "provider_calls": 22
+    },
+    {
+      "file": "docs/batch-8-live-final.json",
+      "sha256": "8ebe9aa3517377bb71e68279c0c559109a81014be34979472177f6bf0d078e15",
+      "outputs": 24,
+      "usage": {
+        "input_tokens": 64564,
+        "output_tokens": 3336,
+        "cached_input_tokens": 9472,
+        "unreported_calls": 0,
+        "estimate_usd": {
+          "global_2025_list": 0.0206818,
+          "data_zone_2025_list": 0.022749980000000003
+        },
+        "cost_status": "Illustrative published 2025 list-rate scenarios, not verified deployment billing. Unreported usage, hosting and taxes excluded."
+      },
+      "provider_calls": 31
+    },
+    {
+      "file": "docs/batch-8-repair-attempt.json",
+      "sha256": "4db606cd5c370e4f73b9bd8766a2ab3ee5919b62a9a7ffb912033e8cee316bc4",
+      "outputs": 3,
+      "usage": {
+        "input_tokens": 18978,
+        "output_tokens": 419,
+        "cached_input_tokens": 0,
+        "unreported_calls": 0,
+        "estimate_usd": {
+          "global_2025_list": 0.0055825,
+          "data_zone_2025_list": 0.006140750000000001
+        },
+        "cost_status": "Illustrative published 2025 list-rate scenarios, not verified deployment billing. Unreported usage, hosting and taxes excluded."
+      },
+      "provider_calls": 9
+    },
+    {
+      "file": "docs/batch-8-repair-before-status-schema.json",
+      "sha256": "a9aa7516c68cd254e8457b919e0a92b8fa845a9ae7d9be43bc26e829ae756461",
+      "outputs": 2,
+      "usage": {
+        "input_tokens": 11852,
+        "output_tokens": 282,
+        "cached_input_tokens": 5248,
+        "unreported_calls": 0,
+        "estimate_usd": {
+          "global_2025_list": 0.0023461999999999997,
+          "data_zone_2025_list": 0.00258082
+        },
+        "cost_status": "Illustrative published 2025 list-rate scenarios, not verified deployment billing. Unreported usage, hosting and taxes excluded."
+      },
+      "provider_calls": 6
+    },
+    {
+      "file": "docs/batch-8-repair-verification.json",
+      "sha256": "6b52557a1e3a6738dcf0ce0f3eb5a50e52c9439a9309ffc1b4d8a428c167a8d8",
+      "outputs": 1,
+      "usage": {
+        "input_tokens": 2818,
+        "output_tokens": 99,
+        "cached_input_tokens": 0,
+        "unreported_calls": 0,
+        "estimate_usd": {
+          "global_2025_list": 0.0009025,
+          "data_zone_2025_list": 0.00099275
+        },
+        "cost_status": "Illustrative published 2025 list-rate scenarios, not verified deployment billing. Unreported usage, hosting and taxes excluded."
+      },
+      "provider_calls": 2
+    }
+  ],
+  "total": {
+    "provider_calls": 133,
+    "input_tokens": 161433,
+    "output_tokens": 8025,
+    "cached_input_tokens": 26752,
+    "unreported_calls": 49,
+    "estimate_usd": {
+      "global_2025_list": 0.050389050000000005,
+      "data_zone_2025_list": 0.055427955
+    },
+    "cost_status": "Illustrative published 2025 list-rate scenarios, not verified deployment billing. Unreported usage, hosting and taxes excluded."
+  }
+}

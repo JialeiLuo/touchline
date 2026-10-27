@@ -1,0 +1,13 @@
+{
+  "report": "docs/batch-8-live-final.json",
+  "pairs": 6,
+  "outputs": 24,
+  "checks": [
+    "Complete four-system pairs",
+    "Identical evidence and fixture hashes per pair",
+    "Source hashes match the live snapshot or explicitly recorded post-comparison repairs",
+    "Saved grades and cost calculations reproduce",
+    "Valid references, typed claims, essential incidents and no future references"
+  ],
+  "limitations": "These audits establish artifact integrity and narrow support contracts, not full semantic entailment, user usefulness, fairness of representation or statistical significance."
+}

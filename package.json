@@ -17,6 +17,7 @@
     "evaluate:scenarios:holdout": "node tools/evaluate-scenarios.cjs --split=holdout",
     "evaluate:agent": "node tools/evaluate-agent.cjs",
     "check:agent": "node tools/check-agent.cjs",
+    "evaluate:comparative": "node tools/evaluate-comparative.cjs",
     "evaluate:narrative": "node tools/evaluate-narrative.cjs"
   }
 }

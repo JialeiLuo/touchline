@@ -1,0 +1,173 @@
+{
+  "source": "docs/batch-8-live-final.json",
+  "rows": [
+    {
+      "case": "dev-quiet/quick",
+      "option": "A",
+      "system": "one_pass",
+      "output_sha256": "531c57871298deab805ec531ce7f8d6a8caf9ff13fffe837a43b50cd54087a7d",
+      "failure_code": null
+    },
+    {
+      "case": "dev-quiet/quick",
+      "option": "B",
+      "system": "investigator",
+      "output_sha256": "9771ab053bf6a27d7ce83b2a1ea7a8f5934597c170445f329f32ccc8f8d6d989",
+      "failure_code": null
+    },
+    {
+      "case": "dev-quiet/quick",
+      "option": "C",
+      "system": "ranking",
+      "output_sha256": "8e30f5564d2c783486e1d38c31a7ff64cfc732e857b98c3fc6d251e5d8ae19f3",
+      "failure_code": null
+    },
+    {
+      "case": "dev-quiet/quick",
+      "option": "D",
+      "system": "rules",
+      "output_sha256": "ed19da23e8a7a2a41dad03299a71982e67fc3163201d133afacff05b722de6d9",
+      "failure_code": null
+    },
+    {
+      "case": "dev-conflicting/tactical",
+      "option": "A",
+      "system": "one_pass",
+      "output_sha256": "5c52c410bee12c9f95ae40f8d54e95f78533f7b418bdb393d15a64a383c1dae4",
+      "failure_code": null
+    },
+    {
+      "case": "dev-conflicting/tactical",
+      "option": "B",
+      "system": "investigator",
+      "output_sha256": "a40fb7b0e7aebae411cc99a0459d8e77a6fc0eba95f55508b10ddfe69b40f13a",
+      "failure_code": null
+    },
+    {
+      "case": "dev-conflicting/tactical",
+      "option": "C",
+      "system": "ranking",
+      "output_sha256": "4cb05e8130fff26f719748fec3a548e01ae04241401cad0b8174c59257aac56d",
+      "failure_code": null
+    },
+    {
+      "case": "dev-conflicting/tactical",
+      "option": "D",
+      "system": "rules",
+      "output_sha256": "6c9bcb8612e8c11b436a85612bc30f64389cbaf7d8c3b21dfdb29373a89a9411",
+      "failure_code": null
+    },
+    {
+      "case": "dev-waiting/quick",
+      "option": "A",
+      "system": "ranking",
+      "output_sha256": "ee435a9c468d3b7b4f657460dc94c5b9f2fff219aa6ab752292357986b34d988",
+      "failure_code": null
+    },
+    {
+      "case": "dev-waiting/quick",
+      "option": "B",
+      "system": "rules",
+      "output_sha256": "9a69a0bb44c2814f366b91230c91736b57e166fa1734002b13df03b5a360fdd3",
+      "failure_code": null
+    },
+    {
+      "case": "dev-waiting/quick",
+      "option": "C",
+      "system": "investigator",
+      "output_sha256": "7db22e3a4162885dbef5621f2ac7146c755968e3fd720bcd0696b99534bd931f",
+      "failure_code": "model_call_budget"
+    },
+    {
+      "case": "dev-waiting/quick",
+      "option": "D",
+      "system": "one_pass",
+      "output_sha256": "7c488d69aea8a1ab3b267780e38444dfb7e5f0978152846d09da168fc9794e53",
+      "failure_code": "Unsupported numeric claim"
+    },
+    {
+      "case": "dev-corrected/quick",
+      "option": "A",
+      "system": "rules",
+      "output_sha256": "e38eebe507b63a95fcd43435535f3191127d78b4edf52788380e6c0ea7d0d93d",
+      "failure_code": null
+    },
+    {
+      "case": "dev-corrected/quick",
+      "option": "B",
+      "system": "one_pass",
+      "output_sha256": "10415cfad1ddb85b5b9bb9d3c2b891e2279d125328f0bdabb6e88662e9416237",
+      "failure_code": null
+    },
+    {
+      "case": "dev-corrected/quick",
+      "option": "C",
+      "system": "ranking",
+      "output_sha256": "2aba42b23f48767c72da989df8509cb9bb58e776a9f1702d69057b27106dd278",
+      "failure_code": null
+    },
+    {
+      "case": "dev-corrected/quick",
+      "option": "D",
+      "system": "investigator",
+      "output_sha256": "b3613acd29de56385fa027127924137fb71e499a0755619d929fe302b99d05dd",
+      "failure_code": null
+    },
+    {
+      "case": "holdout-concurrent/tactical",
+      "option": "A",
+      "system": "ranking",
+      "output_sha256": "bd139ffeb25a18b3a6d5d2da62d440113989150c22a0217e1284b6d0a446f341",
+      "failure_code": null
+    },
+    {
+      "case": "holdout-concurrent/tactical",
+      "option": "B",
+      "system": "investigator",
+      "output_sha256": "86b89a762b4a3af9580a8f7d139e85508075cec7a0c295bbcc9438bcec655289",
+      "failure_code": "model_call_budget"
+    },
+    {
+      "case": "holdout-concurrent/tactical",
+      "option": "C",
+      "system": "one_pass",
+      "output_sha256": "de21f06133f3c11c7f32445a1e636a8162ef5e560db628abdc79eb56517d81f5",
+      "failure_code": "Unsupported numeric claim"
+    },
+    {
+      "case": "holdout-concurrent/tactical",
+      "option": "D",
+      "system": "rules",
+      "output_sha256": "e95cb9db000b33dbefd18e00176e438cca017a94770d71431515c5298668ee1f",
+      "failure_code": null
+    },
+    {
+      "case": "challenge-fulltime/tactical",
+      "option": "A",
+      "system": "ranking",
+      "output_sha256": "986b4c022589d1dfffc091c56daaa2f4ea11930d8c7b251d204c9273cff0dec1",
+      "failure_code": null
+    },
+    {
+      "case": "challenge-fulltime/tactical",
+      "option": "B",
+      "system": "investigator",
+      "output_sha256": "0fea86856b62649710db74df3fc7cada4c253b44613aea27dc406d4d6e5756c0",
+      "failure_code": "token_budget"
+    },
+    {
+      "case": "challenge-fulltime/tactical",
+      "option": "C",
+      "system": "rules",
+      "output_sha256": "31a68a8090add4f7014af0a1ef7d87df1a5ce7c6d57921e322d793b0ab79c2fb",
+      "failure_code": null
+    },
+    {
+      "case": "challenge-fulltime/tactical",
+      "option": "D",
+      "system": "one_pass",
+      "output_sha256": "424f448862d5f692d4b7f4c94be96232f4cc143c8a10a0a49037dedebd5c28e7",
+      "failure_code": null
+    }
+  ]
+}

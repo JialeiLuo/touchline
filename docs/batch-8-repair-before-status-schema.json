@@ -1,0 +1,1401 @@
+{
+  "source_report": "docs/batch-8-live-final.json",
+  "source_report_sha256": "8ebe9aa3517377bb71e68279c0c559109a81014be34979472177f6bf0d078e15",
+  "method": "Original live comparison is preserved. Successful recorded investigator tool/finish choices are replayed through the repaired composer without a model. Separate targeted live waiting/concurrent checks use repaired tool schemas and instructions; they are not replacement comparison scores.",
+  "source_changes": {
+    "server/compose.cjs": {
+      "before": "55ab1ade712dbfe406c5af8e369284d65ba7ec78154db87d0586f4ed50a0c304",
+      "after": "94172437cd05460962d999bfd1e97ce10c715c7d7110877967f924d7e03fd71e"
+    },
+    "server/investigator-tools.cjs": {
+      "before": "79ee1e1889cf667e6bc551ec50e6b6a9eb45d0db2d1bc0874a3d645a887fd32c",
+      "after": "91d39c726b04582bb7cbbd315c5a6c7dd1f90955dc4288acb0e3cd2be4b82f73"
+    },
+    "server/investigator.cjs": {
+      "before": "4f32330788cf333d4eb5f274ca7c6d581fdfc5b2536bed5a677137fdf0f9da8e",
+      "after": "6fb5666c624c4956b2a231e9d763d0635eab62894a82f88666a84f66551297bc"
+    },
+    "prompts/investigator.txt": {
+      "before": "6ce6510042b28737e8904b2daef6918b44432c7985c5a1914e60bb338a17f7cd",
+      "after": "39b1e914a440bb54a52539b7295ce559666b84322a4ccad6819282f627d08c87"
+    }
+  },
+  "replays": [
+    {
+      "id": "dev-quiet",
+      "mode": "quick",
+      "original_paragraphs": [
+        {
+          "text": "Northbridge–Southport held at 0–0; neither side recorded a shot in this interval. Possession detail is unavailable, so this does not show how either side used the ball.",
+          "evidence_ids": [
+            "fact-3",
+            "fact-2"
+          ],
+          "scope_label": "Selected interval 5:00–15:50",
+          "origin_story_ids": [
+            "story-2"
+          ],
+          "parts": {
+            "fact": "Northbridge–Southport held at 0–0; neither side recorded a shot in this interval.",
+            "reading": "",
+            "alternative": "Possession detail is unavailable, so this does not show how either side used the ball."
+          },
+          "structured_claims": [
+            {
+              "kind": "interval_score",
+              "from": 300,
+              "to": 950,
+              "start": [
+                0,
+                0
+              ],
+              "end": [
+                0,
+                0
+              ],
+              "shots": [
+                0,
+                0
+              ],
+              "basis_fact_ids": [
+                "fact-3"
+              ]
+            },
+            {
+              "kind": "quiet_record",
+              "shots": [
+                0,
+                0
+              ],
+              "goals": [
+                0,
+                0
+              ],
+              "substitutions": 0,
+              "cards": 0,
+              "shape_changes": 0,
+              "reports": 0,
+              "basis_fact_ids": [
+                "fact-2",
+                "fact-3"
+              ]
+            },
+            {
+              "kind": "sequence_availability",
+              "available": false,
+              "basis_fact_ids": [
+                "fact-2"
+              ]
+            }
+          ]
+        }
+      ],
+      "output": {
+        "headline": "A quiet spell in the recorded play",
+        "paragraphs": [
+          {
+            "text": "Northbridge–Southport held at 0–0; neither side recorded a shot in this interval. Possession detail is unavailable, so this does not show how either side used the ball.",
+            "evidence_ids": [
+              "fact-3",
+              "fact-2"
+            ],
+            "scope_label": "Selected interval 5:00–15:50",
+            "origin_story_ids": [
+              "story-2"
+            ],
+            "parts": {
+              "fact": "Northbridge–Southport held at 0–0; neither side recorded a shot in this interval.",
+              "reading": "",
+              "alternative": "Possession detail is unavailable, so this does not show how either side used the ball."
+            },
+            "structured_claims": [
+              {
+                "kind": "interval_score",
+                "from": 300,
+                "to": 950,
+                "start": [
+                  0,
+                  0
+                ],
+                "end": [
+                  0,
+                  0
+                ],
+                "shots": [
+                  0,
+                  0
+                ],
+                "basis_fact_ids": [
+                  "fact-3"
+                ]
+              },
+              {
+                "kind": "quiet_record",
+                "shots": [
+                  0,
+                  0
+                ],
+                "goals": [
+                  0,
+                  0
+                ],
+                "substitutions": 0,
+                "cards": 0,
+                "shape_changes": 0,
+                "reports": 0,
+                "basis_fact_ids": [
+                  "fact-2",
+                  "fact-3"
+                ]
+              },
+              {
+                "kind": "sequence_availability",
+                "available": false,
+                "basis_fact_ids": [
+                  "fact-2"
+                ]
+              }
+            ]
+          }
+        ],
+        "watch_label": "What to watch next",
+        "watch_next": null,
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "selected-stories",
+        "commentary_contract": "batch6-v1",
+        "word_count": 27,
+        "word_limit": 120,
+        "length_exception": null
+      },
+      "metrics": {
+        "words": 27,
+        "paragraphs": 1,
+        "reference_occurrences": 2,
+        "typed_claims": {
+          "claims": 3,
+          "passed": 3,
+          "error": null
+        },
+        "checks": [
+          {
+            "name": "valid_fact_references",
+            "passed": true
+          },
+          {
+            "name": "essential_incidents",
+            "passed": true
+          },
+          {
+            "name": "mode_paragraph_limit",
+            "passed": true
+          },
+          {
+            "name": "no_future_event_reference",
+            "passed": true
+          },
+          {
+            "name": "quiet_without_invented_change",
+            "passed": true,
+            "detail": {
+              "passage": "Northbridge–Southport held at 0–0; neither side recorded a shot in this interval."
+            }
+          },
+          {
+            "name": "typed_claim_support",
+            "passed": true
+          },
+          {
+            "name": "no_explicit_causal_overclaim",
+            "passed": true,
+            "detail": {
+              "passages": []
+            }
+          }
+        ],
+        "passed": true,
+        "relevance_proxy": {
+          "passed": true,
+          "scope": "Fixture-specific lexical coverage checks; not a semantic correctness or fan usefulness score."
+        },
+        "semantic_review": "pending independent review",
+        "limitations_in_output": true
+      }
+    },
+    {
+      "id": "dev-conflicting",
+      "mode": "tactical",
+      "original_paragraphs": [
+        {
+          "text": "Northbridge completed more passes after the recorded change, but that activity did not come with more shots. Completed passes went from 1 to 3; shots fell from 2 to 0. This is more passing activity, without an increase in recorded attempts.",
+          "evidence_ids": [
+            "fact-4",
+            "fact-5"
+          ],
+          "scope_label": "Before 5:00–10:00 · after 10:00–15:00",
+          "origin_story_ids": [
+            "story-3"
+          ]
+        },
+        {
+          "text": "Ellis takes the central midfield role; usable prior role-minute history is missing. The outgoing player completed 1/1 passes and took 2 shots; Ellis completed 3/3 and took 0. On-pitch exposure was 300s and 300s respectively. More completed passing did not come with more recorded attempts. Equal clock windows do not isolate the substitution’s effect.",
+          "evidence_ids": [
+            "fact-9",
+            "fact-4",
+            "fact-5"
+          ],
+          "scope_label": "History at 10:00 · equal windows 5:00–15:00",
+          "origin_story_ids": [
+            "story-5"
+          ],
+          "parts": {
+            "fact": "Ellis takes the central midfield role; usable prior role-minute history is missing. The outgoing player completed 1/1 passes and took 2 shots; Ellis completed 3/3 and took 0. On-pitch exposure was 300s and 300s respectively.",
+            "reading": "More completed passing did not come with more recorded attempts.",
+            "alternative": "Equal clock windows do not isolate the substitution’s effect."
+          },
+          "structured_claims": [
+            {
+              "kind": "history_share",
+              "player_id": "Ellis",
+              "assigned_position": "CM",
+              "role_minutes": 0,
+              "minutes": 0,
+              "records": 0,
+              "status": "missing",
+              "known_at": 600,
+              "basis_fact_ids": [
+                "fact-9"
+              ]
+            },
+            {
+              "kind": "player_windows",
+              "player_id": "Ellis",
+              "status": "ready",
+              "before": {
+                "completed": 1,
+                "passes": 1,
+                "shots": 2,
+                "seconds": 300
+              },
+              "after": {
+                "completed": 3,
+                "passes": 3,
+                "shots": 0,
+                "seconds": 300
+              },
+              "from": 300,
+              "boundary": 600,
+              "to": 900,
+              "basis_fact_ids": [
+                "fact-9"
+              ]
+            },
+            {
+              "kind": "concurrent_changes",
+              "player_id": "Ellis",
+              "count": 0,
+              "event_ids": [],
+              "basis_fact_ids": [
+                "fact-9"
+              ]
+            },
+            {
+              "kind": "team_change",
+              "trigger_id": "dev-conflicting-2",
+              "team_id": "northbridge",
+              "from": 300,
+              "boundary": 600,
+              "to": 900,
+              "metrics": [
+                {
+                  "metric": "shots",
+                  "before": 2,
+                  "after": 0,
+                  "direction": "decreased"
+                },
+                {
+                  "metric": "completed_passes",
+                  "before": 1,
+                  "after": 3,
+                  "direction": "increased"
+                }
+              ],
+              "basis_fact_ids": [
+                "fact-4",
+                "fact-5"
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Northbridge–Southport stayed at 0–0 during your selected interval. Northbridge took 2 shots and Southport took 0.",
+          "evidence_ids": [
+            "fact-11",
+            "fact-1"
+          ],
+          "scope_label": "Selected interval · 5:00–15:50",
+          "origin_story_ids": [
+            "story-4"
+          ]
+        }
+      ],
+      "output": {
+        "headline": "A role change, with conflicting activity",
+        "paragraphs": [
+          {
+            "text": "Ellis takes the central midfield role; usable prior role-minute history is missing. The outgoing player completed 1/1 passes and took 2 shots; Ellis completed 3/3 and took 0. On-pitch exposure was 300s and 300s respectively. More completed passing did not come with more recorded attempts. Equal clock windows do not isolate the substitution’s effect.",
+            "evidence_ids": [
+              "fact-9",
+              "fact-4",
+              "fact-5"
+            ],
+            "scope_label": "History at 10:00 · equal windows 5:00–15:00",
+            "origin_story_ids": [
+              "story-5"
+            ],
+            "parts": {
+              "fact": "Ellis takes the central midfield role; usable prior role-minute history is missing. The outgoing player completed 1/1 passes and took 2 shots; Ellis completed 3/3 and took 0. On-pitch exposure was 300s and 300s respectively.",
+              "reading": "More completed passing did not come with more recorded attempts.",
+              "alternative": "Equal clock windows do not isolate the substitution’s effect."
+            },
+            "structured_claims": [
+              {
+                "kind": "history_share",
+                "player_id": "Ellis",
+                "assigned_position": "CM",
+                "role_minutes": 0,
+                "minutes": 0,
+                "records": 0,
+                "status": "missing",
+                "known_at": 600,
+                "basis_fact_ids": [
+                  "fact-9"
+                ]
+              },
+              {
+                "kind": "player_windows",
+                "player_id": "Ellis",
+                "status": "ready",
+                "before": {
+                  "completed": 1,
+                  "passes": 1,
+                  "shots": 2,
+                  "seconds": 300
+                },
+                "after": {
+                  "completed": 3,
+                  "passes": 3,
+                  "shots": 0,
+                  "seconds": 300
+                },
+                "from": 300,
+                "boundary": 600,
+                "to": 900,
+                "basis_fact_ids": [
+                  "fact-9"
+                ]
+              },
+              {
+                "kind": "concurrent_changes",
+                "player_id": "Ellis",
+                "count": 0,
+                "event_ids": [],
+                "basis_fact_ids": [
+                  "fact-9"
+                ]
+              },
+              {
+                "kind": "team_change",
+                "trigger_id": "dev-conflicting-2",
+                "team_id": "northbridge",
+                "from": 300,
+                "boundary": 600,
+                "to": 900,
+                "metrics": [
+                  {
+                    "metric": "shots",
+                    "before": 2,
+                    "after": 0,
+                    "direction": "decreased"
+                  },
+                  {
+                    "metric": "completed_passes",
+                    "before": 1,
+                    "after": 3,
+                    "direction": "increased"
+                  }
+                ],
+                "basis_fact_ids": [
+                  "fact-4",
+                  "fact-5"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Northbridge–Southport stayed at 0–0 during your selected interval. Northbridge took 2 shots and Southport took 0.",
+            "evidence_ids": [
+              "fact-11",
+              "fact-1"
+            ],
+            "scope_label": "Selected interval · 5:00–15:50",
+            "origin_story_ids": [
+              "story-4"
+            ]
+          }
+        ],
+        "watch_label": "What to watch next",
+        "watch_next": "Watch Ellis's next recorded involvement in the central midfield role and whether the team’s possessions lead to attempts.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "selected-stories",
+        "commentary_contract": "batch6-v1",
+        "word_count": 70,
+        "word_limit": 280,
+        "length_exception": null
+      },
+      "metrics": {
+        "words": 70,
+        "paragraphs": 2,
+        "reference_occurrences": 5,
+        "typed_claims": {
+          "claims": 4,
+          "passed": 4,
+          "error": null
+        },
+        "checks": [
+          {
+            "name": "valid_fact_references",
+            "passed": true
+          },
+          {
+            "name": "essential_incidents",
+            "passed": true
+          },
+          {
+            "name": "mode_paragraph_limit",
+            "passed": true
+          },
+          {
+            "name": "no_future_event_reference",
+            "passed": true
+          },
+          {
+            "name": "history_limit_or_provenance",
+            "passed": true,
+            "detail": {
+              "passage": "Ellis takes the central midfield role; usable prior role-minute history is missing."
+            }
+          },
+          {
+            "name": "activity_comparison",
+            "passed": true,
+            "detail": {
+              "passage": "More completed passing did not come with more recorded attempts."
+            }
+          },
+          {
+            "name": "causal_limit",
+            "passed": true,
+            "detail": {
+              "passage": "Equal clock windows do not isolate the substitution’s effect."
+            }
+          },
+          {
+            "name": "conflicting_signals",
+            "passed": true,
+            "detail": {
+              "passage": "More completed passing did not come with more recorded attempts."
+            }
+          },
+          {
+            "name": "typed_claim_support",
+            "passed": true
+          },
+          {
+            "name": "no_explicit_causal_overclaim",
+            "passed": true,
+            "detail": {
+              "passages": []
+            }
+          }
+        ],
+        "passed": true,
+        "relevance_proxy": {
+          "passed": true,
+          "scope": "Fixture-specific lexical coverage checks; not a semantic correctness or fan usefulness score."
+        },
+        "semantic_review": "pending independent review",
+        "limitations_in_output": true
+      }
+    },
+    {
+      "id": "dev-corrected",
+      "mode": "quick",
+      "original_paragraphs": [
+        {
+          "text": "A corrected report says: The initial report was corrected; no sanction is established. This report alone does not establish a sanction.",
+          "evidence_ids": [
+            "fact-2"
+          ],
+          "scope_label": "Reported at 14:10 · corrected",
+          "origin_story_ids": [
+            "story-1"
+          ]
+        },
+        {
+          "text": "Northbridge–Southport stayed at 0–0. Northbridge took 0 shots and Southport took 0.",
+          "evidence_ids": [
+            "fact-4"
+          ],
+          "scope_label": "Selected interval · 5:00–15:50",
+          "origin_story_ids": [
+            "story-2"
+          ]
+        }
+      ],
+      "output": {
+        "headline": "An incident report has been clarified",
+        "paragraphs": [
+          {
+            "text": "A corrected report says: The initial report was corrected; no sanction is established. This report alone does not establish a sanction.",
+            "evidence_ids": [
+              "fact-2"
+            ],
+            "scope_label": "Reported at 14:10 · corrected",
+            "origin_story_ids": [
+              "story-1"
+            ]
+          },
+          {
+            "text": "Northbridge–Southport stayed at 0–0. Northbridge took 0 shots and Southport took 0.",
+            "evidence_ids": [
+              "fact-4"
+            ],
+            "scope_label": "Selected interval · 5:00–15:50",
+            "origin_story_ids": [
+              "story-2"
+            ]
+          }
+        ],
+        "watch_label": "What to watch next",
+        "watch_next": null,
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "selected-stories",
+        "commentary_contract": "batch6-v1",
+        "word_count": 33,
+        "word_limit": 120,
+        "length_exception": null
+      },
+      "metrics": {
+        "words": 33,
+        "paragraphs": 2,
+        "reference_occurrences": 2,
+        "typed_claims": {
+          "claims": 0,
+          "passed": 0,
+          "error": null
+        },
+        "checks": [
+          {
+            "name": "valid_fact_references",
+            "passed": true
+          },
+          {
+            "name": "essential_incidents",
+            "passed": true
+          },
+          {
+            "name": "mode_paragraph_limit",
+            "passed": true
+          },
+          {
+            "name": "no_future_event_reference",
+            "passed": true
+          },
+          {
+            "name": "correct_report_version",
+            "passed": true
+          },
+          {
+            "name": "correction_meaning",
+            "passed": true,
+            "detail": {
+              "passage": "A corrected report says: The initial report was corrected; no sanction is established."
+            }
+          },
+          {
+            "name": "typed_claim_support",
+            "passed": true
+          },
+          {
+            "name": "no_explicit_causal_overclaim",
+            "passed": true,
+            "detail": {
+              "passages": []
+            }
+          }
+        ],
+        "passed": true,
+        "relevance_proxy": {
+          "passed": true,
+          "scope": "Fixture-specific lexical coverage checks; not a semantic correctness or fan usefulness score."
+        },
+        "semantic_review": "pending independent review",
+        "limitations_in_output": true
+      }
+    }
+  ],
+  "live_checks": [
+    {
+      "id": "dev-waiting",
+      "mode": "quick",
+      "evidence_sha256": "7bdcc95e1985358800becd54c1a62990f578c53b93194c34764a2e100153f392",
+      "input": {
+        "index": 4,
+        "from": 300,
+        "to": 650,
+        "viewer_mode": "quick"
+      },
+      "output": {
+        "headline": "A role change awaiting enough evidence",
+        "paragraphs": [
+          {
+            "text": "Ellis takes the central midfield role; usable prior role-minute history is missing. The full post-entry comparison is not yet available. The usual-position label cannot establish familiarity, and the comparison is incomplete.",
+            "evidence_ids": [
+              "fact-3"
+            ],
+            "scope_label": "History at 10:00 · comparison unavailable",
+            "origin_story_ids": [
+              "story-4"
+            ],
+            "parts": {
+              "fact": "Ellis takes the central midfield role; usable prior role-minute history is missing. The full post-entry comparison is not yet available.",
+              "reading": "",
+              "alternative": "The usual-position label cannot establish familiarity, and the comparison is incomplete."
+            },
+            "structured_claims": [
+              {
+                "kind": "history_share",
+                "player_id": "Ellis",
+                "assigned_position": "CM",
+                "role_minutes": 0,
+                "minutes": 0,
+                "records": 0,
+                "status": "missing",
+                "known_at": 600,
+                "basis_fact_ids": [
+                  "fact-3"
+                ]
+              },
+              {
+                "kind": "player_windows",
+                "player_id": "Ellis",
+                "status": "waiting",
+                "before": null,
+                "after": null,
+                "from": 300,
+                "boundary": 600,
+                "to": 900,
+                "basis_fact_ids": [
+                  "fact-3"
+                ]
+              },
+              {
+                "kind": "concurrent_changes",
+                "player_id": "Ellis",
+                "count": 0,
+                "event_ids": [],
+                "basis_fact_ids": [
+                  "fact-3"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Northbridge–Southport stayed at 0–0. Northbridge took 0 shots and Southport took 0.",
+            "evidence_ids": [
+              "fact-5"
+            ],
+            "scope_label": "Selected interval · 5:00–10:50",
+            "origin_story_ids": [
+              "story-3"
+            ]
+          }
+        ],
+        "watch_label": "What to watch next",
+        "watch_next": "Watch Ellis's next recorded involvement in the central midfield role and whether the team’s possessions lead to attempts.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "selected-stories",
+        "commentary_contract": "batch6-v1",
+        "word_count": 43,
+        "word_limit": 120,
+        "length_exception": null,
+        "mode": "template",
+        "reason": "Investigation is unavailable or reached its limit. Showing local evidence-based stories.",
+        "failure_code": "model_call_budget",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "fallback",
+          "stop_reason": "model_call_budget",
+          "model": "gpt-5-mini",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "finish_only": false,
+              "max_output_tokens": 1200,
+              "input_bytes": 6847,
+              "status": "received",
+              "latency_ms": 1559,
+              "usage": {
+                "input_tokens": 1167,
+                "output_tokens": 38
+              }
+            },
+            {
+              "number": 2,
+              "finish_only": false,
+              "max_output_tokens": 1200,
+              "input_bytes": 10376,
+              "status": "received",
+              "latency_ms": 1451,
+              "usage": {
+                "input_tokens": 1659,
+                "output_tokens": 34
+              }
+            },
+            {
+              "number": 3,
+              "finish_only": true,
+              "max_output_tokens": 1200,
+              "input_bytes": 14252,
+              "status": "received",
+              "latency_ms": 1181,
+              "usage": {
+                "input_tokens": 2208,
+                "output_tokens": 58
+              }
+            },
+            {
+              "number": 4,
+              "finish_only": true,
+              "max_output_tokens": 1200,
+              "input_bytes": 17883,
+              "status": "received",
+              "latency_ms": 1328,
+              "usage": {
+                "input_tokens": 2701,
+                "output_tokens": 58
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "compare_change",
+              "status": "insufficient_window",
+              "result_id": "result-1",
+              "summary": "compare change: insufficient_window",
+              "arguments": {
+                "event_id": "dev-waiting-2"
+              },
+              "event_ids": [
+                "dev-waiting-2"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "role_history",
+              "status": "missing",
+              "result_id": "result-2",
+              "summary": "role history: missing",
+              "arguments": {
+                "player_id": "Ellis"
+              },
+              "event_ids": [],
+              "history_ids": []
+            },
+            {
+              "number": 3,
+              "tool": "finish_investigation",
+              "status": "rejected",
+              "result_id": null,
+              "summary": "insufficient_support"
+            },
+            {
+              "number": 4,
+              "tool": "finish_investigation",
+              "status": "rejected",
+              "result_id": null,
+              "summary": "insufficient_support"
+            }
+          ],
+          "usage": {
+            "input_tokens": 7735,
+            "output_tokens": 188,
+            "reported_calls": 4,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 58254
+          },
+          "duration_ms": 5530
+        }
+      },
+      "metrics": {
+        "words": 43,
+        "paragraphs": 2,
+        "reference_occurrences": 2,
+        "typed_claims": {
+          "claims": 3,
+          "passed": 3,
+          "error": null
+        },
+        "checks": [
+          {
+            "name": "valid_fact_references",
+            "passed": true
+          },
+          {
+            "name": "essential_incidents",
+            "passed": true
+          },
+          {
+            "name": "mode_paragraph_limit",
+            "passed": true
+          },
+          {
+            "name": "no_future_event_reference",
+            "passed": true
+          },
+          {
+            "name": "history_limit_or_provenance",
+            "passed": true,
+            "detail": {
+              "passage": "Ellis takes the central midfield role; usable prior role-minute history is missing."
+            }
+          },
+          {
+            "name": "incomplete_comparison",
+            "passed": true,
+            "detail": {
+              "passage": "The full post-entry comparison is not yet available."
+            }
+          },
+          {
+            "name": "typed_claim_support",
+            "passed": true
+          },
+          {
+            "name": "no_explicit_causal_overclaim",
+            "passed": true,
+            "detail": {
+              "passages": []
+            }
+          }
+        ],
+        "passed": true,
+        "relevance_proxy": {
+          "passed": true,
+          "scope": "Fixture-specific lexical coverage checks; not a semantic correctness or fan usefulness score."
+        },
+        "semantic_review": "pending independent review",
+        "limitations_in_output": true
+      },
+      "calls": [
+        {
+          "http_status": 200,
+          "latency_ms": 1558,
+          "usage": {
+            "input_tokens": 1167,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 1024
+            },
+            "output_tokens": 38,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 1205
+          },
+          "actions": [
+            {
+              "name": "compare_change",
+              "arguments": "{\"event_id\":\"dev-waiting-2\"}"
+            }
+          ]
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1451,
+          "usage": {
+            "input_tokens": 1659,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 34,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 1693
+          },
+          "actions": [
+            {
+              "name": "role_history",
+              "arguments": "{\"player_id\":\"Ellis\"}"
+            }
+          ]
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1181,
+          "usage": {
+            "input_tokens": 2208,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 1024
+            },
+            "output_tokens": 58,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 2266
+          },
+          "actions": [
+            {
+              "name": "finish_investigation",
+              "arguments": "{\"status\":\"supported\",\"story_ids\":[\"story-2\",\"story-3\"],\"result_ids\":[\"result-1\",\"result-2\"]}"
+            }
+          ]
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1328,
+          "usage": {
+            "input_tokens": 2701,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 1920
+            },
+            "output_tokens": 58,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 2759
+          },
+          "actions": [
+            {
+              "name": "finish_investigation",
+              "arguments": "{\"status\":\"supported\",\"story_ids\":[\"story-2\",\"story-3\"],\"result_ids\":[\"result-1\",\"context-0\"]}"
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 7735,
+        "output_tokens": 188,
+        "cached_input_tokens": 3968,
+        "unreported_calls": 0,
+        "estimate_usd": {
+          "global_2025_list": 0.0014169500000000002,
+          "data_zone_2025_list": 0.001558645
+        },
+        "cost_status": "Illustrative published 2025 list-rate scenarios, not verified deployment billing. Unreported usage, hosting and taxes excluded."
+      }
+    },
+    {
+      "id": "challenge-fulltime",
+      "mode": "tactical",
+      "evidence_sha256": "22c5b73b9ba3a1156cfc1df31ee1fc043f6763e4a3efcd5139437c6e8d9a41c7",
+      "input": {
+        "seed": 7,
+        "index": 1205,
+        "id": "challenge-fulltime",
+        "challenge": "fulltime",
+        "from": 4800,
+        "to": 5400,
+        "viewer_mode": "tactical"
+      },
+      "output": {
+        "headline": "Possession staying short of advanced territory",
+        "paragraphs": [
+          {
+            "text": "Northbridge had 14 complete sequences: 0 reached the attacking third, 0 included a shot, and 9 ended in an early failed action. Completed passing did not carry these sequences into the attacking third. The denominator excludes boundary-crossing and unfinished sequences; off-ball play is not measured.",
+            "evidence_ids": [
+              "fact-2"
+            ],
+            "scope_label": "Complete sequences only · 80:00–90:00 · crossing/unfinished sequences excluded",
+            "origin_story_ids": [
+              "story-1"
+            ],
+            "parts": {
+              "fact": "Northbridge had 14 complete sequences: 0 reached the attacking third, 0 included a shot, and 9 ended in an early failed action.",
+              "reading": "Completed passing did not carry these sequences into the attacking third.",
+              "alternative": "The denominator excludes boundary-crossing and unfinished sequences; off-ball play is not measured."
+            },
+            "structured_claims": [
+              {
+                "kind": "sequence_summary",
+                "team_id": "northbridge",
+                "from": 4800,
+                "to": 5400,
+                "counts": {
+                  "complete_sequences": 14,
+                  "attacking_third_entries": 0,
+                  "shot_sequences": 0,
+                  "early_losses": 9
+                },
+                "coverage": {
+                  "included": 14,
+                  "boundary_crossing": 0,
+                  "unfinished": 0,
+                  "denominator": "complete recorded sequences wholly inside the interval"
+                },
+                "basis_fact_ids": [
+                  "fact-2"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Northbridge–Southport stayed at 1–0. No shot, substitution, dismissal or declared shape change was recorded in the selected interval. An unchanged score and no attempts do not establish how either side controlled play.",
+            "evidence_ids": [
+              "fact-5",
+              "fact-4"
+            ],
+            "scope_label": "Selected interval 80:00–90:00",
+            "origin_story_ids": [
+              "story-4"
+            ],
+            "parts": {
+              "fact": "Northbridge–Southport stayed at 1–0. No shot, substitution, dismissal or declared shape change was recorded in the selected interval.",
+              "reading": "An unchanged score and no attempts do not establish how either side controlled play.",
+              "alternative": ""
+            },
+            "structured_claims": [
+              {
+                "kind": "interval_score",
+                "from": 4800,
+                "to": 5400,
+                "start": [
+                  1,
+                  0
+                ],
+                "end": [
+                  1,
+                  0
+                ],
+                "shots": [
+                  0,
+                  0
+                ],
+                "basis_fact_ids": [
+                  "fact-5"
+                ]
+              },
+              {
+                "kind": "quiet_record",
+                "shots": [
+                  0,
+                  0
+                ],
+                "goals": [
+                  0,
+                  0
+                ],
+                "substitutions": 0,
+                "cards": 0,
+                "shape_changes": 0,
+                "reports": 0,
+                "basis_fact_ids": [
+                  "fact-4",
+                  "fact-5"
+                ]
+              }
+            ]
+          }
+        ],
+        "watch_label": "Replay takeaway",
+        "watch_next": "The match is complete: Northbridge 1–0 Southport. The explanation covers 80:00–90:00; its activity counts are not whole-match totals.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "investigated-stories",
+        "commentary_contract": "batch6-v1",
+        "word_count": 77,
+        "word_limit": 280,
+        "length_exception": null,
+        "mode": "foundry",
+        "evidence_status": "supported",
+        "reason": "Microsoft Foundry selected evidence tools and follow-up queries; the displayed wording and figures come from inspected server-owned evidence.",
+        "investigation": {
+          "version": "batch5-v1",
+          "status": "complete",
+          "stop_reason": "supported",
+          "model": "gpt-5-mini",
+          "budgets": {
+            "model_calls": 4,
+            "tool_calls": 6,
+            "duration_ms": 22000,
+            "max_output_tokens": 1200,
+            "token_budget": 60000,
+            "request_bytes": 36000,
+            "result_bytes": 18000,
+            "response_bytes": 100000
+          },
+          "model_calls": [
+            {
+              "number": 1,
+              "finish_only": false,
+              "max_output_tokens": 1200,
+              "input_bytes": 7700,
+              "status": "received",
+              "latency_ms": 1588,
+              "usage": {
+                "input_tokens": 1360,
+                "output_tokens": 36
+              }
+            },
+            {
+              "number": 2,
+              "finish_only": true,
+              "max_output_tokens": 1200,
+              "input_bytes": 14228,
+              "status": "received",
+              "latency_ms": 1811,
+              "usage": {
+                "input_tokens": 2757,
+                "output_tokens": 58
+              }
+            }
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "tool": "analyse_possession",
+              "status": "available",
+              "result_id": "result-1",
+              "summary": "analyse possession: available",
+              "arguments": {
+                "team_id": "northbridge"
+              },
+              "event_ids": [
+                "full-v03-7-1080",
+                "full-v03-7-1081",
+                "full-v03-7-1082",
+                "full-v03-7-1089",
+                "full-v03-7-1090",
+                "full-v03-7-1100",
+                "full-v03-7-1101",
+                "full-v03-7-1102",
+                "full-v03-7-1103",
+                "full-v03-7-1104",
+                "full-v03-7-1112",
+                "full-v03-7-1113",
+                "full-v03-7-1114",
+                "full-v03-7-1115",
+                "full-v03-7-1116",
+                "full-v03-7-1117",
+                "full-v03-7-1123",
+                "full-v03-7-1124",
+                "full-v03-7-1129",
+                "full-v03-7-1130",
+                "full-v03-7-1131",
+                "full-v03-7-1132",
+                "full-v03-7-1133",
+                "full-v03-7-1138",
+                "full-v03-7-1139",
+                "full-v03-7-1140",
+                "full-v03-7-1141",
+                "full-v03-7-1142",
+                "full-v03-7-1143",
+                "full-v03-7-1144",
+                "full-v03-7-1147",
+                "full-v03-7-1148",
+                "full-v03-7-1149",
+                "full-v03-7-1150",
+                "full-v03-7-1151",
+                "full-v03-7-1152",
+                "full-v03-7-1156",
+                "full-v03-7-1157",
+                "full-v03-7-1163",
+                "full-v03-7-1164",
+                "full-v03-7-1165",
+                "full-v03-7-1166",
+                "full-v03-7-1175",
+                "full-v03-7-1176",
+                "full-v03-7-1177",
+                "full-v03-7-1178",
+                "full-v03-7-1184",
+                "full-v03-7-1185",
+                "full-v03-7-1192",
+                "full-v03-7-1193",
+                "full-v03-7-1194",
+                "full-v03-7-1195",
+                "full-v03-7-1196",
+                "full-v03-7-1200",
+                "full-v03-7-1201"
+              ],
+              "history_ids": []
+            },
+            {
+              "number": 2,
+              "tool": "finish_investigation",
+              "status": "complete",
+              "result_id": null,
+              "summary": "supported",
+              "result_ids": [
+                "result-1",
+                "context-0"
+              ],
+              "references_completed": false,
+              "story_ids": [
+                "story-1",
+                "story-3"
+              ]
+            }
+          ],
+          "usage": {
+            "input_tokens": 4117,
+            "output_tokens": 94,
+            "reported_calls": 2,
+            "unreported_calls": 0,
+            "reserved_token_upper_estimate": 26376
+          },
+          "duration_ms": 3405
+        }
+      },
+      "metrics": {
+        "words": 77,
+        "paragraphs": 2,
+        "reference_occurrences": 3,
+        "typed_claims": {
+          "claims": 3,
+          "passed": 3,
+          "error": null
+        },
+        "checks": [
+          {
+            "name": "valid_fact_references",
+            "passed": true
+          },
+          {
+            "name": "essential_incidents",
+            "passed": true
+          },
+          {
+            "name": "mode_paragraph_limit",
+            "passed": true
+          },
+          {
+            "name": "no_future_event_reference",
+            "passed": true
+          },
+          {
+            "name": "closing_interval_scope",
+            "passed": true,
+            "detail": {
+              "passage": "No shot, substitution, dismissal or declared shape change was recorded in the selected interval."
+            }
+          },
+          {
+            "name": "typed_claim_support",
+            "passed": true
+          },
+          {
+            "name": "no_explicit_causal_overclaim",
+            "passed": true,
+            "detail": {
+              "passages": []
+            }
+          }
+        ],
+        "passed": true,
+        "relevance_proxy": {
+          "passed": true,
+          "scope": "Fixture-specific lexical coverage checks; not a semantic correctness or fan usefulness score."
+        },
+        "semantic_review": "pending independent review",
+        "limitations_in_output": true
+      },
+      "calls": [
+        {
+          "http_status": 200,
+          "latency_ms": 1588,
+          "usage": {
+            "input_tokens": 1360,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 1280
+            },
+            "output_tokens": 36,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 1396
+          },
+          "actions": [
+            {
+              "name": "analyse_possession",
+              "arguments": "{\"team_id\":\"northbridge\"}"
+            }
+          ]
+        },
+        {
+          "http_status": 200,
+          "latency_ms": 1811,
+          "usage": {
+            "input_tokens": 2757,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 58,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 2815
+          },
+          "actions": [
+            {
+              "name": "finish_investigation",
+              "arguments": "{\"status\":\"supported\",\"story_ids\":[\"story-1\",\"story-3\"],\"result_ids\":[\"result-1\",\"context-0\"]}"
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "input_tokens": 4117,
+        "output_tokens": 94,
+        "cached_input_tokens": 1280,
+        "unreported_calls": 0,
+        "estimate_usd": {
+          "global_2025_list": 0.00092925,
+          "data_zone_2025_list": 0.0010221750000000002
+        },
+        "cost_status": "Illustrative published 2025 list-rate scenarios, not verified deployment billing. Unreported usage, hosting and taxes excluded."
+      }
+    }
+  ]
+}

@@ -40,3 +40,7 @@ For first-time viewers, see [the detailed user guide](docs/USER_GUIDE.md). For e
 ## Fan journey browser check (Batch 7)
 
 Run `npm run check:fan` with Playwright and Chrome installed. The check starts a temporary local server with Foundry disabled, so it does not spend model credits. Set `TOUCHLINE_PLAYWRIGHT` to an alternate Playwright module path or `TOUCHLINE_BROWSER` to a compatible Chromium executable when needed. It tests interval boundaries, preference changes during a delayed request, connection failure recovery, upload expiry, glossary access, lineup player focus and a 390px layout. See [the Batch 7 report](docs/BATCH_7.md) for scope and limits.
+
+## Comparative evaluation (Batch 8)
+
+`npm run evaluate:comparative -- --split=all` runs the offline 27-case/mode matrix. Live comparison requires explicit `--live`, configuration and bounded Azure credit; follow [the method and reproducible commands](docs/COMPARATIVE_EVALUATION.md). `node tools/audit-comparative.cjs` checks saved paired inputs, grades, usage and source provenance without model calls. `node tools/review-comparative.cjs` regenerates the shuffled review packet and separate key. The original comparison and later targeted repairs are separate artifacts; neither substitutes for independent review or fan usability testing.

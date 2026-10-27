@@ -107,3 +107,5 @@ Batch 5 adds the [bounded AI investigator](docs/BOUNDED_INVESTIGATOR.md), with m
 Batch 6 adds [connected, grounded commentary](docs/GROUNDED_COMMENTARY.md): facts versus interpretation, checked claims, quiet/full-time handling and complementary composition. See [local verification and remaining limits](docs/BATCH_6.md).
 
 Batch 7 integrates [the fan experience](docs/BATCH_7.md): interval navigation, viewing preferences, lineup follow-through, evidence/glossary access, loading/recovery and narrow-screen/keyboard fixes. Run `npm run check:fan` for the local browser journey checks.
+
+Batch 8 provides [four-way comparative evaluation and repairs](docs/BATCH_8.md), with saved real-model attempts, identical source packets per pair, tool/resource traces and explicit failures. These small runs do **not** establish that investigation is more useful than rules or ranking. `npm run evaluate:comparative` is offline by default; live runs require an explicit flag and consume existing Azure allowance.

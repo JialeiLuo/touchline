@@ -1,0 +1,6 @@
+/* Account for diagnostic, comparative and targeted attempts once each. */
+const fs=require('node:fs'),{sha,cost}=require('../evaluation/comparative.cjs');
+const files=['docs/batch-8-live-development-before.json','docs/batch-8-live-contract-diagnostic.json','docs/batch-8-live-final.json','docs/batch-8-repair-attempt.json','docs/batch-8-repair-before-status-schema.json','docs/batch-8-repair-verification.json'];
+const rows=files.map(file=>{const text=fs.readFileSync(file,'utf8'),report=JSON.parse(text),calls=report.rows?report.rows.flatMap(r=>r.calls):report.live_checks.flatMap(r=>r.calls);return{file,sha256:sha(text),outputs:report.rows?.length||report.live_checks.length,calls,usage:cost(calls)};});
+const report={method:'Each distinct saved provider attempt is included once. Duplicate intermediate file aliases and offline/replay-only outputs are excluded. Missing provider usage is unknown, never zero billed usage. Estimates apply historical list-rate scenarios only.',attempts:rows.map(({calls,...r})=>({...r,provider_calls:calls.length})),total:{provider_calls:rows.reduce((n,r)=>n+r.calls.length,0),...cost(rows.flatMap(r=>r.calls))}};
+fs.writeFileSync('docs/batch-8-resource-total.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report.total));

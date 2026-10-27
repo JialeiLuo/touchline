@@ -65,3 +65,7 @@ Choose **Investigate the evidence**, then **Explain what changed**. Expand **Evi
 - `docs/batch-5-browser-investigation.json`: subsequent final browser request through the real HTTP handler/provider, with source hashes and returned evidence. The browser also verified approach-change staleness and no console warnings/errors.
 
 Two successful live synthetic samples establish that the protocol works for that example. They do not establish broad reliability, causal validity, football realism, human usefulness or improvement over a one-pass model. Unknown/unusual cases may hit a limit and use fallback. No additional agents, broad histories or arbitrary-question interface were added.
+
+## Batch 8 refinement
+
+Finish schemas now list the current inspected story/result IDs, mode-specific story count and permitted evidence status. Missing supporting result links are completed from the selected story’s already-inspected metadata; unknown IDs and uninspected stories still fail. The trace records completed references. The loop can request an earlier finish to preserve token headroom; hard limits and local fallback remain. Current packet schema is 14 (the earlier execution description above records the Batch 5 snapshot). See [comparative results, failures and remaining limits](BATCH_8.md); investigator superiority over rules/ranking is not established.
