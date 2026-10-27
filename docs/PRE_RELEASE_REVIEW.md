@@ -14,9 +14,9 @@ Proceed toward the release after resolving a small set of consistency and availa
 
 ### Source and timing
 
-Rechecked the [Microsoft official rules, section 6](https://github.com/microsoft/insidethegamehackathon/blob/main/OFFICIAL%20RULES.md#6-judges--criteria) on 27 October. Initial screening checks viable theme/technology fit. The next round assigns equal 20% weights to five areas: technical execution, agentic innovation, practical impact, experience/presentation and category fit. The tables below are our assessment, not predicted judge scores.
+Official reference: [Microsoft rules, section 6](https://github.com/microsoft/insidethegamehackathon/blob/main/OFFICIAL%20RULES.md#6-judges--criteria), rechecked 27 October. Stage 1 screens viability and theme/technology fit. Stage 2 weights each area below at 20%. Assessments are ours.
 
-[Sections 1 and 4](https://github.com/microsoft/insidethegamehackathon/blob/main/OFFICIAL%20RULES.md) also specify a public code repository, a working judge-accessible project, English submission materials or translations, and a public functioning-product video shorter than two minutes. Submission closes 27 October 2026 at 23:59 Pacific: 28 October at 06:59 UK time. Judge access must last through 10 November Pacific. These requirements make release consistency and availability urgent.
+[Submission/access requirements and dates](https://github.com/microsoft/insidethegamehackathon/blob/main/OFFICIAL%20RULES.md): public repository; working judge access through 10 November Pacific; English materials or translations; public working-product video under two minutes. Deadline: 27 October 23:59 Pacific, or 28 October 06:59 UK.
 
 ### Overall assessment
 
