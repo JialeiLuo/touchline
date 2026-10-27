@@ -1,0 +1,42 @@
+# Final improvement batches before release
+
+27 October 2026. Batch 9 remains complete. R1–R6 are new local refinement batches before existing Batch 10 (public release) and Batch 11 (video/submission). This is a plan, not completed implementation. No publication is authorized by this planning request.
+
+## Product direction
+
+Keep the short takeaway as the default. Add an optional Read full report experience with three scopes:
+
+- Match so far: kickoff through the revealed replay position, clearly marked provisional.
+- Selected spell: a connected prose account of the chosen catch-up interval, not a chronological event dump.
+- Full-time report: an account of the complete match, unlocked only by the actual full-time event, including added time.
+
+Write an opening overview, the important passages in order, relevant player/team context, and a conclusion appropriate to the scope. Distinguish observations from interpretation; connect claims to expandable sources. Do not invent emotions, pressure, tactical motives or causal explanations to imitate a journalist. Use shared evidence with Quick/Tactical so scores, actors and timing agree. Long-form length should reflect available substance rather than a minimum word target. Keep a local evidence-based report available when the model is unavailable, clearly labelled.
+
+## Ordered batches
+
+| Batch | Scope | Completion evidence |
+|---|---|---|
+| R1 — Football clock and added time | Define period-aware time and a monotonic event order; distinguish 45+2 from second-half 47:00. Fix the half-time period marker. Add announced minimum added time and actual period-end events to the generator. Support no/short/long added time in either half; the actual whistle may occur later than the announced minimum. Update input version/migration, old-package compatibility, replay clock, selectors, time filtering, comparisons, history/report availability, charts, download/import and full-time detection together. Half-time should be clear without forcing a real waiting period. | Built-in/upload parity; legacy 90-minute packages work; goals, cards, substitutions and corrections in added time appear exactly once; first-half added time does not overlap second-half chronology; no future leakage; full time is not triggered at nominal 90:00. Extra time/shootouts remain excluded. |
+| R2 — Full prose reports | Implement all three report scopes above, using the R1 clock. Retain a concise overview before optional deeper text, meaningful chronology, neutral default team coverage, supporting context and source links. Clearly mark scope and freshness. Long reports need their own explicit output/time/token budget and failure behavior; do not silently reuse a tiny Quick budget or multiply calls without bounds. | Positive, quiet, conflicting, missing-history, corrected-report, added-time and full-time cases. Review prose for usefulness and unsupported interpretation, not only output format. A late decisive goal is included; the final report is unavailable before the actual whistle; a selected-spell report never becomes a whole-match claim. |
+| R3 — Relevant football-law explanations | Expand the curated, edition-labelled law catalogue. Provide optional Explain this decision on supported fouls/cards/restarts and an added-time explanation. Enrich synthetic incident data with the necessary offence and recorded-decision fields. Display a short attributed quotation, plain explanation, official link, edition/retrieval information and applicability limit. Map precise provisions only when supported; otherwise show general guidance or say the incident is insufficiently specified. | Cases for specified challenge, generic foul, dissent, second caution, missing/ambiguous incident details and corrected decisions. Missing severity must not become inferred reckless/excessive-force conduct. Uploaded prose cannot become a verified law quotation. Quote budgets and attribution are checked. |
+| R4 — First-use and reading experience | Make the prepared path concise; offer Read full report without making the first answer longer. Clear scope controls: Match so far / Selected spell / Full time. Clarify that modes/preferences require regeneration. Keep rule cards and sources collapsed until requested. Improve Formation/Event action labels; retain schematic positions without pretending to track players. Update optional in-app guide and hands-on instructions. | Fresh-page journey to a useful short answer without technical settings; report/rule discovery and recovery; keyboard and narrow-screen checks; no duplicate/conflicting controls. |
+| R5 — Final-build quality and comparison | Run the expanded scenario matrix on one identified candidate. Compare rules/ranking/investigator where equivalent; review long prose separately for factual support, chronology, coverage, relevance, repetition and readability. Retain all failures and identify local fallbacks. Record latency, calls/tokens and cost assumptions. Have the owner check representative reports, including a quiet spell and added-time finish. | Reproducible outputs with source hashes, all attempts retained, supported claims, no future leakage and clear distinction between automated checks and human acceptance. No superiority claim unless the evidence supports it. |
+| R6 — Release consistency and freeze preparation | Reconcile scope, architecture, brainstorming statuses, README, testing instructions and submission description; identify one version/revision; add CI; build and test a clean safe archive; inspect publication contents. Plan judge access, concurrency, allowances and fallback. | A locally reproducible candidate, consistent documents, clean archive/manifest, no private configuration/screenshots/runtime state, and a concrete hosted acceptance checklist. No new feature additions after acceptance. |
+| Existing 10 — Public release | Publish only the accepted candidate, configure/verify model access and protective budgets, deploy and check public behavior against that revision. Confirm repository visibility and judge accessibility as required. | Source, download, public build and testing instructions agree; hosted smoke/recovery/access checks pass. |
+| Existing 11 — Video and submission | Record that exact release, make the English demonstration shorter than two minutes, publish the video and align README/Microsoft project-page links. Present any legal-acceptance action to the owner. | All artifacts describe the same release; public links and completion state verified. |
+
+## Current rule-reference status
+
+`data/rules.js` currently contains one curated dissent excerpt. `package-ui.js` renders law references attached to incident annotations; it does not map every generated foul to a specific provision. Generic generated fouls lack the detail necessary for that classification. Consequently the original law-explanation idea is only partially implemented.
+
+For user experience, every supported incident may expose an optional rule explanation, but a long quotation should not interrupt every ordinary foul. Separate the recorded event, recorded official decision, relevant law and what the available data cannot establish. A football rule quotation is not independent proof that the referee's decision was correct.
+
+Primary references checked 27 October:
+- [IFAB Law 12](https://www.theifab.com/laws/latest/fouls-and-misconduct/) for offence/discipline distinctions.
+- [IFAB Law 7](https://www.theifab.com/laws/latest/the-duration-of-the-match/) for periods and allowance for lost time. The announced additional time is a minimum, not a guaranteed exact whistle time.
+
+## Scope and scheduling
+
+R1 is a cross-cutting contract change and should precede report and law/UI work. R2/R3 are substantive feature additions, not release packaging. Do not mark them complete from mocked screenshots or format checks. No injury database or actual player tracking is required: 伤停补时 support here means the football clock and its events, not a medical-history feature.
+
+This plan expands the work previously assigned to Batches 10–11. The official deadline already checked in the pre-release report is 28 October 2026 at 06:59 UK time. If completing these changes endangers submission, make an explicit scope decision rather than rushing a schema migration or pretending an unverified feature is complete. Keep all work local until the release stage.
