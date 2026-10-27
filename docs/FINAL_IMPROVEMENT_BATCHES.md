@@ -1,6 +1,6 @@
 # Final improvement batches before release
 
-27 October 2026. Batch 9 remains complete. R1–R6 are new local refinement batches before existing Batch 10 (public release) and Batch 11 (video/submission). R1 is now completed locally; see [verification](R1.md). R2–R6 remain planned. No publication is authorized by this planning request.
+27 October 2026. Batch 9 remains complete. R1–R6 are new local refinement batches before existing Batch 10 (public release) and Batch 11 (video/submission). R1 and R2 are now completed locally; see [clock verification](R1.md) and [prose reports](R2.md). R3–R6 remain planned. No publication is authorized by this planning request.
 
 ## Product direction
 

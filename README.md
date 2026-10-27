@@ -115,3 +115,5 @@ Batch 8 provides [four-way comparative evaluation and repairs](docs/BATCH_8.md),
 [Pre-release assessment and hands-on guide](docs/PRE_RELEASE_REVIEW.md) maps the current build to the official rubric and brainstorm, prioritizes remaining work and explains the replay clock and pitch. Batch 9 was accepted locally by the owner on 27 October; publication remains pending.
 
 [R1 football clock and added time](docs/R1.md) adds period-aware replay and interval controls, announced minimum/actual whistles, v2 packages and unchanged v1 support. Full-time analysis waits for the actual revealed whistle. Full prose reports and law explanations remain R2/R3.
+
+[R2 full prose reports](docs/R2.md) adds optional match-so-far, selected-spell and full-time accounts, sources and text download. Short commentary stays intact; full-time reading includes added time and waits for the actual whistle.

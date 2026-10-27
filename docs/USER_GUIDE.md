@@ -110,3 +110,7 @@ Explanatory summaries show the recorded facts first, followed by **Reading of th
 ## Added time and the final whistle
 
 The announced added time is a minimum; keep watching until the actual full-time event. `45+2` and second-half `47` are distinct. The replay clock, selected interval and sources share this interpretation. Use the latest interval/replay-end action to include the exact final added-time seconds. Half-time is clearly marked without a real waiting period.
+
+## Read a full prose report
+
+Open **Read a full report** below the short commentary. Choose **Selected spell**, **Match so far** or, after the actual whistle, **Full-time report**, then select **Write report**. The report connects important passages in prose and preserves added-time events. Short commentary remains above. Open **Sources for this paragraph** to inspect evidence, or use **Download report text** for a plain-text copy. Changing the replay or report choices marks the earlier report stale; request another deliberately. Reports cover both teams, while team/player focus can guide supporting context. Local evidence-based reports remain available when online context selection is unavailable. See [R2 scope and verification](R2.md).

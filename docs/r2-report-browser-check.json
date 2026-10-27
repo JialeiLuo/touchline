@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-27T23:44:12.944Z",
+  "checks": [
+    "Optional selected-spell prose report keeps short commentary intact and full time locked",
+    "Paragraph sources, glossary and text download work without technical settings",
+    "Match-so-far expands to kickoff and is labelled provisional",
+    "Actual whistle unlocks full report including late winner, added time and corrected account",
+    "Replay changes cancel/suppress stale reports and disable stale downloads",
+    "Network error persists visibly and explicit retry recovers",
+    "Expired uploads block new reports; 390px reading has no page overflow or script errors"
+  ],
+  "errors": [],
+  "model_calls": 0,
+  "source_hashes": {
+    "server/reports.cjs": "54a14a2aee534ffc4c3a680139c7150515e940b75dc3656fb207f7a8ea1379a8",
+    "report-ui.js": "b922280926d473b74622a138130b220fa3ef48ba5721996e87fb2b86698083ae",
+    "server.cjs": "0b820b91605c3e5f9fd38c2091ac1d46abb488db9b770022585c3bb4d789ec0b",
+    "index.html": "d706a29c576217cc4125a7e383e518bece9d4261c6fbbcde661320306ad82a20"
+  },
+  "limitations": "Builder/browser review with local fallback and controlled failures. Not independent fan testing or live-model quality evaluation."
+}
