@@ -10,7 +10,7 @@ out = root.parent/'releases'
 out.mkdir(exist_ok=True)
 archive = out/f'touchline-{version}-source.zip'
 files = [p for p in root.iterdir() if p.is_file() and (p.suffix in ['.js','.cjs','.html'] or p.name in ['README.md','SUBMISSION.md','TESTING_INSTRUCTIONS.md','COPYRIGHT.md','package.json','Dockerfile','.gitignore','.dockerignore','.env.example'])]
-for folder in ['server','prompts','tests','tools','data','submission']:
+for folder in ['server','prompts','tests','tools','data','submission','evaluation']:
     files += [p for p in (root/folder).rglob('*') if p.is_file() and p.suffix in ['.js','.cjs','.json','.txt','.py','.md','.srt','.mp4','.wav'] and '__pycache__' not in p.parts]
 files += list((root/'submission'/'demo-frames').glob('*.jpg'))
 files += list((root/'submission').glob('*.png'))
@@ -56,7 +56,8 @@ if args.verify:
                 break
             except Exception: time.sleep(.1)
         assert status and status['configured'] is False
-        request=urllib.request.Request('http://127.0.0.1:18767/api/commentary',data=json.dumps({'seed':7,'index':899,'from':3300,'to':3960,'viewer_mode':'tactical','player_focus':'Ellis'}).encode(),headers={'Content-Type':'application/json'})
+        replay_index=int(subprocess.check_output([args.node,'-e',"const d=require('./full-match.js').simulate(7);process.stdout.write(String(d.events.findIndex(e=>e.t>=3960)))"],cwd=project))
+        request=urllib.request.Request('http://127.0.0.1:18767/api/commentary',data=json.dumps({'seed':7,'index':replay_index,'from':3300,'to':3960,'viewer_mode':'tactical','player_focus':'Ellis'}).encode(),headers={'Content-Type':'application/json'})
         with urllib.request.urlopen(request,timeout=10) as r: response=json.load(r)
         assert response['mode']=='template'
         assert any('20 of 305' in p['text'] for p in response['paragraphs'])

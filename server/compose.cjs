@@ -1,3 +1,4 @@
+const MatchClock=require('../match-clock.js');
 /* Compose complementary source-owned stories; retain decisive incidents first. */
 const {validateNarrative}=require('./narrative-checks.cjs');
 const words=t=>t.trim().split(/\s+/).filter(Boolean).length;
@@ -19,7 +20,7 @@ function compose(selection,p,candidates){
   chosen.push(story);if(activity)activityScopes.push(activity);views.push({parts,text});if(parts?.alternative&&story.alternative_category)alternatives.add(story.alternative_category);wordCount+=cost;story.evidence_ids.forEach(id=>covered.add(id));story.coverage_tags?.forEach(tag=>tags.add(tag));
  }
  const paragraphs=chosen.map((story,i)=>{const {parts,text}=views[i],paragraph={text,evidence_ids:story.evidence_ids,scope_label:story.scope_label,origin_story_ids:[story.id],...(parts?{parts}: {}),...(story.structured_claims?{structured_claims:story.structured_claims}:{})};return validateNarrative(paragraph,p);});
- const full=p.interval.to>=5400,situation=p.facts.find(f=>f.kind==='Interval situation'),clock=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
+ const full=p.match_complete===true,situation=p.facts.find(f=>f.kind==='Interval situation'),clock=t=>MatchClock.format(p,t);
  let takeaway=null;if(full&&situation){const[a,b]=situation.score_end;takeaway=`The match is complete: ${situation.team_names[0]} ${a}–${b} ${situation.team_names[1]}. ${p.interval.from===0?'Review the recorded result alongside the evidence above; no single cause is established.':`The explanation covers ${clock(p.interval.from)}–${clock(p.interval.to)}; its activity counts are not whole-match totals.`}`;}
  return{headline:chosen[0].title,paragraphs,watch_label:full?'Replay takeaway':'What to watch next',watch_next:full?takeaway:chosen.find(s=>s.watch_next)?.watch_next||null,limitations:p.limitations,composition:'selected-stories',commentary_contract:'batch6-v1',word_count:wordCount,word_limit:wordLimit,length_exception:wordCount>wordLimit?(essential.length?'essential_incident_coverage':'long_source_story'):null};
 }

@@ -1,15 +1,15 @@
 /* Render server-calculated evidence; no model-generated values or markup. */
 (function(){
- const clock=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
+
  function el(tag,text,cls){const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node}
- window.renderInvestigation=function(host,packet){
+ window.renderInvestigation=function(host,packet){const clock=(t,period)=>MatchClock.format(packet,t,period);
   if(!packet.investigations?.length)return;const section=el('section',undefined,'calculated-comparisons');section.append(el('h3','Substitution investigation'));
   for(const inv of packet.investigations){section.append(el('h4',`${inv.name} · assigned ${inv.assigned_position}`),el('p',`${inv.history.minutes?`${inv.history.role_minutes} minutes in this role from ${inv.history.minutes} minutes across ${inv.history.records} supplied previous matches.`:'No usable role-minute history is available.'} History used only if available when the player came on.`));
    const c=inv.comparison;if(c.status==='ready')section.append(el('p',`Player exposure: outgoing ${c.before.on_pitch_seconds} / ${c.before.duration_seconds}s; incoming ${c.after.on_pitch_seconds} / ${c.after.duration_seconds}s. Different time on pitch can affect the counts. ${inv.other_change_ids.length} concurrent recorded changes; this cannot isolate a substitution effect.`));else section.append(el('p','A full post-entry window is not available. Player comparison counts are unavailable.'));
    const details=el('details');details.append(el('summary','Investigation steps and sources'));for(const source of inv.history.sources||[])details.append(el('p',`${source.id} · ${source.source} · available ${clock(source.available_at)}`));for(const step of inv.trace)details.append(el('p',`${step.tool.replaceAll('_',' ')} · ${step.status}${step.as_of!==undefined?' · known by '+clock(step.as_of):''}${step.record_ids?' · '+step.record_ids.join(', '):''}${step.event_ids?.length?' · '+step.event_ids.join(', '):''}`));section.append(details);
   }host.append(section);
  };
- window.renderSequenceStory=function(host,packet){
+ window.renderSequenceStory=function(host,packet){const clock=(t,period)=>MatchClock.format(packet,t,period);
   const report=packet.sequence_analysis;if(!report){if(packet.input_capabilities?.sequence_reason)host.append(el('p','How attacks developed · '+packet.input_capabilities.sequence_reason,'muted'));return;}
   const section=el('section',undefined,'calculated-comparisons');section.setAttribute('aria-label','How attacks developed');section.append(el('h3','How attacks developed'));
   for(const team of report.teams){
@@ -21,7 +21,7 @@
   }
   const method=el('details');method.append(el('summary','How this is measured'),el('p',report.method,'muted'));section.append(method);host.append(section);
  };
- window.renderCalculatedComparisons=function(host,packet){
+ window.renderCalculatedComparisons=function(host,packet){const clock=(t,period)=>MatchClock.format(packet,t,period);
   if(window.renderChanceQuality)window.renderChanceQuality(host,packet);
   const groups=packet.comparisons||[];
   const section=el('section',undefined,'calculated-comparisons');section.setAttribute('aria-label','Calculated before and after evidence');
@@ -29,7 +29,7 @@
   if(!groups.length)section.append(el('p','No substitution, dismissal or declared tactical change occurs in this selected interval. Try seed 7, minutes 40–50, after advancing the replay to at least 50 minutes.'));
   for(const group of groups){
    const card=el('div',undefined,'comparison-group');card.append(el('h4',`${group.trigger_team} · ${group.trigger_type==='sub'?'substitution':group.trigger_type==='red_card'?'dismissal':'declared tactical change'} at ${clock(group.boundary)}`));
-   if(group.status!=='ready'){card.append(el('p',group.boundary-group.window<0||group.available_at>5400?'This event does not have enough match time on both sides for an equal-window comparison.':`Not enough revealed time in the selected interval. Set its end to at least ${clock(group.available_at)} and advance the replay to that time.`));section.append(card);continue}
+   if(group.status!=='ready'){card.append(el('p',group.boundary-group.window<0||(packet.clock?.periods?.at(-1)?.end!==undefined&&group.available_at>packet.clock.periods.at(-1).end)?'This event does not have enough match time on both sides for an equal-window comparison.':`Not enough revealed time in the selected interval. Set its end to at least ${clock(group.available_at)} and advance the replay to that time.`));section.append(card);continue}
    card.append(el('p',`Before ${clock(group.before.from)}–${clock(group.before.to)} · After ${clock(group.after.from)}–${clock(group.after.to)}. Each window includes its start and excludes its end.`,'muted'));
    const table=el('table');table.style.cssText='width:100%;border-collapse:collapse;text-align:left';table.append(el('caption','Equal-window activity comparison'));
    const head=el('thead'),tr=el('tr');for(const label of ['Team / metric','Before','After','Change']){const th=el('th',label);th.scope='col';tr.append(th)}head.append(tr);table.append(head);const body=el('tbody');

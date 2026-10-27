@@ -26,7 +26,7 @@ A.throws(()=>analyse(data,data.events,{from:900,to:300,asOf:950}));
 console.log('Chance quality: validation, provenance, single-source aggregation, goal linkage, missing/zero/mixed states, temporal boundaries, no outcome-derived values, stories and import parity pass.');
 
 // Fixed event digests from Batch 3 revision 5bc8dfe: metadata adds no random draws.
-const {createHash}=require('node:crypto');for(const [seed,expected]of [[0,'3eefc229967ed85bb7779a3a93f41b16aeca87b2297f0d44413f4943100ec4b9'],[7,'c6f9dc1d35e2acf050e049d92b98767e4f8ec595019ec1bd3146bda2f17768ba'],[19,'2b2829df70f327d89338c82740e008cf0a617a17e6417d947b79b1ae893d0ef3']]){const events=simulate(seed).events.map(({xg,shot_id,...event})=>event);A.equal(createHash('sha256').update(JSON.stringify(events)).digest('hex'),expected,'Pre-existing match events must stay identical');}
+const {createHash}=require('node:crypto');for(const [seed,expected]of [[0,'3eefc229967ed85bb7779a3a93f41b16aeca87b2297f0d44413f4943100ec4b9'],[7,'c6f9dc1d35e2acf050e049d92b98767e4f8ec595019ec1bd3146bda2f17768ba'],[19,'2b2829df70f327d89338c82740e008cf0a617a17e6417d947b79b1ae893d0ef3']]){const events=require('../full-match.js').simulateLegacy(seed).events.map(({xg,shot_id,...event})=>event);A.equal(createHash('sha256').update(JSON.stringify(events)).digest('hex'),expected,'Pre-existing match events must stay identical');}
 
 // Do not narrate a difference hidden by the displayed two-decimal precision.
 const tied=make();tied.events.find(e=>e.id==='s1').xg.value=.3;const tid=store.put(tied);try{const tiedPacket=packet({package_id:tid,index:5,from:300,to:950});A(!buildStories(tiedPacket).some(s=>s.title==='More shots, lower supplied chance total'));}finally{store.remove(tid);}

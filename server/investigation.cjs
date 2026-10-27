@@ -1,8 +1,9 @@
+const MatchClock=require('../match-clock.js');
 const {roleHistory,ratio,playerExposure}=require('./football-tools.cjs');
 /* Explicit investigation steps; deterministic tools, no causal effect estimate. */
 function investigateSubstitutions(data,seen,from,to,contexts){
  return contexts.map(c=>{
-  const history=roleHistory(data,{player_id:c.player_id,position:c.assigned_position,asOf:c.at}),window=300,ready=c.at>=window&&c.at+window<=5400&&to>=c.at+window&&seen.at(-1).t>=c.at+window;
+  const history=roleHistory(data,{player_id:c.player_id,position:c.assigned_position,asOf:c.at}),window=300,ready=c.at>=window&&c.at+window<=MatchClock.end(data)&&to>=c.at+window&&seen.at(-1).t>=c.at+window;
   const actions=(id,a,b)=>seen.filter(e=>e.actor_id===id&&e.t>=a&&e.t<b&&['pass','carry','shot'].includes(e.type));
   const old=ready?actions(seen.find(e=>e.id===c.event_id).outgoing_id,c.at-window,c.at):[],incoming=ready?actions(c.player_id,c.at,c.at+window):[];
   const count=(list,id,a,b)=>!ready?{duration_seconds:window,on_pitch_seconds:null,pass_completion:null,passes:null,completed:null,shots:null,carries:null}:({duration_seconds:window,on_pitch_seconds:ready?playerExposure(data,seen,{player_id:id,from:a,to:b}):null,pass_completion:ratio(list.filter(e=>e.type==='pass'&&e.outcome==='complete').length,list.filter(e=>e.type==='pass').length),passes:list.filter(e=>e.type==='pass').length,completed:list.filter(e=>e.type==='pass'&&e.outcome==='complete').length,shots:list.filter(e=>e.type==='shot').length,carries:list.filter(e=>e.type==='carry').length});

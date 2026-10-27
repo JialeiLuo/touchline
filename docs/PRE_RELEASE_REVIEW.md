@@ -2,6 +2,8 @@
 
 27 October 2026. Reviewed local product: `9fbf70f`, with the Batch 9 closure/documentation changes in the commit containing this report. This is a source-and-record audit, not a new live-model benchmark, competitor survey, production certification or independent fan study. Nothing was deployed, uploaded or made public for this review.
 
+> Timing update: [R1 is now implemented locally](R1.md), superseding the no-added-time assessment and half-time issue below. This report otherwise remains the dated pre-R1 audit.
+
 ## Decision in brief
 
 Batch 9 is complete: the owner rechecked the repairs and accepted the improved experience. The recorded review remains one written feedback response plus owner acceptance, without inventing unfamiliar-user task completion or a larger study.

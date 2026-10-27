@@ -1,6 +1,6 @@
 const A=require('node:assert/strict'),http=require('node:http'),{handler}=require('../server.cjs');
 (async()=>{const server=http.createServer(handler);await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const base='http://127.0.0.1:'+server.address().port;try{
- for(const path of ['/','/app.js','/viewer-ui.js','/investigator-ui.js','/data/player-history.js'])A.equal((await fetch(base+path)).status,200);
+ for(const path of ['/','/app.js','/match-clock.js','/viewer-ui.js','/investigator-ui.js','/data/player-history.js'])A.equal((await fetch(base+path)).status,200);
  for(const path of ['/.env','/server.cjs','/server/provider.cjs','/server/investigator.cjs','/server/investigator-tools.cjs','/prompts/investigator.txt','/prompts/commentary.txt','/docs/azure-gpt5-mini-deployed.jpg','/docs/context-evaluation.json','/tools/evaluate-context.cjs','/package.json'])A.equal((await fetch(base+path)).status,404,path);
  const reply=await fetch(base+'/api/evidence',{method:'POST',headers:{Origin:'https://unrelated.example','Content-Type':'application/json'},body:'{}'});A.equal(reply.status,403);
  A.equal((await fetch(base+'/api/status')).status,200);

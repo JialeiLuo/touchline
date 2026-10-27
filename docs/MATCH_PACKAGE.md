@@ -1,6 +1,23 @@
-# Match-package input v1
+# Match-package input v1 and v2
 
 Version 1 is a constrained upload contract, not an adapter for arbitrary football-provider exports. Use data/example-match-package.json as the complete runnable example. All supported inputs must be explicitly synthetic. Real reports researched for the event catalogue are not imported as synthetic records.
+
+## Version 2: added-time clock (R1)
+
+New generated matches use `package_version: "2"`. All v1 identity, evidence and resource rules continue, with these time changes:
+
+```json
+"clock": {"version": "1", "periods": [
+  {"period": 1, "start": 0, "regulation_seconds": 2700, "end": 2880},
+  {"period": 2, "start": 2880, "regulation_seconds": 2700, "end": 5820}
+]}
+```
+
+`t` is chronological playing-timeline seconds, excluding the half-time wall-clock break. Each event requires `period: 1` or `2`. Each period begins at its kickoff and ends at its whistle; the half-time marker belongs to period 1. Starts/ends are whole seconds; each half permits 0–900 added seconds as a prototype limit. An extended half requires exactly one `added_time` event at `start + 2700`, with whole-minute `minimum_seconds` not exceeding actual added time. The actual whistle can be later than the announced minimum. The final event must match period 2's declared end. History/report/value availability is bounded by that actual final time rather than 5400.
+
+Example: `t: 2820, period: 1` displays `45+2:00`; `t: 3000, period: 2` displays `47:00` with the clock above. They are different moments. Shift every affected second-half timestamp/availability field consistently when migrating a producer. The API still accepts numeric timeline seconds; only browser inputs use football-clock strings. A full-time report requires the revealed whistle, not a nominal minute threshold.
+
+Version 1 remains supported unchanged and is exported unchanged when loaded. Its original 5400-second limit remains intentional. The saved `data/example-match-package.json` is a legacy compatibility example; the server's generated example and built-in downloads now use v2. See [R1 verification and limits](R1.md). The remaining v1-specific descriptions below apply to legacy inputs.
 
 ## Use
 Start `node --env-file=.env server.cjs` with Node 22+ (or omit --env-file for template fallback). Open http://127.0.0.1:8767/. At Match data, choose a JSON file or Load example package. Download current package exports the package format. The older Download data action also exports a clean package when one is loaded. Generate replay returns to the built-in generator. Switching tabs does not change the match clock.

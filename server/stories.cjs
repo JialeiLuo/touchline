@@ -1,9 +1,10 @@
+const MatchClock=require('../match-clock.js');
 const {buildNarratives,enrichStory}=require('./narrative.cjs');
 const {compose}=require('./compose.cjs');
 /* Supported story candidates with server-owned wording and explicit scopes. */
 const roleName=p=>({RW:'right wing',LW:'left wing',ST:'striker',CM:'central midfield',DM:'defensive midfield',AM:'attacking midfield',CB:'centre-back',RB:'right-back',LB:'left-back',GK:'goalkeeper'}[p]||p);
-const clock=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
-function buildStories(p){
+
+function buildStories(p){const clock=t=>MatchClock.format(p,t);
  const stories=[];
  for(const f of p.facts.filter(f=>f.kind==='The score changed'))stories.push({id:`story-${stories.length+1}`,title:'A goal changes the score',text:f.text,scope:{kind:'selected_interval',...p.interval},scope_label:`Selected interval · ${clock(p.interval.from)}–${clock(p.interval.to)}`,evidence_ids:[f.id],priority:10,essential:true});
  for(const f of p.facts.filter(f=>f.kind==='A dismissal changed the numbers'))stories.push({id:`story-${stories.length+1}`,title:'A dismissal changes the available players',text:f.text,scope:{kind:'selected_interval',...p.interval},scope_label:`Selected interval · ${clock(p.interval.from)}–${clock(p.interval.to)}`,evidence_ids:[f.id],priority:10,essential:true});
@@ -65,8 +66,8 @@ function buildStories(p){
  for(const row of buildNarratives(p))stories.push({...row,id:`story-${stories.length+1}`});
  for(const story of stories){
   enrichStory(story,p);
-  if(p.interval.to>=5400){if(story.scope.kind==='since_substitution')story.title='A substitute’s recorded contribution';if(story.scope.kind==='player_interval')story.title='Recorded player involvement';if(story.title==='A booking adds a duel to follow')story.title='A booking in the recorded play';}
-  if(p.interval.to>=5400&&!story.narrative){for(const key of ['text','quick_text'])if(story[key])story[key]=story[key].split(/(?<=[.!?])\s+/).filter(sentence=>! /^(Watch|Follow|Wait for)\b/.test(sentence)).join(' ').replaceAll('is taking the','took the');}
+  if(p.match_complete===true){if(story.scope.kind==='since_substitution')story.title='A substitute’s recorded contribution';if(story.scope.kind==='player_interval')story.title='Recorded player involvement';if(story.title==='A booking adds a duel to follow')story.title='A booking in the recorded play';}
+  if(p.match_complete===true&&!story.narrative){for(const key of ['text','quick_text'])if(story[key])story[key]=story[key].split(/(?<=[.!?])\s+/).filter(sentence=>! /^(Watch|Follow|Wait for)\b/.test(sentence)).join(' ').replaceAll('is taking the','took the');}
   if(story.essential)story.quick_text=story.text;
   if(!story.quick_text)story.quick_text=story.text.split(/(?<=[.!?])\s+/)[0];
   if(!story.watch_next){if(story.scope.kind==='equal_windows')story.watch_next='Watch whether the passing pattern is followed by more attempts in the next comparable spell.';else if(story.scope.kind==='since_substitution')story.watch_next='Watch the incoming player’s next actions and whether they contribute to an attempt.';else if(story.scope.kind==='complete_sequences')story.watch_next='Watch whether the next possessions reach the attacking third and finish with an attempt.';}

@@ -1,8 +1,8 @@
 /* Deterministic evidence tool. Equal clock windows are descriptive, not causal. */
-function compareWindows(events,{boundary,asOf,window=300,teams}){
+function compareWindows(events,{boundary,asOf,window=300,teams,match_end=events.findLast(e=>e.type==='full_time')?.t??Infinity}){
  if(!Number.isFinite(boundary)||!Number.isFinite(asOf)||!Number.isFinite(window)||window<=0)throw Error('Invalid comparison window');
  const start=boundary-window,end=boundary+window;
- if(start<0||end>5400||asOf<end)return{status:'insufficient_window',boundary,window,available_at:end,observations:[]};
+ if(start<0||end>match_end||asOf<end)return{status:'insufficient_window',boundary,window,available_at:end,observations:[]};
  const visible=events.filter(e=>e.t<=asOf),before=visible.filter(e=>e.t>=start&&e.t<boundary),after=visible.filter(e=>e.t>=boundary&&e.t<end);
  const metrics={shots:e=>e.type==='shot',completed_passes:e=>e.type==='pass'&&e.outcome==='complete'};
  const observations=[];

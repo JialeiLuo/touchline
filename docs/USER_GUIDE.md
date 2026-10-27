@@ -12,19 +12,19 @@ Expand **Why this explanation?** below each story. The facts list links by stabl
 
 Use Play, Next event, Next key moment or the pitch slider. The score, statistics, current lineup and incident visibility follow the replay clock. Rewinding restores the earlier observed state. The pitch shows declared lineup slots with shirt numbers; dots are not live tracking.
 
-Under **Match data & demo settings**, Full synthetic match is the main 90-minute demonstration. The shorter scenario/control/generated phase fixtures are diagnostic examples around a booking, not alternative complete matches. A seed makes pseudorandom generation reproducible. Changing a seed or profile does not guarantee that every visible statistic differs at every moment.
+Under **Match data & demo settings**, Full synthetic match is the main two-half demonstration with added time. The shorter scenario/control/generated phase fixtures are diagnostic examples around a booking, not alternative complete matches. A seed makes pseudorandom generation reproducible. Changing a seed or profile does not guarantee that every visible statistic differs at every moment.
 
 ## Catch up on a chosen interval
 
 1. Reveal the match through the end minute you want to examine.
-2. Choose From and To minutes. The controls step in whole minutes. Recent-interval shortcuts help select the last observed spell.
+2. Choose From and To times: use `66`, `66:30`, `45+2` or `90+4`. `H2 45:00` means second-half kickoff. Recent-interval shortcuts help select the last observed spell.
 3. Choose **Quick catch-up** for a shorter story, or **Tactical detail** for more figures, roles and supporting stories.
 4. Optionally select either team and a player. Player focus takes priority when both are set; goals and dismissals remain protected.
 5. Select **Explain what changed**. Playback pauses while the request is prepared.
 
 The explanation concerns the selected interval. A role comparison may use its explicitly labelled window around an entry; historical records are filtered by their own availability rule. The separate match-so-far summary concerns the whole revealed replay, not just your interval.
 
-If you change the interval, preferences or replay position, the previous explanation is marked as belonging to the old selection. Request another explanation to update it. A future end minute is blocked. **End at current replay minute** keeps your start minute and moves the end back to the replay clock; a pending response is discarded if the selection changes.
+If you change the interval, preferences or replay position, the previous explanation is marked as belonging to the old selection. Request another explanation to update it. A future end minute is blocked. **End at current replay time** keeps your start minute and moves the end back to the replay clock; a pending response is discarded if the selection changes.
 
 **Explain my current selection** requests another explanation using the currently selected interval, focus and style. **Show the events in this interval** (or **Show event recap**) produces a simple list of recorded events without online analysis. It is useful when you want the sequence of recorded events without online selection. Commentary adds selected context when that context is present; it cannot infer arbitrary tactics from sparse events.
 
@@ -57,7 +57,7 @@ JSON means a structured text file containing named fields and lists. It is the i
 | Incident reports, availability times and corrections | No | Explain what was reported and when it became known. |
 | Official rule-reference metadata | No | Link to supported official destinations; a URL alone does not verify an interpretation. |
 
-See [MATCH_PACKAGE.md](MATCH_PACKAGE.md) for exact field names, units and supported types. Current internal team slots are northbridge/southport; display names can be customized. The contract requires completed 90-minute synthetic packages. It does not support arbitrary CSV/provider exports, partial live ingestion, added-time periods, extra time or shootouts.
+See [MATCH_PACKAGE.md](MATCH_PACKAGE.md) for exact field names, units and supported types. Current internal team slots are northbridge/southport; display names can be customized. Version 2 supports two 45-minute halves with added time; version 1 keeps its original 0–90-minute timeline. It does not support arbitrary CSV/provider exports, partial live ingestion, extra time or shootouts.
 
 Limits: 2 MB; 12,000 core events; 200 annotations; 1,000 history records. Eight uploaded packages may be held in server memory for one hour. Restarting means stopping and starting the backend process; doing that clears uploaded packages. These limits protect the small free demo and are not football requirements.
 
@@ -106,3 +106,7 @@ Choose **Explanation approach → Investigate the evidence**, then explain the s
 ## Local refinement: facts and the reading of the play
 
 Explanatory summaries show the recorded facts first, followed by **Reading of the play** and a relevant **Limit or alternative**. Open supporting evidence to inspect sources and the checked claim records. Quick preserves the main pattern; Tactical adds exact counts and denominators. Quiet intervals stay brief; full-time takeaways refer back to the selected scope. Missing data is not presented as zero. See [commentary contracts and limits](GROUNDED_COMMENTARY.md). This refinement remains local until Batch 10.
+
+## Added time and the final whistle
+
+The announced added time is a minimum; keep watching until the actual full-time event. `45+2` and second-half `47` are distinct. The replay clock, selected interval and sources share this interpretation. Use the latest interval/replay-end action to include the exact final added-time seconds. Half-time is clearly marked without a real waiting period.

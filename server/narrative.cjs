@@ -1,9 +1,10 @@
+const MatchClock=require('../match-clock.js');
 /* Composable, source-owned explanation: observed record, reading and alternatives. */
 const ids=claims=>[...new Set(claims.flatMap(c=>c.basis_fact_ids))];
-const clock=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
+
 const role=r=>({RW:'right wing',LW:'left wing',ST:'striker',AM:'attacking midfield',CM:'central midfield',DM:'defensive midfield',CB:'centre-back',RB:'right-back',LB:'left-back',GK:'goalkeeper'}[r]||r);
 function buildNarratives(p){
- const {expectedClaim}=require('./narrative-checks.cjs'),rows=[],full=p.interval.to>=5400;
+ const clock=t=>MatchClock.format(p,t);const {expectedClaim}=require('./narrative-checks.cjs'),rows=[],full=p.match_complete===true;
  const claim=(kind,extra={})=>expectedClaim({kind,...extra},p);
  const add=(row,quick,tactical)=>{row.narrative={quick,tactical};row.quick_text=[quick.fact,quick.reading,quick.alternative].filter(Boolean).join(' ');row.text=[tactical.fact,tactical.reading,tactical.alternative].filter(Boolean).join(' ');row.evidence_ids=ids(row.structured_claims);rows.push(row);};
  function trend(g,team){const pass=g?.observations.find(o=>o.team_id===team&&o.metric==='completed_passes'),shot=g?.observations.find(o=>o.team_id===team&&o.metric==='shots');if(!pass||!shot)return null;

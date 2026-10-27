@@ -1,13 +1,13 @@
 /* Readable source disclosures and inspected-evidence limitations. */
 (function(){
  const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
- const clock=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
- window.renderFactEvidence=function(host,f,packet){
+
+ window.renderFactEvidence=function(host,f,packet){const clock=(t,period)=>MatchClock.format(packet,t,period);
   if(!f){host.append(el('p','The source detail is unavailable in this response.'));return;}
   const item=el('section');item.className='source-fact';item.append(el('p',f.text));
   const events=[...new Set(f.event_ids||[])],history=[...new Set(f.history_ids||[])],reports=[...new Set(f.annotation_ids||[])];
   const records=el('details');records.append(el('summary',`Underlying records · ${events.length} events, ${history.length} history, ${reports.length} reports`));
-  for(const id of events){const event=packet.events?.find(e=>e.id===id);records.append(el('p',event?`${clock(event.t)} · ${event.type.replaceAll('_',' ')} · ${event.text||event.actor_id||'Recorded event'} [${id}]`:`Event reference: ${id}. Its individual description is not included here; the calculated source statement above includes its contribution.`));}
+  for(const id of events){const event=packet.events?.find(e=>e.id===id);records.append(el('p',event?`${clock(event.t,event.period)} · ${event.type.replaceAll('_',' ')} · ${event.text||event.actor_id||'Recorded event'} [${id}]`:`Event reference: ${id}. Its individual description is not included here; the calculated source statement above includes its contribution.`));}
   for(const id of history)records.append(el('p',`Supplied historical record: ${id}. Role history describes the supplied sample, not ability.`));
   for(const id of reports){const report=packet.annotations?.find(a=>a.id===id);records.append(el('p',report?`${report.status} report · available ${clock(report.available_at)} · ${report.source}: ${report.description} [${id}]`:`Report reference: ${id}`));}
   records.append(el('p',`Fact reference: ${f.id}. Comparison windows can include events before the selected interval; only evidence available at the permitted replay time is used.`));item.append(records);host.append(item);

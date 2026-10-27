@@ -1,5 +1,5 @@
 /* Fixed authored fixtures. Expectations are declared independently of production tools. */
-const {simulate}=require('../full-match.js'),{fromReplay}=require('../match-package.js');
+const {simulateLegacy:simulate}=require('../full-match.js'),{fromReplay}=require('../match-package.js');
 function fixture(spec){
  const data=structuredClone(fromReplay(simulate(7)));data.match={id:spec.id,title:spec.id};delete data.history;delete data.xg_sources;
  const players=data.squads.teams.northbridge.players,starter=players.find(p=>p.starting&&p.assigned_position!=='GK'),recipient=players.find(p=>p.starting&&p.id!==starter.id&&p.assigned_position!=='GK'),incoming=players.find(p=>!p.starting);
