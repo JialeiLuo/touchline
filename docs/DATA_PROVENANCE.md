@@ -6,6 +6,6 @@ All match, club, player, manager and role-history examples are fictional. Names 
 
 No real footage or provider dataset is redistributed. Player dots are declared slots, not tracking. Shot outcomes use illustrative probabilities; they are not validated xG. Optional uploaded records remain supplied evidence, not independently verified truth.
 
-The rule catalogue contains a short attributed IFAB excerpt and official links. The current reference records retrieval/version information but is not a complete edition-pinned rules engine. Do not infer an official incident ruling from an annotation.
+The rule catalogue contains short attributed IFAB 2026/27 excerpts, official latest-page links and a 27 October 2026 retrieval label. Links can change edition; this is not a complete rules engine. Do not infer referee correctness from a quotation. Generator version 0.4 supplies authored careless/reckless challenge classifications alongside its existing seeded card outcome; these are fictional test metadata, not contact analysis. No empirical referee model is claimed. Version 0.3 legacy fixtures retain their original metadata/output. Two playing periods exclude the half-time wall-clock break; announced added time is a minimum and the actual whistle can be later.
 
 Published source excludes private Azure configuration, local account screenshots, caches and archives of earlier private working folders. Reproducible source, fixtures, tests and evaluation failures are retained where safe to share.

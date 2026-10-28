@@ -5,3 +5,9 @@ node_modules
 *.log
 
 .runtime
+
+docs
+submission
+releases
+*.zip
+touchline-youtube-thumbnail.png

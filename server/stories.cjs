@@ -66,6 +66,8 @@ function buildStories(p){const clock=t=>MatchClock.format(p,t);
  for(const row of buildNarratives(p))stories.push({...row,id:`story-${stories.length+1}`});
  for(const story of stories){
   enrichStory(story,p);
+  if(story.scope.kind==='since_substitution')story.text+=' Prior role-minute history was not inspected for this account, so it cannot establish familiarity.';
+  if(story.scope.kind==='equal_windows'){story.text+=' Equal clock windows do not isolate the effect of the change.';story.quick_text=story.text.split(/(?<=[.!?])\s+/)[0]+' Equal clock windows do not isolate the effect of the change.';}
   if(p.match_complete===true){if(story.scope.kind==='since_substitution')story.title='A substitute’s recorded contribution';if(story.scope.kind==='player_interval')story.title='Recorded player involvement';if(story.title==='A booking adds a duel to follow')story.title='A booking in the recorded play';}
   if(p.match_complete===true&&!story.narrative){for(const key of ['text','quick_text'])if(story[key])story[key]=story[key].split(/(?<=[.!?])\s+/).filter(sentence=>! /^(Watch|Follow|Wait for)\b/.test(sentence)).join(' ').replaceAll('is taking the','took the');}
   if(story.essential)story.quick_text=story.text;

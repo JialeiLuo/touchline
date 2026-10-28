@@ -1,3 +1,5 @@
+> Historical planning/review document. The authoritative final scope, implemented changes and remaining release checks are in [FINAL_CANDIDATE.md](FINAL_CANDIDATE.md).
+
 # Touchline coverage review — 26 October 2026
 
 > Historical snapshot: current local capabilities and remaining work are reconciled in [the 27 October pre-release review](PRE_RELEASE_REVIEW.md). In particular, bounded model-selected investigation and supplied/illustrative shot-value analysis are now implemented. This file is not the final release manifest.

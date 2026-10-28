@@ -4,7 +4,7 @@
  // Preserve existing view visibility handlers: move their original nodes rather than clone them.
  main.prepend(tag,title,intro);$('viewerGettingStarted')?.remove();
  intro.textContent='Missed a spell? Find out what changed, check the evidence, and follow the players you care about. This is a fictional match replay.';
- $('guidedExampleHelp').textContent='Start with the example: it prepares minutes 55–66 and follows substitute Ellis. Then choose Explain what changed. Nothing is sent for online analysis until you ask.';
+ $('guidedExampleHelp').textContent='Start with the example: it prepares a short Quick catch-up for minutes 55–66 and follows substitute Ellis. Then choose Explain what changed. Nothing is sent for online analysis until you ask.';
  // Reuse the existing English definitions instead of opening Chinese definitions by default.
  GLOSSARY_LANGUAGES.en={label:'English',terms:Object.fromEntries(Object.keys(definitions).map(k=>[k,k])),definitions:{...definitions},name_note:'Fictional player or club in this prototype.'};
  const english=document.createElement('option');english.value='en';english.textContent='English';$('language').prepend(english);$('language').value='en';$('language').dispatchEvent(new Event('change',{bubbles:true}));

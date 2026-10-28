@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-10-27T23:59:07.058Z",
+  "method": "Deterministic recomposition of recorded model selection; no new model calls. The live attempt remains unchanged.",
+  "original_failed_checks": [
+    "history_limit_or_provenance",
+    "causal_limit"
+  ],
+  "source_hash": "1e7f2657a4c2149ea81e9dc3262ab4b8c311a0eb782874f4ab2d72ca925a0a52",
+  "metrics": {
+    "words": 112,
+    "paragraphs": 3,
+    "reference_occurrences": 6,
+    "typed_claims": {
+      "claims": 0,
+      "passed": 0,
+      "error": null
+    },
+    "checks": [
+      {
+        "name": "valid_fact_references",
+        "passed": true
+      },
+      {
+        "name": "essential_incidents",
+        "passed": true
+      },
+      {
+        "name": "mode_paragraph_limit",
+        "passed": true
+      },
+      {
+        "name": "no_future_event_reference",
+        "passed": true
+      },
+      {
+        "name": "history_limit_or_provenance",
+        "passed": true,
+        "detail": {
+          "passage": "Prior role-minute history was not inspected for this account, so it cannot establish familiarity."
+        }
+      },
+      {
+        "name": "activity_comparison",
+        "passed": true,
+        "detail": {
+          "passage": "No shot by the substitute is recorded after coming on in this interval."
+        }
+      },
+      {
+        "name": "causal_limit",
+        "passed": true,
+        "detail": {
+          "passage": "Equal clock windows do not isolate the effect of the change."
+        }
+      },
+      {
+        "name": "conflicting_signals",
+        "passed": true,
+        "detail": {
+          "passage": "Northbridge completed more passes after the recorded change, but that activity did not come with more shots."
+        }
+      },
+      {
+        "name": "typed_claim_support",
+        "passed": true
+      },
+      {
+        "name": "no_explicit_causal_overclaim",
+        "passed": true,
+        "detail": {
+          "passages": []
+        }
+      }
+    ],
+    "passed": true,
+    "relevance_proxy": {
+      "passed": true,
+      "scope": "Fixture-specific lexical coverage checks; not a semantic correctness or fan usefulness score."
+    },
+    "semantic_review": "pending independent review",
+    "limitations_in_output": true
+  },
+  "output": {
+    "headline": "A new player, with a role to follow",
+    "paragraphs": [
+      {
+        "text": "Northbridge introduced Ellis for Morgan at 10:00. Ellis usually plays ST, but inherited the declared CM role. No shot by the substitute is recorded after coming on in this interval. Prior role-minute history was not inspected for this account, so it cannot establish familiarity.",
+        "evidence_ids": [
+          "fact-3",
+          "fact-2"
+        ],
+        "scope_label": "Substitute contribution · 10:00–15:50",
+        "origin_story_ids": [
+          "story-2"
+        ]
+      },
+      {
+        "text": "Northbridge completed more passes after the recorded change, but that activity did not come with more shots. Completed passes went from 1 to 3; shots fell from 2 to 0. This is more passing activity, without an increase in recorded attempts. Equal clock windows do not isolate the effect of the change.",
+        "evidence_ids": [
+          "fact-4",
+          "fact-5"
+        ],
+        "scope_label": "Before 5:00–10:00 · after 10:00–15:00",
+        "origin_story_ids": [
+          "story-3"
+        ]
+      },
+      {
+        "text": "Northbridge–Southport stayed at 0–0 during your selected interval. Northbridge took 2 shots and Southport took 0.",
+        "evidence_ids": [
+          "fact-11",
+          "fact-1"
+        ],
+        "scope_label": "Selected interval · 5:00–15:50",
+        "origin_story_ids": [
+          "story-4"
+        ]
+      }
+    ],
+    "watch_label": "What to watch next",
+    "watch_next": "Watch the incoming player’s next actions and whether they contribute to an attempt.",
+    "limitations": [
+      "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+      "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+    ],
+    "composition": "selected-stories",
+    "commentary_contract": "batch6-v1",
+    "word_count": 112,
+    "word_limit": 280,
+    "length_exception": null
+  }
+}

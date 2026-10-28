@@ -2,7 +2,7 @@
 const pitchSvg=document.querySelector('svg.pitch'),pitchGroup=$('declaredPlayers');
 const pitchControls=document.createElement('div');pitchControls.className='toolbar';
 const pitchToggle=document.createElement('input');pitchToggle.type='checkbox';pitchToggle.id='showDeclared';pitchToggle.checked=true;
-const pitchLabel=document.createElement('label');pitchLabel.htmlFor=pitchToggle.id;pitchLabel.textContent='Show declared team positions';pitchControls.append(pitchToggle,pitchLabel);pitchSvg.before(pitchControls);
+const pitchLabel=document.createElement('label');pitchLabel.htmlFor=pitchToggle.id;pitchLabel.textContent='Show team formation';pitchControls.append(pitchToggle,pitchLabel);pitchSvg.before(pitchControls);
 function svgNode(tag,attrs){const el=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);return el;}
 function drawEventPitch(){
  const full=$('scenario').value==='full',data=active(),event=data.events[index],label=$('eventActor');pitchGroup.replaceChildren();pitchControls.hidden=!full;

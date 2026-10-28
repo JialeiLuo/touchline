@@ -1,50 +1,14 @@
-# Judge testing instructions
+# Test Touchline 0.6.0
 
-## Public demo — no login or payment
+These instructions describe the local final candidate. Public access is not yet verified for this build. Run Node 22+ `npm start`, then open http://127.0.0.1:8767. No account or key is required for local reports/calculations. A configured server can use Microsoft Foundry with a labelled local fallback.
 
-Open https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/ in a desktop or mobile browser. Free hosting may take a little time to start. Refresh if the initial load stalls.
+1. Select **Try the substitution example**, then **Explain what changed**. Read the Quick takeaway for 55–66 minutes, following Ellis. Open **Why this explanation?** to find its sources. The 20 of 305 minutes means 20 minutes in the relevant role within 305 supplied historical minutes, not an ability rating.
+2. Choose Tactical and select **Explain what changed** again. It adds figures, comparisons and limits. Clear player focus to compare both teams. Changing controls marks old results stale; it does not silently request more AI work.
+3. Open **Read a full report**. Choose Selected spell, then Write report. Inspect paragraph sources and Download report text. Choose Match so far for kickoff through the revealed position. Full-time report remains disabled until the actual whistle.
+4. Open **Decisions & added time**, then **Explain this decision** on a recorded incident. Inspect input facts, short law quotation, section/edition/link, explanation and any material missing details. A generic card must not be labelled reckless just because it is yellow.
+5. Move the replay to the end. Seed 7 ends at 90+4:30 and contains an added-time equalizer. Generate the full-time report and confirm that late goal and final score appear. First-half added time and second-half minutes use separate periods; half-time does not require waiting 15 minutes.
+6. Request an interval after the replay. Follow the recovery message or use Latest 5 minutes. Earlier commentary/report must be marked stale. Changing language affects supported glossary definitions; the interface stays English.
+7. Open Match data & demo settings, download the current synthetic package, then load it through upload. Equivalent revealed evidence should agree. Version 2 has clock periods; old version 1 retains its old contract. Expired packages require reload.
+8. On a phone-width screen, use the same example, a source disclosure, a report and a decision card. Use Tab/Enter to open disclosures. Formation dots show declared shape, never real-time tracking.
 
-1. Select **Try the substitution example**. The replay moves to minute 66 and selects minutes 55–66, Tactical style and Ellis.
-2. Select **Explain what changed**. Expect a role-history story connecting Ellis's declared wing role with the supplied 20/305 prior role minutes. Other supporting stories may differ because the model ranks a catalogue.
-3. Expand **Inspect supporting evidence** and **Explore the play behind this explanation**. Check the history records, comparison windows and other changes. No causal effect is claimed.
-4. Repeat the same explanation. A cache notice should appear without another model call.
-5. Select **Quick catch-up**, then explain again. The same evidence produces shorter wording. Team/player focus changes relevance, not the facts.
-6. Change the interval. The old result is flagged; an end beyond the revealed clock disables the main request. **Show event recap** opens a local summary without a model call.
-7. Open **Teams & lineups**, select a player and use **Follow this player in commentary**. Starting XI and current personnel share the replay clock.
-8. Change **Glossary language**, then click a highlighted term. Definitions use the selected language. Supported languages are Chinese, Spanish, French, German, Portuguese and Japanese.
-9. Under **Match data & demo settings**, load the example or upload `data/example-match-package.json`. Move the slider past minutes 33 and 34 to see a reported incident become corrected, with the official-rule excerpt kept separate from incident facts.
-
-Everything is fictional. The public demo has conservative usage controls to preserve student credit. A local-commentary label means Foundry was not used for that response; replay and calculations still work. Uploads expire after one hour or a server restart. Do not upload personal information.
-
-## Reproduce locally
-
-Install Node.js 22 or newer, clone this repository and run:
-
-```sh
-npm start
-npm test
-npm run evaluate
-node tools/evaluate-product.cjs
-```
-
-Open `http://127.0.0.1:8767/`. No dependencies need installing. Without private Azure configuration, explanations use the labelled local path. For online ranking, copy `.env.example` to `.env` and privately configure your own Foundry deployment. Never commit secrets. No key belonging to the entrant is provided in the repository.
-
-Read docs/MATCH_PACKAGE.md for the JSON schema, docs/DATA_PROVENANCE.md for generation, and docs/PRODUCT_EVALUATION.md for recorded results and limitations. Optional live evaluation scripts consume model credit and are not part of `npm test`.
-
-## Demonstration video
-
-Watch the 1:48 English-narrated walkthrough: https://youtu.be/9JvQMpAhdpA
-
-For first-time viewers, see [the detailed user guide](docs/USER_GUIDE.md). For evidence against each judging prompt and the complete idea backlog, see [coverage review](docs/COVERAGE_REVIEW.md).
-
-## Fan journey browser check (Batch 7)
-
-Run `npm run check:fan` with Playwright and Chrome installed. The check starts a temporary local server with Foundry disabled, so it does not spend model credits. Set `TOUCHLINE_PLAYWRIGHT` to an alternate Playwright module path or `TOUCHLINE_BROWSER` to a compatible Chromium executable when needed. It tests interval boundaries, preference changes during a delayed request, connection failure recovery, upload expiry, glossary access, lineup player focus and a 390px layout. See [the Batch 7 report](docs/BATCH_7.md) for scope and limits.
-
-## Comparative evaluation (Batch 8)
-
-`npm run evaluate:comparative -- --split=all` runs the offline 27-case/mode matrix. Live comparison requires explicit `--live`, configuration and bounded Azure credit; follow [the method and reproducible commands](docs/COMPARATIVE_EVALUATION.md). `node tools/audit-comparative.cjs` checks saved paired inputs, grades, usage and source provenance without model calls. `node tools/review-comparative.cjs` regenerates the shuffled review packet and separate key. The original comparison and later targeted repairs are separate artifacts; neither substitutes for independent review or fan usability testing.
-
-## Usability review candidate (Batch 9)
-
-`npm run check:usability` runs a builder browser walkthrough with no model calls and saves separate Batch 9 artifacts. Use [the participant task sheet](docs/BATCH_9_PARTICIPANT_TASKS.md) on the current local review build for real first-time feedback. Record actual responses in [the participant results](docs/BATCH_9_RESULTS.md); passing browser checks is not participant evidence.
+Automated verification: `npm test`; `npm run evaluate:comparative`; browser tools in `tools/check-final.cjs`, `tools/check-reports.cjs`, `tools/check-clock.cjs` and `tools/check-usability.cjs` require Playwright and Chrome. Live comparison is opt-in and bounded. See docs/FINAL_CANDIDATE.md for actual results and limitations.

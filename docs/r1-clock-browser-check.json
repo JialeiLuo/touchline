@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-27T16:30:37.240Z",
+  "checked_at": "2026-10-28T00:00:47.657Z",
   "checks": [
     "First-half 45+2 is distinct from unrevealed second-half 47:00",
     "Half-time has its own period; second-half shortcut starts at its actual kickoff",
@@ -12,11 +12,11 @@
   "model_calls": 0,
   "source_hashes": {
     "match-clock.js": "670cf8ba7efa0c9855384424d4a0af0a9e857e70132130c7b74337926927faba",
-    "full-match.js": "76c3c2f2ad1bbe145432a8e0f2be88ddd0d352f9b1cac12a411b9b4914fe8077",
-    "match-package.js": "50210022a6786cd47bcbc9068f2eb18868b6f3a9aaec12bb55975a2af5a145ec",
+    "full-match.js": "289094d9db54e0cb5d82a4263f68de38dbaba41e8b65fc98d02d09dca5829abe",
+    "match-package.js": "9283d9c65725c4205a1ab1f6530fea56eb81b0ef4170c958666212f747fc44fa",
     "app.js": "9b3b2414fccf8c140aa81ef75539a27e491b10d9f22a10c2c8819ef702b7a67b",
     "fan-ui.js": "e6bcc8e7cb76ae350331ec06e281e2071aacb33093540f23f8efee0b270576c9",
-    "product-ui.js": "7cd15f49fb7b9d39bc2b8efbd8000aea548452a7d31e3e85c5fc95b10d06948f"
+    "product-ui.js": "584a6473c13c1beb6049d65a700dfefaf691fb2ddfa986505782339a6a7a696b"
   },
   "limitations": "Builder browser acceptance and local fallback, not participant or live-model quality evaluation."
 }

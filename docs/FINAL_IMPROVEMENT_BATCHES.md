@@ -1,6 +1,6 @@
 # Final improvement batches before release
 
-27 October 2026. Batch 9 remains complete. R1–R6 are new local refinement batches before existing Batch 10 (public release) and Batch 11 (video/submission). R1 and R2 are now completed locally; see [clock verification](R1.md) and [prose reports](R2.md). R3–R6 remain planned. No publication is authorized by this planning request.
+27 October 2026. Batch 9 remains complete. R1–R6 are new local refinement batches before existing Batch 10 (public release) and Batch 11 (video/submission). R1 and R2 are now completed locally; see [clock verification](R1.md) and [prose reports](R2.md). R3–R6 are implemented and locally checked in the final candidate; see [completion evidence](FINAL_CANDIDATE.md). This local implementation pass does not publish or change access.
 
 ## Product direction
 
@@ -27,7 +27,7 @@ Write an opening overview, the important passages in order, relevant player/team
 
 ## Current rule-reference status
 
-`data/rules.js` currently contains one curated dissent excerpt. `package-ui.js` renders law references attached to incident annotations; it does not map every generated foul to a specific provision. Generic generated fouls lack the detail necessary for that classification. Consequently the original law-explanation idea is only partially implemented.
+Historical pre-R3 status: `data/rules.js` contained one curated dissent excerpt. `package-ui.js` renders law references attached to incident annotations; it does not map every generated foul to a specific provision. Generic generated fouls lack the detail necessary for that classification. Consequently the original law-explanation idea is only partially implemented.
 
 For user experience, every supported incident may expose an optional rule explanation, but a long quotation should not interrupt every ordinary foul. Separate the recorded event, recorded official decision, relevant law and what the available data cannot establish. A football rule quotation is not independent proof that the referee's decision was correct.
 

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-27T23:44:12.944Z",
+  "checked_at": "2026-10-28T00:00:44.360Z",
   "checks": [
     "Optional selected-spell prose report keeps short commentary intact and full time locked",
     "Paragraph sources, glossary and text download work without technical settings",
@@ -14,8 +14,8 @@
   "source_hashes": {
     "server/reports.cjs": "54a14a2aee534ffc4c3a680139c7150515e940b75dc3656fb207f7a8ea1379a8",
     "report-ui.js": "b922280926d473b74622a138130b220fa3ef48ba5721996e87fb2b86698083ae",
-    "server.cjs": "0b820b91605c3e5f9fd38c2091ac1d46abb488db9b770022585c3bb4d789ec0b",
-    "index.html": "d706a29c576217cc4125a7e383e518bece9d4261c6fbbcde661320306ad82a20"
+    "server.cjs": "fc737042b5742a9858d4ff627d5399eab3ea30952ec991b0d49150f53c136a74",
+    "index.html": "eb780eead001357d77bd2951383e6f9e1a334ac8c70c548615bca5c88a1b5560"
   },
   "limitations": "Builder/browser review with local fallback and controlled failures. Not independent fan testing or live-model quality evaluation."
 }

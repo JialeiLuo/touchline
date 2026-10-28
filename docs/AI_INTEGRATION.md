@@ -1,13 +1,11 @@
-# Microsoft Foundry integration
+# Microsoft Foundry integration — 0.6.0
 
-The backend calls an Azure OpenAI v1 Responses endpoint configured through environment variables in `.env.example`. The private local `.env` is excluded from source export. Requests use a server-held API key; no key is sent to visitors.
+The private server reads AZURE_FOUNDRY_BASE_URL, AZURE_FOUNDRY_API_KEY and AZURE_FOUNDRY_DEPLOYMENT from environment configuration. `.env.example` documents their shape; `.env` must remain private. Start with Node 22+ `npm start`. Without configuration, evidence calculations, local commentary, law cards and local prose reports remain usable.
 
-For supported stories, the model ranks bounded candidate IDs. The server assembles wording, figures, time scopes and citations and applies player/team focus plus major-event coverage. This is not autonomous tool calling or a multi-agent system. A legacy guarded prose route remains when candidates are absent.
+The default single investigator selects validated read-only tools and inspected stories. Its loop has stopping conditions, follow-ups, invalid-call recovery and a compact trace, bounded to 4 model calls, 6 tool invocations and 22 seconds. The alternative ranker selects story IDs in one request. Deterministic calculations and controlled composition retain ownership of displayed facts and source references.
 
-Provider failure, invalid selection or absent configuration returns a labeled local fallback. The integration uses a timeout and limits output tokens. Live calls consume Azure credit; Codex subscription usage is separate.
+Long reports have a separate one-call context selector, at most 12 seconds and 800 output tokens, with 24KB request, 64KB response and a conservative 26,000-token reservation estimate. Source-owned prose is then composed locally; it is not unrestricted model-written journalism. No retry loop is hidden in the report path.
 
-See TESTING.md for optional live checks and DEPLOYMENT.md for launch prerequisites. Public inference usage controls and billing reconciliation remain outstanding.
+Shared controls include per-address request limits, one online request at a time, a persisted daily/total call ledger and successful-result cache. Calls consume allowance even when providers fail; repeated unconfigured/local reports do not consume model calls. These are application safeguards, not an account dollar cap. Verify persistent hosting storage, model deployment availability and Azure budget/access before public release. No browser key is needed or exposed.
 
-## Batch 5 local refinement
-
-The current local investigator path adds real function calling through Microsoft Foundry, validated read-only evidence queries, follow-ups and explicit stopping. The earlier ranker description remains accurate for `analysis_mode: rank` and the older public release. See [investigator design and bounds](BOUNDED_INVESTIGATOR.md) and [verification evidence](BATCH_5.md).
+Final live attempts and their failures, calls, usage and timing are retained in docs/final-live-comparison.json. Earlier batch reports remain historical. Costs use explicitly dated illustrative list-price assumptions and cannot establish deployment billing.

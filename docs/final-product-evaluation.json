@@ -1,0 +1,4246 @@
+{
+  "generated_at": "2026-10-28T00:00:04.812Z",
+  "cases": 288,
+  "passed": 288,
+  "method": "12 fixed seeds, four intervals, two verbosity levels, three team focuses; deterministic local ranking. All cases retained.",
+  "checks": [
+    "nonempty supported story coverage",
+    "paragraph budget",
+    "all goals and dismissals retained",
+    "source IDs exist",
+    "no event source later than selected interval end",
+    "team focus represented where available without mandatory incidents"
+  ],
+  "examples": [
+    {
+      "case": "mixed passing and attempts",
+      "input": {
+        "name": "mixed passing and attempts",
+        "from": 2400,
+        "to": 3000
+      },
+      "output": {
+        "headline": "Passing and shooting tell different stories",
+        "paragraphs": [
+          {
+            "text": "Northbridge completed 18 passes before and 22 after the change; shots went from 2 to 0. Both windows cover equal match-clock time. More completed passing did not come with more recorded attempts. Score state, personnel and unmeasured play can also influence activity; these counts do not isolate an effect.",
+            "evidence_ids": [
+              "fact-5",
+              "fact-6"
+            ],
+            "scope_label": "Equal windows 40:00–50:00",
+            "origin_story_ids": [
+              "story-8"
+            ],
+            "parts": {
+              "fact": "Northbridge completed 18 passes before and 22 after the change; shots went from 2 to 0. Both windows cover equal match-clock time.",
+              "reading": "More completed passing did not come with more recorded attempts.",
+              "alternative": "Score state, personnel and unmeasured play can also influence activity; these counts do not isolate an effect."
+            },
+            "structured_claims": [
+              {
+                "kind": "team_change",
+                "trigger_id": "full-v04-7-612",
+                "team_id": "northbridge",
+                "from": 2400,
+                "boundary": 2700,
+                "to": 3000,
+                "metrics": [
+                  {
+                    "metric": "shots",
+                    "before": 2,
+                    "after": 0,
+                    "direction": "decreased"
+                  },
+                  {
+                    "metric": "completed_passes",
+                    "before": 18,
+                    "after": 22,
+                    "direction": "increased"
+                  }
+                ],
+                "basis_fact_ids": [
+                  "fact-5",
+                  "fact-6"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Southport completed 17 passes before and 16 after the change; shots went from 0 to 0. Both windows cover equal match-clock time. The activity measures do not point to a single improvement.",
+            "evidence_ids": [
+              "fact-7",
+              "fact-8"
+            ],
+            "scope_label": "Equal windows 40:00–50:00",
+            "origin_story_ids": [
+              "story-9"
+            ],
+            "parts": {
+              "fact": "Southport completed 17 passes before and 16 after the change; shots went from 0 to 0. Both windows cover equal match-clock time.",
+              "reading": "The activity measures do not point to a single improvement.",
+              "alternative": ""
+            },
+            "structured_claims": [
+              {
+                "kind": "team_change",
+                "trigger_id": "full-v04-7-612",
+                "team_id": "southport",
+                "from": 2400,
+                "boundary": 2700,
+                "to": 3000,
+                "metrics": [
+                  {
+                    "metric": "shots",
+                    "before": 0,
+                    "after": 0,
+                    "direction": "unchanged"
+                  },
+                  {
+                    "metric": "completed_passes",
+                    "before": 17,
+                    "after": 16,
+                    "direction": "decreased"
+                  }
+                ],
+                "basis_fact_ids": [
+                  "fact-7",
+                  "fact-8"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Northbridge's 2 shots carried 0.33 pre-shot xG in total, or 0.16 per shot, with 0 linked goals. These are simulator illustrations, not calibrated professional xG. Source: Touchline simulator illustration (1). Goals and chance values describe different things; this does not establish who deserved to win.",
+            "evidence_ids": [
+              "fact-9"
+            ],
+            "scope_label": "Supplied pre-shot values · 40:00–50:00",
+            "origin_story_ids": [
+              "story-4"
+            ],
+            "structured_claims": [
+              {
+                "kind": "chance_values",
+                "team_id": "northbridge",
+                "source_id": "touchline-illustrative-v1",
+                "shots": 2,
+                "total": 0.3276914776768535,
+                "mean": 0.16384573883842676,
+                "goals": 0,
+                "basis_fact_ids": [
+                  "fact-9"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Southport had 12 complete sequences: 0 reached the attacking third, 0 included a shot, and 4 ended in an early failed action. Completed passing did not carry these sequences into the attacking third. The denominator excludes boundary-crossing and unfinished sequences; off-ball play is not measured.",
+            "evidence_ids": [
+              "fact-11"
+            ],
+            "scope_label": "Complete sequences only · 40:00–50:00 · crossing/unfinished sequences excluded",
+            "origin_story_ids": [
+              "story-3"
+            ],
+            "parts": {
+              "fact": "Southport had 12 complete sequences: 0 reached the attacking third, 0 included a shot, and 4 ended in an early failed action.",
+              "reading": "Completed passing did not carry these sequences into the attacking third.",
+              "alternative": "The denominator excludes boundary-crossing and unfinished sequences; off-ball play is not measured."
+            },
+            "structured_claims": [
+              {
+                "kind": "sequence_summary",
+                "team_id": "southport",
+                "from": 2400,
+                "to": 3000,
+                "counts": {
+                  "complete_sequences": 12,
+                  "attacking_third_entries": 0,
+                  "shot_sequences": 0,
+                  "early_losses": 4
+                },
+                "coverage": {
+                  "included": 12,
+                  "boundary_crossing": 0,
+                  "unfinished": 0,
+                  "denominator": "complete recorded sequences wholly inside the interval"
+                },
+                "basis_fact_ids": [
+                  "fact-11"
+                ]
+              }
+            ]
+          }
+        ],
+        "watch_label": "What to watch next",
+        "watch_next": "Watch whether the next comparable spell adds attempts as well as completed passes.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "selected-stories",
+        "commentary_contract": "batch6-v1",
+        "word_count": 171,
+        "word_limit": 280,
+        "length_exception": null,
+        "mode": "template",
+        "reason": "Local baseline"
+      },
+      "candidate_titles": [
+        "More passing, without more attempts",
+        "Where the attacks reached",
+        "Possession staying short of advanced territory",
+        "Illustrative chance values",
+        "The score held — here is the spell",
+        "A booking adds a duel to follow",
+        "A declared change of shape",
+        "Passing and shooting tell different stories",
+        "Activity around the recorded change"
+      ]
+    },
+    {
+      "case": "role-history substitution",
+      "input": {
+        "name": "role-history substitution",
+        "from": 3300,
+        "to": 3960,
+        "player_focus": "Ellis"
+      },
+      "output": {
+        "headline": "What changed after the substitution",
+        "paragraphs": [
+          {
+            "text": "Ellis takes the right wing role. In 5 supplied past match records, 20 of 305 total minutes were in this role. These are past-match minutes, not minutes in this match. The outgoing player completed 4/4 passes and took 0 shots; Ellis completed 1/3 and took 0. On-pitch exposure was 300s and 300s respectively. The team’s recorded passing and shooting counts were unchanged across these equal windows. Other recorded changes overlap the windows, so the substitution’s effect cannot be isolated.",
+            "evidence_ids": [
+              "fact-18",
+              "fact-10",
+              "fact-11"
+            ],
+            "scope_label": "History at 60:40 · equal windows 55:40–65:40",
+            "origin_story_ids": [
+              "story-14"
+            ],
+            "parts": {
+              "fact": "Ellis takes the right wing role. In 5 supplied past match records, 20 of 305 total minutes were in this role. These are past-match minutes, not minutes in this match. The outgoing player completed 4/4 passes and took 0 shots; Ellis completed 1/3 and took 0. On-pitch exposure was 300s and 300s respectively.",
+              "reading": "The team’s recorded passing and shooting counts were unchanged across these equal windows.",
+              "alternative": "Other recorded changes overlap the windows, so the substitution’s effect cannot be isolated."
+            },
+            "structured_claims": [
+              {
+                "kind": "history_share",
+                "player_id": "Ellis",
+                "assigned_position": "RW",
+                "role_minutes": 20,
+                "minutes": 305,
+                "records": 5,
+                "status": "limited_sample",
+                "known_at": 3640.2,
+                "basis_fact_ids": [
+                  "fact-18"
+                ]
+              },
+              {
+                "kind": "player_windows",
+                "player_id": "Ellis",
+                "status": "ready",
+                "before": {
+                  "completed": 4,
+                  "passes": 4,
+                  "shots": 0,
+                  "seconds": 300
+                },
+                "after": {
+                  "completed": 1,
+                  "passes": 3,
+                  "shots": 0,
+                  "seconds": 300
+                },
+                "from": 3340.2,
+                "boundary": 3640.2,
+                "to": 3940.2,
+                "basis_fact_ids": [
+                  "fact-18"
+                ]
+              },
+              {
+                "kind": "concurrent_changes",
+                "player_id": "Ellis",
+                "count": 1,
+                "event_ids": [
+                  "full-v04-7-827"
+                ],
+                "basis_fact_ids": [
+                  "fact-18"
+                ]
+              },
+              {
+                "kind": "team_change",
+                "trigger_id": "full-v04-7-832",
+                "team_id": "northbridge",
+                "from": 3340.2,
+                "boundary": 3640.2,
+                "to": 3940.2,
+                "metrics": [
+                  {
+                    "metric": "shots",
+                    "before": 0,
+                    "after": 0,
+                    "direction": "unchanged"
+                  },
+                  {
+                    "metric": "completed_passes",
+                    "before": 21,
+                    "after": 21,
+                    "direction": "unchanged"
+                  }
+                ],
+                "basis_fact_ids": [
+                  "fact-10",
+                  "fact-11"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Duarte takes the right wing role. In 5 supplied past match records, 305 of 305 total minutes were in this role. These are past-match minutes, not minutes in this match. The outgoing player completed 2/2 passes and took 0 shots; Duarte completed 1/1 and took 0. On-pitch exposure was 300s and 300s respectively. Both completed passing and shooting activity declined across these windows.",
+            "evidence_ids": [
+              "fact-17",
+              "fact-8",
+              "fact-9"
+            ],
+            "scope_label": "History at 60:23 · equal windows 55:23–65:23",
+            "origin_story_ids": [
+              "story-13"
+            ],
+            "parts": {
+              "fact": "Duarte takes the right wing role. In 5 supplied past match records, 305 of 305 total minutes were in this role. These are past-match minutes, not minutes in this match. The outgoing player completed 2/2 passes and took 0 shots; Duarte completed 1/1 and took 0. On-pitch exposure was 300s and 300s respectively.",
+              "reading": "Both completed passing and shooting activity declined across these windows.",
+              "alternative": ""
+            },
+            "structured_claims": [
+              {
+                "kind": "history_share",
+                "player_id": "Duarte",
+                "assigned_position": "RW",
+                "role_minutes": 305,
+                "minutes": 305,
+                "records": 5,
+                "status": "recorded_experience",
+                "known_at": 3623.4,
+                "basis_fact_ids": [
+                  "fact-17"
+                ]
+              },
+              {
+                "kind": "player_windows",
+                "player_id": "Duarte",
+                "status": "ready",
+                "before": {
+                  "completed": 2,
+                  "passes": 2,
+                  "shots": 0,
+                  "seconds": 300
+                },
+                "after": {
+                  "completed": 1,
+                  "passes": 1,
+                  "shots": 0,
+                  "seconds": 300
+                },
+                "from": 3323.4,
+                "boundary": 3623.4,
+                "to": 3923.4,
+                "basis_fact_ids": [
+                  "fact-17"
+                ]
+              },
+              {
+                "kind": "concurrent_changes",
+                "player_id": "Duarte",
+                "count": 1,
+                "event_ids": [
+                  "full-v04-7-832"
+                ],
+                "basis_fact_ids": [
+                  "fact-17"
+                ]
+              },
+              {
+                "kind": "team_change",
+                "trigger_id": "full-v04-7-827",
+                "team_id": "southport",
+                "from": 3323.4,
+                "boundary": 3623.4,
+                "to": 3923.4,
+                "metrics": [
+                  {
+                    "metric": "shots",
+                    "before": 1,
+                    "after": 0,
+                    "direction": "decreased"
+                  },
+                  {
+                    "metric": "completed_passes",
+                    "before": 17,
+                    "after": 12,
+                    "direction": "decreased"
+                  }
+                ],
+                "basis_fact_ids": [
+                  "fact-8",
+                  "fact-9"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Southport's 1 shots carried 0.15 pre-shot xG in total, or 0.15 per shot, with 0 linked goals. These are simulator illustrations, not calibrated professional xG. Source: Touchline simulator illustration (1). Goals and chance values describe different things; this does not establish who deserved to win.",
+            "evidence_ids": [
+              "fact-14"
+            ],
+            "scope_label": "Supplied pre-shot values · 55:00–66:00",
+            "origin_story_ids": [
+              "story-11"
+            ],
+            "structured_claims": [
+              {
+                "kind": "chance_values",
+                "team_id": "southport",
+                "source_id": "touchline-illustrative-v1",
+                "shots": 1,
+                "total": 0.15050267723689859,
+                "mean": 0.15050267723689859,
+                "goals": 0,
+                "basis_fact_ids": [
+                  "fact-14"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Northbridge had 15 complete sequences: 1 reached the attacking third, 0 included a shot, and 10 ended in an early failed action. Reaching advanced territory did not produce a recorded shot within these complete sequences. The denominator excludes boundary-crossing and unfinished sequences; off-ball play is not measured.",
+            "evidence_ids": [
+              "fact-15"
+            ],
+            "scope_label": "Complete sequences only · 55:00–66:00 · crossing/unfinished sequences excluded",
+            "origin_story_ids": [
+              "story-9"
+            ],
+            "parts": {
+              "fact": "Northbridge had 15 complete sequences: 1 reached the attacking third, 0 included a shot, and 10 ended in an early failed action.",
+              "reading": "Reaching advanced territory did not produce a recorded shot within these complete sequences.",
+              "alternative": "The denominator excludes boundary-crossing and unfinished sequences; off-ball play is not measured."
+            },
+            "structured_claims": [
+              {
+                "kind": "sequence_summary",
+                "team_id": "northbridge",
+                "from": 3300,
+                "to": 3960,
+                "counts": {
+                  "complete_sequences": 15,
+                  "attacking_third_entries": 1,
+                  "shot_sequences": 0,
+                  "early_losses": 10
+                },
+                "coverage": {
+                  "included": 15,
+                  "boundary_crossing": 0,
+                  "unfinished": 1,
+                  "denominator": "complete recorded sequences wholly inside the interval"
+                },
+                "basis_fact_ids": [
+                  "fact-15"
+                ]
+              }
+            ]
+          }
+        ],
+        "watch_label": "What to watch next",
+        "watch_next": "Watch Ellis's next recorded involvement in the right wing role and whether the team’s possessions lead to attempts.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "selected-stories",
+        "commentary_contract": "batch6-v1",
+        "word_count": 234,
+        "word_limit": 280,
+        "length_exception": null,
+        "mode": "template",
+        "reason": "Local baseline"
+      },
+      "candidate_titles": [
+        "Following Ellis",
+        "A role the substitute has played before",
+        "Limited role experience in supplied records",
+        "A new player, with a role to follow",
+        "A new player, with a role to follow",
+        "More passing, without more attempts",
+        "Less passing and fewer attempts",
+        "Less passing and fewer attempts",
+        "Reaching advanced areas without a shot",
+        "Where the attacks reached",
+        "Illustrative chance values",
+        "The score held — here is the spell",
+        "What changed after the substitution",
+        "What changed after the substitution",
+        "Passing and shooting tell different stories",
+        "Activity around the recorded change"
+      ]
+    },
+    {
+      "case": "full match with essential incidents",
+      "input": {
+        "name": "full match with essential incidents",
+        "from": 0,
+        "to": 5670
+      },
+      "output": {
+        "headline": "A goal changes the score",
+        "paragraphs": [
+          {
+            "text": "25:13: Northbridge scored through Turner. 90+1:57: Southport scored through Alves.",
+            "evidence_ids": [
+              "fact-1"
+            ],
+            "scope_label": "Selected interval · 0:00–90+4:30",
+            "origin_story_ids": [
+              "story-1"
+            ]
+          },
+          {
+            "text": "Duarte took the right wing role. In 5 supplied past match records, 305 of 305 total minutes were in this role. These are past-match minutes, not minutes in this match. The outgoing player completed 2/2 passes and took 0 shots; Duarte completed 1/1 and took 0. On-pitch exposure was 300s and 300s respectively. Both completed passing and shooting activity declined across these windows. Other recorded changes overlap the windows, so the substitution’s effect cannot be isolated.",
+            "evidence_ids": [
+              "fact-26",
+              "fact-16",
+              "fact-17"
+            ],
+            "scope_label": "History at 60:23 · equal windows 55:23–65:23",
+            "origin_story_ids": [
+              "story-17"
+            ],
+            "parts": {
+              "fact": "Duarte took the right wing role. In 5 supplied past match records, 305 of 305 total minutes were in this role. These are past-match minutes, not minutes in this match. The outgoing player completed 2/2 passes and took 0 shots; Duarte completed 1/1 and took 0. On-pitch exposure was 300s and 300s respectively.",
+              "reading": "Both completed passing and shooting activity declined across these windows.",
+              "alternative": "Other recorded changes overlap the windows, so the substitution’s effect cannot be isolated."
+            },
+            "structured_claims": [
+              {
+                "kind": "history_share",
+                "player_id": "Duarte",
+                "assigned_position": "RW",
+                "role_minutes": 305,
+                "minutes": 305,
+                "records": 5,
+                "status": "recorded_experience",
+                "known_at": 3623.4,
+                "basis_fact_ids": [
+                  "fact-26"
+                ]
+              },
+              {
+                "kind": "player_windows",
+                "player_id": "Duarte",
+                "status": "ready",
+                "before": {
+                  "completed": 2,
+                  "passes": 2,
+                  "shots": 0,
+                  "seconds": 300
+                },
+                "after": {
+                  "completed": 1,
+                  "passes": 1,
+                  "shots": 0,
+                  "seconds": 300
+                },
+                "from": 3323.4,
+                "boundary": 3623.4,
+                "to": 3923.4,
+                "basis_fact_ids": [
+                  "fact-26"
+                ]
+              },
+              {
+                "kind": "concurrent_changes",
+                "player_id": "Duarte",
+                "count": 1,
+                "event_ids": [
+                  "full-v04-7-832"
+                ],
+                "basis_fact_ids": [
+                  "fact-26"
+                ]
+              },
+              {
+                "kind": "team_change",
+                "trigger_id": "full-v04-7-827",
+                "team_id": "southport",
+                "from": 3323.4,
+                "boundary": 3623.4,
+                "to": 3923.4,
+                "metrics": [
+                  {
+                    "metric": "shots",
+                    "before": 1,
+                    "after": 0,
+                    "direction": "decreased"
+                  },
+                  {
+                    "metric": "completed_passes",
+                    "before": 17,
+                    "after": 12,
+                    "direction": "decreased"
+                  }
+                ],
+                "basis_fact_ids": [
+                  "fact-16",
+                  "fact-17"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Ellis took the right wing role. In 5 supplied past match records, 20 of 305 total minutes were in this role. These are past-match minutes, not minutes in this match. The outgoing player completed 4/4 passes and took 0 shots; Ellis completed 1/3 and took 0. On-pitch exposure was 300s and 300s respectively. The team’s recorded passing and shooting counts were unchanged across these equal windows.",
+            "evidence_ids": [
+              "fact-27",
+              "fact-18",
+              "fact-19"
+            ],
+            "scope_label": "History at 60:40 · equal windows 55:40–65:40",
+            "origin_story_ids": [
+              "story-18"
+            ],
+            "parts": {
+              "fact": "Ellis took the right wing role. In 5 supplied past match records, 20 of 305 total minutes were in this role. These are past-match minutes, not minutes in this match. The outgoing player completed 4/4 passes and took 0 shots; Ellis completed 1/3 and took 0. On-pitch exposure was 300s and 300s respectively.",
+              "reading": "The team’s recorded passing and shooting counts were unchanged across these equal windows.",
+              "alternative": ""
+            },
+            "structured_claims": [
+              {
+                "kind": "history_share",
+                "player_id": "Ellis",
+                "assigned_position": "RW",
+                "role_minutes": 20,
+                "minutes": 305,
+                "records": 5,
+                "status": "limited_sample",
+                "known_at": 3640.2,
+                "basis_fact_ids": [
+                  "fact-27"
+                ]
+              },
+              {
+                "kind": "player_windows",
+                "player_id": "Ellis",
+                "status": "ready",
+                "before": {
+                  "completed": 4,
+                  "passes": 4,
+                  "shots": 0,
+                  "seconds": 300
+                },
+                "after": {
+                  "completed": 1,
+                  "passes": 3,
+                  "shots": 0,
+                  "seconds": 300
+                },
+                "from": 3340.2,
+                "boundary": 3640.2,
+                "to": 3940.2,
+                "basis_fact_ids": [
+                  "fact-27"
+                ]
+              },
+              {
+                "kind": "concurrent_changes",
+                "player_id": "Ellis",
+                "count": 1,
+                "event_ids": [
+                  "full-v04-7-827"
+                ],
+                "basis_fact_ids": [
+                  "fact-27"
+                ]
+              },
+              {
+                "kind": "team_change",
+                "trigger_id": "full-v04-7-832",
+                "team_id": "northbridge",
+                "from": 3340.2,
+                "boundary": 3640.2,
+                "to": 3940.2,
+                "metrics": [
+                  {
+                    "metric": "shots",
+                    "before": 0,
+                    "after": 0,
+                    "direction": "unchanged"
+                  },
+                  {
+                    "metric": "completed_passes",
+                    "before": 21,
+                    "after": 21,
+                    "direction": "unchanged"
+                  }
+                ],
+                "basis_fact_ids": [
+                  "fact-18",
+                  "fact-19"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Northbridge completed 18 passes before and 22 after the change; shots went from 2 to 0. Both windows cover equal match-clock time. More completed passing did not come with more recorded attempts.",
+            "evidence_ids": [
+              "fact-10",
+              "fact-11"
+            ],
+            "scope_label": "Equal windows 40:00–50:00",
+            "origin_story_ids": [
+              "story-19"
+            ],
+            "parts": {
+              "fact": "Northbridge completed 18 passes before and 22 after the change; shots went from 2 to 0. Both windows cover equal match-clock time.",
+              "reading": "More completed passing did not come with more recorded attempts.",
+              "alternative": ""
+            },
+            "structured_claims": [
+              {
+                "kind": "team_change",
+                "trigger_id": "full-v04-7-612",
+                "team_id": "northbridge",
+                "from": 2400,
+                "boundary": 2700,
+                "to": 3000,
+                "metrics": [
+                  {
+                    "metric": "shots",
+                    "before": 2,
+                    "after": 0,
+                    "direction": "decreased"
+                  },
+                  {
+                    "metric": "completed_passes",
+                    "before": 18,
+                    "after": 22,
+                    "direction": "increased"
+                  }
+                ],
+                "basis_fact_ids": [
+                  "fact-10",
+                  "fact-11"
+                ]
+              }
+            ]
+          }
+        ],
+        "watch_label": "Replay takeaway",
+        "watch_next": "The match is complete: Northbridge 1–1 Southport. Review the recorded result alongside the evidence above; no single cause is established.",
+        "limitations": [
+          "Template-generated commentary from the revealed event stream. Formation, off-ball movement and chance quality are not inferred from sparse events.",
+          "Simplified synthetic simulator; no real-match validation. Only supplied role-history records are connected; broader player/manager history and measured tactical tracking remain unavailable. Declared formation changes are authored inputs."
+        ],
+        "composition": "selected-stories",
+        "commentary_contract": "batch6-v1",
+        "word_count": 184,
+        "word_limit": 280,
+        "length_exception": null,
+        "mode": "template",
+        "reason": "Local baseline"
+      },
+      "candidate_titles": [
+        "A goal changes the score",
+        "A role the substitute has played before",
+        "Limited role experience in supplied records",
+        "A substitute’s recorded contribution",
+        "A substitute’s recorded contribution",
+        "More passing, without more attempts",
+        "More passing, without more attempts",
+        "Less passing and fewer attempts",
+        "Less passing and fewer attempts",
+        "Where the attacks reached",
+        "Where the attacks reached",
+        "Illustrative chance values",
+        "Illustrative chance values",
+        "The score moved during your absence",
+        "A booking in the recorded play",
+        "A declared change of shape",
+        "What changed after the substitution",
+        "What changed after the substitution",
+        "Passing and shooting tell different stories",
+        "Activity around the recorded change",
+        "Passing and shooting tell different stories",
+        "Activity around the recorded change",
+        "The result and the selected closing spell"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 7,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 7,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 7,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 7,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 7,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 7,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 5700,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 5700,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 5700,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 5700,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 5700,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 1,
+      "from": 0,
+      "to": 5700,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 10,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 10,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 10,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 10,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 10,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 10,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 5880,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 18,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 5880,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 18,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 5880,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 18,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 5880,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 18,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 5880,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 18,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 2,
+      "from": 0,
+      "to": 5880,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 18,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 13,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 13,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 13,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 13,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 13,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 13,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 5670,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 5670,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 5670,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 5670,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 5670,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 3,
+      "from": 0,
+      "to": 5670,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 14,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 14,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 14,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 14,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 14,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 14,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 5400,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 18,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 5400,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 18,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 5400,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 18,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 5400,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 18,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 5400,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 18,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 4,
+      "from": 0,
+      "to": 5400,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 18,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 3,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 3,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 3,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 3,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 3,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 3,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 6,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 6,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 6,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 6,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 6,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 6,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 5700,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 5700,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 5700,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 5700,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 5700,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 5,
+      "from": 0,
+      "to": 5700,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 6,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 6,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 6,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 6,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 6,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 6,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 10,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 10,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 10,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 10,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 10,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 10,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 5880,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 17,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 5880,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 17,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 5880,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 17,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 5880,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 17,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 5880,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 17,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 6,
+      "from": 0,
+      "to": 5880,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 17,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 3,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 15,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 15,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 15,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 15,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 15,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 15,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 5670,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 23,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 5670,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 23,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 5670,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 23,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 5670,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 23,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 5670,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 23,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 7,
+      "from": 0,
+      "to": 5670,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 23,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 3,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 3,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 3,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 3,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 3,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 3,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 13,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 13,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 13,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 13,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 13,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 13,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 5400,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 18,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 5400,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 18,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 5400,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 18,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 5400,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 18,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 5400,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 18,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 8,
+      "from": 0,
+      "to": 5400,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 18,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 10,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 10,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 10,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 10,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 10,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 10,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 5700,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 29,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 5700,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 29,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 5700,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 29,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 5700,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 29,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 5700,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 29,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 9,
+      "from": 0,
+      "to": 5700,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 29,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 5,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 5,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 9,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 9,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 5880,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 16,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 5880,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 16,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 5880,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 16,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 5880,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 16,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 5880,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 16,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 10,
+      "from": 0,
+      "to": 5880,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 16,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 7,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 7,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 7,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 7,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 7,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 7,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 15,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 15,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 15,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 15,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 15,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 15,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 5670,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 5670,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 5670,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 5670,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 5670,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 11,
+      "from": 0,
+      "to": 5670,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 120,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 120,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 2,
+      "paragraphs": 1,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 2400,
+      "to": 3000,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 2400,
+      "to": 3000,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 4,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 15,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 15,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 3300,
+      "to": 3960,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 15,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 15,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 15,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 3300,
+      "to": 3960,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 15,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 5400,
+      "mode": "quick",
+      "focus": "neutral",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 5400,
+      "mode": "quick",
+      "focus": "northbridge",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 5400,
+      "mode": "quick",
+      "focus": "southport",
+      "candidates": 22,
+      "paragraphs": 2,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 5400,
+      "mode": "tactical",
+      "focus": "neutral",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 5400,
+      "mode": "tactical",
+      "focus": "northbridge",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    },
+    {
+      "seed": 12,
+      "from": 0,
+      "to": 5400,
+      "mode": "tactical",
+      "focus": "southport",
+      "candidates": 22,
+      "paragraphs": 4,
+      "essential_coverage": true,
+      "references_valid": true,
+      "no_future_sources": true
+    }
+  ],
+  "limits": [
+    "Contract checks do not prove football realism, causal interpretation or fan usefulness.",
+    "No user study, blinded review or equal-information ChatGPT baseline.",
+    "Live ranking and browser journeys are recorded separately."
+  ]
+}

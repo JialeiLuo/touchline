@@ -1,0 +1,1489 @@
+{
+  "version": "batch4-v1",
+  "source_revision": "f35186b22084a863ebc0c642ec5894e4fc0294ef",
+  "runtime": "v24.22.1",
+  "source_hashes": {
+    "full-match.js": "289094d9db54e0cb5d82a4263f68de38dbaba41e8b65fc98d02d09dca5829abe",
+    "match-package.js": "9283d9c65725c4205a1ab1f6530fea56eb81b0ef4170c958666212f747fc44fa",
+    "server/chance-quality.cjs": "1d796d6f21479fc9afcff3928ad7b524d55f5de018b87993f42ba237ffcb604d",
+    "server/evidence.cjs": "86fb9b9dedeb29cd98b7a4d9bc6df2682925bbef7156ac84e50da6621d1e7c4f",
+    "server/football-tools.cjs": "7cf959aa599ea1da6ba7fbad4932ae284a3683aa02a01f8c842bd95a9df7a67b",
+    "server/stories.cjs": "1e7f2657a4c2149ea81e9dc3262ab4b8c311a0eb782874f4ab2d72ca925a0a52",
+    "chance-quality-ui.js": "ac78d8eac5e651b064398a0e3b260a9cb7bcf918a4f86d94e8d12faccfa2b002",
+    "tests/chance-quality.cjs": "6416f8d957f2d31658858def8dfe9d1909bbccdd9b1501c0cdf24a728aea49a4",
+    "tools/check-chance-quality.cjs": "d0450ab2093257d462aaf45e68b1347b8cb6eb6c973b48b54cae1a408d4066a3"
+  },
+  "method": "Sixty synthetic seeds checked for complete shot coverage, goal linkage and aggregation; twenty-four frozen scenario regressions. Supplied/illustrative values only, no trained model or live provider call; these are integrity checks, not calibration or fan-usefulness evidence.",
+  "generated_cases": 60,
+  "generated_passed": 60,
+  "frozen_cases": 24,
+  "frozen_passed": 24,
+  "rows": [
+    {
+      "seed": 0,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.5700808715131134,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.8589890642074439,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.8159998597316444,
+          "goals": 2,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.7020988474360739,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.4505513283882576,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 9,
+          "covered_shots": 9,
+          "xg_total": 1.3341183298830515,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 2,
+          "covered_shots": 2,
+          "xg_total": 0.2712835938209811,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.43556763065420095,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 4,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 9,
+          "covered_shots": 9,
+          "xg_total": 0.9173454835436379,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.5224597037010468,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 5,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.5072513317117611,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.615363219551742,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 6,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 2,
+          "covered_shots": 2,
+          "xg_total": 0.3278672546440592,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 10,
+          "covered_shots": 10,
+          "xg_total": 1.2223658236702186,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 7,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 7,
+          "covered_shots": 7,
+          "xg_total": 0.8784797278452091,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.5343188788898003,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 8,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 1,
+          "covered_shots": 1,
+          "xg_total": 0.08319656349474994,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 9,
+          "covered_shots": 9,
+          "xg_total": 1.1905225965940895,
+          "goals": 2,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 9,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.6410862414382685,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.1346681242887504,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 10,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.7777074185071083,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 9,
+          "covered_shots": 9,
+          "xg_total": 1.308695127546644,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 12,
+          "covered_shots": 12,
+          "xg_total": 1.596026231441074,
+          "goals": 2,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.6039514451220345,
+          "goals": 2,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 12,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.4786464805670369,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 1.045405836735494,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 13,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 0.9309751423213345,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 12,
+          "covered_shots": 12,
+          "xg_total": 1.5170816935724938,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 14,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.0055484847539606,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.6910356283772451,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 15,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.16466172051659,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.56133953153385,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 16,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.7622138209067859,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.3593398865290846,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 17,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 11,
+          "covered_shots": 11,
+          "xg_total": 1.3368139599835356,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.099747445943264,
+          "goals": 2,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 18,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 0.8970862933286967,
+          "goals": 3,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.7317504960324328,
+          "goals": 2,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 19,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.4092817227977973,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.6395239805508978,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 20,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.9551761218570174,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.5504901332921134,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 21,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.0380264511286066,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.144137985134354,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.7753118056680721,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 7,
+          "covered_shots": 7,
+          "xg_total": 1.0008524284736755,
+          "goals": 3,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 23,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.6395829620768244,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 0.9937441110159628,
+          "goals": 2,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 24,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.5773230330972717,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.6969981129176629,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 25,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.6554471633786766,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 7,
+          "covered_shots": 7,
+          "xg_total": 0.9015168017590276,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 26,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.9916049190312624,
+          "goals": 2,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.1752747858351527,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 27,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 2,
+          "covered_shots": 2,
+          "xg_total": 0.22181249852406865,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.8552430351142987,
+          "goals": 2,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 28,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.3591909511232605,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 7,
+          "covered_shots": 7,
+          "xg_total": 0.8695021150420205,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 29,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.8107986290353135,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.734290172251228,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 30,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.0634972081949505,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.34138370803156154,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 31,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.5215630770672399,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.7415597154184317,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 32,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.1881715025792903,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.5200570941080268,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.2653389407264498,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.6698645890122997,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 34,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.5984140503566998,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.3737897755844662,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 35,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 9,
+          "covered_shots": 9,
+          "xg_total": 1.2539427724821637,
+          "goals": 2,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.0733269016354416,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 36,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.8796406034112263,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.45077607726735563,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 37,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 7,
+          "covered_shots": 7,
+          "xg_total": 0.6981403516485141,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.5940805078181797,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 38,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.499001294384782,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 9,
+          "covered_shots": 9,
+          "xg_total": 1.035615835308169,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 39,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.7263070476949215,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.4658117602999107,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 40,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 0.7963502680619176,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 2,
+          "covered_shots": 2,
+          "xg_total": 0.2006335675345304,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 41,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.072623251163329,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.28739932152843817,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 7,
+          "covered_shots": 7,
+          "xg_total": 0.7602126739678475,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.1230116210152896,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 43,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.6962234251550758,
+          "goals": 2,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 10,
+          "covered_shots": 10,
+          "xg_total": 1.288971480399227,
+          "goals": 2,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.33696719082101034,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.3688580028522187,
+          "goals": 2,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 45,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.57594749667911,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 10,
+          "covered_shots": 10,
+          "xg_total": 1.2480444164227409,
+          "goals": 3,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 46,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 1.1310592661608871,
+          "goals": 2,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.6711931892558932,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 47,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 9,
+          "covered_shots": 9,
+          "xg_total": 1.3812582584092252,
+          "goals": 3,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.6019231583347114,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 48,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 7,
+          "covered_shots": 7,
+          "xg_total": 0.8571281510211813,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.5355285136487621,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 49,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 7,
+          "covered_shots": 7,
+          "xg_total": 0.8890214875596933,
+          "goals": 2,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.7951356501534868,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 50,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 2,
+          "covered_shots": 2,
+          "xg_total": 0.24033825362717304,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 10,
+          "covered_shots": 10,
+          "xg_total": 1.2339960861982635,
+          "goals": 2,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 51,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.7530943306162953,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 7,
+          "covered_shots": 7,
+          "xg_total": 0.9707784337335483,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 52,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.5307692013388643,
+          "goals": 3,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.6449561753755866,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 53,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.6154012120669852,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.8667414589234842,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 54,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.45629244048248696,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 9,
+          "covered_shots": 9,
+          "xg_total": 1.1122926147005594,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 4,
+          "covered_shots": 4,
+          "xg_total": 0.5412098959978097,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 7,
+          "covered_shots": 7,
+          "xg_total": 0.9726262659974969,
+          "goals": 1,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 56,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 7,
+          "covered_shots": 7,
+          "xg_total": 0.7552234114703651,
+          "goals": 3,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 2,
+          "covered_shots": 2,
+          "xg_total": 0.19834698192058847,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 57,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.6467774995192885,
+          "goals": 1,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 5,
+          "covered_shots": 5,
+          "xg_total": 0.5503471764455048,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 58,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 6,
+          "covered_shots": 6,
+          "xg_total": 0.8338133041347163,
+          "goals": 2,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.388842000639496,
+          "goals": 2,
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "seed": 59,
+      "passed": true,
+      "teams": [
+        {
+          "team_id": "northbridge",
+          "shots": 3,
+          "covered_shots": 3,
+          "xg_total": 0.3940824199777383,
+          "goals": 0,
+          "status": "complete"
+        },
+        {
+          "team_id": "southport",
+          "shots": 8,
+          "covered_shots": 8,
+          "xg_total": 0.773135403389541,
+          "goals": 0,
+          "status": "complete"
+        }
+      ]
+    }
+  ],
+  "frozen": [
+    {
+      "id": "dev-quiet",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-quiet",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-goal",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-goal",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-positive",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-positive",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-no-change",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-no-change",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-conflicting",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-conflicting",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-missing-history",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-missing-history",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-waiting",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-waiting",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-corrected",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "dev-corrected",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "holdout-concurrent",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "holdout-concurrent",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "holdout-late-history",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "holdout-late-history",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "holdout-before-correction",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "holdout-before-correction",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "holdout-decline",
+      "mode": "quick",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "holdout-decline",
+      "mode": "tactical",
+      "passed": true,
+      "failures": []
+    }
+  ]
+}

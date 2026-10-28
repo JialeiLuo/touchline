@@ -1,3 +1,5 @@
+> Historical planning/review document. The authoritative final scope, implemented changes and remaining release checks are in [FINAL_CANDIDATE.md](FINAL_CANDIDATE.md).
+
 # Touchline: pre-release assessment and hands-on guide
 
 27 October 2026. Reviewed local product: `9fbf70f`, with the Batch 9 closure/documentation changes in the commit containing this report. This is a source-and-record audit, not a new live-model benchmark, competitor survey, production certification or independent fan study. Nothing was deployed, uploaded or made public for this review.

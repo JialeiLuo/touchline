@@ -1,6 +1,6 @@
 # How to use Touchline
 
-This guide describes the local review build of the 0.5 fan-facing prototype. The public demo and video below remain the earlier release until Batch 10. [Open Touchline](https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/) or [watch the 1:48 demonstration](https://youtu.be/9JvQMpAhdpA). Everything in the example match is fictional.
+This guide describes the local final candidate 0.6.0. The public demo and video below remain the earlier release until Batch 10. [Open Touchline](https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/) or [watch the 1:48 demonstration](https://youtu.be/9JvQMpAhdpA). Everything in the example match is fictional.
 
 ## Start without supplying data
 
@@ -114,3 +114,10 @@ The announced added time is a minimum; keep watching until the actual full-time 
 ## Read a full prose report
 
 Open **Read a full report** below the short commentary. Choose **Selected spell**, **Match so far** or, after the actual whistle, **Full-time report**, then select **Write report**. The report connects important passages in prose and preserves added-time events. Short commentary remains above. Open **Sources for this paragraph** to inspect evidence, or use **Download report text** for a plain-text copy. Changing the replay or report choices marks the earlier report stale; request another deliberately. Reports cover both teams, while team/player focus can guide supporting context. Local evidence-based reports remain available when online context selection is unavailable. See [R2 scope and verification](R2.md).
+
+
+## Decision explanations and formation
+
+Open **Decisions & added time** below the commentary and choose **Explain this decision** on an incident in the selected revealed interval. Read the recorded event/decision first, then the short attributed quotation and explanation. Missing detail appears only when it prevents a specific explanation. Generic fouls and cards do not establish reckless conduct. The catalogue identifies IFAB 2026/27 and the retrieval date; its official latest links can change. Corrections to incident reports replace earlier accounts only when available.
+
+**Show team formation** displays declared slots, not measured real-time player positions. The ball/event marker shows the supplied event location. Use Teams & lineups for player roles and the replay for what has actually been revealed. Start with Quick and open the report, sources or decisions only when useful; no long manual is required for the prepared example.
