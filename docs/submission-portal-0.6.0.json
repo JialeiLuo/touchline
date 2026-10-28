@@ -18,5 +18,13 @@
   ],
   "separate_submit_control_found": false,
   "explicit_legal_acceptance_performed": false,
-  "organizer_acceptance": "Not independently confirmed; saving the project is the observed completion state."
+  "organizer_acceptance": "Not independently confirmed; saving the project is the observed completion state.",
+  "final_procedure_check": {
+    "checked_at": "2026-10-28T00:55:31.999105+00:00",
+    "official_reference": "https://github.com/microsoft/insidethegamehackathon/blob/main/OFFICIAL%20RULES.md#4-how-to-enter",
+    "published_procedure": "Register, complete the project, and enter the required Projects-page fields during the submission period. No separate Submit action is specified.",
+    "directory_verification": "The event Projects directory with Created/Joined filter shows one result: Touchline — Your AI Co-commentator, owned by Jialei Luo.",
+    "additional_actions": "Directory help describes project creation/challenge selection and joining; no further submission control is exposed.",
+    "assessment": "All identified project-entry actions are complete against the published procedure. Organizer eligibility and judging decisions remain separate."
+  }
 }
