@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-28T00:51:21.882118Z",
+  "project_url": "https://innovationstudio.microsoft.com/hackathons/insidethegamedeveloperhackathon/project/127025",
+  "description_updated": true,
+  "video_url": "https://youtu.be/juiWMsbUzJk",
+  "video_link_persisted_after_reload": true,
+  "embedded_video": {
+    "duration_seconds": 114.001,
+    "ready_state": 4,
+    "width": 1280,
+    "height": 720
+  },
+  "cover": "Final public-build frame 000; accessibility text updated and persisted",
+  "project_menu": [
+    "Change log",
+    "Clone project",
+    "Delete project"
+  ],
+  "separate_submit_control_found": false,
+  "explicit_legal_acceptance_performed": false,
+  "organizer_acceptance": "Not independently confirmed; saving the project is the observed completion state."
+}

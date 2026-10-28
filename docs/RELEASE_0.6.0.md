@@ -25,6 +25,6 @@ The final public YouTube video is below two minutes (source timeline 114 seconds
 
 ## Submission and boundaries
 
-Microsoft project: https://innovationstudio.microsoft.com/hackathons/insidethegamedeveloperhackathon/project/127025 . Its description and final YouTube link have been saved and read back outside the editor; final portal/media verification is recorded in submission/STATUS.md. Organizer acceptance is distinct from saving a project page. Any explicit legal acceptance remains an owner action.
+Microsoft project: https://innovationstudio.microsoft.com/hackathons/insidethegamedeveloperhackathon/project/127025 . Its description and final YouTube link have been saved and read back outside the editor; the final embedded video is ready (114.001 seconds), and the current-build cover and link persisted after reload. The inspected project menu has no separate Submit control; see submission/STATUS.md. Organizer acceptance is distinct from saving a project page. Any explicit legal acceptance remains an owner action.
 
 All matches and history are fictional. Chance probabilities are illustrative; formation dots are schematic. Law excerpts do not independently determine referee correctness. Evaluation failures, rate limits, proxies and unmeasured usefulness remain in docs/FINAL_CANDIDATE.md and final evaluation files. No superiority or independent user-study claim is made. Maintain the public app and repository for the judging period; a successful check today is not continuous-uptime evidence.
