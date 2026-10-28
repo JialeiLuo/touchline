@@ -1,0 +1,9 @@
+{
+  "url": "https://github.com/JialeiLuo/touchline/releases/download/v0.6.0/touchline-0.6.0-source.zip",
+  "anonymous_download": true,
+  "archive_sha256": "04db27966e606eab8e8c247135b58831a3ca11fae43419bbe2b9005ae2cef0c0",
+  "manifest_files_verified": 273,
+  "test_files": 32,
+  "tests_pass": true,
+  "source_revision": "1b2600724c142f46f31e0c9252c13d7326d24841"
+}

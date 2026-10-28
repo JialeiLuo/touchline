@@ -1,4 +1,4 @@
-# Touchline — final candidate submission text
+# Touchline — final release submission text
 
 Touchline is an evidence-grounded football companion built with Microsoft Foundry. A viewer selects the spell they missed, receives a short explanation and can inspect why it was selected. Quick and Tactical styles, team/player focus and an optional connected match report serve different reading needs without changing the facts.
 
@@ -8,4 +8,6 @@ All football input is fictional. Period-aware replay includes announced minimum 
 
 Our distinctive combination is understandable commentary, inspectable football evidence, corrections and missing-evidence handling, temporal boundaries, and deliberate refusal to turn a statistical association into a causal claim. Reproducible comparison results include failures and fallbacks; we do not claim superiority, real-match validation or an independent fan study.
 
-Candidate version: 0.6.0. Exact archive identity and checks are in docs/FINAL_CANDIDATE.md and the release manifest. Public repository/demo/video links must be filled and verified during Batches 10–11 against this release; earlier links are not evidence of final-build deployment. The final English demonstration will be shorter than two minutes and show the product’s value through an end-to-end task. Do not submit this draft as a claim that release checks have already occurred.
+Release version: 0.6.0, frozen product revision 1b26007. The public source archive, deployed build and final English demonstration identify the same release. The 114-second source video is displayed as 1:55 by YouTube and stays below two minutes. It shows actual captured product behavior, with synthetic English narration and readable captions.
+
+Public release: [working demo](https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/), [final English video](https://youtu.be/juiWMsbUzJk), [source and verified archive](https://github.com/JialeiLuo/touchline/releases/tag/v0.6.0). Product revision `1b26007`; public release verification is in docs/RELEASE_0.6.0.md.

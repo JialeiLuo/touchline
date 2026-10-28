@@ -1,6 +1,6 @@
 # How to use Touchline
 
-This guide describes the local final candidate 0.6.0. The public demo and video below remain the earlier release until Batch 10. [Open Touchline](https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/) or [watch the 1:48 demonstration](https://youtu.be/9JvQMpAhdpA). Everything in the example match is fictional.
+This guide describes public release 0.6.0. [Open Touchline](https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/) or [watch the final demonstration](https://youtu.be/juiWMsbUzJk). Everything in the example match is fictional.
 
 ## Start without supplying data
 

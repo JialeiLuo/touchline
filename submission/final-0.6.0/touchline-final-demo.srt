@@ -1,0 +1,47 @@
+1
+00:00:00,000 --> 00:00:08,000
+Missed ten minutes? The score tells you who is ahead. Touchline helps you understand what changed while you were away.
+
+2
+00:00:08,000 --> 00:00:16,000
+Start with a prepared catch-up. Choose the minutes you missed, and follow either team or an individual player.
+
+3
+00:00:16,000 --> 00:00:26,000
+Quick gives the main story in plain English. It separates recorded events from a reading of the play, with supporting sources close at hand.
+
+4
+00:00:26,000 --> 00:00:38,000
+Tactical adds exact player involvement and before-and-after figures. Here, Ellis usually plays striker but enters on the right wing. The explanation also says when role history was not inspected.
+
+5
+00:00:38,000 --> 00:00:48,000
+Open a claim's sources. Compare activity before and after a change, and see why concurrent events and missing evidence limit the conclusion.
+
+6
+00:00:48,000 --> 00:00:58,000
+A single Foundry investigator selects evidence tools and follow-up queries. The trace shows what ran. Local checks and writing rules keep the final commentary tied to inspected evidence.
+
+7
+00:00:58,000 --> 00:01:08,000
+Want the longer story? Read a source-linked report of the selected spell or the match so far. It remains optional, with a downloadable text version.
+
+8
+00:01:08,000 --> 00:01:18,000
+An optional decision card connects the recorded incident to a short attributed IFAB quotation and plain-English explanation. Unspecified details stay unspecified; this does not certify the referee's decision.
+
+9
+00:01:18,000 --> 00:01:28,000
+The clock includes both halves and added time. Full-time reports unlock at the actual whistle and include late goals, rather than stopping automatically at ninety minutes.
+
+10
+00:01:28,000 --> 00:01:34,000
+Glossary languages help with football terms. Formation dots show declared shape, not live player tracking.
+
+11
+00:01:34,000 --> 00:01:44,000
+The release includes regression checks, scenario comparisons and retained live failures. All football data is fictional. We do not claim real-match validation or superiority over other systems.
+
+12
+00:01:44,000 --> 00:01:54,000
+Try the public demo linked in our GitHub repository. Catch up, ask what changed, and inspect why. Touchline makes the story behind the play understandable and open to question.

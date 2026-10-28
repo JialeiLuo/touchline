@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-25T18:00:38.563Z",
+  "checked_at": "2026-10-28T00:25:07.026Z",
   "origin": "https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "checks": [
     "public HTML and browser assets",
     "private files blocked",

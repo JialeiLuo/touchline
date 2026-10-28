@@ -1,15 +1,11 @@
-# Demo video
+# Final Touchline video — release 0.6.0
 
-`touchline-demo.mp4`: 1920×1080 H.264 video with AAC English synthetic narration and burned-in English captions, 108 seconds. This is an edited walkthrough using real interface captures and held frames, not a continuous screen recording. No real match footage or music is included.
+[Watch the public final video](https://youtu.be/juiWMsbUzJk). YouTube title: **Touchline — Your AI Co-commentator | Final 0.6.0 Demo**. The source cut is 114 seconds; YouTube displays 1:55, below the two-minute limit.
 
-Public demonstration video: https://youtu.be/9JvQMpAhdpA
+The file is `final-0.6.0/touchline-final-demo.mp4`, with English narration and burned-in captions. Narration uses the synthetic en-GB-RyanNeural voice. `VIDEO_SCRIPT.json`, SRT captions, captured product frames and verification metadata sit beside it. The first ten frames show the working public product; the last two are clearly prepared explanation/end cards. No real match footage or copyrighted music is used.
 
-The entrant uploaded the narrated demo to YouTube on 26 October 2026. The watch page opens with the expected title and a 1:48 duration.
+Product version 0.6.0, source revision `1b2600724c142f46f31e0c9252c13d7326d24841`. Capture verification records the public API identity, actual Foundry/cached results and no script errors. Full video decoding passed. Audio slots are bounded to the narration timeline. The video does not claim independent fan validation or comparative superiority.
 
-## Reproduce
+The MP4, SRT and verification JSON are also public [release assets](https://github.com/JialeiLuo/touchline/releases/tag/v0.6.0). Rebuild using `tools/capture-final-demo.cjs` against the verified public origin, then `tools/build-final-video.py` with Pillow, edge-tts, imageio-ffmpeg and the documented Arial font paths. Capturing may use bounded model calls; results can legitimately vary.
 
-Install Pillow and imageio-ffmpeg in a separate Python environment; run `python tools/build-demo-video.py`. It uses the bundled `submission/touchline-narration.wav`, so this rebuild needs no online speech request. Alternatively set FFMPEG to an installed ffmpeg executable. The current renderer uses macOS Arial fonts.
-
-To regenerate the voice, additionally install edge-tts 7.3.1 and run `python tools/generate-demo-narration.py`. The script sends the public text from `narration-script.json` to Microsoft Edge's online TTS service. Voice: en-GB-RyanNeural; rate +5%, with per-section padding or modest tempo adjustment. No voice cloning is used.
-
-Source captures, caption timeline, narration script, WAV and SRT are included. SRT contains the visual summary captions; narration-script.json contains the full spoken explanation.
+Earlier files in this folder are retained as historical production artifacts. The old 1:48 video is superseded and is not the final release demonstration.

@@ -1,0 +1,476 @@
+{
+  "captured_at": "2026-10-28T00:31:10.132Z",
+  "origin": "https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net",
+  "status": {
+    "version": "0.6.0",
+    "release_id": "touchline-0.6.0-final",
+    "source_revision": "1b2600724c142f46f31e0c9252c13d7326d24841",
+    "configured": true,
+    "provider": "Microsoft Foundry",
+    "mode": "ready"
+  },
+  "revision": "1b2600724c142f46f31e0c9252c13d7326d24841",
+  "frames": 12,
+  "errors": [],
+  "responses": [
+    {
+      "route": "/api/commentary",
+      "status": 200,
+      "mode": "foundry",
+      "delivery": "cached",
+      "headline": "What changed after the substitution",
+      "investigation": {
+        "version": "batch5-v1",
+        "status": "complete",
+        "stop_reason": "supported",
+        "model": "gpt-5-mini",
+        "budgets": {
+          "model_calls": 4,
+          "tool_calls": 6,
+          "duration_ms": 22000,
+          "max_output_tokens": 1200,
+          "token_budget": 60000,
+          "request_bytes": 36000,
+          "result_bytes": 18000,
+          "response_bytes": 100000
+        },
+        "model_calls": [
+          {
+            "number": 1,
+            "finish_only": false,
+            "max_output_tokens": 1200,
+            "input_bytes": 7411,
+            "status": "received",
+            "latency_ms": 1104,
+            "usage": {
+              "input_tokens": 1324,
+              "output_tokens": 34
+            }
+          },
+          {
+            "number": 2,
+            "finish_only": false,
+            "max_output_tokens": 1200,
+            "input_bytes": 11204,
+            "status": "received",
+            "latency_ms": 1113,
+            "usage": {
+              "input_tokens": 1899,
+              "output_tokens": 39
+            }
+          },
+          {
+            "number": 3,
+            "finish_only": true,
+            "max_output_tokens": 1200,
+            "input_bytes": 26422,
+            "status": "received",
+            "latency_ms": 1253,
+            "usage": {
+              "input_tokens": 5667,
+              "output_tokens": 58
+            }
+          }
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "tool": "role_history",
+            "status": "limited_sample",
+            "result_id": "result-1",
+            "summary": "role history: limited_sample",
+            "arguments": {
+              "player_id": "Ellis"
+            },
+            "event_ids": [],
+            "history_ids": [
+              "history-Ellis-1",
+              "history-Ellis-2",
+              "history-Ellis-3",
+              "history-Ellis-4",
+              "history-Ellis-5"
+            ]
+          },
+          {
+            "number": 2,
+            "tool": "compare_change",
+            "status": "ready",
+            "result_id": "result-2",
+            "summary": "compare change: ready",
+            "arguments": {
+              "event_id": "full-v04-7-832"
+            },
+            "event_ids": [
+              "full-v04-7-832",
+              "full-v04-7-827",
+              "full-v04-7-768",
+              "full-v04-7-769",
+              "full-v04-7-770",
+              "full-v04-7-771",
+              "full-v04-7-772",
+              "full-v04-7-773",
+              "full-v04-7-774",
+              "full-v04-7-775",
+              "full-v04-7-780",
+              "full-v04-7-781",
+              "full-v04-7-782",
+              "full-v04-7-783",
+              "full-v04-7-792",
+              "full-v04-7-793",
+              "full-v04-7-799",
+              "full-v04-7-800",
+              "full-v04-7-801",
+              "full-v04-7-802",
+              "full-v04-7-808",
+              "full-v04-7-809",
+              "full-v04-7-810",
+              "full-v04-7-811",
+              "full-v04-7-812",
+              "full-v04-7-816",
+              "full-v04-7-828",
+              "full-v04-7-829",
+              "full-v04-7-830",
+              "full-v04-7-837",
+              "full-v04-7-841",
+              "full-v04-7-842",
+              "full-v04-7-843",
+              "full-v04-7-844",
+              "full-v04-7-845",
+              "full-v04-7-846",
+              "full-v04-7-853",
+              "full-v04-7-854",
+              "full-v04-7-855",
+              "full-v04-7-856",
+              "full-v04-7-864",
+              "full-v04-7-865",
+              "full-v04-7-866",
+              "full-v04-7-867",
+              "full-v04-7-872",
+              "full-v04-7-873",
+              "full-v04-7-874",
+              "full-v04-7-875",
+              "full-v04-7-879",
+              "full-v04-7-880",
+              "full-v04-7-881",
+              "full-v04-7-882",
+              "full-v04-7-883",
+              "full-v04-7-884",
+              "full-v04-7-885",
+              "full-v04-7-891",
+              "full-v04-7-892",
+              "full-v04-7-893",
+              "full-v04-7-894",
+              "full-v04-7-895",
+              "full-v04-7-759",
+              "full-v04-7-760",
+              "full-v04-7-761",
+              "full-v04-7-762",
+              "full-v04-7-763",
+              "full-v04-7-764",
+              "full-v04-7-765",
+              "full-v04-7-777",
+              "full-v04-7-778",
+              "full-v04-7-785",
+              "full-v04-7-786",
+              "full-v04-7-787",
+              "full-v04-7-788",
+              "full-v04-7-789",
+              "full-v04-7-790",
+              "full-v04-7-795",
+              "full-v04-7-796",
+              "full-v04-7-797",
+              "full-v04-7-804",
+              "full-v04-7-805",
+              "full-v04-7-806",
+              "full-v04-7-814",
+              "full-v04-7-818",
+              "full-v04-7-819",
+              "full-v04-7-820",
+              "full-v04-7-821",
+              "full-v04-7-822",
+              "full-v04-7-823",
+              "full-v04-7-824",
+              "full-v04-7-825",
+              "full-v04-7-833",
+              "full-v04-7-834",
+              "full-v04-7-835",
+              "full-v04-7-839",
+              "full-v04-7-848",
+              "full-v04-7-849",
+              "full-v04-7-850",
+              "full-v04-7-851",
+              "full-v04-7-858",
+              "full-v04-7-859"
+            ],
+            "history_ids": []
+          },
+          {
+            "number": 3,
+            "tool": "finish_investigation",
+            "status": "complete",
+            "result_id": null,
+            "summary": "supported",
+            "result_ids": [
+              "result-1",
+              "result-2"
+            ],
+            "references_completed": false,
+            "story_ids": [
+              "story-14",
+              "story-3"
+            ]
+          }
+        ],
+        "usage": {
+          "input_tokens": 8890,
+          "output_tokens": 131,
+          "reported_calls": 3,
+          "unreported_calls": 0,
+          "reserved_token_upper_estimate": 51709
+        },
+        "duration_ms": 3593
+      }
+    },
+    {
+      "route": "/api/commentary",
+      "status": 200,
+      "mode": "foundry",
+      "delivery": "cached",
+      "headline": "Following Ellis",
+      "investigation": {
+        "version": "batch5-v1",
+        "status": "complete",
+        "stop_reason": "supported",
+        "model": "gpt-5-mini",
+        "budgets": {
+          "model_calls": 4,
+          "tool_calls": 6,
+          "duration_ms": 22000,
+          "max_output_tokens": 1200,
+          "token_budget": 60000,
+          "request_bytes": 36000,
+          "result_bytes": 18000,
+          "response_bytes": 100000
+        },
+        "model_calls": [
+          {
+            "number": 1,
+            "finish_only": false,
+            "max_output_tokens": 1200,
+            "input_bytes": 7523,
+            "status": "received",
+            "latency_ms": 1921,
+            "usage": {
+              "input_tokens": 1354,
+              "output_tokens": 39
+            }
+          },
+          {
+            "number": 2,
+            "finish_only": true,
+            "max_output_tokens": 1200,
+            "input_bytes": 22272,
+            "status": "received",
+            "latency_ms": 1254,
+            "usage": {
+              "input_tokens": 4995,
+              "output_tokens": 58
+            }
+          }
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "tool": "compare_change",
+            "status": "ready",
+            "result_id": "result-1",
+            "summary": "compare change: ready",
+            "arguments": {
+              "event_id": "full-v04-7-832"
+            },
+            "event_ids": [
+              "full-v04-7-832",
+              "full-v04-7-827",
+              "full-v04-7-768",
+              "full-v04-7-769",
+              "full-v04-7-770",
+              "full-v04-7-771",
+              "full-v04-7-772",
+              "full-v04-7-773",
+              "full-v04-7-774",
+              "full-v04-7-775",
+              "full-v04-7-780",
+              "full-v04-7-781",
+              "full-v04-7-782",
+              "full-v04-7-783",
+              "full-v04-7-792",
+              "full-v04-7-793",
+              "full-v04-7-799",
+              "full-v04-7-800",
+              "full-v04-7-801",
+              "full-v04-7-802",
+              "full-v04-7-808",
+              "full-v04-7-809",
+              "full-v04-7-810",
+              "full-v04-7-811",
+              "full-v04-7-812",
+              "full-v04-7-816",
+              "full-v04-7-828",
+              "full-v04-7-829",
+              "full-v04-7-830",
+              "full-v04-7-837",
+              "full-v04-7-841",
+              "full-v04-7-842",
+              "full-v04-7-843",
+              "full-v04-7-844",
+              "full-v04-7-845",
+              "full-v04-7-846",
+              "full-v04-7-853",
+              "full-v04-7-854",
+              "full-v04-7-855",
+              "full-v04-7-856",
+              "full-v04-7-864",
+              "full-v04-7-865",
+              "full-v04-7-866",
+              "full-v04-7-867",
+              "full-v04-7-872",
+              "full-v04-7-873",
+              "full-v04-7-874",
+              "full-v04-7-875",
+              "full-v04-7-879",
+              "full-v04-7-880",
+              "full-v04-7-881",
+              "full-v04-7-882",
+              "full-v04-7-883",
+              "full-v04-7-884",
+              "full-v04-7-885",
+              "full-v04-7-891",
+              "full-v04-7-892",
+              "full-v04-7-893",
+              "full-v04-7-894",
+              "full-v04-7-895",
+              "full-v04-7-759",
+              "full-v04-7-760",
+              "full-v04-7-761",
+              "full-v04-7-762",
+              "full-v04-7-763",
+              "full-v04-7-764",
+              "full-v04-7-765",
+              "full-v04-7-777",
+              "full-v04-7-778",
+              "full-v04-7-785",
+              "full-v04-7-786",
+              "full-v04-7-787",
+              "full-v04-7-788",
+              "full-v04-7-789",
+              "full-v04-7-790",
+              "full-v04-7-795",
+              "full-v04-7-796",
+              "full-v04-7-797",
+              "full-v04-7-804",
+              "full-v04-7-805",
+              "full-v04-7-806",
+              "full-v04-7-814",
+              "full-v04-7-818",
+              "full-v04-7-819",
+              "full-v04-7-820",
+              "full-v04-7-821",
+              "full-v04-7-822",
+              "full-v04-7-823",
+              "full-v04-7-824",
+              "full-v04-7-825",
+              "full-v04-7-833",
+              "full-v04-7-834",
+              "full-v04-7-835",
+              "full-v04-7-839",
+              "full-v04-7-848",
+              "full-v04-7-849",
+              "full-v04-7-850",
+              "full-v04-7-851",
+              "full-v04-7-858",
+              "full-v04-7-859"
+            ],
+            "history_ids": []
+          },
+          {
+            "number": 2,
+            "tool": "finish_investigation",
+            "status": "complete",
+            "result_id": null,
+            "summary": "supported",
+            "result_ids": [
+              "context-0",
+              "result-1"
+            ],
+            "references_completed": false,
+            "story_ids": [
+              "story-5",
+              "story-8"
+            ]
+          }
+        ],
+        "usage": {
+          "input_tokens": 6349,
+          "output_tokens": 97,
+          "reported_calls": 2,
+          "unreported_calls": 0,
+          "reserved_token_upper_estimate": 34243
+        },
+        "duration_ms": 3235
+      }
+    },
+    {
+      "route": "/api/report",
+      "status": 200,
+      "mode": "foundry",
+      "delivery": "cached",
+      "headline": "Northbridge v Southport: the match so far",
+      "selection": {
+        "budgets": {
+          "model_calls": 1,
+          "duration_ms": 12000,
+          "max_output_tokens": 800,
+          "request_bytes": 24000,
+          "response_bytes": 64000,
+          "token_budget": 26000,
+          "max_contexts": 3,
+          "word_limit": 1200
+        },
+        "model_calls": 1,
+        "usage": {
+          "input_tokens": 1228,
+          "output_tokens": 39
+        },
+        "stop_reason": "complete",
+        "reserved_token_upper_estimate": 7425
+      }
+    },
+    {
+      "route": "/api/report",
+      "status": 200,
+      "mode": "foundry",
+      "delivery": "cached",
+      "headline": "Northbridge 1–1 Southport",
+      "selection": {
+        "budgets": {
+          "model_calls": 1,
+          "duration_ms": 12000,
+          "max_output_tokens": 800,
+          "request_bytes": 24000,
+          "response_bytes": 64000,
+          "token_budget": 26000,
+          "max_contexts": 3,
+          "word_limit": 1200
+        },
+        "model_calls": 1,
+        "usage": {
+          "input_tokens": 1236,
+          "output_tokens": 39
+        },
+        "stop_reason": "complete",
+        "reserved_token_upper_estimate": 7437
+      }
+    }
+  ],
+  "notes": "App frames are from an anonymous browser on the public frozen build. Final two frames are explicitly prepared explanation/end cards."
+}

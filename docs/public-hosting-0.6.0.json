@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-10-28T00:39:41.206399Z",
+  "version": "0.6.0",
+  "source_revision": "1b2600724c142f46f31e0c9252c13d7326d24841",
+  "archive_sha256": "04db27966e606eab8e8c247135b58831a3ca11fae43419bbe2b9005ae2cef0c0",
+  "hosting_plan": "F1 Free; existing plan retained",
+  "runtime": "Node 24 LTS",
+  "https_only": true,
+  "subscription_spending_limit": "On",
+  "restart_persistence": {
+    "before": {
+      "day": "2026-10-28",
+      "daily": 9,
+      "total": 19
+    },
+    "after": {
+      "day": "2026-10-28",
+      "daily": 9,
+      "total": 19
+    },
+    "preserved": true
+  },
+  "privacy": {
+    "repository_history_blobs_checked": 522,
+    "configured_credential_absent": true
+  },
+  "limitations": [
+    "Initial cold start timed out; hosted startup probe later succeeded after 76.6 seconds.",
+    "Free hosting can cold-start and has platform quotas.",
+    "Daily/total call allowances are not a dollar spending cap.",
+    "Single-process shared allowance and proxy socket rate limits."
+  ],
+  "application_settings": {
+    "daily_model_calls": 200,
+    "total_model_calls": 2000,
+    "post_requests_per_minute": 30,
+    "state_dir": "/home/touchline-state",
+    "persistent_app_storage": true
+  }
+}

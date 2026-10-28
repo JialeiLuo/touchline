@@ -1,6 +1,6 @@
 # Test Touchline 0.6.0
 
-These instructions describe the local final candidate. Public access is not yet verified for this build. Run Node 22+ `npm start`, then open http://127.0.0.1:8767. No account or key is required for local reports/calculations. A configured server can use Microsoft Foundry with a labelled local fallback.
+These instructions describe public release 0.6.0. Open [the working demo](https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/) or reproduce it locally. Run Node 22+ `npm start`, then open http://127.0.0.1:8767. No account or key is required for local reports/calculations. A configured server can use Microsoft Foundry with a labelled local fallback.
 
 1. Select **Try the substitution example**, then **Explain what changed**. Read the Quick takeaway for 55–66 minutes, following Ellis. Open **Why this explanation?** to find its sources. The 20 of 305 minutes means 20 minutes in the relevant role within 305 supplied historical minutes, not an ability rating.
 2. Choose Tactical and select **Explain what changed** again. It adds figures, comparisons and limits. Clear player focus to compare both teams. Changing controls marks old results stale; it does not silently request more AI work.

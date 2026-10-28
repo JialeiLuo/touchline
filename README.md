@@ -2,7 +2,9 @@
 
 Touchline helps a football viewer catch up and question a commentary: what changed, what supports that reading, and what the supplied evidence cannot show. All included matches, clubs, players and histories are fictional.
 
-**Local final candidate: 0.6.0.** Public deployment, repository access and the final video are handled together in release Batches 10–11. Existing hosted/video links describe an earlier build until verified against this candidate. See [final candidate record](docs/FINAL_CANDIDATE.md) and [hands-on guide](docs/USER_GUIDE.md).
+**Public release: 0.6.0.** [Try Touchline](https://touchline-fan-20261025-b4bpgfdxbyarhyh5.germanywestcentral-01.azurewebsites.net/) · [Watch the final demo](https://youtu.be/juiWMsbUzJk) · [Download the verified release](https://github.com/JialeiLuo/touchline/releases/tag/v0.6.0).
+
+Product source is frozen at `1b26007`; later documentation and video commits do not change the hosted product. Public Foundry/cache/upload checks, CI, restart persistence and the anonymous release download passed. See [release verification](docs/RELEASE_0.6.0.md) and the [hands-on guide](docs/USER_GUIDE.md).
 
 ## Try it locally
 

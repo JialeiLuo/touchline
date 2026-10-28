@@ -1,3 +1,5 @@
+> Historical local freeze record. The candidate is now publicly released; see [RELEASE_0.6.0.md](RELEASE_0.6.0.md) for current access, deployment, CI and video verification.
+
 # Touchline 0.6.0 — local final candidate
 
 R1–R6 are complete as a local improvement pass. All work is in the owner's Documents/ChatGPT/Hackathon folder. Batch 9 remains accepted by the owner. Public access, deployment and submission have not been changed by this pass.
